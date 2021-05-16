@@ -1,0 +1,108 @@
+.aboutUs
+	.content
+		padding-top: 184px
+		.contentTemplate
+			margin-bottom: 50px
+			&__text
+		&::after
+			content: none
+		.treatmentPhilosophy
+			.contentTemplate__text
+				p 
+					height: 350px !important
+					overflow: scroll !important
+					max-width: 474px
+
+	.videoContent
+		.widthWrapper
+			p
+				font-family: HelveticaRegular
+				font-size: 16px
+				line-height: 31px
+				color: #707070
+			h1
+				text-align: center
+			.subHeader
+				margin: 45px auto 100px auto
+				display: block
+				font-size: 
+				font-family: HelveticaRegular
+				max-width: 60%
+				text-align: center
+				line-height: 24px
+				color: #707070
+			.benefits
+				margin-bottom: 148px
+				justify-content: space-between
+				align-items: flex-start
+				li
+					width: 21%
+					.highlighted
+						font-family: saolLight
+						text-align: center
+						display: block
+						font-size: 80px
+					span:nth-of-type(2)
+						text-align: center
+						display: block
+						margin: 23px 0 98px 0
+						font-family: saol
+						text-align: center
+						font-size: 39px
+						height: 38px
+					p
+						height: 200px
+						overflow: scroll
+
+
+
+
+
+	.gallery
+		overflow: hidden
+		.widthWrapper
+			h1
+				text-align: center
+				margin-bottom: 45px
+				display: block
+			.slider
+				.slick-track
+					display: flex
+				.slick-next, .slick-prev
+					display: none !important
+				// .slick-slide
+				// 	margin: 0px 10px
+				
+
+
+
+// responsiveness
+@media (max-width: 1024px) 
+	.aboutUs
+		.videoContent
+			.widthWrapper
+				.benefits
+					margin-bottom: 50px
+					flex-flow: wrap
+					li
+						margin-bottom: 100px
+						width: 40%
+@media (max-width: 768px) 
+	.aboutUs
+		.videoContent
+			.widthWrapper
+				.subHeader
+					max-width: 100%
+				.benefits
+					flex-flow: wrap
+					margin-bottom: 100px
+					li
+						margin-bottom: 100px
+						width: 100%
+						p
+							text-align: center			
+				.headings
+					flex-flow: wrap
+					li
+						h4
+							font-size: 25px				

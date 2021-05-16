@@ -1,0 +1,49 @@
+.footer
+	padding: 126px 0 105px 0
+	background-color: #F2EEEB
+	font-family: helveticaLight
+	font-size: 14px
+	position: relative
+	z-index: 5
+	.logoFooter
+		max-width: 115px
+		margin-bottom: 37px
+	&__list
+		justify-content: space-between 
+		align-items: flex-start
+		&-item
+			color: #707070
+			p 
+				max-width: 185px
+				line-height: 20px
+				a 
+					display: inline
+			h3, a 
+				display: block
+			h3 
+				font-family: helveticaBold
+				color: #000
+				margin-bottom: 27px
+			a
+				color: #707070
+				margin-bottom: 10px
+
+
+
+// responsiveness
+
+@media (max-width:1024px) 
+	.footer
+		padding: 75px 0
+		&__list
+			flex-flow: wrap
+			&-item:nth-child(1)
+				width: 100%
+				order: 1
+				margin-top: 10px
+				p
+					max-width: none
+			&-item
+				margin-bottom: 15px
+				width: 45%
+

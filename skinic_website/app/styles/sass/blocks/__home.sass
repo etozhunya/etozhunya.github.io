@@ -1,0 +1,366 @@
+.general
+	background: url('../images/src/homeImage.png') 90% center/cover no-repeat
+	height: 667px
+	display: flex
+	align-items: center
+	position: relative
+	&::before
+		content: ""
+		display: block
+		position: absolute
+		width: 100vw
+		height: 50%
+		opacity: 0.56
+		top: 0
+		left: 0
+		background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0))
+	.widthWrapper
+		width: 100%
+		p
+			margin: 24px 0 67px 0
+			font-family: blacker
+.content
+	padding: 112px 0
+	position: relative
+	.contentTemplate
+		padding-bottom: 100px
+		align-items: flex-start
+		justify-content: space-between
+		&__photo
+			width: 45%
+			img
+				display: block
+				width: 100%
+		&__text
+			width: 55%
+			overflow-x: visible
+			padding: 20px 50px
+			h1 
+				width: 130%
+			h2
+				margin: 42px 0 0 0
+				display: block
+				padding-left: 58px
+				font-family: helveticaLight
+				font-size: 36px
+			p
+				margin-top: 36px
+				line-height: 24px
+				padding-left: 58px
+				font-family: helveticaRegular
+				font-size: 16px
+				color: #707070
+			.highlighted
+				font-family: saolLightItalic
+			.link
+				margin-left: 58px
+		// &:nth-of-type(2)
+		// 	.contentTemplate__text
+		// 		width: 40%		
+		// 	.contentTemplate__photo
+		// 		width: 45%
+	.treatmentPhilosophy
+		.contentTemplate__text
+			padding-top: 60px	
+	&::after
+		content: ''
+		display: block
+		width: 100vw
+		height: 126%
+		background-color: #F9F9F9
+		position: absolute
+		left: 0
+		top: 0
+		z-index: -2
+.leaves
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		left: -340px
+		bottom: -40px
+		width: 815px
+		height: 746px
+		background: url('../images/src/leaves.png') center center/contain no-repeat
+		z-index: -1
+.faceList
+	margin-bottom: 180px
+	.widthWrapper		
+		h1
+			margin-bottom: 45px
+		.faces
+			justify-content: flex-start
+			li
+				margin: 0 7px 
+				width: 27%
+				position: relative
+				&:first-child
+					margin-left: 0
+				&:last-child
+					margin-right: 0
+				> a:nth-of-type(1) 
+					width: 100%
+					height: 100%
+					display: block
+				img
+					transition: .3s
+					display: block
+					width: 100%
+				h3
+					text-transform: uppercase
+					font-size: 24px
+					font-family: italiana
+					margin: 19px 0 25px 0
+					display: block
+					height: 24px
+				p
+						line-height: 21px
+						font-family: helveticaRegular
+						font-size: 14px
+						color: #707070					
+.treatments
+	.widthWrapper
+		h1
+			margin-bottom: 65px
+		.faces
+			li
+				&:hover
+					img
+						transition: .3s
+					h3
+						color: $highlighted			
+				&::before
+					display: block
+					position: absolute
+					left: 0
+					font-family: helveticaMedium
+					font-size: 16px
+					top: -27px
+				&:nth-child(1)
+					&:hover
+						img
+							border-radius: 150px 0 150px 0
+					&::before
+						content: '01'
+				&:nth-child(2)
+					&:hover
+						img
+							border-radius: 150px 0px 150px 150px
+					&::before
+						content: '02'
+				&:nth-child(3), &:nth-child(4)
+					&:hover
+						img
+							border-radius: 150px
+					&::before
+						content: '03'
+			.treatButton
+					position: absolute
+					top: 30%
+					right: 0
+					transform: translateX(30%)
+					display: block
+					svg
+						transition: .5s
+					&:hover
+						#let
+							transform: rotate(220deg)
+							transition: .5s
+							path
+								fill: $highlighted !important
+						path, #arrow, line
+							stroke: $highlighted !important
+					#arrow
+						position: absolute
+
+
+.doctors
+	margin-bottom: 61px
+	position: relative
+	.faces
+		li
+			width: auto
+			p
+				margin-bottom: 21px
+			.button
+				line-height: 20px
+				width: 100%
+				display: block
+				padding: 14px 0
+				text-align: center
+				opacity: 0
+				z-index: -5
+				transition: .3s
+				font-size: 11px
+			.imgContainer
+				overflow: hidden
+				position: relative
+				.img
+					transition: .5s
+					width: 100%
+					height: 100%
+					.transparentImage
+						opacity: 0
+						pointer-events: none
+			&:nth-child(1)
+				.img
+					background: url('../images/src/iselin.png') center top/cover no-repeat
+			&:nth-child(2)
+				.img
+					background: url('../images/src/schrammek.png') center top/cover no-repeat
+			&:nth-child(3)
+				.img
+					background: url('../images/src/davis.png') center top/cover no-repeat
+			&:nth-child(4)
+				.img
+					background: url('../images/src/myers.png') center top/cover no-repeat
+			&:hover
+				.img
+					transform: scale(1.4) translateY(13%)
+					transition: .5s
+				.button
+					opacity: 1
+					transition: .3s
+					z-index: 1
+
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		left: 0
+		top: -60px
+		width: 240px
+		height: 486px
+		background: url('../images/src/designElement.svg') center center/cover no-repeat
+		z-index: -1
+.gallery
+	.widthWrapper
+		h1
+			text-align: center
+			margin-bottom: 45px
+			display: block
+			padding: 0 !important
+		.slider
+			padding-bottom: 142px
+			.slick-track
+				display: flex
+			.slick-next, .slick-prev
+				display: none !important
+			.slick-slide
+				display: block !important
+				width: 279px !important
+				height: 279px !important
+				margin: 0 10px
+			
+.DoctorsPage
+	.faceList
+		padding-top: 180px
+
+
+
+
+
+
+// responsiveness	
+@media (max-width: 1250px) 
+	.faceList
+		.button
+			font-size: 10px !important
+	.general
+		background: url('../images/src/homeImage.png') 60% center/cover no-repeat
+	.treatButton
+		width: 150px
+		height: 50px
+		right: -20px
+		svg
+			width: 100%
+@media (max-width: 1024px) 
+	.content
+		.contentTemplate
+			&__text
+				padding: 15px
+				h1
+					width: 100%
+				p, h2
+					padding-left: 10px
+		&::after
+			height: 115%
+	.treatments
+		.widthWrapper
+			.faces
+				flex-flow: wrap
+				.treatButton
+					width: 100%
+					height: auto
+					text-align: center
+					position: relative
+					transform: none
+					margin: 0 auto
+	.doctors
+		.widthWrapper
+			.faces
+				li 
+					> a:nth-of-type(1) 
+						h3
+							font-size: larger
+
+@media (max-width: 768px) 
+	.doctors
+		.widthWrapper
+			.faces
+				flex-flow: wrap
+				li
+					width: 45% 
+					margin-bottom: 50px
+@media (max-width: 767px) 
+	.general
+		background: url('../images/src/homeImage.png') 56% center/cover no-repeat
+	.content
+		padding: 50px 0
+		.contentTemplate
+			overflow: hidden
+			flex-flow: wrap
+			&__photo
+				width: 100%
+				img
+					max-width: 470px
+					margin: 0 auto
+			&__text
+				width: 100%
+				padding: 0
+				h1
+					width: 100%
+					margin-top: 30px
+				h2, p 
+					padding-left: 0
+		.treatmentPhilosophy
+			flex-direction: column-reverse
+			align-items: end
+			.contentTemplate__text
+				padding-top: 0
+	.faceList
+		margin-bottom: 80px
+		.widthWrapper
+			.faces
+				flex-flow: wrap
+				li
+					width: 100%
+					margin-bottom: 50px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

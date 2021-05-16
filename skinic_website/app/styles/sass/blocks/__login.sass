@@ -1,0 +1,182 @@
+.iti--allow-dropdown 
+	.iti__flag-container
+		.iti__selected-flag
+	    	padding: 0 0 10px 0
+		&:hover 
+			.iti__selected-flag
+				background-color: transparent !important
+
+.loginRegister
+	.login__menu
+		&.hidden
+			opacity: 0
+			z-index: -10
+		z-index: 50
+		.header__menu-photo
+			background: url('../images/src/logincrop.jpg') left center/cover no-repeat
+		.header__menu-content
+			&--container
+				display: flex
+				justify-content: center
+				align-items: center
+				transform: translateX(-8%)
+				height: calc(100vh - 60px)
+				&-flex
+					width: 346px
+					position: relative
+					font-family: helveticaRegular
+					h1
+						text-align: center
+						display: block
+						font-size: 36px
+						font-family: Italiana
+						margin-bottom: 37px
+						color: #323232
+						letter-spacing: 3.6px
+					.regh1
+						margin-bottom: 29px
+					h2
+						color: #323232
+						font-size: 16px
+						text-align: center
+						font-family: blackerLight
+						margin-bottom: 29px
+					.steps
+						width: 100%
+						justify-content: space-between
+						margin-bottom: 30px
+						.flex
+							width: 33px
+							height: 33px
+							background-color: #F4F5F7
+							border-radius: 50px
+							justify-content: center
+							position: relative
+							span
+								color: #A5ADBA
+								position: relative
+							&:nth-child(1):after, &:nth-child(2):after
+								content: ''
+								display: block
+								height: 1px
+								width: 100px
+								left: 44px
+								background-color: #CED4DA
+								position: absolute
+							&.done
+								background-color: transparent
+								border: 1px solid rgba(215, 177, 110, 0.33)
+								img
+									transform: translateY(1px)	
+								&:after
+									background-color: $highlighted
+							&.current
+								background-color: transparent	
+								border: 1px solid #D7B16E
+								span
+									color: #D7B16E
+
+					form
+						width: 100%
+						position: relative
+						label
+							margin-bottom: 23px
+							display: block
+							> span
+								font-size: 14px
+								display: block
+								margin-bottom: 11px
+							.status
+								#phone
+									padding-left: 60px
+								input
+									appearance: none
+									-webkit-appearance: none
+									font-size: 21px
+									width: 100%
+									padding: 0 0 8px 0
+									border: none
+									border-bottom: 1px solid #e0e0e0
+									font-family: helveticaRegular
+									&::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+										-webkit-appearance: none
+									  	margin: 0
+									&:focus
+										border-bottom: 1px solid #d5b168
+								&.error
+									input
+										border-bottom: 1px solid #DC3545
+									&:after
+										content: 'We’ll never share your email with anyone else'
+										font-family: helveticaRegular
+										font-size: 12px
+										color: #DC3545
+								&.success
+									input
+										border-bottom: 1px solid #00B9B5
+									&:after
+										content: 'We’ll never share your email with anyone else'
+										font-family: helveticaRegular
+										font-size: 12px
+										color: #00B9B5
+								&.disabled
+									pointer-events: none
+									input
+										opacity: 0.38
+										border-bottom: 1px solid #231F20
+							.sms
+								justify-content: space-between
+								input
+									width: 24%
+									text-align: center
+						button
+							appearance: none
+							background-color: #343A40
+							color: #fff
+							padding: 10px 0px
+							border: none
+							cursor: pointer
+							font-size: 20px
+							width: 100%
+							display: block
+							margin-top: 27px
+							font-family: helveticaRegular
+							&:hover
+								background-color: #23272B	
+					p, a
+						display: block
+						// font-family: helveticaRegular
+						font-size: 16px
+						text-align: center
+						line-height: 24px
+					p
+						color: #343a40
+						margin: 24px 0 14px
+						display: block
+						a
+							display: inline
+					a
+						color: $highlighted
+						display: block	
+					
+
+@media (min-width: 768px) and (max-width: 1200px) 
+	// .loginRegister
+	// 	.login__menu
+	// 		.header__menu-photo
+	// 			background: url('../images/src/login(cropped).jpg') center center/cover no-repeat
+
+@media (max-width: 767px) 
+	.loginRegister
+		.login__menu
+			z-index: 50
+			.header__menu-photo
+				display: none
+			.header__menu-content
+				width: calc(100% - 10%) !important
+				&--container
+					padding-bottom: 100px
+					transform: translateX(0)
+						
+
+			

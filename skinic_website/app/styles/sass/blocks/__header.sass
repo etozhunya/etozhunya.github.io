@@ -1,0 +1,304 @@
+.header
+	position: absolute
+	width: 100vw
+	z-index: 50
+	&__top
+		padding: 26px 0 28px 0
+		justify-content: flex-start
+		.transformed
+			transform: translateY(-10px)
+		&-list
+			width: 64%
+			padding-left: 8px
+			li 
+				margin: 0 17px
+				.lang 
+					font-family: helveticaMedium
+					font-size: 14px
+					transform: translateX(-5px)
+					display: block
+		.logo 
+			display: block
+			width: 14%	
+			position: relative
+			img
+				width: 100%
+		
+		.button 
+			position: absolute
+			right: -10px
+		.hamburger-container, .close-container
+			position: fixed
+			width: 1150px
+			margin: 0 auto
+			top: 0	
+			z-index: 99
+			.close-icon
+				background-color: #fff
+			.hamburger-icon, .close-icon
+				height: 46px
+				width: 78px
+				display: block
+				position: absolute
+				z-index: 10
+				border-radius: 30%
+				right: -60px
+				top: 40px
+				transform: translateY(-50%)
+				z-index: 100
+				cursor: pointer
+				&.hide
+					display: none
+				&:hover
+					.hamburger_button
+						background-color: $highlighted
+						&:before, &:after
+							background-color: $highlighted
+				&.active .hamburger_button, &.active .close_button,
+					background-color: transparent
+					&:before
+						transform: rotate(45deg)
+						top: 0
+					&:after
+						transform: rotate(-45deg)
+						top: 0
+				.hamburger_button, .close_button
+		  		    height: 1px
+		  		    width: 40%
+		  		    display: block
+		  		    background-color: #000
+		  		    position: relative
+		  		    top: 50%
+		  		    margin: 0 auto
+		  		    border-radius: 3px
+		  		    transform: translateY(-50%)
+		  		    z-index: 21
+		  		    &:after, &:before
+		  		    	content: ''
+		  		    	background-color: #000
+		  		    	position: absolute
+		  		    	height: 1px
+		  		    	width: 100%
+		  		    	left: 0
+		  		    	border-radius: 3px
+		  		    	transition: top 0.3s, transform 0.3s 0.3s
+	  		    	&:before 
+	  		    		top: -8px
+	  		    	&:after
+	  		    		top: 8px
+	&__menu, .login__menu
+		width: 100vw
+		height: 100vh
+		position: fixed
+		background-color: #fff
+		z-index: 9
+		left: 0
+		transition: .8s
+		transition-timing-function: cubic-bezier(0.5,0.25,0,1)
+		top: 0
+		align-items: flex-start !important
+		opacity: 1
+		&-photo
+			height: 100vh
+			width: 40%
+			background: url('../images/src/headerHero.png') center center/cover no-repeat
+		.button
+			display: inline-block 
+			margin: 67px 0 55px 0
+		&-content
+			width: 60%
+			padding: 28px 0 0 125px
+			height: 100vh
+			overflow: scroll
+			.logo 
+				display: block
+				max-width: 109px
+			&--list
+				li
+					a 
+						font-family: saol !important
+						font-size: 48px !important
+						margin-bottom: 6px
+						display: block
+						position: relative
+						transition: .3s 
+						&::before
+							content: ''
+							width: 6%
+							height: 2px
+							background-color: $highlighted
+							display: block
+							position: absolute
+							top: 50%
+							transition: .5s
+							opacity: 0%
+							left: 0
+							transform: translateY(50%)
+							transition: .3s
+						&:hover
+							padding-left: 8%
+							transition: .3s 
+							font-family: saolLightItalic !important
+							font-style: italic
+							&::before
+								opacity: 100%
+								transition: .5s
+						&:active::after
+							content: none !important
+
+			&--info
+				align-items: flex-start !important
+				max-width: 740px
+				padding-right: 70px
+				justify-content: space-between
+				li
+					h3 
+						margin: 52px 0 24px 0
+						display: block
+						font-family: helveticaBold
+					span, p 
+						font-family: helveticaLight
+						display: block
+						margin-bottom: 7px
+						font-size: 14px
+					p 
+						margin-top: 27px
+						line-height: 20px
+				.account
+					position: relative
+					span, p 
+						padding-left: 65px
+					.bold
+						position: relative
+						&:before 
+							content: ''
+							background: url('../images/src/signIn.svg') center center/cover no-repeat
+							width: 49px
+							height: 49px
+							border-radius: 50px
+							display: block
+							position: absolute
+							left: 0
+							top: -50%
+				.social
+					padding-bottom: 100px
+	&__menu.hidden
+		pointer-events: none
+		opacity: 0
+		z-index: -10
+		position: fixed
+		left: 10%
+		transition: .8s
+		transition-timing-function: cubic-bezier(0.5,0.25,0,1)
+.menuList
+	li 	
+		a 
+			opacity: 0.7
+			letter-spacing: 1px
+			font-family: helveticaRegular
+			font-size: 14px
+			text-decoration: none
+			color: #000
+			position: relative
+			&:hover, &:active
+				color: $highlighted
+			&:active::after
+				content: ''
+				position: absolute
+				width: 100%
+				height: 3px
+				left: 0
+				bottom: -5px
+				background-color: $highlighted
+
+			
+
+
+// responsiveness
+@media (max-width: 1300px) 
+	.transformed
+		transform: translateY(-11px) !important
+	.hamburger-container 
+		width: 80% !important
+	.widthWrapper 
+		max-width: 80% !important
+	.header__top-list
+		width: auto
+		margin-right: 5px
+		li 
+			margin: 0 8px
+	.header__top
+		&-list, .lang
+			display: none !important
+		.logo 
+			width: auto
+		.hamburger-icon 
+			right: -45px !important
+			width: 55px	!important
+		.button	
+			right: 30px
+@media (max-width: 1050px) 	
+	.transformed
+		transform: translateY(-11px) !important
+	.header__menu
+		&-content 
+			padding: 28px 0 0 5%
+			&--list
+				li
+					a 
+						font-size: 35px !important
+			&--info
+				padding-right: 0px
+				display: block !important
+				li
+					text-align: left
+					p,span 
+						font-size: 11px
+		.button 
+			margin: 25px 0
+	.social
+		text-align: right
+
+@media (max-width: 767px) 	
+	.transformed
+		transform: translateY(-6px) !important
+	.widthWrapper
+		// max-width: 100% !important
+		padding: 20px
+	.header__top
+		.logo 
+			transform: none
+			width: 100px
+		.button
+			right: 25px
+			padding: 10px
+			font-size: 8px
+		.hamburger-icon
+			right: -40px !important
+			width: 50px !important
+			top: 30px !important
+	.header__menu
+		&-photo 
+		    background-position-x: 70%
+		.button
+			padding: 15px
+		&-content 
+			padding-top: 20px
+			.button
+				font-size: 12px
+			&--info 
+				li 
+					h3 
+					 margin: 25px 0
+					br
+						display: none
+
+				.social 
+					text-align: left
+					max-width: 230px
+
+@media (max-width: 375px)
+	.header__menu-content--list 
+		li 
+			a 
+	    		font-size: 25px!important

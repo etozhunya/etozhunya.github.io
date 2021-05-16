@@ -1,0 +1,388 @@
+.account
+	.greetings
+		padding-top: 194px
+		&__photo
+			position: relative
+			img
+				width: 127px
+				height: 127px
+			a
+				position: absolute
+				width: 43px
+				height: 43px
+				background-color: #FFEBC9
+				border-radius: 50px
+				display: flex
+				justify-content: center
+				align-items: center
+				border: 5px solid #fff
+				right: 0
+				bottom: 0
+				img
+					transform: translateY(-2px)
+					display: block
+					width: 20px
+					height: 20px
+		&__content
+			margin-left: 23px
+			h1
+				font-family: helveticaMedium
+				font-size: 37px
+			p
+				font-family: helveticaRegular
+				font-size: 16px
+	.steps
+		margin: 66px 0
+		justify-content: space-between
+		li
+			border: 1px solid #E0E0E0
+			border-radius: 8px
+			width: 33%
+			margin: 0 8px
+			padding: 21px 0 43px 25px
+			cursor: pointer
+			position: relative
+			&.active
+				&:after
+					content: none
+			&::after
+				content: ''
+				background: url('../images/src/arrowRight.svg') center center/cover no-repeat
+				position: absolute
+				right: 28px
+				top: 50%
+				transform: translateY(-50%)
+				height: 11px
+				width: 14px
+			&:nth-child(1)
+				margin-left: 0
+				&.active
+					background: linear-gradient(253deg, #ffebc9 100%, #fff0eb 2%)
+			&:nth-child(2)
+				&.active
+					background-color: #fff3fe
+			&:nth-child(3)
+				margin-right: 0	
+				&.active
+					background: linear-gradient(255deg, #ebffea 100%, #caffff 2%)
+			h2
+				font-family: saol
+				font-size: 24px
+				margin-bottom: 11px
+			p
+				font-size: 12px
+				font-family: helveticaRegular
+
+
+
+
+
+
+	.tables
+		position: relative
+		h3
+			font-size: 39px
+			font-family: saol
+		.preTable
+			justify-content: space-between
+			width: 30%
+			margin: 34px 0 18px
+			li
+				border-radius: 5px
+				p
+					cursor: pointer
+					padding: 12px 10px
+					font-family: helveticaRegular
+					font-size: 15px
+					color: #707070
+				&.active
+					background-color: #F3F3F4
+					p
+						font-family: helveticaBold
+						color: #000
+	.containerWrapper
+		position: relative
+		width: 100%
+		.tableWrapper
+			position: absolute
+			left: 0
+			top: 0
+			display: none
+			h2
+				margin: 67px 0 46px 0
+				font-size: 39px
+				font-family: saol
+			&.in-view
+				display: block
+				position: relative
+			.AAS
+				width: 100%
+				position: relative
+				justify-content: space-between
+				li
+					width: 33%
+					cursor: pointer
+					border-bottom: 2px solid #DFDFDF
+					padding-bottom: 14px
+					&:nth-child(2)
+						margin: 0 16px
+					&.active
+						border-bottom: 2px solid $highlighted
+					p
+						font-family: saol
+						font-size: 28px
+			.short
+				width: 50%
+				position: relative
+				.sub:nth-of-type(2)
+					margin-top: 20px
+				.buttons
+					&.visible
+						display: flex
+			.AAScontent
+				display: none
+				margin-bottom: 140px
+				padding-top: 16px
+				.AASwrapper
+					// &:nth-child(2)
+					// 	border-bottom: 1px solid #e0e0e0
+					.AAStext
+						display: flex
+						justify-content: space-between
+						align-items: center
+						margin: 33px 0 0px 0
+						span
+							font-family: helveticaRegular
+							font-size: 19px
+							color: $highlighted
+							cursor: pointer
+						.edit
+							&.hidden
+								display: none !important
+							&.visible
+								display: block
+
+						.close
+							display: none
+							&.hidden
+								display: none !important
+							&.visible
+								display: block 
+				h4
+					font-family: helveticaMedium
+					font-size: 19px
+					margin-bottom: 20px
+				.sub
+					font-size: 17px
+					font-family: helveticaRegular
+					margin: 0px 0 23px 0
+					display: block
+				input
+					display: block
+					appearance: none
+					-webkit-appearance: none
+					font-size: 21px
+					width: 100%
+					padding: 0 0 8px 0
+					border: none
+					border-bottom: 1px solid #e0e0e0
+					font-family: helveticaRegular
+					&::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+						-webkit-appearance: none
+					  	margin: 0
+					&:focus
+						border-bottom: 1px solid #d5b168
+				#phone
+					padding-left: 60px
+				p
+					font-size: 12px
+					font-family: helveticaLight
+					color: #909090
+					margin: 10px 0 0px 0
+				.buttons
+					width: 100%
+					margin-top: 26px
+					justify-content: space-between
+					position: relative
+					margin-bottom: 60px
+					display: none
+					&.visible
+						display: flex
+					.button
+						cursor: pointer
+						text-align: center
+						padding: 14px 0
+						&:first-child
+							width: 37%
+						&:last-child	
+							width: 59%
+				.shortTable
+					width: 43%
+					li
+						padding: 14px 0
+						border-bottom: 1px solid #f5f5f5
+						display: flex
+						align-items: center
+						justify-content: space-between
+						span
+							font-family: helveticaRegular
+							font-size: 14px
+
+
+
+				&.in-view
+					display: block
+					position: relative
+
+		&__One
+
+		&__Two
+
+		&__Three
+			justify-content: space-between
+			align-items: center
+			h2
+				margin-bottom: 32px !important
+			.bonusesTable
+				width: 100%
+				position: relative
+				li
+					display: flex
+					justify-content: space-between
+					align-items: center
+					padding: 20px 24px 23px 42px !important
+					.button
+						padding: 14px 0
+						width: 14%
+						text-align: center
+					&::after
+						content: none !important
+					&:hover
+						background-color: #FFF3FE
+					table
+						width: 79%
+						tr
+							&:first-child
+								td
+									padding: 3px 0
+									font-size: 14px
+							&:nth-child(2)
+								td
+									font-size: 16px
+									&:last-child
+										font-size: 20px		
+							td
+								.button
+									transform: translateY(20px)
+									display: inline-block
+								&:nth-child(1)	
+									width: 30%
+								&:nth-child(2)
+									width: 20%
+								&:nth-child(3)
+									width: 15%
+									text-align: right	
+	.headings
+		margin-bottom: 140px
+		li
+			padding: 20px 100px 24px 28px
+			border-radius: 8px
+			border: 1px solid #E0E0E0
+			position: relative
+			cursor: pointer
+			margin-bottom: 16px
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				right: 35px
+				background: url('../images/src/arrow.svg') center center/cover no-repeat
+				width: 18px
+				height: 11px
+				top: 45px
+				transform: translateY(-50%)
+				transition: .5s
+			&.active
+				.animated
+					.button
+						display: inline-block
+				&::after 
+					transition: .5s
+					transform: translateY(-50%) rotate(540deg)
+			> table
+				position: relative
+			table
+				width: 100%
+				.btn
+					position: relative
+					padding: 2px 10px 3px 10px
+					border-radius: 10px
+					transform: translateY(4px)
+					display: inline-block
+				.btnActive
+					color: #00CE97
+					background-color: rgba(0, 206, 151, 0.2)
+				.btnCompleted
+					color: #febc2e
+					background-color: rgba(254, 188, 46, 0.2)
+				.btnCanceled
+					color: #ff0062
+					background-color: rgba(255, 0, 98, 0.2)
+				tr
+					height: 25px
+					&:first-child
+						td
+							color: #909090
+							font-family: helveticaRegular
+					td
+						font-size: 14px
+						font-family: helveticaMedium
+						color: #171616
+						width: 25%
+						&:nth-child(4)
+							width: 15%
+						&:last-child
+							text-align: right
+			.animated
+				height: 196px
+				overflow: visible
+				table
+					margin-top: 21px
+					width: 87%
+					tr
+						td
+							width: auto
+				.button
+					margin-top: 79px
+					float: right
+					transform: translateX(20%)
+					display: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

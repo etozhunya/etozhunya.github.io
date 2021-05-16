@@ -1,0 +1,142 @@
+@import config
+
+body 
+	font-family: HelveticaRegular
+	color: #000
+	a 
+		text-decoration: none
+.hover
+	&:hover
+		color: $highlighted
+		cursor: pointer
+.flex 
+	display: flex
+	align-items: center	
+.clicked
+	position: relative
+	color: $highlighted !important
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 2px
+		left: 0
+		bottom: -3px
+		background-color: $highlighted	
+.link
+	margin: 50px 0
+	display: block
+	font-family: HelveticaLight
+	font-size: 18px
+	background-color: #F9F9F9
+	position: relative
+	&::before
+		content: ''
+		display: block
+		width: 50px
+		height: 50px
+		border-radius: 50px
+		border: 1px solid $highlighted
+		position: absolute
+		left: -20px
+		top: 50%
+		transform: translateY(-50%)
+		z-index: -1
+.widthWrapper 
+	max-width: 1120px
+	margin: 0 auto
+	position: relative
+	h1 
+		font-family: italiana
+		font-weight: 400
+		font-size: 56px
+		letter-spacing: 5.6px
+		line-height: 67px	
+		text-transform: uppercase	
+	.highlighted
+		color: #BF9F5D !important
+.button 
+	font-family: HelveticaRegular
+	font-size: 14px
+	padding: 14px 33px
+	border: 1px solid $highlighted
+	transition: .3s
+	letter-spacing: 1.3px
+	&:hover
+		color: #fff
+		background-color: $highlighted
+		transition: .3s
+.imgLeft
+	.contentTemplate__text
+		padding: 20px 0 20px 50px !important
+.imgRight
+	.contentTemplate__text
+		padding: 20px 50px 20px 0px !important
+.headings
+	margin-bottom: 70px
+	li
+		h4
+			font-family: saol
+			display: block
+			font-size: 39px
+			padding: 43px 10px 43px 0
+			border-bottom: 1px solid #E0D6CF
+			position: relative
+			cursor: pointer
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				right: 0
+				background: url('../images/src/arrow.svg') center center/cover no-repeat
+				width: 18px
+				height: 11px
+				top: 50%
+				transform: translateY(-50%)
+				transition: .5s
+			&.active
+				border-bottom: none
+				&::after 
+					transition: .5s
+					transform: translateY(-50%) rotate(540deg)
+		.animated
+			display: none
+			p
+				display: block
+				margin: 45px 0
+				max-width: 818px
+			h5
+				font-family: saol
+				font-size: 29px
+
+
+
+// responsiveness			
+@media (max-width: 1300px) 
+	.widthWrapper 
+		max-width: 80% !important
+@media (max-width: 1300px) 
+	.widthWrapper
+		h1
+			font-size: 50px
+@media (max-width: 768px) 
+	.content
+		.contentTemplate
+			flex-flow: wrap
+			&__text, &__photo 
+				width: 100% !important
+		.treatmentPhilosophy
+			flex-direction: column-reverse
+	.widthWrapper
+		h1
+			font-size: 40px
+			letter-spacing: 6px
+			line-height: 50px
+
+
+
+
+	
+
+@import 'blocks/**/*'
+@import 'blocks/__footer.sass'
