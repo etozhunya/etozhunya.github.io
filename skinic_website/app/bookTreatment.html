@@ -6,13 +6,14 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>About Us</title>
+	<title>book</title>
 	<meta name="description" content="Startup HTML template OptimizedHTML 5">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
+	<link rel="stylesheet" href="css/intlTelInput.min.css">
 </head>
 
 <body class="book faq">
@@ -152,11 +153,97 @@
 			<li>
 				<h4>Details</h4>
 				<div class="animated">
-					<p>
-					In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
-					<br><br>
-					The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
-					</p>
+					<form action="">
+						<label for="typeOfTreatmentOne">
+							<span>Name*</span>
+							<input type="text">
+						</label>
+
+						<label for="typeOfService">
+							<span>First Name</span>
+							<input type="text">
+						</label>
+
+						<div class="radio_width radio_width50">
+							<span>Add to your appointment</span>
+							<div class="radio_core">
+								<label>
+								    <input name="dzen" type="radio" value="I am an existing customer" checked="">
+								    <span class="radio">
+								    	Male
+								    </span>
+								</label>
+								<label>
+								    <input name="dzen" type="radio" value="I am an existing customer">
+								    <span class="radio">
+								    	Female
+								    </span>
+								</label>
+							</div>
+						</div>
+						<label for="" class="specLabel">
+							<span>Payment</span>
+							<label class="check spec">
+								<div class="radio_width">
+									<input type="checkbox">
+									<span class="checkmark"></span>	
+									<p>I use a credit card</p>
+								</div>
+								
+							</label>
+						</label>
+
+						<label for="typeOfTreatmentOne">
+							<span>Phone number</span>
+							<input type="tel" id="phone">
+						</label>
+
+						<label>
+							<span>Email</span>
+							<input type="Email" >
+						</label>
+
+						<label>
+							<span>Street (e.g. Bahnhofstrasse 37) *</span>
+							<input type="text" >
+						</label>
+
+						<label>
+							<span>City, postal code, country (e.g. 8001 Zurich, Switzerland) *</span>
+							<input type="text" >
+						</label>
+
+						<label>
+							<span>City, postal code, country (e.g. 8001 Zurich, Switzerland) *</span>
+							<input type="text" >
+						</label>
+
+						<label>
+							<span>Date of birth (DD.MM.YYYY)</span>
+							<input type="text" >
+						</label>
+
+						<label>
+							<span>Additional Treatments (optional)</span>
+							<input type="text" >
+						</label>
+
+						<label>
+							<span>Additional information (optional)</span>
+							<input type="text" >
+						</label>
+
+						<label for="" class="specLabel">
+							<label class="check spec">
+								<div class="radio_width">
+									<input type="checkbox">
+									<span class="checkmark"></span>	
+									<p>I Agree with the terms and conditions</p>
+								</div>
+							</label>
+						</label>
+					</form>
+					<span class="button confirmPopup">CONFIRM BOOKING</span>
 				</div>
 			</li>
 			<li>
@@ -225,6 +312,27 @@
 	</div>
 </div>
 
+<div class="popup" id="confirmPopup">
+	<div class="popup__container">
+		<div class="popup__container-ver">
+			<h1>CONFIRM</h1>
+			<p class="sub">Please verify your phone  number to confirm the appointment booking</p>
+			<input type="text" id="phone">
+			<label for="pass forSMS-container">
+				<span>Enter your SMS-code</span>
+				<div class="status sms flex">
+					<input type="number" maxlength="1" class="forSMS"> 
+					<input type="number" maxlength="1" class="forSMS" >
+					<input type="number" maxlength="1" class="forSMS">
+					<input type="number" maxlength="1" class="forSMS">
+				</div>
+			</label>
+			<p>Haven’t received the code? <a href="#">Re-send SMS!</a></p>
+			<button type="button">Confirm booking</button>
+		</div>
+	</div>
+</div>
+
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -264,6 +372,8 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+<script src="js/tel/js/intlTelInput.js"></script>
+<script src="js/tel.js"></script>
 <script src="https://unpkg.com/js-datepicker"></script>
 <script src="js/app.js"></script>
 <!-- FOOTER ENDS-->

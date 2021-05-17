@@ -112,6 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
   $('.popupClose').click(function() {
     $('#deletePopup').removeClass('active')
   });
+  $('.confirmPopup').click(function() {
+    $('#confirmPopup').addClass('active')
+  });
+  $('.popupClose').click(function() {
+    $('#confirmPopup').removeClass('active')
+  });
 
   $('#nameEdit').click(function() {
     $('.nameEdit').focus()
