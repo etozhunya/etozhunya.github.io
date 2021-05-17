@@ -111,6 +111,34 @@ body
 				font-family: saol
 				font-size: 29px
 
+.popup
+	background-color: rgba(0, 0, 0, 0.33)
+	position: fixed
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100vw
+	height: 100vh
+	z-index: -10
+	opacity: 0
+	left: 0
+	top: 0
+	&.active
+		z-index: 5
+		opacity: 1
+	&__container
+		border-radius: 7px
+		width: 50%
+		height: 20%
+		background-color: #fff
+		display: flex
+		justify-content: space-around
+		align-items: center
+		a, span
+			cursor: pointer
+			font-family: saol
+			font-size: 18px
+
 
 
 // responsiveness			

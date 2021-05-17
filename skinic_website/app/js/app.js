@@ -106,6 +106,13 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.AAScontent').removeClass('in-view').eq($(this).index()).addClass('in-view');
   });
 
+  $('.deletePopup').click(function() {
+    $('#deletePopup').addClass('active')
+  });
+  $('.popupClose').click(function() {
+    $('#deletePopup').removeClass('active')
+  });
+
   $('#nameEdit').click(function() {
     $('.nameEdit').focus()
     $(this).addClass('hidden')
@@ -186,6 +193,25 @@ document.addEventListener('DOMContentLoaded', () => {
     $('#addressEdit').addClass('visible')
     $('.addressEdit').prop('readonly', true);
     $('.addressButtons').removeClass('visible')
+  })
+
+
+
+
+  $('#methodEdit').click(function() {
+    $('.methodEdit').focus()
+    $(this).addClass('hidden')
+    $('.methodClose').addClass('visible')
+    $('.methodEdit').removeAttr('disabled')
+    $('.methodButtons').addClass('visible')
+  })
+  $('.methodClose').click(function() {
+    $('.methodClose').removeClass('hidden')
+    $('.methodClose').removeClass('visible')
+    $('#methodEdit').removeClass('hidden')
+    $('#methodEdit').addClass('visible')
+    $('.methodEdit').attr('disabled', true);
+    $('.methodButtons').removeClass('visible')
   })
 // auto changer input SMS verification ENDS
 

@@ -353,7 +353,7 @@
 							<span class="edit" id="addressEdit">Edit</span>
 							<span class="close addressClose">Close</span>
 						</div>
-						<input type="text" value="Lorzenweidstrasse 486332 Hagendorn" class="addressEdit">
+						<input type="text" value="Lorzenweidstrasse 486332 Hagendorn" class="addressEdit" readonly="">
 						<div class="short">
 							<div class="buttons addressButtons">
 								<span class="button addressClose">CANCEL</span>
@@ -367,13 +367,31 @@
 						<div class="AAStext">
 							<h4>Method of communication</h4>
 							<span class="edit" id="methodEdit">Edit</span>
-							<span class="close" id="methodClose">Close</span>
+							<span class="close methodClose" id="methodClose">Close</span>
 						</div>
 						<span class="sub">Get suggestions, tips and news through:</span>
 						<ul class="shortTable">
-							<li><span>Email</span><img src="images/src/ok.svg" alt=""></li>
-							<li><span>SMS</span><img src="images/src/minus.svg" alt=""></li>
-							<li><span>Mail</span><img src="images/src/minus.svg" alt=""></li>
+							<div class="general-box">
+								<label class="check">
+									<p>Email</p>
+									<input type="checkbox" checked="" disabled="disabled" class="methodEdit">
+									<span class="checkmark"></span>
+								</label>
+								<label class="check">
+									<p>SMS</p>
+									<input type="checkbox" disabled="disabled" class="methodEdit">
+									<span class="checkmark"></span>
+								</label>
+								<label class="check">
+									<p>Mail	</p>
+									<input type="checkbox" disabled="disabled" class="methodEdit">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="buttons methodButtons">
+								<span class="button methodClose">CANCEL</span>
+								<span class="button methodClose">SAVE CHANGES</span>
+							</div>
 						</ul>
 					</div>
 					<div class="AASwrapper">
@@ -382,7 +400,7 @@
 						</div>
 						<span class="sub">You can delete your account at any time. This will delete your profile and related information.</span>
 						<div class="AAStext">
-							<h4>Do you want to delete the account?</h4>	
+							<h4 class="deletePopup">Do you want to delete the account?</h4>	
 						</div>
 					</div>
 
@@ -446,6 +464,12 @@
 	</div>
 
 </section>
+<div class="popup" id="deletePopup">
+	<div class="popup__container">
+		<a href="home.html">Yes, delete my account</a>
+		<span class="popupClose">Cancel</span>
+	</div>
+</div>
 
 
 <!-- <div class="treatmentsSection faqSection">
