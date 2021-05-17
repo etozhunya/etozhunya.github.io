@@ -12,7 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
-
+	<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
 </head>
 
 <body class="book faq">
@@ -21,7 +21,7 @@
 	   <div class="header__top widthWrapper flex">
 	      <a href="home.html" class="logo"><img src="images/src/logo.svg" alt=""></a>
 	      <ul class="header__top-list menuList flex transformed">
-	      	         <li><a href="aboutUs.html" class="clicked">ABOUT US</a></li>
+	      	         <li><a href="aboutUs.html">ABOUT US</a></li>
 	      	         <li><a href="treatments.html">TREATMENTS</a></li>
 	      	         <li><a href="doctors.html">DOCTORS</a></li>
 	      	         <li><a href="pricing.html">PRICING</a></li>
@@ -96,11 +96,57 @@
 			<li>
 				<h4>Choose Appointment</h4>
 				<div class="animated">
-					<p>
-					In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
-					<br><br>
-					The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
-					</p>
+					<form action="">
+						<label for="typeOfTreatmentOne">
+							<span>Type of treatment</span>
+							<select name="" id="">
+								<option value="Botulinum treatments" chosen>Botulinum treatments</option>
+								<option value="Botulinum treatments">Botulinum treatments</option>
+								<option value="Botulinum treatments">Botulinum treatments</option>
+							</select>
+						</label>
+
+						<label for="typeOfService">
+							<span>Type of Service</span>
+							<select name="" id="">
+								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet CHF 350</option>
+								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet CHF 350</option>
+								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet CHF 350</option>
+							</select>
+						</label>
+
+						<div class="radio_width">
+							<span>Add to your appointment</span>
+							<div class="radio_core">
+								<label>
+								    <input name="dzen" type="radio" value="I am an existing customer" checked="">
+								    <span class="radio">
+								    	I am an existing customer
+								    </span>
+								</label>
+								<label>
+								    <input name="dzen" type="radio" value="I am an existing customer">
+								    <span class="radio">
+								    	I am an existing customer
+								    </span>
+								</label>
+							</div>
+						</div>
+
+						<label for="doctors">
+							<span>Doctor</span>
+							<select name="doctors" id="">
+								<option value="DR. Jonathan Davis">DR. Jonathan Davis</option>
+								<option value="DR. Jonathan Davis">DR. Jonathan Davis</option>
+								<option value="DR. Jonathan Davis">DR. Jonathan Davis</option>
+							</select>
+						</label>
+
+						<label for="typeOfTreatmentFivth">
+							<span>Type of treatment</span>
+							<input type="text" class="datePicker">
+						</label>
+					</form>
 				</div>
 			</li>
 			<li>
@@ -124,6 +170,58 @@
 				</div>
 			</li>
 		</ul>
+	</div>
+</div>
+
+<div class="terms">
+	<div class="widthWrapper">
+		<h3>General terms and conditions of the Dr Dan Iselin Practice</h3>
+		<div class="termsText flex">
+			<div class="termsText-column">
+						<h4 class="firstH">1. Scope</h4>
+						<p>
+							These General Terms and Conditions (“GTC”) apply to the business area of the practice.
+			                <br><br>
+							Dan Iselin, Bahnhofstrasse 37, 8001 Zurich, Switzerland, (hereinafter referred to as “Practice”). 
+							<br><br>
+							The owner and employees of the Practice provide paid medical services in the field of aesthetic medicine.
+							<br><br>
+							These General Terms and Conditions apply to the location mentioned above, which the doctor and employee provide directly and indirectly to the customer.
+						</p>
+						<h4>2. Cancellations and rescheduling of appointments</h4>
+						<p>Appointments may be postponed or cancelled. You can do this free of charge up to 24 hours before the agreed date.
+							<br><br>
+							For late cancellations, forgotten or postponed appointments, CHF 150 will be charged for thereserved time.
+							<br><br>
+							The clinic reserves the right to refuse to accept new appointments or provide treatment should clients  postpone and/or cancel an excessive number of appointments. 
+						<br><br>No additional appointments can be made in the event of there being a disproportionate number of late arrivals, appointment changes or cancellations.</p>	
+			</div>
+			<div class="termsText-column">
+				<p>Appointments that are made with incorrect required data (first name, surname, mail address, residential address, date of birth) shall be cancelled.
+					<br><br>
+					For clients who fail to appear for an appointment more than once within a year without cancellation, the practice will not perform any further treatments.<br><br>
+					The customer is obliged to pay the price for treatment directly onsite, in cash or by credit card (no PostFinance Card!). 
+					<br><br>
+				Payment by instalments is not possible, and no invoices are issued.</p>
+					<h4>3. Delays</h4>
+					<p>The practice reserves the right to cancel the appointment if delays occur and to charge a lump sum of CHF 150. 
+					<br><br>
+				The client is responsible for knowing the exact location of the practice ahead of time as well as taking into account possible delays in traffic (traffic jams, difficult parking), or other foreseeable obstacles.</p>
+					<h4>4. Follow-up checks and treatment</h4>
+					<p>A free follow-up examination or treatment is carried out within 2 to a maximum of 3 weeks unless differently agreed with the doctor. Requests for follow-up treatment received by the Practice after this time will be invoiced.</p>
+			</div>
+
+
+            <div class="termsText-column">
+            	<h4 class="firstH">5. Payment</h4>
+            	<p>Payment options: Cash payment, Maestro or credit card accepted. No PostFinance Card, payment by instalments or invoice.
+            		<br><br>If the customer cannot pay the amount, they are automatically in default. Starting from the time of default, the customer shall owe default interest in the amount of 5%. Additional payments are due within five working days. After that, the customer is admonished and served a written reminder. In the case that the payment processing isn’t possible due to a technical problem on the part of the practice’s payment service provider, the customer may transfer the amount to the practice’s bank account within ten days using a payment slip.
+            		<br><br>The customer is not allowed to offset the invoiced amount against a possible claim of the customer against the Practice.
+            		<br><br>The practice has the right to refuse further services in case of late payment.</p>
+            	<h4>6. Amendments</h4>
+                <p>The practice may change these terms and conditions at any time. The new version comes into force by publication on the practice’s website. Generally, the text of the General Terms and Conditions that is effective at the conclusion of the contract applies to customers, except if the customer has agreed to a newer version of the GTC.</p>
+            </div>
+		</div>
 	</div>
 </div>
 
@@ -166,6 +264,7 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+<script src="https://unpkg.com/js-datepicker"></script>
 <script src="js/app.js"></script>
 <!-- FOOTER ENDS-->
 </body>

@@ -34,13 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
   	      ]
   	}); 
 
-    $('.headings li').click(function() {
+    $('.headings li h4').click(function() {
           $(this).toggleClass('active');
-          $(this).find('h4').toggleClass('active');
+          $(this).parent().toggleClass('active');
         if ($(this).hasClass('active')) {
-          $(this).find('.animated').slideDown();
+          $(this).next().slideDown();
         } else  
-            $(this).find('.animated').slideUp();
+            $(this).next().slideUp();
     });
 
   $('.faces li').click(function() {
@@ -215,6 +215,13 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 // auto changer input SMS verification ENDS
 
+
+// DATEPICKER
+var pickers = document.querySelectorAll('.datePicker');
+pickers.forEach(function(el) {
+
+    datepicker(el)
+})
 
 
   // // Select all »a« elements with a parent class »links« and add a function that is executed on click
