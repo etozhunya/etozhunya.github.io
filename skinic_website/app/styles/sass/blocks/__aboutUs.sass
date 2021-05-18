@@ -1,12 +1,14 @@
 .aboutUs
 	.content
 		padding-top: 184px
+		padding-bottom: 0
 		.contentTemplate
 			margin-bottom: 50px
 			&__text
 		&::after
 			content: none
 		.treatmentPhilosophy
+			margin-bottom: 25px
 			.contentTemplate__text
 				p 
 					height: 350px !important
@@ -15,6 +17,28 @@
 
 	.videoContent
 		.widthWrapper
+			.videoContainer
+				position: relative
+				margin-bottom: 134px
+				cursor: pointer
+				&-img
+					position: absolute
+					left: 0
+					top: 0 
+					height: 100%
+					width: 100%
+					display: flex
+					justify-content: center
+					align-items: center
+					img
+						height: 131px
+						width: 131px
+						&.hidden
+							opacity: 0
+							transition: .5s
+
+				video
+					width: 100%					
 			p
 				font-family: HelveticaRegular
 				font-size: 16px

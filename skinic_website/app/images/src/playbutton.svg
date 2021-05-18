@@ -1,8 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="131" height="131" viewBox="0 0 131 131">
-  <g id="Сгруппировать_161793" data-name="Сгруппировать 161793" transform="translate(-655 -2083)">
-    <g id="Эллипс_2" data-name="Эллипс 2" transform="translate(655 2083)" fill="none" stroke="#fff" stroke-width="2">
-      <circle cx="65.5" cy="65.5" r="65.5" stroke="none"/>
-      <circle cx="65.5" cy="65.5" r="64.5" fill="none"/>
+  <g id="Сгруппировать_161796" data-name="Сгруппировать 161796" transform="translate(-655 -2083)">
+    <g id="Сгруппировать_161795" data-name="Сгруппировать 161795">
+      <g id="Эллипс_2" data-name="Эллипс 2" transform="translate(655 2083)" fill="none" stroke="#fff" stroke-width="2">
+        <circle cx="65.5" cy="65.5" r="65.5" stroke="none"/>
+        <circle cx="65.5" cy="65.5" r="64.5" fill="none"/>
+      </g>
     </g>
+    <path id="Многоугольник_1" data-name="Многоугольник 1" d="M16,0,32,28H0Z" transform="translate(735 2133) rotate(90)" fill="#fff"/>
   </g>
 </svg>

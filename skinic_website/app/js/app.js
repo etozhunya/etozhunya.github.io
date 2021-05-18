@@ -14,6 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
           $(".login__menu").addClass("hidden");
           $(this).addClass('hide');
     });
+
+
+
+  $(document).scroll(function(){
+        if($(this).scrollTop() >= $('video').offset().top - 200) {
+            $('video').trigger('play')
+        } else {
+         $('video').trigger('pause')
+        }
+      });
+
+
 	$(".hamburger-icon").click(function (e) {
 	        $(".hamburger-icon").toggleClass("active");
 	        $(".header__menu").toggleClass("hidden");
