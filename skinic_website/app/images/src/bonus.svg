@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="49" viewBox="0 0 49 49">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.094" y1="0.774" x2="0.902" y2="0.287" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d5b168"/>
+      <stop offset="0.969" stop-color="#fee0a3"/>
+      <stop offset="1" stop-color="#ffe2a5"/>
+    </linearGradient>
+  </defs>
+  <g id="Сгруппировать_161792" data-name="Сгруппировать 161792" transform="translate(-202 -2804)">
+    <path id="Контур_83329" data-name="Контур 83329" d="M24.5,0A24.592,24.592,0,0,1,48.533,19.716,23.838,23.838,0,0,1,49,24.5,24.5,24.5,0,1,1,24.5,0Z" transform="translate(202 2804)" fill="url(#linear-gradient)"/>
+    <g id="Сгруппировать_161789" data-name="Сгруппировать 161789">
+      <g id="Сгруппировать_161791" data-name="Сгруппировать 161791">
+        <g id="Сгруппировать_161788" data-name="Сгруппировать 161788">
+          <g id="Сгруппировать_161787" data-name="Сгруппировать 161787">
+            <g id="Сгруппировать_161786" data-name="Сгруппировать 161786">
+              <g id="Сгруппировать_161784" data-name="Сгруппировать 161784">
+                <g id="gift" transform="translate(217 2819)">
+                  <path id="Контур_83167" data-name="Контур 83167" d="M20,12V22H4V12" transform="translate(-2 -2)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                  <rect id="Прямоугольник_147607" data-name="Прямоугольник 147607" width="20" height="5" transform="translate(0 5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                  <line id="Линия_232" data-name="Линия 232" y1="15" transform="translate(10 5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                  <path id="Контур_83168" data-name="Контур 83168" d="M12,7H7.5a2.5,2.5,0,0,1,0-5C11,2,12,7,12,7Z" transform="translate(-2 -2)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                  <path id="Контур_83169" data-name="Контур 83169" d="M12,7h4.5a2.5,2.5,0,0,0,0-5C13,2,12,7,12,7Z" transform="translate(-2 -2)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

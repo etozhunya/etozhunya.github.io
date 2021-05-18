@@ -23,16 +23,20 @@
 					&.active
 						background: transparent
 						border: solid 1px #e0e0e0
+					&:last-child
+						&.active
+							background: linear-gradient(234deg, #ebffea 98%, #caffff 4%)
 					h4
+						padding: 40px 60px
 
 					.animated
-						padding: 0 30px
+						padding: 0 60px
 						form
 							display: flex
 							justify-content: space-between
 							flex-flow: wrap
 							label
-								width: 45%
+								width: 48%
 								border-bottom: 1px solid #e0e0e0
 								margin-bottom: 36px
 								select, input
@@ -42,6 +46,9 @@
 									font-family: helveticaRegular
 									font-size: 21px
 									color: #000
+								input
+									&::placeholder
+										color: #000
 								span
 									display: block
 									font-family: helveticaRegular
@@ -147,7 +154,7 @@
 										.radio
 											background-color: rgba(0, 0, 0, 0.05)
 											color: rgba(0, 0, 0, 0.35)
-											padding: 10px 0
+											padding: 13px 0
 											display: block
 											width: 100%
 											font-size: 16px
@@ -162,9 +169,55 @@
 							padding: 14px 9%
 							cursor: pointer
 
+						.confirmation
+							font-family: helveticaRegular
+							padding: 9px 0px 52px 0px
+							p
+								font-size: 16px
+								padding: 0
+								max-width: 60%
+								color: #212529
+							.time
+								font-family: saol
+								display: block
+								margin: 37px 0 49px 0
+								font-size: 68px
+							.price
+								font-size: 48px
+								font-family: saolLight
+								margin-bottom: 29px
+								span
+									font-family: saol
+							.bonuses
+								position: relative
+								margin-bottom: 39px
+								padding-left: 65px
+								span
+									display: block
+									&:first-child
+										font-size: 18px
+										margin-bottom: 5px
+										color: #707070
+									&:last-child
+										font-size: 27px
+								&:before
+									content: ''
+									display: block
+									position: absolute
+									left: 0 
+									top: 0
+									width: 49px
+									height: 49px 
+									border-radius: 50px
+									background-color: #D5B168
+									background: url('../images/src/bonus.svg') center center/cover no-repeat
+							.italic
+								margin-bottom: 0
+								margin-top: 49px
+								font-family: helveticaItalic
 	.terms
 		padding: 46px 0 140px 0
-		background: linear-gradient(to bottom, #fff8ed, rgba(255, 255, 255, 0))
+		background: linear-gradient(234deg,#EBFFEA 78%,#caffff 164%)
 		border: solid 1px rgba(0, 0, 0, 0)
 		h3
 			font-family: saol
@@ -195,18 +248,77 @@
 
 	#confirmPopup
 		.popup__container
-			height: 70%
+			height: auto
 			&-ver
 				max-width: 345px
+				position: relative
+				padding: 44px 0 87px 0
 				h1
+					font-family: italiana
 					width: 100%
 					text-align: center
-				p
+					font-size: 36px
+				.sub
+					font-family: blacker
+					line-height: 19px
+					margin: 17px auto 51px auto
 					text-align: center
+					max-width: 80%
 				input
 					width: 100%
+				label
+					margin-bottom: 48px
+					display: block
+					span
+						font-size: 14px
+						font-family: helveticaRegular
+						margin-bottom: 15px
+						display: block
+					input
+						appearance: none
+						-webkit-appearance: none
+						font-size: 21px
+						width: 100%
+						padding: 0 0 8px 0
+						border: none
+						border-bottom: 1px solid #e0e0e0
+						font-family: helveticaRegular
+				button
+					appearance: none
+					background-color: #343A40
+					color: #fff
+					padding: 10px 0px
+					border: none
+					cursor: pointer
+					font-size: 20px
+					width: 100%
+					display: block
+					margin-top: 27px
+					font-family: helveticaRegular
+					&:hover
+						background-color: #23272B	
+				.code
+					font-size: 16px
+					font-family: helveticaRegular
+					text-align: left
+					a
+						font-family: helveticaRegular
+						color: $highlighted	
+
 				.sms
 					justify-content: space-between
 					input
 						width: 24%
 						text-align: center
+						&::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+							-webkit-appearance: none
+						  	margin: 0
+			  	
+
+
+
+
+
+
+
+

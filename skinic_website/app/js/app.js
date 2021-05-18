@@ -43,6 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
             $(this).next().slideUp();
     });
 
+    $('.specTable li').click(function() {
+      $(this).find('h4').toggleClass('active');
+      $(this).toggleClass('active');
+      if ($(this).hasClass('active')) {
+          $(this).find('.animated').slideDown();
+        } else  
+            $(this).find('.animated').slideUp();
+    });
+
   $('.faces li').click(function() {
     $('.triangle').removeClass('hidden')
     $(this).addClass('active').siblings().removeClass('active');
@@ -118,6 +127,15 @@ document.addEventListener('DOMContentLoaded', () => {
   $('.popupClose').click(function() {
     $('#confirmPopup').removeClass('active')
   });
+
+  $('.step1 button').click(function() {
+    $('.step1').removeClass('visible')
+    $('.step2').addClass('visible')
+  })
+  $('.step2 button').click(function() {
+    $('.step2').removeClass('visible')
+    $('.step3').addClass('visible')
+  })
 
   $('#nameEdit').click(function() {
     $('.nameEdit').focus()

@@ -1,6 +1,8 @@
 .treatmentsPage
 	.treatments
 		margin-bottom: 40px
+		.specP
+			padding-right: 50px
 		.widthWrapper
 			h1
 				padding-top: 137px
@@ -139,6 +141,9 @@
 							display: block
 							width: 237px
 							padding: 14px 0 14px 0
+							border: 1px solid black
+							&:hover
+								background-color: black
 
 
 .faq, .faqPricing
@@ -238,16 +243,24 @@
 							display: inline-block
 							background-color: #fff
 							padding-left: 22px
+			&:nth-child(2)
+				&.active
+					ul
+						li
+							span, h3
+								background-color: #FFFBFE
+					&:before
+						background-color: #FFFBFE
 			&.active
 				ul
 					li
 						span, h3
-							background-color: #FFF7EA
+							background-color: #FFF0EB
 				&:before
 					content: ''
 					display: block
 					position: absolute
-					background-color: #FFF7EA
+					background-color: #FFF0EB
 					width: 100%
 					height: 100%
 					z-index: -2
