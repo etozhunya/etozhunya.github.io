@@ -52,7 +52,8 @@
 								span
 									display: block
 									font-family: helveticaRegular
-									font-size: 14px							
+									font-size: 14px	
+									line-height: 1.5						
 							.specLabel
 								border: none	
 								.check
@@ -168,6 +169,7 @@
 							margin-bottom: 90px
 							padding: 14px 9%
 							cursor: pointer
+							border-radius: 5px
 
 						.confirmation
 							font-family: helveticaRegular
@@ -314,7 +316,62 @@
 							-webkit-appearance: none
 						  	margin: 0
 			  	
-
+@media (max-width:768px) 
+	.book
+		.bookSchedule
+			.widthWrapper
+				.headings
+					li
+						h4
+							padding: 30px 20px
+						.animated
+							padding: 0 20px
+							form
+								flex-flow: wrap
+								label
+									width: 100%
+								.radio_width, .radio_width50
+									width: 100%
+									.radio_core
+										width: 100%
+										label
+											.radio
+												padding: 5px 0
+							.button
+									display: block
+									text-align: center
+									padding: 14px 0
+									margin-bottom: 40px
+							.confirmation
+								p
+									max-width: none
+								.time
+									font-size: 50px
+									line-height: 70px
+								.price
+									font-size: 30px
+								.bonuses
+								.price
+		.terms
+			padding-bottom: 100px
+			.widthWrapper
+				.termsText
+					display: block
+					&-column
+						width: 100%
+						margin-bottom: 10px
+		.popup
+		#confirmPopup
+			.popup__container
+				width: 90%
+				&-ver
+					padding: 30px 15px 70px 15px
+					.code
+						text-align: center
+						a
+							display: block
+							margin-top: 5px
+					 	
 
 
 

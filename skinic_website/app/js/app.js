@@ -16,14 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    if ($("body").hasClass("media")) {
+        $(document).scroll(function(){
+          if($(this).scrollTop() >= $('video').offset().top - 200) {
+              $('video').trigger('play')
+          } 
+        });
+    }
 
-  $(document).scroll(function(){
-        if($(this).scrollTop() >= $('video').offset().top - 200) {
-            $('video').trigger('play')
-        } else {
-         $('video').trigger('pause')
-        }
-      });
+
 
 
 	$(".hamburger-icon").click(function (e) {
@@ -129,15 +130,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   $('.deletePopup').click(function() {
     $('#deletePopup').addClass('active')
-  });
-  $('.popupClose').click(function() {
-    $('#deletePopup').removeClass('active')
+    $('body').addClass('scrollDisabled')
   });
   $('.confirmPopup').click(function() {
     $('#confirmPopup').addClass('active')
+    $('body').addClass('scrollDisabled')
   });
   $('.popupClose').click(function() {
+    $('#deletePopup').removeClass('active')
     $('#confirmPopup').removeClass('active')
+    $('body').removeClass('scrollDisabled')
   });
 
   $('.step1 button').click(function() {
@@ -253,41 +255,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // DATEPICKER
-var pickers = document.querySelectorAll('.datePicker');
-pickers.forEach(function(el) {
+  var pickers = document.querySelectorAll('.datePicker');
+  pickers.forEach(function(el) {
 
-    datepicker(el)
-})
-
-
-  // // Select all »a« elements with a parent class »links« and add a function that is executed on click
-  // $( '.scroll' ).on( 'click', function(e){
-    
-  //   // Define variable of the clicked »a« element (»this«) and get its href value.
-  //   var href = $(this).attr( 'href' );
-    
-  //   // Run a scroll animation to the position of the element which has the same id like the href value.
-  //   $( 'html, body' ).animate({
-  //     scrollTop: $( href ).offset().top
-  //   }, '300' );
-    
-  //   // Prevent the browser from showing the attribute name of the clicked link in the address bar
-  //   e.preventDefault();
-
-  // });
-
-
-
-
-
-
-
-	// //ESC
-	// $(document).on("keyup", function (e) { 
-	//   if (e.keyCode === 27) { 
-	//     $('.hamburger').removeClass('active');
-	//     $('.headerMenu').addClass('hidden');
-	//   }
-	// });	
-
+      datepicker(el)
+  })
 })

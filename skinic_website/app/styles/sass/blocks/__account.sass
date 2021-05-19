@@ -318,15 +318,48 @@
 			.bonusesTable
 				width: 100%
 				position: relative
-				li
+				> li
 					display: flex
 					justify-content: space-between
 					align-items: center
 					padding: 20px 24px 23px 42px !important
+					position: relative
+					.tableUSE
+						width: 100%
+						display: flex
+						justify-content: space-between
+						li
+							width: 20%
+							h5
+								font-family: helveticaRegular
+								padding: 3px 0
+								font-size: 14px
+								color: #909090
+								margin-bottom: 6px
+							span
+								color: #171616
+								font-size: 16px
+								font-family: helveticaMedium
+							&:nth-child(1)
+								width: 35%
+							&:nth-child(2)
+								width: 30%								
+							&:nth-child(3)
+								width: 20%
+								text-align: right
+								span
+									font-size: 20px	
+							&:nth-child(4)
+								width: 20%
+								text-align: right
 					.button
 						padding: 14px 0
 						width: 14%
 						text-align: center
+						position: absolute
+						right: 24px
+						top: 50%
+						transform: translateY(-50%)
 					&::after
 						content: none !important
 					&:hover
@@ -336,8 +369,7 @@
 						tr
 							&:first-child
 								td
-									padding: 3px 0
-									font-size: 14px
+									
 							&:nth-child(2)
 								td
 									font-size: 16px
@@ -356,7 +388,7 @@
 									text-align: right	
 	.headings
 		margin-bottom: 140px
-		li
+		> li
 			padding: 20px 100px 24px 28px
 			border-radius: 8px
 			border: 1px solid #E0E0E0
@@ -381,40 +413,66 @@
 				&::after 
 					transition: .5s
 					transform: translateY(-50%) rotate(540deg)
+			.table, .tableInside
+				display: flex
+				justify-content: space-between
+				align-items: center
+				li
+					width: 25%
+					.btn
+						position: relative
+						padding: 2px 10px 3px 10px
+						border-radius: 10px
+						transform: translateY(4px)
+						display: inline-block
+					.btnActive
+						color: #00CE97
+						background-color: rgba(0, 206, 151, 0.2)
+					.btnCompleted
+						color: #febc2e
+						background-color: rgba(254, 188, 46, 0.2)
+					.btnCanceled
+						color: #ff0062
+						background-color: rgba(255, 0, 98, 0.2)
+					h5
+						color: #909090
+						font-family: helveticaRegular
+						font-size: 14px
+						margin-bottom: 10px
+					span
+						font-size: 14px
+						font-family: helveticaMedium
+						color: #171616
+						// width: 100px
+					&:nth-child(3)
+						width: 25%
+					&:nth-child(4)
+						width: 15%
+					&:last-child
+						width: 15%
+						text-align: right
+			.tableInside
+				justify-content: flex-start
+				li
+					padding-top: 21px
+					&:last-child
+						text-align: left
+
+
 			> table
 				position: relative
 			table
 				width: 100%
-				.btn
-					position: relative
-					padding: 2px 10px 3px 10px
-					border-radius: 10px
-					transform: translateY(4px)
-					display: inline-block
-				.btnActive
-					color: #00CE97
-					background-color: rgba(0, 206, 151, 0.2)
-				.btnCompleted
-					color: #febc2e
-					background-color: rgba(254, 188, 46, 0.2)
-				.btnCanceled
-					color: #ff0062
-					background-color: rgba(255, 0, 98, 0.2)
 				tr
 					height: 25px
 					&:first-child
 						td
-							color: #909090
-							font-family: helveticaRegular
+							
 					td
-						font-size: 14px
-						font-family: helveticaMedium
-						color: #171616
-						width: 25%
+						
 						&:nth-child(4)
-							width: 15%
-						&:last-child
-							text-align: right
+							width: 100px
+						
 			.animated
 				height: 196px
 				overflow: visible
@@ -432,8 +490,11 @@
 
 @media (max-width: 768px)
 	.account
+		.shortTable
+			width: 100% !important
 		.widthWrapper
 			.greetings
+				padding-top: 100px
 				&__photo
 					> img
 						width: 95px
@@ -443,12 +504,14 @@
 						width: 30px
 
 				&__content
+					margin-left: 10px
 					h1
 						font-size: 25px
 						line-height: 25px
 					p
 						margin-top: 10px
 						font-size: 12px
+						line-height: 15px
 			.steps
 				display: block
 				li
@@ -485,8 +548,45 @@
 									font-size: 12px
 					.headings
 						li
-							padding: 10px
+							padding: 10px !important
+							.table
+								flex-flow: wrap
+								align-items: flex-start
+								justify-content: flex-start
+								li
+									width: 33%
+									&:last-child
+										text-align: left
+							.tableUSE
+								flex-flow: wrap
+								li
+									width: 35%
+									position: relative
+									.button
+										position: relative
+										width: 100%
+										right: 5px
+										top: 32px
+										display: block
+									&:nth-child(3)
+										text-align: left
 
+							.animated
+								.tableInside
+									width: 100%
+									li
+										width: 50%
+								.button
+									transform: translate3d(0,0,0)
+									display: block
+									text-align: center
+									width: 100%
+									padding: 14px 0
+									margin-top: 50px
+		#deletePopup
+			.popup__container
+				width: 90%
+				height: 30%
 							
 
 

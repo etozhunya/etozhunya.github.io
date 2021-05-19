@@ -1,0 +1,102 @@
+.pricing
+	.headings
+		width: 100vw
+		position: relative
+		margin-bottom: 141px
+		li:nth-child(1)
+			margin-top: 17px
+		li
+			width: 100%
+			position: relative
+			h4
+				max-width: 1077px
+				margin: 0 auto
+			.animated
+				max-width: 1078px
+				margin: 0 auto
+				padding-bottom: 79px
+				ul
+					li 
+						display: flex
+						justify-content: space-between
+						align-items: center
+						position: relative
+						margin-bottom: 26px
+						&:before
+							content: ''
+							display: block
+							position: absolute
+							height: 1px
+							width: 100%
+							background-color: #E0D6CF
+							top: 50%
+							transform: translateY(-50%)
+							z-index: -1
+						span
+							color: #1F1F1F
+							font-family: helveticaRegular
+							font-size: 18px
+							padding-right: 20px
+							display: block
+							background-color: #fff
+
+						h3
+							font-family: saol
+							font-size: 29px
+							display: inline-block
+							background-color: #fff
+							padding-left: 22px
+			&:nth-child(2)
+				&.active
+					ul
+						li
+							span, h3
+								background-color: #FFFBFE
+					&:before
+						background-color: #FFFBFE
+			&.active
+				ul
+					li
+						span, h3
+							background-color: #FFF0EB
+				&:before
+					content: ''
+					display: block
+					position: absolute
+					background-color: #FFF0EB
+					width: 100%
+					height: 100%
+					z-index: -2
+
+@media (min-width: 768px) and (max-width: 1024px) 
+	.pricing
+		.headings
+			li
+				h4, .animated
+					padding: 40px 10%
+				h4
+					&:after
+						right: 10%
+
+@media (max-width: 767px) 
+	.pricing
+		h1
+			text-align: center
+			margin: 20px 0 !important
+		.headings
+			li
+				h4
+					padding: 40px 20px
+					font-size: 22px
+					&:after
+						right: 20px
+				.animated
+					padding: 0 20px
+					ul
+						li
+							span
+								font-size: 12px
+								max-width: 170px
+								padding-right: 5px !important
+							h3
+								font-size: 19px
