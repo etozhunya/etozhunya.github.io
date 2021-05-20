@@ -128,6 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.AAScontent').removeClass('in-view').eq($(this).index()).addClass('in-view');
   });
 
+  $('.pricing .animated li').hover(function() {
+    console.log('asdas')
+      // $(this).find('.hoverContainer .button').addClass('hover')
+  })
+
   $('.deletePopup').click(function() {
     $('#deletePopup').addClass('active')
     $('body').addClass('scrollDisabled')

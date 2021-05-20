@@ -9,8 +9,6 @@
 			.faces
 				li 
 					cursor: pointer
-					h3
-						margin-bottom: 35px
 					&::before
 						content: none
 	.triangle
@@ -66,6 +64,10 @@
 
 					.link
 						margin-left: 16px !important
+			.imgLeft
+				.contentTemplate__text
+					p
+						width: 45vw
 			.content
 				padding: 0
 				.contentTemplate
@@ -75,11 +77,11 @@
 						padding: 10px 0
 						h2
 							margin-top: 8px
-							font-family: Italiana
+							font-family: saol
 							font-size: 39px
 						.chf
 							display: block
-							margin: 24px 0 103px
+							margin: 24px 0 50px
 							padding-left: 15%
 							font-family: saol
 							font-size: 21px
@@ -210,6 +212,10 @@
 						&-box
 							width: 100%
 @media (max-width: 1024px) 
+	.imgLeft
+		.contentTemplate__text
+			p
+				width: 100% !important
 	.treatmentsInfoPage
 		.treatmentsSection
 			.widthWrapper
