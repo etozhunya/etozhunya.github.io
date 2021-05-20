@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    if ($(window).width() < 1024) {
+        $('.pricing .headings .animated ul li ').click(function(){
+           window.location.href='bookTreatment.html';
+        })
+    }
+
 
 
 	$(".hamburger-icon").click(function (e) {
@@ -128,10 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.AAScontent').removeClass('in-view').eq($(this).index()).addClass('in-view');
   });
 
-  $('.pricing .animated li').hover(function() {
-    console.log('asdas')
-      // $(this).find('.hoverContainer .button').addClass('hover')
-  })
+  if ($(window))
 
   $('.deletePopup').click(function() {
     $('#deletePopup').addClass('active')

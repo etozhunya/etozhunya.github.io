@@ -29,8 +29,8 @@
 							position: absolute
 							height: 1px
 							width: 100%
-							background-color: #E0D6CF
-							top: 50%
+							background-color: rgba(224, 214, 207, 0.3)
+							top: 55%
 							transform: translateY(-50%)
 							z-index: -1
 						span
@@ -64,21 +64,20 @@
 							span, .hoverContainer 
 								background-color: #FFFBFE
 					&:before
-						background-color: #FFFBFE
+						background: linear-gradient(75deg, rgba(255, 243, 254, 0.73) 8%, rgba(255, 251, 254, 0.73) 97%) 
 			&.active
 				ul
 					li
 						span, .hoverContainer 
-							background-color: #FFF0EB
+							background: #fff5f1
 				&:before
 					content: ''
 					display: block
 					position: absolute
-					background-color: #FFF0EB
+					background: linear-gradient(239deg, rgba(255, 247, 234, 0.65), rgba(255, 240, 235, 0.65) 2%)
 					width: 100%
 					height: 100%
 					z-index: -2
-
 @media (min-width: 768px) and (max-width: 1024px) 
 	.pricing
 		.headings
@@ -89,6 +88,24 @@
 					&:after
 						right: 10%
 
+@media (min-width: 1024px) and (max-width: 1200px)
+	.pricing
+		.headings
+			li
+				h4
+					padding: 43px 20px
+					&::after
+						right: 20px
+				.animated
+					padding: 0 20px 78px 20px
+@media (max-width: 1024px) 
+	.pricing
+		.headings
+			li
+				.animated
+					.hoverContainer
+						.button
+							display: none
 @media (max-width: 767px) 
 	.pricing
 		h1
@@ -102,7 +119,7 @@
 					&:after
 						right: 20px
 				.animated
-					padding: 0 20px
+					padding: 20px 20px 50px 20px
 					ul
 						li
 							span
@@ -110,4 +127,4 @@
 								max-width: 170px
 								padding-right: 5px !important
 							h3
-								font-size: 19px
+								font-size: 19px !important
