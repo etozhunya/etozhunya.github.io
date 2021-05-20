@@ -124,6 +124,7 @@
 						background-color: #fff3fe
 						text-align: center
 						float: right
+						border-radius: 5px
 						span
 							font-size: 24px
 							font-family: saol
@@ -155,13 +156,29 @@
 				&__text
 					width: 55% 
 			.treatmentsContent__plan-box
-				background-image: linear-gradient(222deg, #ebffea 97%, #caffff 5%) !important
+				 background-image: linear-gradient(222deg, #ebffea, #caffff 36%) !important
+				 span
+				 	line-height: 1.3
 			.faqLinks
-				a
+				a, span
 					font-family: saol
 					font-size: 24px
-				li:nth-child(2)
-					margin: 0 56px
+				li
+					&:nth-child(2)
+						margin: 0 56px
+					&.active
+						span
+							color: $highlighted
+							position: relative
+							&::after
+								content: ''
+								position: absolute
+								width: 100%
+								height: 2px
+								left: 0
+								bottom: -3px
+								background-color: $highlighted	
+
 
 			h1
 				margin: 52px 0 88px 0
@@ -197,6 +214,10 @@
 					transition: 1s
 					border: solid 1px rgba(0, 0, 0, 0)
 					background: linear-gradient(248deg, #fff7ea, #fff0eb 2%)
+		.faqWrapper
+			display: none
+			&.visible
+				display: block
 @media (max-width: 1200px) 
 	.faqLinks
 		display: block !important

@@ -1,11 +1,3 @@
-// // Import jQuery module (npm i jquery)
-// import $ from 'jquery'
-// window.jQuery = $
-// window.$ = $
-
-// // Import vendor jQuery plugin example (not module)
-// require('~/app/libs/mmenu/dist/mmenu.js')
-
 document.addEventListener('DOMContentLoaded', () => {
 
   $(".close-icon").click(function (e) {
@@ -53,22 +45,25 @@ document.addEventListener('DOMContentLoaded', () => {
   	      ]
   	}); 
 
+
     $('.headings li h4').click(function() {
           $(this).toggleClass('active');
-          $(this).parent().toggleClass('active');
-        if ($(this).hasClass('active')) {
-          $(this).next().slideDown();
-        } else  
-            $(this).next().slideUp();
+          $(this).next().slideToggle()
+          $(this).parent().siblings().find('.animated').slideUp()
+          $(this).parent().siblings().find('h4').removeClass('active')
     });
+
 
     $('.specTable li').click(function() {
       $(this).find('h4').toggleClass('active');
       $(this).toggleClass('active');
+      $(this).siblings().find('.animated').slideUp()
+      $(this).siblings().find('h4').removeClass('active')
       if ($(this).hasClass('active')) {
           $(this).find('.animated').slideDown();
         } else  
             $(this).find('.animated').slideUp();
+
     });
 
   $('.faces li').click(function() {
@@ -76,6 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
     $(this).addClass('active').siblings().removeClass('active');
     $('.block').removeClass('in-view').eq($(this).index()).addClass('in-view');
     $('.slider').slick('setPosition');
+  });
+
+  $('.faqLinks li').click(function() {
+    $(this).addClass('active').siblings().removeClass('active');
+    $('.faqWrapper').removeClass('visible').eq($(this).index()).addClass('visible');
   });
 
   $('.faces li').click(function() {
@@ -134,7 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.AAScontent').removeClass('in-view').eq($(this).index()).addClass('in-view');
   });
 
-  if ($(window))
 
   $('.deletePopup').click(function() {
     $('#deletePopup').addClass('active')
@@ -147,6 +146,10 @@ document.addEventListener('DOMContentLoaded', () => {
   $('.popupClose').click(function() {
     $('#deletePopup').removeClass('active')
     $('#confirmPopup').removeClass('active')
+    $('body').removeClass('scrollDisabled')
+  });
+  $('.fade__container').click(function() {
+    $('.popup').removeClass('active')
     $('body').removeClass('scrollDisabled')
   });
 
@@ -180,10 +183,12 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.phoneEdit').focus()
     $(this).addClass('hidden')
     $('.phoneClose').addClass('visible')
+    $('.confirmationLink').addClass('visible')
     $('.phoneEdit').prop('readonly', false);
     $('.phoneButtons').addClass('visible')
   })
   $('.phoneClose').click(function() {
+    $('.confirmationLink').removeClass('visible')
     $('.phoneClose').removeClass('hidden')
     $('.phoneClose').removeClass('visible')
     $('#phoneEdit').removeClass('hidden')
@@ -259,6 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.methodEdit').attr('disabled', true);
     $('.methodButtons').removeClass('visible')
   })
+
 // auto changer input SMS verification ENDS
 
 

@@ -85,6 +85,8 @@
 				<p>Do you want to change your account? <a href="#" class="highlighted">Change</a></p>
 			</div>
 		</div>
+	</div>
+	<div class="widthWrapper widthWrapperWide">
 		<ul class="steps flex">
 			<li data-index="0" class="active">
 				<h2>Receptions and consultations</h2>
@@ -310,7 +312,7 @@
 							<input type="text" id="phone" class="phoneEdit" value="+4 345 34 53 455" readonly="">
 							<span class="sub">Email</span>
 							<input class="phoneEdit" type="Email" value="julianmyers@yahoo.de" readonly="">
-							<p>After updating your email address, a new confirmation link will be automatically sent to that address.</p>
+							<p class="confirmationLink">After updating your email address, a new confirmation link will be automatically sent to that address.</p>
 							<div class="buttons phoneButtons">
 								<span class="button phoneClose">CANCEL</span>
 								<span class="button phoneClose">SAVE CHANGES<span>
@@ -400,7 +402,7 @@
 						</div>
 						<span class="sub">You can delete your account at any time. This will delete your profile and related information.</span>
 						<div class="AAStext">
-							<h4 class="deletePopup">Do you want to delete the account?</h4>	
+							<h4 class="deletePopup hover">Do you want to delete the account?</h4>	
 						</div>
 					</div>
 
@@ -495,14 +497,14 @@
 				</div>				
 			</div>	
 		</div>
-		
 	</div>
 
 </section>
 <div class="popup" id="deletePopup">
+	<div class="fade__container"></div>
 	<div class="popup__container">
-		<a href="home.html">Yes, delete my account</a>
-		<span class="popupClose">Cancel</span>
+		<a href="home.html" class="hover">Yes, delete my account</a>
+		<span class="popupClose" class="hover">Cancel</span>
 	</div>
 </div>
 

@@ -77,7 +77,7 @@
 		<div class="contentTemplate flex imgLeft">
 			<div class="contentTemplate__photo"><img src="images/src/bookHero.png" alt=""></div>
 			<div class="contentTemplate__text">
-				<h1>BOOK TREATMENT <span class="highlighted">ONLINE</span></h1>
+				<h1>BOOK TREATMENT <br><span class="highlighted">ONLINE</span></h1>
 				<p>We offer additional treatments and combination discounts with botulinum & hyaluron. Regular and doctoral students receive a discount of CHF 50, respectively CHF 100 from a price higher than CHF 600. The discount is only applicable upon presentation of the identification card. Please contact us for further information.
 					<br><br>
 				I will gladly consult with you in a private conversation.
@@ -92,11 +92,11 @@
 
 <div class="bookSchedule">
 	<div class="widthWrapper">
-		<h1>BOOK TREATMENT</h1>
+		<h1>Book Treatment</h1>
 		<ul class="headings">
-			<li>
-				<h4>Choose Appointment</h4>
-				<div class="animated">
+			<li class="active">
+				<h4 class="active">Choose Appointment</h4>
+				<div class="animated" style="display: block;">
 					<form action="">
 						<label for="typeOfTreatmentOne">
 							<span>Type of treatment</span>
@@ -110,9 +110,9 @@
 						<label for="typeOfService">
 							<span>Type of Service</span>
 							<select name="" id="">
-								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet CHF 350</option>
-								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet CHF 350</option>
-								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet CHF 350</option>
+								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet <span>CHF 350</span></option>
+								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet <span>CHF 350</span></option>
+								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet <span>CHF 150</span></option>
 							</select>
 						</label>
 
@@ -166,7 +166,7 @@
 
 						<div class="radio_width radio_width50">
 							<span>Add to your appointment</span>
-							<div class="radio_core">
+							<div class="radio_core maleFemale">
 								<label>
 								    <input name="dzen" type="radio" value="I am an existing customer" checked="">
 								    <span class="radio">
@@ -325,9 +325,10 @@
 </div>
 
 <div class="popup" id="confirmPopup">
+	<div class="fade__container"></div>
 	<div class="popup__container">
 		<div class="popup__container-ver">
-			<h1>CONFIRM</h1>
+			<h1>Confirm</h1>
 			<p class="sub">Please verify your phone  number to confirm the appointment booking</p>
 			<label>
 				<span>Phone number</span>
