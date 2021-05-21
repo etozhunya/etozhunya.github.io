@@ -14,9 +14,10 @@
 	<link rel="stylesheet" href="css/main.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
 	<link rel="stylesheet" href="css/intlTelInput.min.css">
+	<link href="css/select2.css" rel="stylesheet" />
 </head>
 
-<body class="book faq">
+<body class="book faq haveSelect">
 <!-- HEADER -->	
 	<header class="header" id="headerScroll">
 	   <div class="header__top widthWrapper flex">
@@ -100,7 +101,7 @@
 					<form action="">
 						<label for="typeOfTreatmentOne">
 							<span>Type of treatment</span>
-							<select name="">
+							<select name="" class="select">
 								<option value="Botulinum treatments" chosen>Botulinum treatments</option>
 								<option value="Botulinum treatments">Botulinum treatments</option>
 								<option value="Botulinum treatments">Botulinum treatments</option>
@@ -109,8 +110,8 @@
 
 						<label for="typeOfService">
 							<span>Type of Service</span>
-							<select name="">
-								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet <span>CHF 350</span></option>
+							<select name="" class="select">
+								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet <span style="color: red">CHF 350</span></option>
 								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet <span>CHF 350</span></option>
 								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet <span>CHF 150</span></option>
 							</select>
@@ -136,7 +137,7 @@
 
 						<label for="doctors">
 							<span>Doctor</span>
-							<select name="doctors" >
+							<select name="doctors"  class="select">
 								<option value="DR. Jonathan Davis">DR. Jonathan Davis</option>
 								<option value="DR. Jonathan Davis">DR. Jonathan Davis</option>
 								<option value="DR. Jonathan Davis">DR. Jonathan Davis</option>
@@ -388,6 +389,7 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+<script src="js/select2.min.js"></script>
 <script src="js/tel/js/intlTelInput.js"></script>
 <script src="js/tel.js"></script>
 <script src="https://unpkg.com/js-datepicker"></script>

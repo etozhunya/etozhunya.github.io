@@ -1,13 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 
-  $('.image-link').magnificPopup({
-     gallery: {
-          enabled: true
-      },
-       type: 'image'
-  });
-
+  if ($('body').hasClass('haveGallery')) {
+    $('.image-link').magnificPopup({
+       gallery: {
+            enabled: true
+        },
+         type: 'image'
+    });
+  }
+  if ($('body').hasClass('haveSelect')) {
+    $('.select').select2();
+  }
 
   $(".close-icon").click(function (e) {
           $(".hamburger-icon").toggleClass("active");
