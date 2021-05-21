@@ -1,4 +1,6 @@
 .treatmentsPage
+	.gallery
+		overflow: visible
 	.treatments
 		margin-bottom: 40px
 		.specP
@@ -95,12 +97,15 @@
 							content: ''
 							display: block
 							position: absolute
-							left: 0
+							right: 0
 							top: -30px
 							z-index: -1
 							width: 78%
 							height: calc(100% + 60px)
 							background-color: #FFF0EB
+						img
+							display: block
+							width: 70%
 					.version3
 						position: relative
 						&::after
@@ -112,19 +117,26 @@
 							z-index: -1
 							width: 78%
 							height: calc(100% + 60px)
-							background-color: #CAFFFF
+							background: linear-gradient(222deg,#ebffea,#caffff 36%)!important
+						img
+							display: block
+							width: 70%
+							float: right
 					.version4
 						position: relative
 						&::after
 							content: ''
 							display: block
 							position: absolute
-							left: 0
+							right: 0
 							top: -30px
 							z-index: -1
 							width: 78%
 							height: calc(100% + 60px)
 							background-color: #FFF3FE
+						img
+							display: block
+							width: 70%
 					&__text
 						padding: 10px 0
 						h2
@@ -146,10 +158,11 @@
 .treatmentsInfoPage
 	.treatmentsSection
 		.widthWrapper
-			img
-				display: block
-				width: 100%
-				padding: 115px 0 30px 0
+			picture
+				img
+					display: block
+					width: 100%
+					padding: 115px 0 30px 0
 			.treatmentsContent
 				align-items: flex-start	
 				justify-content: space-between
@@ -204,6 +217,10 @@
 .faq, .faqPricing
 	.treatmentsSection
 		.widthWrapper
+			> img
+				display: block
+				width: 100%
+				padding: 115px 0 30px 0
 			.treatmentsContent
 				&__text
 					width: 55% 
@@ -311,7 +328,11 @@
 				li
 					margin-bottom: 50px
 					width: 45%
-
+@media (max-width: 767px) 
+	.treatmentsPage
+		.contentTemplate__photo
+			img
+				padding-top: 30px !important
 @media (max-width: 768px) 
 	.treatmentsInfoPage
 		.widthWrapper
