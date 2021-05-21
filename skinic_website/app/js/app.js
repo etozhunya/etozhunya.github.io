@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+
+  $('.image-link').magnificPopup({
+     gallery: {
+          enabled: true
+      },
+       type: 'image'
+  });
+
+
   $(".close-icon").click(function (e) {
           $(".hamburger-icon").toggleClass("active");
           $(".header__menu").toggleClass("hidden");
