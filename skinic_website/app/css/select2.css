@@ -62,9 +62,10 @@
       -webkit-appearance: none; }
 
 .select2-dropdown {
-  background-color: white;
-  border: 1px solid #bf9f5d;
-  border-radius: 4px;
+  box-shadow: 10px 10px 50px rgb(0 0 0 / 50%);
+  background-color: #fff;
+  border: none;
+  border-radius: 5px !important;
   box-sizing: border-box;
   display: block;
   position: absolute;
@@ -79,12 +80,20 @@
   list-style: none;
   margin: 0;
   font-size: 18px;
-  padding: 10px 0 }
+  padding: 10px 0 
+}
 
 .select2-results__option {
-  padding: 14px 5px;
+  padding: 20px 14px;
   user-select: none;
-  -webkit-user-select: none; }
+  -webkit-user-select: none;
+   }
+.select2-results__option:last-child {
+  border-radius: 0px 0px 5px 5px
+}
+.select2-results__option:first-child {
+  border-radius: 5px 5px 0px 0px
+}
 
 .select2-results__option--selectable {
   cursor: pointer; }
@@ -144,7 +153,7 @@
   white-space: nowrap !important; }
 
 .select2-container--default .select2-selection--single {
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 4px; }
   .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: #444;
@@ -328,18 +337,23 @@
             padding-left: 6em; }
 
 .select2-container--default .select2-results__option--group {
-  padding: 0; }
+  padding: 0;
+   }
+.select2-results__option:nth-child(2), .select2-results__option:nth-child(4), .select2-results__option:nth-child(6), .select2-results__option:nth-child(8), .select2-results__option:nth-child(10) {
+  background-color: #EAEAEA;
+  color: #707070;
+}
 
 .select2-container--default .select2-results__option--disabled {
   color: #999; }
 
-.select2-container--default .select2-results__option--selected {
+/*.select2-container--default .select2-results__option--selected {
   background-color: #a77c266b;
-  color: #fff }
+  color: #fff }*/
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-  background-color: #9c731f;
-  color: white; }
+  background-color: #D5B168;
+  color: #fff; }
 
 .select2-container--default .select2-results__group {
   cursor: default;
@@ -512,8 +526,9 @@
   box-shadow: none; }
 
 .select2-container--classic .select2-dropdown {
-  background-color: white;
-  border: 1px solid transparent; }
+  box-shadow: 10px 10px 50px rgb(0 0 0 / 50%);
+  background-color: #fff;
+  border: none; }
 
 .select2-container--classic .select2-dropdown--above {
   border-bottom: none; }

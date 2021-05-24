@@ -17,18 +17,19 @@
 			h1
 				margin-bottom: 29px
 				text-transform: lowercase
+				font-family: 'saol'
+				font-size: 39px
 				&::first-letter
 					text-transform: uppercase
 			.headings
 				max-width: none
 				li
 					margin-bottom: 20px
-					&.active
-						background: transparent
+					&.active, &:hover
 						border: solid 1px #e0e0e0
 					&:last-child
-						&.active
-							background-image: linear-gradient(234deg, rgba(235, 255, 234, 0.33) 98%, rgba(202, 255, 255, 0.33) 4%)
+						&.active, &:hover
+							background: linear-gradient(234deg, rgba(235, 255, 234, 0.33) 98%, rgba(202, 255, 255, 0.33) 4%)
 					h4
 						padding: 40px 60px
 						font-size: 30px
@@ -50,6 +51,7 @@
 									font-family: helveticaRegular
 									font-size: 21px
 									color: #212529
+									background-color: transparent
 									option
 										color: #818080
 								input
@@ -180,7 +182,7 @@
 							margin-bottom: 90px
 							padding: 14px 9%
 							cursor: pointer
-							border-radius: 5px
+							border-radius: 0px
 
 						.confirmation
 							font-family: helveticaRegular
@@ -230,6 +232,9 @@
 								margin-bottom: 0
 								margin-top: 49px
 								font-family: helveticaItalic
+				#confirmationBlock
+					&:hover
+						background-image: linear-gradient(234deg, rgba(235, 255, 234, 0.33) 98%, rgba(202, 255, 255, 0.33) 4%) 
 	.terms
 		padding: 46px 0 140px 0
 		background: linear-gradient(to bottom, #fff8ed, rgba(255, 255, 255, 0))
@@ -300,7 +305,8 @@
 						border: none
 						border-bottom: 1px solid #e0e0e0
 						font-family: helveticaRegular
-				button
+				.popupClose
+					text-align: center
 					appearance: none
 					background-color: #343A40
 					color: #fff
