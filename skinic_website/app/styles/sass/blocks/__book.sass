@@ -26,10 +26,8 @@
 				> li
 					margin-bottom: 20px
 					&.active, &:hover
+						background: green
 						border: solid 1px #e0e0e0
-					&:last-child
-						&.active, &:hover
-							background: linear-gradient(234deg, rgba(235, 255, 234, 0.33) 98%, rgba(202, 255, 255, 0.33) 4%)
 					h4
 						padding: 40px 60px
 						font-size: 30px
@@ -233,8 +231,8 @@
 								margin-top: 49px
 								font-family: helveticaItalic
 				#confirmationBlock
-					&:hover
-						background-image: linear-gradient(234deg, rgba(235, 255, 234, 0.33) 98%, rgba(202, 255, 255, 0.33) 4%) 
+					&:hover, &.active
+						background: linear-gradient(234deg, rgba(235, 255, 234, 0.33) 98%, rgba(202, 255, 255, 0.33) 4%)
 	.terms
 		padding: 46px 0 140px 0
 		background: linear-gradient(to bottom, #fff8ed, rgba(255, 255, 255, 0))
