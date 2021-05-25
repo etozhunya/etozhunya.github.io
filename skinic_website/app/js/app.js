@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if ($("body").hasClass("media")) {
         $(document).scroll(function() {
-            console.log($(document).scrollTop())
             if ($(this).scrollTop() == Math.ceil(Math.round($('video').offset().top)/100)*100) {
                 console.log('PLAY!!!!!')
                 $('video').trigger('play')
