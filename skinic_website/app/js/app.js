@@ -30,10 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
         $(this).addClass('hide');
     });
 
-
     if ($("body").hasClass("media")) {
         $(document).scroll(function() {
-            if ($(this).scrollTop() >= $('video').offset().top - 200) {
+            console.log($(document).scrollTop())
+            if ($(this).scrollTop() == Math.ceil(Math.round($('video').offset().top)/100)*100) {
+                console.log('PLAY!!!!!')
                 $('video').trigger('play')
             }
         });
