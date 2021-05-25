@@ -282,13 +282,26 @@
 			top: 30px !important
 	.header__menu
 		&-photo 
-		    background-position-x: 70%
+		    display: none
 		.button
 			padding: 15px
 		&-content 
+			width: 100%
 			padding-top: 20px
 			.button
 				font-size: 12px
+			.menuList
+				li 
+					// 
+				  	a
+				  		&:hover
+					  		padding-left: 0
+					  		font-family: saol !important;
+					  		font-style: normal
+				  		&:before
+				  			content: none
+				  		&:active
+							color: $highlighted	
 			&--info 
 				li 
 					h3 
@@ -298,7 +311,6 @@
 
 				.social 
 					text-align: left
-					max-width: 230px
 
 @media (max-width: 375px)
 	.header__menu-content--list 
