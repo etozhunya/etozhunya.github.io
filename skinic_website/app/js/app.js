@@ -9,6 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
             type: 'image'
         });
     }
+    // $('.qs-datepicker-container').click(function(){
+    //     console.log('asdad')
+    // })
+    $(document).on("click",".qs-square", function(){
+        $('.timePicker').removeClass('disabled')
+       $('.timeSelect').select2('open');
+    });
+    if ($('.timePicker').hasClass('open')) {
+        console.log('11111111')
+    }
     if ($('body').hasClass('haveSelect')) {
         $('.select').select2();
     }

@@ -2,7 +2,8 @@
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
-  width: 100%;
+  width: 100% !important;
+  padding-right: 25px;
   position: relative;
   vertical-align: middle; }
   .select2-container .select2-selection--single {
@@ -310,7 +311,7 @@
   -webkit-appearance: textfield; }
 
 .select2-container--default .select2-results > .select2-results__options {
-  max-height: 200px;
+  max-height: 400px;
   overflow-y: auto; 
   padding: 0;
   font-family: helveticaLight;

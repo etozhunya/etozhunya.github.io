@@ -42,7 +42,7 @@
 	      <div class="header__menu-photo">
 	      </div>
 	      <div class="header__menu-content">
-	         <img src="images/src/logo.svg" alt="" class="logo">
+	         <a href="home.html"><img src="images/src/logo.svg" alt="" class="logo"></a>
 	         <a href="#" class="button">BOOK AN APPOINTMENT</a>		
 	         <ul class="header__menu-content--list menuList">
 	            <li><a href="aboutUs.html">About Us</a></li>
@@ -145,10 +145,28 @@
 							</select>
 						</label>
 
-						<label>
+						<div class="dateTimePicker">
 							<span>Type of treatment</span>
-							<input type="text" class="datePicker" placeholder="April 16 2021 at 17:00">
-						</label>
+							<div class="datePicker">
+								<!-- <span>Date:</span> -->
+								<input type="text" class="datePicker" placeholder="April 16 2021">
+							</div>
+							<div class="timePicker disabled">
+								<!-- <span>Time:</span> -->
+								<select name="time" id="" class="select timeSelect">
+									<option value=""><p>08:00 am - 09:00 am</p></option>
+									<option value="">09:00 am - 10:00 am</option>
+									<option value="">11:00 am - 12:00 am</option>
+									<option value="">01:00 am - 02:00 pm</option>
+									<option value="">03:00 am - 04:00 pm</option>
+									<option value="">04:00 am - 05:00 pm</option>
+									<option value="">05:00 am - 06:00 pm</option>
+									<option value="">06:00 am - 07:00 pm</option>
+									<option value="">07:00 am - 08:00 pm</option>
+									<option value="">08:00 am - 09:00 pm</option>
+								</select>
+							</div>
+						</div>
 					</form>
 				</div>
 			</li>

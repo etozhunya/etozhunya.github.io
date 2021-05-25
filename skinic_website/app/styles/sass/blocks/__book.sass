@@ -26,7 +26,7 @@
 				> li
 					margin-bottom: 20px
 					&.active, &:hover
-						background: #fafafa
+						background: none
 						border: solid 1px #e0e0e0
 					h4
 						padding: 40px 60px
@@ -38,13 +38,13 @@
 							display: flex
 							justify-content: space-between
 							flex-flow: wrap
-							label
+							label, .dateTimePicker
 								width: 48%
 								border-bottom: 1px solid #e0e0e0
 								margin-bottom: 36px
 								select, input
 									padding: 11px 0 16px 0
-									width: 100%
+									width: 100% !important
 									border: none
 									font-family: helveticaRegular
 									font-size: 21px
@@ -61,6 +61,35 @@
 									font-size: 14px	
 									line-height: 1.5	
 									color: #212529					
+							.dateTimePicker
+								display: flex
+								flex-flow: wrap
+								justify-content: space-between
+								> span
+									width: 100%
+								.datePicker
+									width: calc(45% - 30px)
+									input
+										padding: 13px 0 16px 30px
+									&:before
+										content: ''
+										display: block
+										position: absolute
+										left: 0
+										top: 14px
+										width: 20px 
+										height: 20px
+										background: url('../images/src/calendar.svg') center center/cover no-repeat
+
+								.timePicker
+									width: 50%
+									position: relative
+									select
+										width: 100% !important
+									&.disabled
+										pointer-events: none
+										.select2
+											opacity: 0.38
 							.specLabel
 								border: none	
 								.check
@@ -230,9 +259,16 @@
 								margin-bottom: 0
 								margin-top: 49px
 								font-family: helveticaItalic
+				> li:nth-child(2)
+					&:hover
+						background-image: linear-gradient(91deg, #fdf3ff 0%, #ffe6eb 100%)
+					&.active
+						background-image: none
 				#confirmationBlock
-					&:hover, &.active
-						background: linear-gradient(234deg, rgba(235, 255, 234, 0.33) 98%, rgba(202, 255, 255, 0.33) 4%)
+					&:hover
+						background-image: linear-gradient(266deg, #ebffea 100%, #caffff 1%)
+					&.active
+						background-image: linear-gradient(234deg, rgba(235, 255, 234, 0.33) 4%, rgba(202, 255, 255, 0.33) 98%)
 	.terms
 		padding: 46px 0 140px 0
 		background: linear-gradient(to bottom, #fff8ed, rgba(255, 255, 255, 0))
