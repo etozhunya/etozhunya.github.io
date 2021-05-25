@@ -102,12 +102,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    $('.faces li').click(function() {
-        $('.triangle').removeClass('hidden')
-        $(this).addClass('active').siblings().removeClass('active');
-        $('.block').removeClass('in-view').eq($(this).index()).addClass('in-view');
-        $('.slider').slick('setPosition');
-    });
+    if ($(window).width() > 768) {
+        $('.faces li').click(function() {
+            $('.triangle').removeClass('hidden')
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.block').removeClass('in-view').eq($(this).index()).addClass('in-view');
+            $('.slider').slick('setPosition');
+        });
+    }
 
     
     // if ($('.middleBlock').parent().parent().hasClass('slick-active')) {
@@ -116,9 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // if ($('.middleBlock').parent().parent().hasClass('slick-current')) {
     //     console.log('TOP')
     // }
-    $('.slick-slide div .scroll').click(function() {
-        $('.block').removeClass('in-view').eq($(this).index()).addClass('in-view');
-    });
+    // $('.slick-slide div .scroll').click(function() {
+    //     $('.block').removeClass('in-view').eq($(this).index()).addClass('in-view');
+    // });
 
 
     $('.faqLinks li').click(function() {
