@@ -5,6 +5,8 @@ body
 	color: #000
 	a 
 		text-decoration: none
+		&:focus
+			outline: none
 	&.scrollDisabled
 		overflow: hidden
 .hover
@@ -294,6 +296,9 @@ body
 				// margin: 0px 25px !important
 				a
 					text-align: center
+					outline: none
+					&:focus
+						outline: none
 					img
 						width: 100%
 						display: inline-block
