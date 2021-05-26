@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('11111111')
     }
     if ($('body').hasClass('haveSelect')) {
-        if ($(window).width() > 768) {
+        // if ($(window).width() > 768) {
             $('.select').select2();
-        }
+        // }
     }
 
     $(".close-icon").click(function(e) {
