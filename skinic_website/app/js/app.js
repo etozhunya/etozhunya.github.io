@@ -20,9 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('11111111')
     }
     if ($('body').hasClass('haveSelect')) {
-        // if ($(window).width() > 768) {
             $('.select').select2();
-        // }
     }
 
     $(".close-icon").click(function(e) {
@@ -339,17 +337,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         datepicker(el)
     })
-    // $('.datePicker').on('focus', 'input', function() { $(this).blur(); });
+    
+        document.activeElement.blur();
+        $(".datePicker").blur();
 
-
-    // var selectOption = document.querySelectorAll('.select option');
-
-    // for (var i = 0; i < selectOption.length; i++) {
-    //   var item = selectOption[i];
-    //   if (item.innerHTML.charAt(0) === "–") {
-    //     item.remove();
-    //   };
-    // }
 })
 // jQuery(document).ready(function($){
 

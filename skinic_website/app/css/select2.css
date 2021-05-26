@@ -178,7 +178,7 @@
     .select2-container--default .select2-selection--single .select2-selection__arrow b {
       height: 7px;
       width: 15px;
-      background: url('../images/src/selectArrow.svg') center center/cover no-repeat;
+      background: url('../images/src/selectArrow.svg') center center/contain no-repeat;
       right: 5px;
       position: absolute;
       top: 50%;
