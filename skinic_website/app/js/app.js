@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.headings li h4').click(function() {
         $(this).parent().toggleClass('active')
         $(this).toggleClass('active');
-        $(this).next().slideToggle()
+        $(this).next('.animated').slideToggle()
         $(this).parent().siblings().removeClass('active')
         $(this).parent().siblings().find('.animated').slideUp()
         $(this).parent().siblings().find('h4').removeClass('active')
@@ -337,4 +337,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
         datepicker(el)
     })
+    $('.datePicker').on('focus', 'input', function() { $(this).blur(); });
 })

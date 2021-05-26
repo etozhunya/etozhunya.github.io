@@ -26,6 +26,11 @@
 				max-width: none
 				> li
 					margin-bottom: 20px
+					&:first-child
+						h4
+							&.active
+								&:after
+									transform: translateY(-50%)
 					&.active, &:hover
 						background: none
 						border: solid 1px #e0e0e0
@@ -33,7 +38,7 @@
 						padding: 40px 60px
 						font-size: 30px
 
-					.animated
+					.animated, .notAnimated
 						padding: 0 60px
 						form
 							display: flex
@@ -51,6 +56,8 @@
 									font-size: 21px
 									color: #212529
 									background-color: transparent
+									&:focus
+										outline: none
 									option
 										color: #818080
 								input
@@ -61,7 +68,8 @@
 									font-family: helveticaRegular
 									font-size: 14px	
 									line-height: 1.5	
-									color: #212529					
+									color: #212529
+									outline: none					
 							.dateTimePicker
 								display: flex
 								flex-flow: wrap
@@ -382,7 +390,7 @@
 					li
 						h4
 							padding: 30px 20px
-						.animated
+						.animated, .notAnimated
 							padding: 0 20px
 							form
 								flex-flow: wrap
