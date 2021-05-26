@@ -288,7 +288,7 @@
 					&:hover
 						background-image: linear-gradient(255deg, #ebffea 2%, #caffff 100%)
 					&.active
-						background-image: linear-gradient(234deg, rgba(235, 255, 234, 0.33) 4%, rgba(202, 255, 255, 0.33) 98%)
+						background-image: linear-gradient(234deg, rgba(235, 255, 234, 0.33) 4%, rgba(202, 255, 255, 0.33) 98%) !important
 	.terms
 		padding: 46px 0 140px 0
 		background: linear-gradient(to bottom, #fff8ed, rgba(255, 255, 255, 0))
@@ -393,8 +393,24 @@
 							-webkit-appearance: none
 						  	margin: 0
 			  	
-@media (max-width:768px) 
+
+@media (max-width:1024px) 
 	.book
+		.content
+			.widthWrapper
+				.contentTemplate
+					&__text
+						padding-top: 0px !important
+
+@media (max-width:768px) 
+
+	.book
+		.content
+			.widthWrapper
+				.contentTemplate
+					&__text
+						padding: 0 !important
+						padding-top: 50px !important
 		.bookSchedule
 			overflow: hidden
 			.widthWrapper
@@ -416,6 +432,9 @@
 										label
 											.radio
 												padding: 5px 0
+								.maleFemale
+									label
+										width: 50% !important
 								.dateTimePicker
 									width: 100%
 									flex-flow: wrap
@@ -434,8 +453,9 @@
 									line-height: 70px
 								.price
 									font-size: 30px
-								.bonuses
-								.price
+					#confirmationBlock, li:nth-child(2)
+						&:hover
+							background-image: none
 		.terms
 			padding-bottom: 100px
 			.widthWrapper
@@ -449,7 +469,7 @@
 			.popup__container
 				width: 90%
 				&-ver
-					padding: 30px 15px 70px 15px
+					padding: 30px 35px 70px 35px
 
 					.code
 						text-align: center

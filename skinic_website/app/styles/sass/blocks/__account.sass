@@ -35,7 +35,6 @@
 				font-family: helveticaRegular
 				font-size: 16px
 	.widthWrapperWide
-		max-width: 1200px !important
 		.steps
 			margin: 66px 0
 			justify-content: space-between
@@ -502,12 +501,16 @@
 						display: none
 
 @media (max-width: 768px)
+	.widthWrapperWide
+		.steps
+			margin: 0 0 66px 0 !important
 	.account
 		.shortTable
 			width: 100% !important
 		.widthWrapper
 			.greetings
 				padding-top: 100px
+				padding-bottom: 40px
 				&__photo
 					> img
 						width: 95px
@@ -528,9 +531,9 @@
 			.steps
 				display: block
 				li
-					width: 100%
+					width: calc(100% - 18px)
 					margin: 0px 0 10px 0
-					padding: 11px 0 28px 15px 
+					padding: 11px 10px 28px 8px 
 			.containerWrapper
 				h2
 					font-size: 35px
@@ -547,6 +550,7 @@
 								p
 									font-size: 12px
 					.AAScontent
+						margin-bottom: 40px
 						.AASwrapper
 							input
 								font-size: 15px
@@ -600,7 +604,21 @@
 			.popup__container
 				width: 90%
 				height: 30%
-							
+@media (min-width: 1210px)
+	.account
+		.widthWrapperWide
+			max-width: 1200px !important
+
+@media (max-width: 1210px)
+	.account
+		.widthWrapperWide
+			.steps
+				li
+					&:after
+						top: 74%
+					h2
+						font-size: 18px
+
 
 
 

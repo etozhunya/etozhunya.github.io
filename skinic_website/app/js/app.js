@@ -84,6 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    $('.pricingSection').click(function() {
+        if ($(window).width() < 1024) {
+            $(this).href('bookTreatment.html')
+        }
+    })
+
     $('.headings li h4').click(function() {
         $(this).parent().toggleClass('active')
         $(this).toggleClass('active');
@@ -191,6 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     $('.confirmButton').click(function(e) {
+        $( "#confirmationBlock" ).addClass('active')
         $( "#confirmationBlock" ).find('.animated').slideToggle()
         $( "#confirmationBlock" ).find('h4').toggleClass('active')
 
