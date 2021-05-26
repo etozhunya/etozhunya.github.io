@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 
+    if ($('body').hasClass('hash')) {
+        $(window.location.hash).addClass('in-view').siblings().removeClass('in-view')
+    }
+
+
     if ($('body').hasClass('haveGallery')) {
         $('.image-link').magnificPopup({
             gallery: {
