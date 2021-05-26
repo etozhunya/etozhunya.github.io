@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('11111111')
     }
     if ($('body').hasClass('haveSelect')) {
-        $('.select').select2();
+        if ($(window).width() > 768) {
+            $('.select').select2();
+        }
     }
 
     $(".close-icon").click(function(e) {
@@ -349,3 +351,27 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     }
 })
+// jQuery(document).ready(function($){
+
+
+
+
+// if ($(window).width() < 768) {
+//     var deviceAgent = navigator.userAgent.toLowerCase();
+
+//     var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+
+//         if (agentID) {
+
+     
+
+//         $('body').addClass('ios');
+
+//             $('.select').next().find('.select2-results').css("display", "none");
+
+
+
+//         }
+// }
+
+// });
