@@ -337,5 +337,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
         datepicker(el)
     })
-    $('.datePicker').on('focus', 'input', function() { $(this).blur(); });
 })
