@@ -343,8 +343,12 @@ document.addEventListener('DOMContentLoaded', () => {
         datepicker(el)
     })
     
-        document.activeElement.blur();
-        $(".datePicker").blur();
+        // document.activeElement.blur();
+        // $(".datePicker").blur();
+
+
+        
+        // $('.datePicker').onfocus
 
 })
 // jQuery(document).ready(function($){
