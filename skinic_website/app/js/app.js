@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     $('#nameEdit').click(function() {
-        $('.nameEdit').focus()
+        // $('.nameEdit').focus()
         $(this).addClass('hidden')
         $('.nameClose').addClass('visible')
         $('.nameEdit').prop('readonly', false);
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
         $('.nameButtons').removeClass('visible')
     })
     $('#phoneEdit').click(function() {
-        $('.phoneEdit').focus()
+        // $('.phoneEdit').focus()
         $(this).addClass('hidden')
         $('.phoneClose').addClass('visible')
         $('.confirmationLink').addClass('visible')
@@ -239,14 +239,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     $('#passwordEdit').click(function() {
-        $('.passwordEdit').focus()
+        // $('.passwordEdit').focus()
         $(this).addClass('hidden')
         $('.passwordClose').addClass('visible')
         $('.passwordEdit').prop('readonly', false);
         $('.passwordButtons').addClass('visible')
     })
     $('.passwordClose').click(function() {
-        $('.passwordEdit').focus()
+        // $('.passwordEdit').focus()
         $('.passwordClose').removeClass('hidden')
         $('.passwordClose').removeClass('visible')
         $('#passwordEdit').removeClass('hidden')
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     $('#dateEdit').click(function() {
-        $('.dateEdit').focus()
+        // $('.dateEdit').focus()
         $(this).addClass('hidden')
         $('.dateClose').addClass('visible')
         $('.dateEdit').prop('readonly', false);
@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     $('#addressEdit').click(function() {
-        $('.addressEdit').focus()
+        // $('.addressEdit').focus()
         $(this).addClass('hidden')
         $('.addressClose').addClass('visible')
         $('.addressEdit').prop('readonly', false);
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
         $('.addressButtons').removeClass('visible')
     })
     $('#methodEdit').click(function() {
-        $('.methodEdit').focus()
+        // $('.methodEdit').focus()
         $(this).addClass('hidden')
         $('.methodClose').addClass('visible')
         $('.methodEdit').removeAttr('disabled')
