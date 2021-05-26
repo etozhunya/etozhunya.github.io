@@ -44,11 +44,13 @@
 							display: flex
 							justify-content: space-between
 							flex-flow: wrap
-							label, .dateTimePicker
+							label, .dateTimePicker, .label
 								width: 48%
 								border-bottom: 1px solid #e0e0e0
 								margin-bottom: 36px
+								position: relative
 								select
+									position: relative
 									-webkit-appearance: none
 									-webkit-user-select: none
 									-moz-user-select: none
@@ -394,6 +396,7 @@
 @media (max-width:768px) 
 	.book
 		.bookSchedule
+			overflow: hidden
 			.widthWrapper
 				.headings
 					li
@@ -404,7 +407,7 @@
 							padding: 0 20px
 							form
 								flex-flow: wrap
-								label
+								label, .label
 									width: 100%
 								.radio_width, .radio_width50
 									width: 100%

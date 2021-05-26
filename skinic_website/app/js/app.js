@@ -21,9 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         $('.timePicker').removeClass('disabled')
        $('.timeSelect').select2('open');
     });
-    if ($('.timePicker').hasClass('open')) {
-        console.log('11111111')
-    }
     if ($('body').hasClass('haveSelect')) {
             $('.select').select2();
     }
@@ -342,36 +339,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         datepicker(el)
     })
-    
-        // document.activeElement.blur();
-        // $(".datePicker").blur();
 
-
-        
-        // $('.datePicker').onfocus
 
 })
-// jQuery(document).ready(function($){
-
-
-
-
-// if ($(window).width() < 768) {
-//     var deviceAgent = navigator.userAgent.toLowerCase();
-
-//     var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
-
-//         if (agentID) {
-
-     
-
-//         $('body').addClass('ios');
-
-//             $('.select').next().find('.select2-results').css("display", "none");
-
-
-
-//         }
-// }
-
-// });
