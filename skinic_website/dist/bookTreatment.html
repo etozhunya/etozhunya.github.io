@@ -11,14 +11,15 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-	<link rel="stylesheet" href="css/main.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
 	<link rel="stylesheet" href="css/intlTelInput.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+	<link href="css/select2.css" rel="stylesheet" />
 </head>
 
-<body class="book faq">
+<body class="book faq haveSelect">
 <!-- HEADER -->	
-	<header class="header">
+	<header class="header" id="headerScroll">
 	   <div class="header__top widthWrapper flex">
 	      <a href="home.html" class="logo"><img src="images/src/logo.svg" alt=""></a>
 	      <ul class="header__top-list menuList flex transformed">
@@ -30,7 +31,7 @@
 	      	         <li><a href="contactUs.html">CONTACT US</a></li>
 	      	         <li><span class="lang transformed hover">EN</span></li>
 	      	      </ul>
-	      <a href="#" class="button transformed">BOOK AN APPOINTMENT</a>
+	      <a href="#headerScroll" class="button transformed">BOOK AN APPOINTMENT</a>
 	      <div class="hamburger-container">
 	      	<div class="hamburger-icon">
 	      	   <span class="hamburger_button hover"></span>
@@ -41,7 +42,7 @@
 	      <div class="header__menu-photo">
 	      </div>
 	      <div class="header__menu-content">
-	         <img src="images/src/logo.svg" alt="" class="logo">
+	         <a href="home.html"><img src="images/src/logo.svg" alt="" class="logo"></a>
 	         <a href="#" class="button">BOOK AN APPOINTMENT</a>		
 	         <ul class="header__menu-content--list menuList">
 	            <li><a href="aboutUs.html">About Us</a></li>
@@ -54,8 +55,8 @@
 	         <ul class="header__menu-content--info flex">
 	            <li class="account">
 	               <h3>Account</h3>
-	               <a href="#" class="hover"><span class="bold">Sign-in</span></a>
-	               <a href="#" class="hover"><span>Registration</span></a>
+	               <a href="login.html" class="hover"><span class="bold">Sign-in</span></a>
+	               <a href="registration.html" class="hover"><span>Registration</span></a>
 	            </li>
 	            <li class="social">
 	               <h3>Social</h3>
@@ -77,7 +78,7 @@
 		<div class="contentTemplate flex imgLeft">
 			<div class="contentTemplate__photo"><img src="images/src/bookHero.png" alt=""></div>
 			<div class="contentTemplate__text">
-				<h1>BOOK TREATMENT <span class="highlighted">ONLINE</span></h1>
+				<h1>BOOK TREATMENT <br><span class="highlighted">ONLINE</span></h1>
 				<p>We offer additional treatments and combination discounts with botulinum & hyaluron. Regular and doctoral students receive a discount of CHF 50, respectively CHF 100 from a price higher than CHF 600. The discount is only applicable upon presentation of the identification card. Please contact us for further information.
 					<br><br>
 				I will gladly consult with you in a private conversation.
@@ -92,29 +93,29 @@
 
 <div class="bookSchedule">
 	<div class="widthWrapper">
-		<h1>BOOK TREATMENT</h1>
+		<h1>Book Treatment</h1>
 		<ul class="headings">
-			<li>
-				<h4>Choose Appointment</h4>
-				<div class="animated">
+			<li class="active">
+				<h4 class="active">Choose Appointment</h4>
+				<div class="notAnimated" style="display: block;">
 					<form action="">
-						<label for="typeOfTreatmentOne">
+						<div class="label">
 							<span>Type of treatment</span>
-							<select name="" id="">
+							<select name="" class="select">
 								<option value="Botulinum treatments" chosen>Botulinum treatments</option>
 								<option value="Botulinum treatments">Botulinum treatments</option>
 								<option value="Botulinum treatments">Botulinum treatments</option>
 							</select>
-						</label>
+						</div>
 
-						<label for="typeOfService">
+						<div class="label">
 							<span>Type of Service</span>
-							<select name="" id="">
-								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet CHF 350</option>
-								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet CHF 350</option>
-								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet CHF 350</option>
+							<select name="" class="select">
+								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet <span style="color: red">CHF 350</span></option>
+								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet <span>CHF 350</span></option>
+								<option value="Forehead wrinkles and crow’s feet CHF 350" chosen>Forehead wrinkles and crow’s feet <span>CHF 150</span></option>
 							</select>
-						</label>
+						</div>
 
 						<div class="radio_width">
 							<span>Add to your appointment...</span>
@@ -134,19 +135,38 @@
 							</div>
 						</div>
 
-						<label for="doctors">
+						<div class="label">
 							<span>Doctor</span>
-							<select name="doctors" id="">
-								<option value="DR. Jonathan Davis">DR. Jonathan Davis</option>
-								<option value="DR. Jonathan Davis">DR. Jonathan Davis</option>
-								<option value="DR. Jonathan Davis">DR. Jonathan Davis</option>
+							<select name="doctors"  class="select">
+								<option value="Dr. Jonathan Davis">Dr. Jonathan Davis</option>
+								<option value="Dr. LANA Schrammek">Dr. LANA Schrammek</option>
+								<option value="Dr. Dan Iselin">Dr. Dan Iselin</option>
+								<option value="Dr. Julian Myers">Dr. Julian Myers</option>
 							</select>
-						</label>
+						</div>
 
-						<label for="typeOfTreatmentFivth">
+						<div class="dateTimePicker">
 							<span>Type of treatment</span>
-							<input type="text" class="datePicker" placeholder="April 16 2021 at 17:00">
-						</label>
+							<div class="datePicker">
+								<!-- <span>Date:</span> -->
+								<input type="text" class="datePicker" placeholder="April 16 2021" readonly="">
+							</div>
+							<div class="timePicker disabled">
+								<!-- <span>Time:</span> -->
+								<select name="time" id="" class="select timeSelect">
+									<option value=""><p>08:00 am - 09:00 am</p></option>
+									<option value="">09:00 am - 10:00 am</option>
+									<option value="">11:00 am - 12:00 am</option>
+									<option value="">01:00 am - 02:00 pm</option>
+									<option value="">03:00 am - 04:00 pm</option>
+									<option value="">04:00 am - 05:00 pm</option>
+									<option value="">05:00 am - 06:00 pm</option>
+									<option value="">06:00 am - 07:00 pm</option>
+									<option value="">07:00 am - 08:00 pm</option>
+									<option value="">08:00 am - 09:00 pm</option>
+								</select>
+							</div>
+						</div>
 					</form>
 				</div>
 			</li>
@@ -154,19 +174,19 @@
 				<h4>Details</h4>
 				<div class="animated">
 					<form action="">
-						<label for="typeOfTreatmentOne">
+						<label>
 							<span>Name*</span>
 							<input type="text">
 						</label>
 
-						<label for="typeOfService">
+						<label>
 							<span>First Name</span>
 							<input type="text">
 						</label>
 
 						<div class="radio_width radio_width50">
 							<span>Add to your appointment</span>
-							<div class="radio_core">
+							<div class="radio_core maleFemale">
 								<label>
 								    <input name="dzen" type="radio" value="I am an existing customer" checked="">
 								    <span class="radio">
@@ -181,7 +201,7 @@
 								</label>
 							</div>
 						</div>
-						<label for="" class="specLabel">
+						<label class="specLabel">
 							<span>Payment</span>
 							<label class="check spec">
 								<div class="radio_width">
@@ -193,7 +213,7 @@
 							</label>
 						</label>
 
-						<label for="typeOfTreatmentOne">
+						<label>
 							<span>Phone number</span>
 							<input type="tel" id="phone">
 						</label>
@@ -233,7 +253,7 @@
 							<input type="text" >
 						</label>
 
-						<label for="" class="specLabel">
+						<label class="specLabel">
 							<label class="check spec">
 								<div class="radio_width">
 									<input type="checkbox">
@@ -246,7 +266,7 @@
 					<span class="button confirmPopup">CONFIRM BOOKING</span>
 				</div>
 			</li>
-			<li>
+			<li id="confirmationBlock">
 				<h4>Confirmation</h4>
 				<div class="animated">
 					<div class="confirmation">
@@ -325,6 +345,7 @@
 </div>
 
 <div class="popup" id="confirmPopup">
+	<div class="fade__container"></div>
 	<div class="popup__container">
 		<div class="popup__container-ver">
 			<h1>CONFIRM</h1>
@@ -343,7 +364,7 @@
 				</div>
 			</label>
 			<p class="code">Haven’t received the code? <a href="#" class="highlighted">Re-send SMS!</a></p>
-			<button type="button" class="popupClose">Confirm booking</button>
+			<a href="#confirmationBlock" type="button" class="confirmButton popupClose">Confirm booking</a>
 		</div>
 	</div>
 </div>
@@ -360,9 +381,9 @@
 			<li class="footer__list-item">
 				<h3>Navigate</h3>
 				<a href="aboutUs.html" class="hover"><span>About Us</span></a>
-				<a href="#" class="hover"><span>Treatments</span></a>
-				<a href="#" class="hover"><span>Doctors</span></a>
-				<a href="#" class="hover"><span>Pricing</span></a>
+				<a href="treatments.html" class="hover"><span>Treatments</span></a>
+				<a href="doctors.html" class="hover"><span>Doctors</span></a>
+				<a href="pricing.html" class="hover"><span>Pricing</span></a>
 			</li>
 			<li class="footer__list-item">
 				<h3>Need Help?</h3>
@@ -387,6 +408,7 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="js/tel/js/intlTelInput.js"></script>
 <script src="js/tel.js"></script>
 <script src="https://unpkg.com/js-datepicker"></script>

@@ -40,7 +40,7 @@
 	      <div class="header__menu-photo">
 	      </div>
 	      <div class="header__menu-content">
-	         <img src="images/src/logo.svg" alt="" class="logo">
+	         <a href="home.html"><img src="images/src/logo.svg" alt="" class="logo"></a>
 	         <a href="bookTreatment.html" class="button">BOOK AN APPOINTMENT</a>		
 	         <ul class="header__menu-content--list menuList">
 	            <li><a href="aboutUs.html">About Us</a></li>
@@ -53,8 +53,8 @@
 	         <ul class="header__menu-content--info flex">
 	            <li class="account">
 	               <h3>Account</h3>
-	               <a href="#" class="hover"><span class="bold">Sign-in</span></a>
-	               <a href="#" class="hover"><span>Registration</span></a>
+	               <a href="login.html" class="hover"><span class="bold">Sign-in</span></a>
+	               <a href="registration.html" class="hover"><span>Registration</span></a>
 	            </li>
 	            <li class="social">
 	               <h3>Social</h3>
@@ -73,102 +73,292 @@
 
 <div class="treatmentsSection faqSection">
 	<div class="widthWrapper">
-		<img src="images/src/treatmentsWomen.png">
+		<picture>
+		    <source srcset="images/src/imweb3mob.jpg" media="(max-width: 767px)">
+		    <source srcset="images/src/imweb3.jpg">
+		    <img srcset="images/src/imweb3.jpg">
+		</picture>
 		<ul class="faqLinks flex">
-			<li><a href="#" class="hover">Good to know</a></li>
-			<li><a href="#" class="clicked hover">Question and Answers about Botulinum</a></li>
-			<li><a href="#" class="hover">Question and Answers about Hyaluron</a></li>
+			<li data-index="0"><span class="hover">Good to know</span></li>
+			<li data-index="1" class="active"><span class="hover">Question and Answers about Botulinum</span></li>
+			<li data-index="2"><span class="hover">Question and Answers about Hyaluron</span></li>
 		</ul>
-		<h1>Questions and answers about anti-wrinkle treatment with botulinum</h1>
-		<div class="treatmentsContent flex">
-			<div class="treatmentsContent__text">
-				<h2>What is botulinum?</h2>
-				<p>Botulinum (botulinum toxin-A) is a medical substance approved by the drug authorities and used to temporarily smooth wrinkles on the face. It is a biological protein obtained from a bacterium called ‘Clostridium Botulinum’. The active ingredient relaxes the facial muscles responsible for the development of wrinkles. Only trained specialists should carry out botulinum treatment. For the best effect, the treatment needs moderate doses and to be repeated at regular intervals (3–6 months).
-				<br><br>
-				Referring to the original compound which contained botulinum as an active ingredient, the term ‘Botox treatment’ is familiar as a generic term for all treatments with this active ingredient.
-				<br><br>
-				Dr. Iselin’s practice in Zurich specialises in botulinum treatments. He offers many years of experience in the field of aesthetic medicine.</p>
-				<h2>How does botulinum work?</h2>
-				<p>Firstly, a specialist injects the active substance accurately into the muscle with a thin needle. An injection of botulinum chemically stops the release of a signal. The transmission of stimuli from the nerve to the treated muscle is temporarily interrupted. The muscle relaxes, and the result is a reduction of wrinkles. This effect is temporary. When the effect wears off, the transmission recovers and the muscle function is completely restored. In the treatment of excessive sweating with botulinum, a twilight sleep occurs in the sweat glands instead of the muscles.</p>
+		<div class="faqWrapper">
+			<h1>Good to know</h1>
+			<div class="treatmentsContent flex">
+				<div class="treatmentsContent__text">
+					<h2>What is botulinum?</h2>
+					<p>Botulinum (botulinum toxin-A) is a medical substance approved by the drug authorities and used to temporarily smooth wrinkles on the face. It is a biological protein obtained from a bacterium called ‘Clostridium Botulinum’. The active ingredient relaxes the facial muscles responsible for the development of wrinkles. Only trained specialists should carry out botulinum treatment. For the best effect, the treatment needs moderate doses and to be repeated at regular intervals (3–6 months).
+					<br><br>
+					Referring to the original compound which contained botulinum as an active ingredient, the term ‘Botox treatment’ is familiar as a generic term for all treatments with this active ingredient.
+					<br><br>
+					Dr. Iselin’s practice in Zurich specialises in botulinum treatments. He offers many years of experience in the field of aesthetic medicine.</p>
+					<h2>How does botulinum work?</h2>
+					<p>Firstly, a specialist injects the active substance accurately into the muscle with a thin needle. An injection of botulinum chemically stops the release of a signal. The transmission of stimuli from the nerve to the treated muscle is temporarily interrupted. The muscle relaxes, and the result is a reduction of wrinkles. This effect is temporary. When the effect wears off, the transmission recovers and the muscle function is completely restored. In the treatment of excessive sweating with botulinum, a twilight sleep occurs in the sweat glands instead of the muscles.</p>
 
-				<h2>Where is botulinum used?</h2>
-				<p>As an active ingredient, botulinum is an approved medication for the treatment of frown lines, crow’s feet and excessive underarm sweating. However, the active ingredient works for other expression wrinkles as well.</p>
-			</div>
-			<div class="treatmentsContent__plan">
-				<div class="treatmentsContent__plan-box">
-					<span>Professional plan</span>
-					<h3>CHF350</h3>
-					<p>Duration 20 minutes</p>
-					<p>Material Botulinum</p>
-					<p>Anesthesia None</p>
-					<p>Follow-up check in 2 weeks</p>
-					<p>Sports restriction 1 day</p>
-					<a href="bookTreatment.html" class="button">BOOK AN APPOINTMENT</a>
+					<h2>Where is botulinum used?</h2>
+					<p>As an active ingredient, botulinum is an approved medication for the treatment of frown lines, crow’s feet and excessive underarm sweating. However, the active ingredient works for other expression wrinkles as well.</p>
+				</div>
+				<div class="treatmentsContent__plan">
+					<div class="treatmentsContent__plan-box">
+						<span>Professional plan</span>
+						<h3>CHF350</h3>
+						<p>Duration 20 minutes</p>
+						<p>Material Botulinum</p>
+						<p>Anesthesia None</p>
+						<p>Follow-up check in 2 weeks</p>
+						<p>Sports restriction 1 day</p>
+						<a href="bookTreatment.html" class="button">BOOK AN APPOINTMENT</a>
+					</div>
 				</div>
 			</div>
+			<ul class="headings">
+				<li>
+					<h4>Is botulinum safe?</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+				<li>
+					<h4>Does a cosmetic application of botulinum cause any side effects?</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+				<li>
+					<h4>When and how long does botulinum work? How often can botulinum be used?</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+				<li>
+					<h4>Can I immediately socialise again after the botulinum treatment?</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+				<li>
+					<h4>What other things should be considered?</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+				<li>
+					<h4>Nice to know</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+			</ul>
 		</div>
-		<ul class="headings">
-			<li>
-				<h4>Is botulinum safe?</h4>
-				<div class="animated">
-					<p>
-					In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+		<div class="faqWrapper visible">
+			<h1>Questions and answers about anti-wrinkle treatment with botulinum</h1>
+			<div class="treatmentsContent flex">
+				<div class="treatmentsContent__text">
+					<h2>What is botulinum?</h2>
+					<p>Botulinum (botulinum toxin-A) is a medical substance approved by the drug authorities and used to temporarily smooth wrinkles on the face. It is a biological protein obtained from a bacterium called ‘Clostridium Botulinum’. The active ingredient relaxes the facial muscles responsible for the development of wrinkles. Only trained specialists should carry out botulinum treatment. For the best effect, the treatment needs moderate doses and to be repeated at regular intervals (3–6 months).
 					<br><br>
-					The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
-					</p>
-				</div>
-			</li>
-			<li>
-				<h4>Does a cosmetic application of botulinum cause any side effects?</h4>
-				<div class="animated">
-					<p>
-					In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+					Referring to the original compound which contained botulinum as an active ingredient, the term ‘Botox treatment’ is familiar as a generic term for all treatments with this active ingredient.
 					<br><br>
-					The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
-					</p>
+					Dr. Iselin’s practice in Zurich specialises in botulinum treatments. He offers many years of experience in the field of aesthetic medicine.</p>
+					<h2>How does botulinum work?</h2>
+					<p>Firstly, a specialist injects the active substance accurately into the muscle with a thin needle. An injection of botulinum chemically stops the release of a signal. The transmission of stimuli from the nerve to the treated muscle is temporarily interrupted. The muscle relaxes, and the result is a reduction of wrinkles. This effect is temporary. When the effect wears off, the transmission recovers and the muscle function is completely restored. In the treatment of excessive sweating with botulinum, a twilight sleep occurs in the sweat glands instead of the muscles.</p>
+
+					<h2>Where is botulinum used?</h2>
+					<p>As an active ingredient, botulinum is an approved medication for the treatment of frown lines, crow’s feet and excessive underarm sweating. However, the active ingredient works for other expression wrinkles as well.</p>
 				</div>
-			</li>
-			<li>
-				<h4>When and how long does botulinum work? How often can botulinum be used?</h4>
-				<div class="animated">
-					<p>
-					In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+				<div class="treatmentsContent__plan">
+					<div class="treatmentsContent__plan-box">
+						<span>Professional plan</span>
+						<h3>CHF350</h3>
+						<p>Duration 20 minutes</p>
+						<p>Material Botulinum</p>
+						<p>Anesthesia None</p>
+						<p>Follow-up check in 2 weeks</p>
+						<p>Sports restriction 1 day</p>
+						<a href="bookTreatment.html" class="button">BOOK AN APPOINTMENT</a>
+					</div>
+				</div>
+			</div>
+			<ul class="headings">
+				<li>
+					<h4>Is botulinum safe?</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+				<li>
+					<h4>Does a cosmetic application of botulinum cause any side effects?</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+				<li>
+					<h4>When and how long does botulinum work? How often can botulinum be used?</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+				<li>
+					<h4>Can I immediately socialise again after the botulinum treatment?</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+				<li>
+					<h4>What other things should be considered?</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+				<li>
+					<h4>Nice to know</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="faqWrapper">
+			<h1>Question and Answers about Hyaluron</h1>
+			<div class="treatmentsContent flex">
+				<div class="treatmentsContent__text">
+					<h2>What is botulinum?</h2>
+					<p>Botulinum (botulinum toxin-A) is a medical substance approved by the drug authorities and used to temporarily smooth wrinkles on the face. It is a biological protein obtained from a bacterium called ‘Clostridium Botulinum’. The active ingredient relaxes the facial muscles responsible for the development of wrinkles. Only trained specialists should carry out botulinum treatment. For the best effect, the treatment needs moderate doses and to be repeated at regular intervals (3–6 months).
 					<br><br>
-					The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
-					</p>
-				</div>
-			</li>
-			<li>
-				<h4>Can I immediately socialise again after the botulinum treatment?</h4>
-				<div class="animated">
-					<p>
-					In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+					Referring to the original compound which contained botulinum as an active ingredient, the term ‘Botox treatment’ is familiar as a generic term for all treatments with this active ingredient.
 					<br><br>
-					The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
-					</p>
+					Dr. Iselin’s practice in Zurich specialises in botulinum treatments. He offers many years of experience in the field of aesthetic medicine.</p>
+					<h2>How does botulinum work?</h2>
+					<p>Firstly, a specialist injects the active substance accurately into the muscle with a thin needle. An injection of botulinum chemically stops the release of a signal. The transmission of stimuli from the nerve to the treated muscle is temporarily interrupted. The muscle relaxes, and the result is a reduction of wrinkles. This effect is temporary. When the effect wears off, the transmission recovers and the muscle function is completely restored. In the treatment of excessive sweating with botulinum, a twilight sleep occurs in the sweat glands instead of the muscles.</p>
+
+					<h2>Where is botulinum used?</h2>
+					<p>As an active ingredient, botulinum is an approved medication for the treatment of frown lines, crow’s feet and excessive underarm sweating. However, the active ingredient works for other expression wrinkles as well.</p>
 				</div>
-			</li>
-			<li>
-				<h4>What other things should be considered?</h4>
-				<div class="animated">
-					<p>
-					In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
-					<br><br>
-					The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
-					</p>
+				<div class="treatmentsContent__plan">
+					<div class="treatmentsContent__plan-box">
+						<span>Professional plan</span>
+						<h3>CHF350</h3>
+						<p>Duration 20 minutes</p>
+						<p>Material Botulinum</p>
+						<p>Anesthesia None</p>
+						<p>Follow-up check in 2 weeks</p>
+						<p>Sports restriction 1 day</p>
+						<a href="bookTreatment.html" class="button">BOOK AN APPOINTMENT</a>
+					</div>
 				</div>
-			</li>
-			<li>
-				<h4>Nice to know</h4>
-				<div class="animated">
-					<p>
-					In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
-					<br><br>
-					The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
-					</p>
-				</div>
-			</li>
-		</ul>
+			</div>
+			<ul class="headings">
+				<li>
+					<h4>Is botulinum safe?</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+				<li>
+					<h4>Does a cosmetic application of botulinum cause any side effects?</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+				<li>
+					<h4>When and how long does botulinum work? How often can botulinum be used?</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+				<li>
+					<h4>Can I immediately socialise again after the botulinum treatment?</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+				<li>
+					<h4>What other things should be considered?</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+				<li>
+					<h4>Nice to know</h4>
+					<div class="animated">
+						<p>
+						In most cases, the treatment effect occurs after 1-3 days. After 7-14 days the full effect (and thus the treated area) reveals itself. It rarely takes longer before the result appears. However, according to specialist information, the maximum effect occurs after 5-6 weeks.
+						<br><br>
+						The effect generally lasts 3-6 months. However, this is on an individual basis and also depends on the treated area. The duration of the result also depends on the injected dose and the existing muscle activity and mass. Avoiding a mask-like face, also called ‘frozen face’, is contrary to the desire for a prolonged botulinum effect. We recommend moderate doses of botulinum for a natural result. Before treatment, professional advice and information is a must. Furthermore, a strategic treatment plan for anti-wrinkle treatment or prevention needs to be worked out together with the client.
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>
 
@@ -184,9 +374,9 @@
 			<li class="footer__list-item">
 				<h3>Navigate</h3>
 				<a href="aboutUs.html" class="hover"><span>About Us</span></a>
-				<a href="#" class="hover"><span>Treatments</span></a>
-				<a href="#" class="hover"><span>Doctors</span></a>
-				<a href="#" class="hover"><span>Pricing</span></a>
+				<a href="treatments.html" class="hover"><span>Treatments</span></a>
+				<a href="doctors.html" class="hover"><span>Doctors</span></a>
+				<a href="pricing.html" class="hover"><span>Pricing</span></a>
 			</li>
 			<li class="footer__list-item">
 				<h3>Need Help?</h3>

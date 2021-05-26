@@ -11,11 +11,12 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+	<link rel="stylesheet" href="css//magnific-popup.css">
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
-<body class="treatmentsPage">
+<body class="treatmentsPage haveGallery hash">
 <!-- HEADER -->	
 	<header class="header">
 	   <div class="header__top widthWrapper flex">
@@ -40,7 +41,7 @@
 	      <div class="header__menu-photo">
 	      </div>
 	      <div class="header__menu-content">
-	         <img src="images/src/logo.svg" alt="" class="logo">
+	         <a href="home.html"><img src="images/src/logo.svg" alt="" class="logo"></a>
 	         <a href="bookTreatment.html" class="button">BOOK AN APPOINTMENT</a>		
 	         <ul class="header__menu-content--list menuList">
 	            <li><a href="aboutUs.html">About Us</a></li>
@@ -53,8 +54,8 @@
 	         <ul class="header__menu-content--info flex">
 	            <li class="account">
 	               <h3>Account</h3>
-	               <a href="#" class="hover"><span class="bold">Sign-in</span></a>
-	               <a href="#" class="hover"><span>Registration</span></a>
+	               <a href="login.html" class="hover"><span class="bold">Sign-in</span></a>
+	               <a href="registration.html" class="hover"><span>Registration</span></a>
 	            </li>
 	            <li class="social">
 	               <h3>Social</h3>
@@ -74,32 +75,28 @@
 <section class="faceList treatments">
 	<div class="widthWrapper">
 		<h1>PLEASE CHOOSE THE <br>TREATMENT TYPE</h1>
-		<ul class="faces flex">
+		<ul class="faces flex sliderTreatments">
 			<li data-index="0" class="scroll">
 				<a href="#upperFaceBlock"><img src="images/src/upperFace.png" alt="">
 					<h3>Upper third <br>of the face</h3>
-					<p>Aesthetic treatment of frown lines (glabella): botulinum and hyaluron filler relax frown lines and smooth</p>
 				</a>					
 			</li>
-			<li data-index="1" class="scroll">
+			<li data-index="1" class="scroll middleBlock">
 				<a href="#middleFaceBlock">
 					<img src="images/src/middleFace.png" alt="">
 					<h3>Middle third <br>of the face</h3>
-					<p>Aesthetic treatment of frown lines (glabella): botulinum and hyaluron filler relax frown lines and smooth</p>
 				</a>	
 			</li>
 			<li data-index="2" class="scroll">
 				<a href="#lowerFaceBlock">
 					<img src="images/src/lowerFace.png" alt="">
 					<h3>Lower third<br> of the face</h3>
-					<p>Aesthetic treatment of frown lines (glabella): botulinum and hyaluron filler relax frown lines and smooth</p>
 				</a>
 			</li>
 			<li data-index="3" class="scroll">
 				<a href="#lower2FaceBlock">
 					<img src="images/src/lowerFace.png" alt="">
 					<h3>Lower third<br> of the face</h3>
-					<p>Aesthetic treatment of frown lines (glabella): botulinum and hyaluron filler relax frown lines and smooth</p>
 				</a>
 			</li>
 		</ul>
@@ -118,14 +115,14 @@
 			<h1>Upper third of the <br> face</h1>
 			<div class="content">
 				<div class="contentTemplate flex imgLeft">
-					<div class="contentTemplate__photo">
-						<img src="images/src/model1.png" alt="">
+					<div class="contentTemplate__photo version1">
+						<img src="images/src/ver1Women.jpg" alt="">
 					</div>
 					<div class="contentTemplate__text">
 						<h2>Removal of frown lines</h2>
 						<p>Aesthetic treatment of frown lines (glabella): botulinum and hyaluron filler relax frown lines and smooth them for a harmonious facial expression.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the treatment of frown lines</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the treatment of frown lines</a>
 					</div>
 				</div>
 				<div class="contentTemplate flex imgRight">
@@ -133,21 +130,21 @@
 						<h2>Removal of forehead wrinkles</h2>
 						<p>Aesthetic treatment of forehead wrinkles (worry lines): botulinum (botulinum toxin) in combination with hyaluron makes wrinkles and other creases on the forehead and face disappear.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the forehead wrinkle removal</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the forehead wrinkle removal</a>
 					</div>
-					<div class="contentTemplate__photo">
-						<img src="images/src/model2.png" alt="">
+					<div class="contentTemplate__photo version2">
+						<img src="images/src/ver2Women.jpg" alt="">
 					</div>
 				</div>
 				<div class="contentTemplate flex imgLeft">
-					<div class="contentTemplate__photo">
-						<img src="images/src/model3.png" alt="">
+					<div class="contentTemplate__photo version3">
+						<img src="images/src/ver3Women.jpg" alt="">
 					</div>
 					<div class="contentTemplate__text">
 						<h2>Hollow forehead contour</h2>
 						<p>The forehead area may also experience a loss of volume of the skin and subcutaneous tissue, causing a lowering of the eyebrows, prominence of the eye bone ridges or an irregular contour of the forehead. Instead of a tapered forehead contour, it becomes concave in certain areas, causing a visual disturbance and aesthetically unpleasing. The treatment with hyaluron compensates for the loss of volume.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the hollow forehead contour</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the hollow forehead contour</a>
 					</div>
 				</div>
 				<div class="contentTemplate flex imgRight">
@@ -155,10 +152,10 @@
 						<h2>Hollow temple contour</h2>
 						<p>The volume loss is also partially distinct at this point, which leads to a bony and therefore unhealthy appearance. The  class="chf"sinking of the temple leads to a shortening of the eyebrow sides when looking from the front. It can also lead to a sagging of the eyebrows laterally. Strongly cross-linked hyaluronic acid can correct all these problems. This region is a challenging one, which should only be treated by a specialist.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the forehead wrinkle removal</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the forehead wrinkle removal</a>
 					</div>
-					<div class="contentTemplate__photo">
-						<img src="images/src/model4.png" alt="">
+					<div class="contentTemplate__photo version4">
+						<img src="images/src/ver4Women.jpg" alt="">
 					</div>
 				</div>
 			</div>
@@ -169,14 +166,32 @@
 				<div class="widthWrapper">
 					<h1>GALLERY</h1>
 					<div class="slider">
-						<img src="images/src/gallery1.png" alt="">
-						<img src="images/src/gallery2.png" alt="">
-						<img src="images/src/gallery3.png" alt="">
-						<img src="images/src/gallery4.png" alt="">
-						<img src="images/src/gallery5.png" alt="">
-						<img src="images/src/gallery6.png" alt="">
-						<img src="images/src/gallery7.png" alt="">
-						<img src="images/src/gallery8.png" alt="">
+						<a class="image-link" href="images/src/gallery1.png">
+							<img src="images/src/gallery1.png" alt="">
+						</a>
+
+						<a class="image-link" href="images/src/gallery2.png">
+							<img src="images/src/gallery2.png" alt="">
+						</a>	
+
+						<a class="image-link" href="images/src/gallery3.png">
+							<img src="images/src/gallery3.png" alt="">
+						</a>	
+						<a class="image-link" href="images/src/gallery4.png">
+							<img src="images/src/gallery4.png" alt="">
+						</a>	
+						<a class="image-link" href="images/src/gallery5.png">
+							<img src="images/src/gallery5.png" alt="">
+						</a>	
+						<a class="image-link" href="images/src/gallery6.png">
+							<img src="images/src/gallery6.png" alt="">
+						</a>	
+						<a class="image-link" href="images/src/gallery7.png">
+							<img src="images/src/gallery7.png" alt="">
+						</a>	
+						<a class="image-link" href="images/src/gallery8.png">
+							<img src="images/src/gallery8.png" alt="">
+						</a>	
 					</div>
 				</div>
 			</div>
@@ -206,7 +221,7 @@
 						<h2>Removal of frown lines</h2>
 						<p>Aesthetic treatment of frown lines (glabella): botulinum and hyaluron filler relax frown lines and smooth them for a harmonious facial expression.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the treatment of frown lines</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the treatment of frown lines</a>
 					</div>
 				</div>
 				<div class="contentTemplate flex imgRight">
@@ -214,7 +229,7 @@
 						<h2>Removal of forehead wrinkles</h2>
 						<p>Aesthetic treatment of forehead wrinkles (worry lines): botulinum (botulinum toxin) in combination with hyaluron makes wrinkles and other creases on the forehead and face disappear.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the forehead wrinkle removal</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the forehead wrinkle removal</a>
 					</div>
 					<div class="contentTemplate__photo">
 						<img src="images/src/model2.png" alt="">
@@ -228,7 +243,7 @@
 						<h2>Hollow forehead contour</h2>
 						<p>The forehead area may also experience a loss of volume of the skin and subcutaneous tissue, causing a lowering of the eyebrows, prominence of the eye bone ridges or an irregular contour of the forehead. Instead of a tapered forehead contour, it becomes concave in certain areas, causing a visual disturbance and aesthetically unpleasing. The treatment with hyaluron compensates for the loss of volume.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the hollow forehead contour</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the hollow forehead contour</a>
 					</div>
 				</div>
 				<div class="contentTemplate flex imgRight">
@@ -236,7 +251,7 @@
 						<h2>Hollow temple contour</h2>
 						<p>The volume loss is also partially distinct at this point, which leads to a bony and therefore unhealthy appearance. The  class="chf"sinking of the temple leads to a shortening of the eyebrow sides when looking from the front. It can also lead to a sagging of the eyebrows laterally. Strongly cross-linked hyaluronic acid can correct all these problems. This region is a challenging one, which should only be treated by a specialist.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the forehead wrinkle removal</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the forehead wrinkle removal</a>
 					</div>
 					<div class="contentTemplate__photo">
 						<img src="images/src/model4.png" alt="">
@@ -287,7 +302,7 @@
 						<h2>Removal of frown lines</h2>
 						<p>Aesthetic treatment of frown lines (glabella): botulinum and hyaluron filler relax frown lines and smooth them for a harmonious facial expression.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the treatment of frown lines</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the treatment of frown lines</a>
 					</div>
 				</div>
 				<div class="contentTemplate flex imgRight">
@@ -295,7 +310,7 @@
 						<h2>Removal of forehead wrinkles</h2>
 						<p>Aesthetic treatment of forehead wrinkles (worry lines): botulinum (botulinum toxin) in combination with hyaluron makes wrinkles and other creases on the forehead and face disappear.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the forehead wrinkle removal</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the forehead wrinkle removal</a>
 					</div>
 					<div class="contentTemplate__photo">
 						<img src="images/src/model2.png" alt="">
@@ -309,7 +324,7 @@
 						<h2>Hollow forehead contour</h2>
 						<p>The forehead area may also experience a loss of volume of the skin and subcutaneous tissue, causing a lowering of the eyebrows, prominence of the eye bone ridges or an irregular contour of the forehead. Instead of a tapered forehead contour, it becomes concave in certain areas, causing a visual disturbance and aesthetically unpleasing. The treatment with hyaluron compensates for the loss of volume.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the hollow forehead contour</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the hollow forehead contour</a>
 					</div>
 				</div>
 				<div class="contentTemplate flex imgRight">
@@ -317,7 +332,7 @@
 						<h2>Hollow temple contour</h2>
 						<p>The volume loss is also partially distinct at this point, which leads to a bony and therefore unhealthy appearance. The  class="chf"sinking of the temple leads to a shortening of the eyebrow sides when looking from the front. It can also lead to a sagging of the eyebrows laterally. Strongly cross-linked hyaluronic acid can correct all these problems. This region is a challenging one, which should only be treated by a specialist.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the forehead wrinkle removal</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the forehead wrinkle removal</a>
 					</div>
 					<div class="contentTemplate__photo">
 						<img src="images/src/model4.png" alt="">
@@ -368,7 +383,7 @@
 						<h2>Removal of frown lines</h2>
 						<p>Aesthetic treatment of frown lines (glabella): botulinum and hyaluron filler relax frown lines and smooth them for a harmonious facial expression.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the treatment of frown lines</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the treatment of frown lines</a>
 					</div>
 				</div>
 				<div class="contentTemplate flex imgRight">
@@ -376,7 +391,7 @@
 						<h2>Removal of forehead wrinkles</h2>
 						<p>Aesthetic treatment of forehead wrinkles (worry lines): botulinum (botulinum toxin) in combination with hyaluron makes wrinkles and other creases on the forehead and face disappear.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the forehead wrinkle removal</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the forehead wrinkle removal</a>
 					</div>
 					<div class="contentTemplate__photo">
 						<img src="images/src/model2.png" alt="">
@@ -390,7 +405,7 @@
 						<h2>Hollow forehead contour</h2>
 						<p>The forehead area may also experience a loss of volume of the skin and subcutaneous tissue, causing a lowering of the eyebrows, prominence of the eye bone ridges or an irregular contour of the forehead. Instead of a tapered forehead contour, it becomes concave in certain areas, causing a visual disturbance and aesthetically unpleasing. The treatment with hyaluron compensates for the loss of volume.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the hollow forehead contour</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the hollow forehead contour</a>
 					</div>
 				</div>
 				<div class="contentTemplate flex imgRight">
@@ -398,7 +413,7 @@
 						<h2>Hollow temple contour</h2>
 						<p>The volume loss is also partially distinct at this point, which leads to a bony and therefore unhealthy appearance. The  class="chf"sinking of the temple leads to a shortening of the eyebrow sides when looking from the front. It can also lead to a sagging of the eyebrows laterally. Strongly cross-linked hyaluronic acid can correct all these problems. This region is a challenging one, which should only be treated by a specialist.</p>
 						<span class="chf">From CHF 350</span>
-						<a class="link hover" href="aboutUs.html">+ More about the forehead wrinkle removal</a>
+						<a class="link hover" href="treatmentsInfo.html">+ More about the forehead wrinkle removal</a>
 					</div>
 					<div class="contentTemplate__photo">
 						<img src="images/src/model4.png" alt="">
@@ -447,9 +462,9 @@
 			<li class="footer__list-item">
 				<h3>Navigate</h3>
 				<a href="aboutUs.html" class="hover"><span>About Us</span></a>
-				<a href="#" class="hover"><span>Treatments</span></a>
-				<a href="#" class="hover"><span>Doctors</span></a>
-				<a href="#" class="hover"><span>Pricing</span></a>
+				<a href="treatments.html" class="hover"><span>Treatments</span></a>
+				<a href="doctors.html" class="hover"><span>Doctors</span></a>
+				<a href="pricing.html" class="hover"><span>Pricing</span></a>
 			</li>
 			<li class="footer__list-item">
 				<h3>Need Help?</h3>
@@ -474,6 +489,7 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
 <script src="js/app.js"></script>
 <!-- FOOTER ENDS-->
 </body>

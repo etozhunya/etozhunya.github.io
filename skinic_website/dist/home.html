@@ -8,14 +8,16 @@
 
 	<title>Home</title>
 	<meta name="description" content="Startup HTML template OptimizedHTML 5">
-
+	<link rel="shortcut icon" href="images/favicon/favicon.png" type="image/x-icon">
+	<link rel="icon" href="images/favicon/favicon.png" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+	<link rel="stylesheet" href="css//magnific-popup.css">
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
-<body>
+<body class="haveGallery">
 <!-- HEADER -->	
 	<header class="header">
 	   <div class="header__top widthWrapper flex">
@@ -40,7 +42,7 @@
 	      <div class="header__menu-photo">
 	      </div>
 	      <div class="header__menu-content">
-	         <img src="images/src/logo.svg" alt="" class="logo">
+	         <a href="home.html"><img src="images/src/logo.svg" alt="" class="logo"></a>
 	         <a href="bookTreatment.html" class="button">BOOK AN APPOINTMENT</a>		
 	         <ul class="header__menu-content--list menuList">
 	            <li><a href="aboutUs.html">About Us</a></li>
@@ -53,8 +55,8 @@
 	         <ul class="header__menu-content--info flex">
 	            <li class="account">
 	               <h3>Account</h3>
-	               <a href="#" class="hover"><span class="bold">Sign-in</span></a>
-	               <a href="#" class="hover"><span>Registration</span></a>
+	               <a href="login.html" class="hover"><span class="bold">Sign-in</span></a>
+	               <a href="registration.html" class="hover"><span>Registration</span></a>
 	            </li>
 	            <li class="social">
 	               <h3>Social</h3>
@@ -80,59 +82,74 @@
 	</div>
 </section>
 
-<section class="content leaves">
+<section class="sponsors">
 	<div class="widthWrapper">
-		<div class="contentTemplate flex imgLeft">
-			<div class="contentTemplate__photo"><img src="images/src/headerHero.png" alt=""></div>
-			<div class="contentTemplate__text">
-				<h1>AESTHETIC MEDICINE IN <span class="highlighted">ZURICH</span></h1>
-				<h2>Dr. Dan Iselin</h2>
-				<p>Dr. Iselin is an aesthetic physician in Zurich who specialises in non-surgical facial treatments. For the last ten years he has dedicated himself entirely to the gentle and natural application of botulinum and hyaluron. While these methods are only two of the many options on the market, they represent the foundation of every modern aesthetic medicine treatment.
-				<br><br>
-				Dr. Iselin’s approach to treatment places great emphasis on the effectiveness and safety of the chosen method, the natural look of the result and respect for the individual. Holistic integrity is the core and focus of his Zurich clinic.
-				<br><br>
-			    Dr. Iselin’s beauty clinic is located in the heart of Zurich and is easily accessible by car or public transport.</p>
-			    <a class="link hover" href="aboutUs.html">+ More about us Dr. Dan Iselin</a>
-			</div>
-		</div>
-		<div class="contentTemplate flex treatmentPhilosophy imgRight">
-			<div class="contentTemplate__text">
-				<h1>TREATMENT <br><span class="highlighted">PHILOSOPHY</span></h1>
-				<p>Your trust is paramount to us – this is what all our work is based on. We will accompany you on your journey, even if you don’t yet know exactly where you are headed. But if you do already know, all the better. We treat you as an individual and respond precisely to your personal needs.</p>
-				<p class="highlighted">«Growing old with grace? Yes, of course… …but not right now, please…»</p>
-			    <a class="link hover" href="aboutUs.html">+ More about us</a>
-			</div>
-			<div class="contentTemplate__photo"><img src="images/src/doctor2.png" alt=""></div>
-		</div>
+		<ul>
+			<li><img src="images/src/fmh.png" alt=""></li>
+			<li><img src="images/src/agz.png" alt=""></li>
+			<li><img src="images/src/sgml.png" alt=""></li>
+			<li><img src="images/src/bayer.png" alt=""></li>
+			<li><img src="images/src/ams.png" alt=""></li>
+			<li><img src="images/src/allergan.png" alt=""></li>
+			<li><img src="images/src/imcas.png" alt=""></li>
+			<li><img src="images/src/dgbt.png" alt=""></li>
+		</ul>
 	</div>
 </section>
+
+<div class="background">
+	<section class="content leaves">
+		<div class="widthWrapper">
+			<div class="contentTemplate flex imgLeft">
+				<div class="contentTemplate__photo"><img src="images/src/imweb1.jpg" alt=""></div>
+				<div class="contentTemplate__text">
+					<h1>AESTHETIC MEDICINE <br> IN <span class="highlighted">ZURICH</span></h1>
+					<h2>Dr. Dan Iselin</h2>
+					<p>Dr. Iselin is an aesthetic physician in Zurich who specialises in non-surgical facial treatments. For the last ten years he has dedicated himself entirely to the gentle and natural application of botulinum and hyaluron. While these methods are only two of the many options on the market, they represent the foundation of every modern aesthetic medicine treatment.
+					<br><br>
+					Dr. Iselin’s approach to treatment places great emphasis on the effectiveness and safety of the chosen method, the natural look of the result and respect for the individual. Holistic integrity is the core and focus of his Zurich clinic.
+					<br><br>
+				    Dr. Iselin’s beauty clinic is located in the heart of Zurich and is easily accessible by car or public transport.</p>
+				    <a class="link hover" href="aboutUs.html">+ More about us Dr. Dan Iselin</a>
+				</div>
+			</div>
+			<div class="contentTemplate flex treatmentPhilosophy imgRight">
+				<div class="contentTemplate__text">
+					<h1>TREATMENT <br><span class="highlighted">PHILOSOPHY</span></h1>
+					<p>Your trust is paramount to us – this is what all our work is based on. We will accompany you on your journey, even if you don’t yet know exactly where you are headed. But if you do already know, all the better. We treat you as an individual and respond precisely to your personal needs.</p>
+					<p class="highlighted">«Growing old with grace? Yes, of course… …but not right now, please…»</p>
+				    <a class="link hover" href="aboutUs.html">+ More about us</a>
+				</div>
+				<div class="contentTemplate__photo"><img src="images/src/imweb2.jpg" alt=""></div>
+			</div>
+		</div>
+	</section>	
+</div>
+
 
 <section class="faceList treatments">
 	<div class="widthWrapper">
 		<h1>TREATMENTS</h1>
-		<ul class="faces flex">
+		<ul class="faces flex sliderTreatments">
 			<li>
-				<a href="#">
+				<a href="treatments.html#upperFaceBlock">
 				<img src="images/src/upperFace.png" alt="">
 				<h3>Upper third <br>of the face</h3>
-				<p>Aesthetic treatment of frown lines (glabella): botulinum and hyaluron filler relax frown lines and smooth</p>
 			    </a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="treatments.html#middleFaceBlock">
 					<img src="images/src/middleFace.png" alt="">
 				<h3>Middle third <br>of the face</h3>
-				<p>Aesthetic treatment of frown lines (glabella): botulinum and hyaluron filler relax frown lines and smooth</p>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="treatments.html#lowerFaceBlock">
 					<img src="images/src/lowerFace.png" alt="">
 				<h3>Lower third<br> of the face</h3>
-				<p>Aesthetic treatment of frown lines (glabella): botulinum and hyaluron filler relax frown lines and smooth</p>
 				</a>
 			</li>
-			<a href="#" class="treatButton">
+			<a href="treatments.html" class="treatButton">
 				<svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="221.051" height="220.941" viewBox="0 0 221.051 220.941">
 				  <g id="Сгруппировать_161774" data-name="Сгруппировать 161774" transform="translate(-1144.129 -2694.648)">
 				    <g id="Компонент_8_1" data-name="Компонент 8 – 1" transform="translate(1144.129 2705.656) rotate(-3)">
@@ -182,7 +199,7 @@
 				</div></div>
 				<h3>Dr. Dan Iselin</h3>
 				<p>Aesthetic treatment of frown lines (glabella): botulinum and hyaluron filler relax frown lines and smooth</p>
-				<a href="#" class="button">ABOUT THE DOCTOR</a>
+				<a href="doctors.html" class="button">ABOUT THE DOCTOR</a>
 			    </a>
 			</li>
 			<li id="schrammek">
@@ -193,7 +210,7 @@
 				<h3>Dr. LANA Schrammek</h3>
 				<p>Aesthetic treatment of frown lines (glabella): botulinum and hyaluron filler relax frown lines and smooth</p>
 				</a>
-				<a href="#" class="button">ABOUT THE DOCTOR</a>
+				<a href="doctors.html" class="button">ABOUT THE DOCTOR</a>
 			</li>
 			<li id="davis">
 				<a href="#">
@@ -201,7 +218,7 @@
 				<h3>DR. Jonathan Davis</h3>
 				<p>Aesthetic treatment of frown lines (glabella): botulinum and hyaluron filler relax frown lines and smooth</p>
 				</a>
-				<a href="#" class="button">ABOUT THE DOCTOR</a>
+				<a href="doctors.html" class="button">ABOUT THE DOCTOR</a>
 			</li>
 			<li id="myers">
 				<a href="#">
@@ -209,7 +226,7 @@
 				<h3>DR. Julian Myers</h3>
 				<p>Aesthetic treatment of frown lines (glabella): botulinum and hyaluron filler relax frown lines and smooth</p>
 				</a>
-				<a href="#" class="button">ABOUT THE DOCTOR</a>
+				<a href="doctors.html" class="button">ABOUT THE DOCTOR</a>
 			</li>
 		</ul>
 	</div>
@@ -219,14 +236,32 @@
 	<div class="widthWrapper">
 		<h1>GALLERY</h1>
 		<div class="slider">
-			<img src="images/src/gallery1.png" alt="">
-			<img src="images/src/gallery2.png" alt="">
-			<img src="images/src/gallery3.png" alt="">
-			<img src="images/src/gallery4.png" alt="">
-			<img src="images/src/gallery5.png" alt="">
-			<img src="images/src/gallery6.png" alt="">
-			<img src="images/src/gallery7.png" alt="">
-			<img src="images/src/gallery8.png" alt="">
+			<a class="image-link" href="images/src/gallery1.png">
+				<img src="images/src/gallery1.png" alt="">
+			</a>
+
+			<a class="image-link" href="images/src/gallery2.png">
+				<img src="images/src/gallery2.png" alt="">
+			</a>	
+
+			<a class="image-link" href="images/src/gallery3.png">
+				<img src="images/src/gallery3.png" alt="">
+			</a>	
+			<a class="image-link" href="images/src/gallery4.png">
+				<img src="images/src/gallery4.png" alt="">
+			</a>	
+			<a class="image-link" href="images/src/gallery5.png">
+				<img src="images/src/gallery5.png" alt="">
+			</a>	
+			<a class="image-link" href="images/src/gallery6.png">
+				<img src="images/src/gallery6.png" alt="">
+			</a>	
+			<a class="image-link" href="images/src/gallery7.png">
+				<img src="images/src/gallery7.png" alt="">
+			</a>	
+			<a class="image-link" href="images/src/gallery8.png">
+				<img src="images/src/gallery8.png" alt="">
+			</a>	
 		</div>
 	</div>
 </section>
@@ -243,9 +278,9 @@
 			<li class="footer__list-item">
 				<h3>Navigate</h3>
 				<a href="aboutUs.html" class="hover"><span>About Us</span></a>
-				<a href="#" class="hover"><span>Treatments</span></a>
-				<a href="#" class="hover"><span>Doctors</span></a>
-				<a href="#" class="hover"><span>Pricing</span></a>
+				<a href="treatments.html" class="hover"><span>Treatments</span></a>
+				<a href="doctors.html" class="hover"><span>Doctors</span></a>
+				<a href="pricing.html" class="hover"><span>Pricing</span></a>
 			</li>
 			<li class="footer__list-item">
 				<h3>Need Help?</h3>
@@ -270,6 +305,7 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
 <script src="js/app.js"></script>
 <!-- FOOTER ENDS-->
 </body>
