@@ -339,17 +339,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         datepicker(el)
     })
-    $('.datePicker').on('focus', 'input', function() { $(this).blur(); });
+    // $('.datePicker').on('focus', 'input', function() { $(this).blur(); });
 
 
-    var selectOption = document.querySelectorAll('.select option');
+    // var selectOption = document.querySelectorAll('.select option');
 
-    for (var i = 0; i < selectOption.length; i++) {
-      var item = selectOption[i];
-      if (item.innerHTML.charAt(0) === "–") {
-        item.remove();
-      };
-    }
+    // for (var i = 0; i < selectOption.length; i++) {
+    //   var item = selectOption[i];
+    //   if (item.innerHTML.charAt(0) === "–") {
+    //     item.remove();
+    //   };
+    // }
 })
 // jQuery(document).ready(function($){
 
