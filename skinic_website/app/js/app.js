@@ -3,6 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if ($('body').hasClass('hash')) {
         $(window.location.hash).addClass('in-view').siblings().removeClass('in-view')
+        $('.scroll').eq($(".block.in-view").index()).addClass('active');
+        $('.rectangle_gradient').css({
+            "transform": "translate3d(" + $(".block.in-view").index() + "00%, 0, 0)"
+        })
+        $('.rectangle_gradient').css({
+            "transition": ".5s"
+        })
     }
 
 
@@ -20,6 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
     $(document).on("click",".qs-square", function(){
         $('.timePicker').removeClass('disabled')
        $('.timeSelect').select2('open');
+    });
+    $(".timePicker").on("input", function() {
+       $('#detailsBlock').find('.animated').slideToggle()
+       $('#detailsBlock').find('h4').addClass('active')
+       $('html, body').animate({
+           scrollTop: $('#detailsBlock').offset().top
+       }, '300');
+
+
     });
     if ($('body').hasClass('haveSelect')) {
             $('.select').select2();
@@ -97,6 +113,13 @@ document.addEventListener('DOMContentLoaded', () => {
         $(this).parent().siblings().removeClass('active')
         $(this).parent().siblings().find('.animated').slideUp()
         $(this).parent().siblings().find('h4').removeClass('active')
+
+
+
+        console.log($(this).offset())
+        $('html, body').animate({
+            scrollTop: $(this).offset().top
+        });
     });
     $('.specTable li').click(function() {
         $(this).find('h4').toggleClass('active');
