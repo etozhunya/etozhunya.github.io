@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     if ($(window).width() < 1024) {
-        $('.pricing .headings .animated ul li ').click(function() {
+        $('.pricing .headings .animated ul li .toBook').click(function() {
             window.location.href = 'bookTreatment.html';
         })
     }
@@ -100,11 +100,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    $('.pricingSection').click(function() {
-        if ($(window).width() < 1024) {
-            $(this).href('bookTreatment.html')
-        }
-    })
+    // $('.pricingSection').click(function() {
+    //     if ($(window).width() < 1024) {
+    //         $(this).href('bookTreatment.html')
+    //     }
+    // })
 
 
 
