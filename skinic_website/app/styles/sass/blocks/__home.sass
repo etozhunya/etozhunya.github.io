@@ -76,8 +76,12 @@
 		// 	.contentTemplate__photo
 		// 		width: 45%
 	.treatmentPhilosophy
+		align-items: center
 		.contentTemplate__text
 			padding-top: 60px	
+			p, .highlighted
+				max-width: 400px
+
 .background
 	position: relative
 	&::after
@@ -93,6 +97,7 @@
 .leaves
 	overflow: hidden
 	padding-bottom: 0
+	padding-top: 20px
 	&::before
 		content: ''
 		display: block
@@ -318,6 +323,8 @@
 					width: 100%
 				p, h2
 					padding-left: 10px
+				p, .highlighted
+					max-width: none !important
 		&::after
 			height: 115%
 	.sponsors
