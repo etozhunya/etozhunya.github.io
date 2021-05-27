@@ -106,21 +106,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
+
+
+
     $('.headings li h4').click(function() {
         $(this).parent().toggleClass('active')
         $(this).toggleClass('active');
-        $(this).next('.animated').slideToggle()
+        $(this).next('.animated').slideToggle(500)
         $(this).parent().siblings().removeClass('active')
-        $(this).parent().siblings().find('.animated').slideUp()
+        $(this).parent().siblings().find('.animated').slideUp(500)
         $(this).parent().siblings().find('h4').removeClass('active')
 
-
-
-        console.log($(this).offset())
-        $('html, body').animate({
-            scrollTop: $(this).offset().top
-        });
+        var that = $(this)
+        window.setTimeout(function() {
+            $('html, body').animate({
+                scrollTop: that.offset().top - 100
+            });
+        }, 600)
     });
+
+
+
+
+
     $('.specTable li').click(function() {
         $(this).find('h4').toggleClass('active');
         $(this).toggleClass('active');
