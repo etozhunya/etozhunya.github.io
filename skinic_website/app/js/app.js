@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    if ($(window).width() < 1024) {
+    if ($(window).width() < 1025) {
         $('.pricing .headings .animated ul li .toBook').click(function() {
             window.location.href = 'bookTreatment.html';
         })
