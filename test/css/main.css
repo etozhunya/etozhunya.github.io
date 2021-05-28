@@ -1,0 +1,236 @@
+body {
+	background: #181818
+}
+
+.hamburger {
+	height: 160px;
+	width: 160px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	position: fixed;
+	z-index: 1;
+	right: 20px;
+	top: 20px;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	cursor: pointer
+}
+
+.hamburger__icon {
+	height: 3px;
+	width: 26px;
+	display: block;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	border-radius: 3px;
+	z-index: 21;
+	-webkit-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s;
+	-o-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s;
+	transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s
+}
+
+.hamburger__icon::after,
+.hamburger__icon::before {
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	-webkit-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s;
+	-o-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s;
+	transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s;
+	height: 3px;
+	left: 0;
+	border-radius: 3px
+}
+
+.hamburger__icon::after {
+	top: 9px;
+	width: 14px
+}
+
+.hamburger__icon::before {
+	top: -9px;
+	width: 22px
+}
+
+.hamburger__container {
+	width: 26px;
+	height: 18px;
+	position: relative
+}
+
+.hamburger::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	-webkit-transform: scale(.95);
+	-ms-transform: scale(.95);
+	transform: scale(.95);
+	-webkit-transform-origin: right top;
+	-ms-transform-origin: right top;
+	transform-origin: right top;
+	background-color: #e70d44;
+	opacity: 0;
+	z-index: -1;
+	-webkit-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s;
+	-o-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s;
+	transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s
+}
+
+.hamburger:hover .hamburger__icon {
+	width: 14px;
+	-webkit-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s;
+	-o-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s;
+	transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s
+}
+
+.hamburger:hover .hamburger__icon::after {
+	width: 22px;
+	-webkit-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s;
+	-o-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s;
+	transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s
+}
+
+.hamburger:hover .hamburger__icon::before {
+	width: 26px;
+	-webkit-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s;
+	-o-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s;
+	transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s
+}
+
+.hamburger:hover::after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s;
+	-o-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s;
+	transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s
+}
+
+.hamburger:hover .hamburger__icon {
+	background-color: #fff
+}
+
+.hamburger:hover .hamburger__icon::after,
+.hamburger:hover .hamburger__icon::before {
+	background-color: #fff
+}
+
+.hamburger.active .hamburger__icon {
+	background-color: transparent
+}
+
+.hamburger.active .hamburger__icon::before {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	top: 0;
+	width: 26px
+}
+
+.hamburger.active .hamburger__icon::after {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	top: 0;
+	width: 26px
+}
+
+.animation-wrapper {
+	-webkit-perspective: 800px;
+	perspective: 800px;
+	-webkit-perspective-origin: center;
+	perspective-origin: center;
+	height: 100vh
+}
+
+.animation-wrapper__cube {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	margin: 0 auto;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	transition: -webkit-transform 1s;
+	-o-transition: transform 1s;
+	transition: transform 1s;
+	transition: transform 1s, -webkit-transform 1s;
+	-webkit-transition: -webkit-transform 1s;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center
+}
+
+.animation-wrapper__cube div {
+	position: absolute;
+	width: 300px;
+	height: 50vh;
+	background-color: #000;
+	cursor: pointer;
+	overflow: hidden
+}
+
+.animation-wrapper__cube div video {
+	height: 100%;
+	width: 100%;
+	pointer-events: none
+}
+
+.animation-wrapper__cube div img {
+	width: 100%
+}
+
+.animation-wrapper__front {
+	-webkit-transform: translate3d(0, 0, 150px);
+	transform: translate3d(0, 0, 150px)
+}
+
+.animation-wrapper__left {
+	-webkit-transform: rotateY(270deg) translate3d(-150px, 0, 0);
+	transform: rotateY(270deg) translate3d(-150px, 0, 0);
+	-webkit-transform-origin: center left;
+	-ms-transform-origin: center left;
+	transform-origin: center left
+}
+
+.animation-wrapper__back {
+	-webkit-transform: translate3d(0, 0, -150px) rotateY(180deg);
+	transform: translate3d(0, 0, -150px) rotateY(180deg)
+}
+
+.animation-wrapper__right {
+	-webkit-transform: rotateY(-270deg) translate3d(150px, 0, 0);
+	transform: rotateY(-270deg) translate3d(150px, 0, 0);
+	-webkit-transform-origin: top right;
+	-ms-transform-origin: top right;
+	transform-origin: top right
+}
+
+@media (max-width:768px) {
+	.hamburger {
+		width: 80px;
+		height: 80px
+	}
+}

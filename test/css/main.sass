@@ -1,0 +1,141 @@
+@import config
+@import 'blocks/**/*'
+body
+	background: #181818
+.hamburger
+	height: 160px
+	width: 160px
+	display: flex
+	justify-content: center
+	align-items: center
+	position: fixed
+	z-index: 1
+	right: 20px
+	top: 20px
+	flex-direction: column
+	cursor: pointer
+	&__icon
+		height: 3px
+		width: 26px
+		display: block
+		background-color: #fff
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+		border-radius: 3px
+		z-index: 21
+		transition: $defaultTransition
+		&::after, &::before
+			content: ''
+			background-color: #fff
+			position: absolute
+			transition: $defaultTransition
+			height: 3px
+			left: 0
+			border-radius: 3px   
+		&::after
+			top: 9px
+			width: 14px
+		&::before
+			top: -9px
+			width: 22px
+	&__container
+		width: 26px
+		height: 18px
+		position: relative
+	&::after
+		content: ''
+		width: 100%
+		height: 100%
+		display: block
+		position: absolute
+		transform: scale(0.95)
+		transform-origin: right top
+		background-color: $red
+		opacity: 0
+		z-index: -1
+		transition: $defaultTransition
+	&:hover
+		.hamburger__icon
+			width: 14px
+			transition: $defaultTransition
+			&::after
+				width: 22px
+				transition: $defaultTransition
+			&::before
+				width: 26px
+				transition: $defaultTransition
+		&::after
+			opacity: 1
+			transform: scale(1)
+			transition: $defaultTransition
+		.hamburger__icon
+			background-color: #fff
+			&::before, &::after
+				background-color: #fff
+	&.active
+		.hamburger__icon 
+			background-color: transparent
+			&::before
+				transform: rotate(45deg)
+				top: 0
+				width: 26px
+			&::after
+				transform: rotate(-45deg)
+				top: 0
+				width: 26px
+
+.animation-wrapper
+	perspective: 800px
+	perspective-origin: center
+	height: 100vh
+	&__cube
+		position: relative
+		width: 100vw
+		height: 100vh
+		margin: 0 auto
+		transform-style: preserve-3d
+		transition: transform 1s
+		-webkit-transition: -webkit-transform 1s
+		display: flex
+		justify-content: center
+		align-items: center
+		div
+			position: absolute
+			width: 300px
+			height: 50vh
+			background-color: #000
+			cursor: pointer
+			overflow: hidden
+			video
+				height: 100%
+				width: 100%
+				pointer-events: none
+			img
+				width: 100%
+	&__front
+	  transform: translate3d(0, 0, 150px)
+
+	&__left
+	  transform: rotateY(270deg) translate3d(-150px, 0, 0)
+	  transform-origin: center left
+
+	&__back
+	  transform: translate3d(0, 0, -150px) rotateY(180deg)
+
+	&__right
+	  transform: rotateY(-270deg) translate3d(150px, 0, 0)
+	  transform-origin: top right	
+		
+@media (max-width: 768px)
+	.hamburger
+		width: 80px
+		height: 80px 
+		
+
+
+
+
+
+
