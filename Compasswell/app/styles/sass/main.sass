@@ -1,0 +1,176 @@
+@import config
+@import 'blocks/**/*'
+
+.account
+	background-color: #fcfaf6
+.title
+	font-size: 36px
+	font-family: helveticaLight
+	letter-spacing: 4.39px
+	color: $chocolate
+	margin-bottom: 11px
+	text-transform: uppercase	
+.widthWrapper
+	width: 1280px
+	position: relative
+	margin: 0 auto
+	a
+		text-decoration: none
+.transformed
+	transform: translateY(-172px)
+.button
+	position: relative
+	display: inline-block
+	line-height: normal
+	border-radius: 0
+	text-transform: uppercase
+	text-align: center
+	letter-spacing: 0.2em
+	font-weight: 500
+	font-style: normal
+	background-color: transparent
+	transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86), border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+	z-index: 1
+	-webkit-tap-highlight-color: initial 
+	font-family: HelveticaRegular
+	font-size: 14px
+	padding: 14px 33px
+	border: 1px solid $mainColor
+	letter-spacing: 1.3px
+	background-color: transparent
+	&:hover
+		color: #fff
+		&:before
+			transform-origin: left center
+			transform: scale(1, 1)
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		background-color: $mainColor
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		transform: scale(0, 1)
+		transform-origin: right center
+		z-index: -1
+		transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86)	
+.cardsList
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: relative
+		li
+			width: 30%
+			position: relative
+			transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s
+			.borderDiv
+				width: calc(100% - 30px)
+				height: calc(100% - 30px)
+				position: absolute
+				cursor: pointer
+				left: 15px
+				top: 15px
+				border: 2px solid $mainColor
+			.learnMore
+				position: relative
+				z-index: -2
+				span
+					text-transform: uppercase
+					letter-spacing: 3px
+					display: block
+					padding: 110px 0 105px 0
+					text-align: center
+					font-family: helveticaRegular
+					font-size: 21px
+					color: #fff
+					opacity: 0
+					transition: .5s
+			.cardText
+				background-color: #FCFAF6
+				padding: 29px 0 46px
+				text-align: center
+				h3
+					font-family: helveticaLight
+					font-size: 36px
+					color: #4A1D18
+					display: block
+					letter-spacing: 3px
+					margin-bottom: 55px
+					position: relative
+					&::after
+						content: '';
+						display: block
+						position: absolute
+						width: 68px
+						height: 2px
+						background-color: #CCC3BF
+						left: 50%
+						transform: translateX(-50%)
+						top: 59px
+				p
+					color: #8F7F72
+					font-family: 'garamond'
+					font-size: 22px
+					line-height: 33px
+					display: block
+					padding: 0 20px
+					margin-bottom: 54px
+				a
+					color: #4A1D18
+					font-family: 'helveticaBold'
+					font-size: 12px
+					position: relative
+					display: inline-block
+					letter-spacing: 3px
+					z-index: 10
+					&::after
+						content: ''
+						display: block
+						width: 100%
+						height: 1px
+						bottom: -3px
+						position: absolute
+						background-color: #4A1D18
+			&:hover
+				transform: translateY(10px) scale(1.05)
+				transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s
+				.learnMore
+					&::before
+						content: ''
+						display: block
+						width: 100%
+						height: 100%
+						background-color: #000000
+						opacity: 0.5
+						position: absolute
+						left: 0
+						top: 0
+						z-index: -1
+					span
+						opacity: 1
+						transition: .5s
+						z-index: 1
+				.cardText
+					background-color: #A48E8B
+					h3, p, a
+						color: #fff
+						&::before, &::after
+							background-color: #fff
+
+
+			&:nth-child(1)
+				.learnMore
+					background: url('../images/src/business.jpg') center center/cover no-repeat
+			&:nth-child(2)
+				.learnMore
+					background: url('../images/src/hotel.jpg') center center/cover no-repeat		
+			&:nth-child(3)
+				.learnMore
+					background: url('../images/src/member.jpg') center center/cover no-repeat				
+
+
+

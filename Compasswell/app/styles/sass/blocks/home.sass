@@ -1,0 +1,32 @@
+.home
+	&__textWrapper
+		margin: 0 auto
+		padding: 115px 0 70px 0
+		text-align: center
+		background-color: #FCFAF6
+		margin-bottom: 111px
+		p
+			font-family: garamondItalic
+			font-size: 34px
+			line-height: 41px
+			color: #4A1D18
+			max-width: 712px
+			margin: 0 auto
+			position: relative
+			&::after, &::before
+				content: ''
+				display: block
+				position: absolute
+				width: 41px
+				height: 28px
+				left: 50%
+				transform: translateX(-50%)
+				background: url('../images/src/homeText.png') center center/cover no-repeat
+			&::after
+				bottom: -33px
+			&::before
+				top: -63px
+			
+.header__top
+	.centerLink
+		display: none
