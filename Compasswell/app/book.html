@@ -1,5 +1,45 @@
-<!--#set var="title" value="book" -->
-<!--#include virtual="/parts/header.html" -->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title><!--#echo var="title" --></title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+	<header class="header">
+		<div class="header__top widthWrapper">
+			<a href="home.html" class="logo">
+				<img src="images/src/logo.svg" class="logo">		
+				<p>Compasswell <br>
+				Health & Relax</p>
+			</a>
+			<div class="centerLink">
+				<a href="#">all bookings</a>
+			</div>
+			<div class="rightLinks">
+				<a href="aboutUs.html">About Us</a>
+				<div class="lang">
+					<a href="#">DE</a>
+					<a href="#" class="active">EN</a>
+				</div>
+			</div>
+		</div>
+		<div class="header__media">
+			<img src="images/src/video.jpg" alt="">
+		</div>
+	</header>
+
 <body class="haveSlider">
 	<section class="book transformed">
 		<div class="widthWrapper searchContainer">
@@ -22,7 +62,7 @@
 				<span class="book__wrapper-pre">Special Codes or rates</span>
 				<div class="book__wrapper-content">
 					<input type="text" placeholder="Promo Code">
-					<input type="text" placeholder="Enter Code">
+					<input type="text" placeholder="Enter sCode">
 					<input type="text" placeholder="Agent ID">
 				</div>
 				<div class="buttons">
@@ -113,4 +153,52 @@
 		</div>
 	</section>
 
-	<!--#include virtual="/parts/footer.html" -->
+
+
+	<footer class="footer">
+		<ul class="footer__top widthWrapper">
+			<li><a href="#"><img src="images/src/footerLink1.svg" alt=""></a></li>
+			<li><a href=""><img src="images/src/footerLink2.svg" alt=""></a></li>
+			<li><a href=""><img src="images/src/footerLink3.svg" alt=""></a></li>
+			<li><a href=""><img src="images/src/footerLink4.svg" alt=""></a></li>
+			<li><a href=""><img src="images/src/footerLink5.svg" alt=""></a></li>
+			<li><a href=""><img src="images/src/footerLink6.svg" alt=""></a></li>
+		</ul>
+		<div class="footer__content">
+			<div class="footer__content-container widthWrapper">
+				<h1>DIRECT YOUR HEALTH</h1>
+				<p>«Find your inner compass to your wellness, wellbeeing and wellbalanced. With compasswell you contribute to your, your guests and your employees health with integration of all cultural relaxation techniques.»</p>
+			</div>
+		</div>
+		<ul class="footer__bottom widthWrapper">
+			<li>
+				<h3>CAREERS</h3>
+				<a href="#">Job opportunities</a>
+			</li>
+			<li><h3>CONTACT</h3>
+				<a href="#">Contact Us</a></li>
+			<li>
+				<h3>SOCIAL MEDIA</h3>
+				<ul>
+					<li><a href="#"><img src="images/src/in.svg" alt=""></a></li>
+					<li><a href="#"><img src="images/src/facebook.svg" alt=""></a></li>
+					<li><a href=""><img src="images/src/twitter.svg" alt=""></a></li>
+					<li><a href=""><img src="images/src/instagram.svg" alt=""></a></li>
+				</ul>	
+			</li>
+			<li>
+				<a href="home.html" class="logo">
+					<img src="images/src/logo.svg" class="logo">		
+					<p>© Compasswell <br>
+					GmbH, 2021</p>
+				</a>
+			</li>
+		</ul>
+	</footer>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/app.min.js"></script>
+</body>
+</html>
