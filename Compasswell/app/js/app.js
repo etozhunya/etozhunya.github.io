@@ -23,6 +23,46 @@ document.addEventListener('DOMContentLoaded', () => {
 	//         });
 	//     }, 600)
 	// });
+
+
+	// $('.slider').slick({
+	//     slidesToShow: 1,
+	//     slidesToScroll: 1,
+	//     centerMode: true,
+	//     centerPadding: '10px',
+	//     infinite: true,
+	//     responsive: [{
+	//         breakpoint: 767,
+	//         settings: {
+	//             slidesToShow: 1,
+	//             slidesToScroll: 1
+	//         }
+	//     }]
+	// });
+	  
+		if ($('body').hasClass('haveGallery')) {
+					  if ($(window).width() < 1025) {
+				        $('.slider').slick({
+				          centerMode: true,
+				          centerPadding: '60px',
+				          slidesToShow: 1,
+				          responsive: [
+				            {
+				              breakpoint: 768,
+				              settings: {
+				                arrows: false,
+				                centerMode: true,
+				                centerPadding: '0px',
+				                slidesToShow: 1
+				              }
+				            }
+				          ]
+				        });
+				    }
+		}
+
+
+
 	$('.specTable li').click(function() {
 	    $(this).find('h4').toggleClass('active');
 	    $(this).toggleClass('active');

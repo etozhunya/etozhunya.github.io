@@ -10,13 +10,13 @@
 				font-family: helveticaLight
 				letter-spacing: 4.39px
 				padding: 32px 20px 32px 120px
-				font-size: 36px
+				font-size: 26px
 			&::before
 				content: ''
 				display: block
 				position: absolute
-				width: 30px
-				height: 30px
+				width: 24px
+				height: 24px
 				left: 53px
 				top: 50%
 				transform: translateY(-50%)
@@ -37,7 +37,7 @@
 				margin-top: 20px
 			form
 				width: 368px
-				margin: 48px auto 126px auto
+				margin: 48px auto 98px auto
 				label
 					display: block
 					input
@@ -74,7 +74,7 @@
 					display: inline-block
 		.cardContentWrapper
 			background-color: #fcfaf6	
-			padding: 148px 0 201px				
+			padding: 110px 0 133px				
 			.cardContent
 				display: flex
 				justify-content: space-between
@@ -90,23 +90,51 @@
 					h2
 						font-size: 36px
 						font-family: helveticaLight
-						margin: 10px 0 36px 0
+						margin: 10px 0 19px 0
 						display: block
 						color: $chocolate
 						letter-spacing: 4.39px
 					p
 						font-family: garamond
-						font-size: 22px
-						line-height: 33px
+						font-size: 18px
+						line-height: 22px
 						color: #000
 						padding-right: 55px
 
-				&__photo
+				&__pic
 					width: 40%
-
-
-
-
-
+					img
+						width: 100%
+						display: block
 		.footer
 			margin-top: 0
+@media (max-width: 768px) 
+	.contact
+		.searchBar
+			input
+				padding: 22px 10px 22px 60px 
+				font-size: 17px
+			&::before
+				left: 23px
+				height: 20px
+				width: 20px
+		.login
+			form
+				margin: 50px auto
+				width: 100%
+				position: relative
+				label
+					input
+						width: 100%
+		.map
+			margin-top: 50px
+		.cardContentWrapper
+			padding: 30px 0
+			.cardContent
+				flex-direction: column-reverse
+				&__text, &__pic	
+					width: 100%
+				&__pic
+					margin-bottom: 20px	
+
+				

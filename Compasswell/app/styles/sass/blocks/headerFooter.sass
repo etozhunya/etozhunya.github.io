@@ -8,9 +8,10 @@
 	p
 		font-family: helveticaRegular
 		color: $mainColor
-		line-height: 22px
+		line-height: 20px
 		text-transform: uppercase
 		margin-left: 20px
+		font-size: 14px
 .header
 	background-color: #fcfaf6
 	&__top
@@ -20,37 +21,40 @@
 		.rightLinks
 			a
 				margin-right: 68px
+				font-size: 14px
 		.rightLinks, .centerLink
 			display: flex
 			align-items: center
 			justify-content: center
 			a
 				font-family: helveticaMedium
-				font-size: 18px
 				text-transform: uppercase
 				color: $mainColor
+				font-size: 14px
 			.lang
 				a
 					display: inline-block
 					font-family: 'helveticaRegular'
 					opacity: 0.83
 					margin: 0px 7px
+					font-size: 14px
 					&.active
 						opacity: 1
 						font-family: 'helveticaBold'
 						font-weight: bold
-	&__video
+	&__media
 		width: 100vw
 		position: relative
 		height: 600px
 		img
-			width: 100%
-			display: block
+			// width: 100%
+			// display: block
 
-
-
-
-
+.homeFooter
+		.footer__content
+			background: url(../images/src/homeFooterImage.jpg) left top/cover no-repeat
+			&:after
+				content: none
 .footer	
 	margin-top: -172px
 	&__top
@@ -59,21 +63,35 @@
 		align-items: center
 		padding: 100px 7%
 	&__content
-		height: 661px
+		height: 496px
 		background: url('../images/src/footerImage.jpg') center center/cover no-repeat		
+		position: relative
+		z-index: -2
 		h1
 			font-family: 'helveticaLight'
-			font-size: 48px
+			font-size: 35px
 			color: #fff
 			padding-top: 139px
 			margin-bottom: 31px
 			letter-spacing: 6px
+			z-index: 1
 		p
-			max-width: 608px
-			font-size: 22px
+			max-width: 456px
+			font-size: 18px
 			font-family: 'garamond'
-			line-height: 33px
+			line-height: 22px
 			color: #fff
+			z-index: 1
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			width: 100%
+			height: 100%
+			top: 0
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0))
+			z-index: -1
 	&__bottom
 		display: flex
 		align-items: center
@@ -92,13 +110,70 @@
 				&:nth-child(3)
 					padding-right: 25px
 			a
-				font-size: 18px
+				font-size: 14px
 				color: #8F7F72
 			ul
 				display: flex
 				justify-content: space-between
 
+@media (max-width: 768px)
+	.logo
+		img
+			width: 40px
+		p
+			display: none
 
+	
+	.header
+		&__top
+		.rightLinks
+			a
+				margin-right: 15px
+			.lang
+				a 
+					margin: 0 1px
+	.footer
+		&__content
+			    background: url(../images/src/footerImage.jpg) left top/cover no-repeat
+			    h1
+			    	padding-top: 50px
+		&__bottom
+			flex-flow: wrap
+			align-items: flex-start
+			> li
+				width: 45%
+				margin-bottom: 55px
+				h3
+					margin-bottom: 15px
+				h3, a
+					text-align: center
+					display: block
+				.logo
+					img
+						margin: 0 auto 5px
+					p
+						display: block
+						font-size: 12px
+						line-height: 16px
+						text-align: center
+						margin: 0
+				&:nth-child(4), &:nth-child(3)
+					margin-bottom: 0
 
-
-
+@media (max-width: 767px) 
+	.header
+		&__media
+			max-height: 70vh
+			overflow: hidden
+	.footer
+		&__top
+			flex-flow: wrap
+			padding: 30px 0%
+			li
+				width: 33%
+				a
+					width: 100%
+					display: block
+					text-align: center
+					img
+						margin: 0 auto 15px

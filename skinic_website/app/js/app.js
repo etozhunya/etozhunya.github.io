@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     $('.slider').slick({
-        slidesToShow: 3,
+        slidesToShow: 1,
         infinite: false,
         centerPadding: '40px',
         responsive: [{

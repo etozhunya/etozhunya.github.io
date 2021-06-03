@@ -40,6 +40,8 @@ $('#emailEdit').click(function() {
     $('.emailClose').addClass('visible')
     $('.emailEdit').prop('readonly', false);
     $('.emailEdit').removeAttr('disabled')
+    $('.emailEdit').addClass('editable');
+    $('.pseudoWrapper').addClass('editable');
     $('.emailButtons').addClass('visible')
 })
 $('.emailClose').click(function() {
@@ -47,6 +49,8 @@ $('.emailClose').click(function() {
     $('.emailClose').removeClass('visible')
     $('#emailEdit').removeClass('hidden')
     $('#emailEdit').addClass('visible')
+    $('.emailEdit').removeClass('editable');
+    $('.pseudoWrapper').removeClass('editable');
     $('.emailEdit').attr('disabled', true);
     $('.emailButtons').removeClass('visible')
 })

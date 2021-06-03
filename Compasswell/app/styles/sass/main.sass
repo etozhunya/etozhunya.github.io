@@ -11,13 +11,25 @@
 	margin-bottom: 11px
 	text-transform: uppercase	
 .widthWrapper
-	width: 1280px
+	width: 960px
 	position: relative
 	margin: 0 auto
 	a
 		text-decoration: none
 .transformed
 	transform: translateY(-172px)
+.widthWrapper
+	.slider
+		.slick-track
+			display: flex
+			.slick-slide
+				div
+					li
+						max-width: 420px !important
+						display: block !important
+						margin: 0 auto
+		// .slick-next, .slick-prev
+		// 	display: none !important	
 .button
 	position: relative
 	display: inline-block
@@ -33,7 +45,7 @@
 	z-index: 1
 	-webkit-tap-highlight-color: initial 
 	font-family: HelveticaRegular
-	font-size: 14px
+	font-size: 18px
 	padding: 14px 33px
 	border: 1px solid $mainColor
 	letter-spacing: 1.3px
@@ -74,7 +86,7 @@
 				cursor: pointer
 				left: 15px
 				top: 15px
-				border: 2px solid $mainColor
+				border: 1px solid #C0B5AF
 			.learnMore
 				position: relative
 				z-index: -2
@@ -82,10 +94,10 @@
 					text-transform: uppercase
 					letter-spacing: 3px
 					display: block
-					padding: 110px 0 105px 0
+					padding: 95px 0 95px 0
 					text-align: center
 					font-family: helveticaRegular
-					font-size: 21px
+					font-size: 16px
 					color: #fff
 					opacity: 0
 					transition: .5s
@@ -95,11 +107,11 @@
 				text-align: center
 				h3
 					font-family: helveticaLight
-					font-size: 36px
+					font-size: 26px
 					color: #4A1D18
 					display: block
 					letter-spacing: 3px
-					margin-bottom: 55px
+					margin-bottom: 40px
 					position: relative
 					&::after
 						content: '';
@@ -110,15 +122,15 @@
 						background-color: #CCC3BF
 						left: 50%
 						transform: translateX(-50%)
-						top: 59px
+						top: 45px
 				p
 					color: #8F7F72
 					font-family: 'garamond'
-					font-size: 22px
-					line-height: 33px
+					font-size: 18px
+					line-height: 22px
 					display: block
-					padding: 0 20px
-					margin-bottom: 54px
+					padding: 0 30px
+					margin-bottom: 21px
 				a
 					color: #4A1D18
 					font-family: 'helveticaBold'
@@ -172,5 +184,30 @@
 				.learnMore
 					background: url('../images/src/member.jpg') center center/cover no-repeat				
 
+
+@media (max-width: 1024px)
+	.widthWrapper
+		width: 80%
+	.cardsList
+		display: block
+		li
+			&:hover
+				transform: none
+	.footerTableWrapper
+		width: 100%
+@media (max-width: 768px)		
+	.widthWrapper
+		width: 90%
+	.footerTableWrapper
+		width: 100%
+@media (max-width: 767px)
+	.slick-slide
+		width: 360px !important
+		margin: 0 10px
+	.cardsList
+		li
+			.cardText
+				p
+					font-size: 18px
 
 
