@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	//     }]
 	// });
 	  
-		if ($('body').hasClass('haveGallery')) {
+		if ($('body').hasClass('haveSlider')) {
 					  if ($(window).width() < 1025) {
 				        $('.slider').slick({
 				          centerMode: true,
@@ -59,6 +59,26 @@ document.addEventListener('DOMContentLoaded', () => {
 				          ]
 				        });
 				    }
+				    $('.slider3').slick({
+				      infinite: true,
+				      slidesToShow: 3,
+				      slidesToScroll: 3,
+				      dots: true,
+				      centerPadding: '0px',
+				      arrows: true,
+				      responsive: [
+				        {
+				          breakpoint: 768,
+				          settings: {
+				          	dots: false,
+				            arrows: false,
+				            centerMode: true,
+				            centerPadding: '0px',
+				            slidesToShow: 1
+				          }
+				        }
+				      ]
+				    });
 		}
 
 

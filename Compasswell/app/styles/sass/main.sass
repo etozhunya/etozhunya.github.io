@@ -1,6 +1,7 @@
 @import config
 @import 'blocks/**/*'
-
+.ipad
+	display: none
 .account
 	background-color: #fcfaf6
 .title
@@ -28,6 +29,16 @@
 						max-width: 420px !important
 						display: block !important
 						margin: 0 auto
+	.slider3
+		.slick-track
+			display: flex
+			.slick-slide
+				> div
+					margin: 0 10px
+					li
+						// max-width: 600px !important
+						// display: block !important
+						// margin: 0 auto
 		// .slick-next, .slick-prev
 		// 	display: none !important	
 .button
@@ -75,10 +86,14 @@
 		justify-content: space-between
 		align-items: center
 		position: relative
-		li
+		background-color: #fcfaf6
+		&__item
 			width: 30%
 			position: relative
 			transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s
+			img
+				width: 100%
+				display: block
 			.borderDiv
 				width: calc(100% - 30px)
 				height: calc(100% - 30px)
@@ -87,9 +102,11 @@
 				left: 15px
 				top: 15px
 				border: 1px solid #C0B5AF
+				z-index: 3
 			.learnMore
 				position: relative
-				z-index: -2
+				z-index: 1
+				overflow: hidden
 				span
 					text-transform: uppercase
 					letter-spacing: 3px
@@ -101,6 +118,7 @@
 					color: #fff
 					opacity: 0
 					transition: .5s
+					z-index: 5
 			.cardText
 				background-color: #FCFAF6
 				padding: 29px 0 46px
@@ -148,7 +166,7 @@
 						position: absolute
 						background-color: #4A1D18
 			&:hover
-				transform: translateY(10px) scale(1.05)
+				// transform: translateY(10px) scale(1.)
 				transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s
 				.learnMore
 					&::before
@@ -165,7 +183,7 @@
 					span
 						opacity: 1
 						transition: .5s
-						z-index: 1
+						z-index: 10
 				.cardText
 					background-color: #A48E8B
 					h3, p, a
@@ -183,6 +201,70 @@
 			&:nth-child(3)
 				.learnMore
 					background: url('../images/src/member.jpg') center center/cover no-repeat				
+		.chooseHotel
+			&:hover
+				.cardText
+					color: 
+.hotelList
+	&__item
+		// .borderDiv
+		// 	display: none
+		.cardText
+			background-color: linear-gradient(213deg, #fcfaf5 99%, #f8f2ee 1%)
+			padding: 29px 7px 71px 7px
+			h3
+				font-family: EBgaramond
+				font-size: 26px
+				margin-bottom: 11px
+				letter-spacing: normal
+				color: #957248
+				&::after
+					content: none
+			p
+				font-size: 13px
+				font-family: helveticaLight
+				margin: 0
+				line-height: 18px
+				&:last-of-type
+					font-size: 12px;
+					max-width: 235px;
+					margin: 0 auto 24px;
+			h4
+				font-family: EBgaramondMedium
+				font-size: 27px
+				position: relative
+				display: inline-block
+				color: #957248
+				margin: 12px 0 9px
+				span
+					position: absolute
+					right: -20px
+					right: -40px
+					top: 5px
+					font-size: 14px
+					color: #8F7F72
+					&::after
+						content: ''
+						display: block
+						position: absolute
+						left: 0
+						top: 55%
+						height: 1px
+						width: 100%
+						background-color: #8F7F72
+					
+			p
+			.button
+				font-size: 18px
+				color: #957248
+				font-family: helveticaRegular
+				&:before
+					content: none
+				&::after
+					content: none
+		&:hover
+			h4
+				color: #fff
 
 
 @media (max-width: 1024px)

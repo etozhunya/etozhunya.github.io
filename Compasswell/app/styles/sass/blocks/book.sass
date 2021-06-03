@@ -35,4 +35,77 @@
 			color: #8F7F72
 			text-align: center
 			margin-bottom: 55px
+		.cardsList
+			display: block
+			.chooseHotel
+				height: 461px
+				.cardText
+					padding-left: 15px
+					padding-right: 15px
+					h3
+						letter-spacing: normal
+				&:hover
+					.learnMore
+						&::before
+							width: calc(100% - 30px)
+							calc(100% - 30px)
+							left: 15px
+							top: 15px
+					.cardText
+						background-color: #fcfaf6
+						h3
+							color: #4a1d18
+							&::after
+								background-color:#ccc3bf
+						p
+							color: #8f7f72
 
+
+
+			
+
+
+
+
+			.slick-dots
+				li
+					margin: 0
+					button
+						&::before
+							color: #ccc3bf
+							font-size: 10px
+					&.slick-active
+						button
+							&::before
+								color: #a48e8b
+								opacity: 1
+			.slick-prev
+				&::before
+					content: ''
+					display: block
+					background: url('../images/src/sliderArrow.svg') center center/contain no-repeat
+					height: 43px
+					width: 12px
+			.slick-next
+				&::before
+					content: ''
+					display: block
+					transform: rotate(180deg)
+					background: url('../images/src/sliderArrow.svg') center center/contain no-repeat
+					height: 43px
+					width: 12px					
+			.slick-list
+				overflow: hidden
+
+@media (max-width: 1024px) 
+	.book
+		.bookTreatment
+			.cardsList
+				.chooseHotel
+
+					.cardText
+						h3
+							.ipad
+								display: block
+							&::after
+								top: 70px
