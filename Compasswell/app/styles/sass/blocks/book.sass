@@ -1,37 +1,126 @@
 .book
+	.noHover
+		background-color: #947147
+		color: #fff
+		&::before
+			content: none
+
 	.searchContainer
-		width: 100%
 		position: relative
+		background-color: #fff
 		&__searchBar
 			display: flex
 			justify-content: space-between
+			border: 1px solid #999999
 			li
 				width: 30%
+				padding: 15px 15px 15px 55px
+				position: relative
 				h3
 					display: block
 					font-family: RobotoMedium
-					font-size: 16px
-				span
 					font-size: 14px
+					position: relative
+					color: $chocolate
+					margin-bottom: 5px
+					&::before
+						content: ''
+						display: block
+						position: absolute
+						left: -30px
+						width: 22px
+						height: 22px
+						top: 3px
+				span
+					font-size: 13px
 					font-family: RobotoRegular
 					color: #a48e8b
-				.button
-
-				&:last-chid
+				&:first-child
+					h3
+						&::before
+							background: url('../images/src/guests.svg') center center/contain no-repeat
+				&:nth-child(2)
+					border-left: 1px solid #999999
+					border-right: 1px solid #999999
+					h3
+						&::before
+							background: url('../images/src/calendar.svg') center center/contain no-repeat
+				&:last-child
 					width: 40%
+					h3
+						&::before
+							background: url('../images/src/calendar.svg') center center/contain no-repeat
+					.button
+						position: absolute
+						right: 15px
+						padding: 13px 25px
+						font-size: 14px
+						top: 50%
+						transform: translateY(-50%)
 		&__wrapper
+			padding: 31px 29px 77px 29px
+			position: relative
+			border-bottom: 1px solid #999999
+			border-left: 1px solid #999999
+			border-right: 1px solid #999999
 			&-pre
+				color: #A48E8B
+				font-family: RobotoRegular
+				font-size: 14px
+				position: absolute
+				right: 45px
+				top: 29px
+				&::after
+					content: ''
+					display: block
+					background: url('../images/src/preArrow.svg') center center/contain no-repeat
+					width: 10px
+					height: 5px
+					position: absolute
+					right: -15px
+					top: 5px
 			&-content
+				display: flex
+				justify-content: space-between
+				flex-flow: wrap
+				width: 462px
+				position: relative
 				input
+					border: none
+					appearance: none
+					font-family: RobotoRegular
+					font-size: 14px
+					padding: 20px 10px 20px 26px
+					border: 1px solid #999
+					&::placeholder
+						color: #A48E8B
+					&:first-child
+						border-right: none
+					&:first-child, &:nth-child(2)
+						width: 50%
+						margin-bottom: 16px
+					&:last-child
+						width: 100%
+
 			.buttons
+				position: absolute
+				right: 29px
+				bottom: 22spx
 				.button
+					font-size: 14px
+					&:first-child
+						color: #947147
+						background-color: #fff
+						border: none
+						padding: 14px
+						text-transform: capitalize
 	.bookTreatment
-		padding-top: 60px
+		padding-top: 53px
 		h1
 			text-align: center
 		p
 			font-family: helveticaRegular
-			font-size: 18px
+			font-size: 14px
 			color: #8F7F72
 			text-align: center
 			margin-bottom: 55px
@@ -101,6 +190,10 @@
 	.book
 		.bookTreatment
 			.cardsList
+				&__item
+					max-width: 398px
+
+
 				.chooseHotel
 
 					.cardText
@@ -109,3 +202,27 @@
 								display: block
 							&::after
 								top: 70px
+			.hotelList
+				&__item
+
+					.cardText
+						.button
+							font-size: 15px
+							padding: 10px 25px					
+@media (width: 1024px) 
+	.book
+		.ipad2
+			display: block
+@media (width: 768px) 
+	.book
+		.bookTreatment
+			max-width: 70%
+			margin: 0 auto
+		.slider3
+			.slick-list
+				.slick-slide
+					> div
+						display: flex
+						justify-content: center
+
+

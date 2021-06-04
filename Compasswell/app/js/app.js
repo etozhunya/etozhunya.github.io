@@ -68,14 +68,20 @@ document.addEventListener('DOMContentLoaded', () => {
 				      arrows: true,
 				      responsive: [
 				        {
-				          breakpoint: 768,
+				          breakpoint: 769,
 				          settings: {
-				          	dots: false,
-				            arrows: false,
 				            centerMode: true,
 				            centerPadding: '0px',
 				            slidesToShow: 1
 				          }
+				        },
+				        {
+				        	breakpoint: 767,
+				        	settings: {
+				        	  arrows: false,
+				        	  slidesToShow: 1,
+				        	  slidesToScroll: 1
+				        	}
 				        }
 				      ]
 				    });
