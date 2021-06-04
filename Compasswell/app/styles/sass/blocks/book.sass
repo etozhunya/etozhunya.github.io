@@ -105,7 +105,7 @@
 			.buttons
 				position: absolute
 				right: 29px
-				bottom: 22spx
+				bottom: 22px
 				.button
 					font-size: 14px
 					&:first-child
@@ -116,6 +116,7 @@
 						text-transform: capitalize
 	.bookTreatment
 		padding-top: 53px
+		overflow: hidden
 		h1
 			text-align: center
 		p
@@ -224,5 +225,31 @@
 					> div
 						display: flex
 						justify-content: center
+@media (max-width: 767px)
+	.book
+		.searchContainer
+
+			&__searchBar
+				display: flex
+				justify-content: space-between
+				flex-flow: wrap
+				li
+					border-bottom: 1px solid #999
+					padding-right: 5px
+					padding-left: 45px
+					&:nth-child(1), &:nth-child(2)
+						width: 50%
+					&:nth-child(3)
+						width: 100%
+						border-bottom: none
+
+			&__wrapper
+				padding-bottom: 100px
+				&-content
+					flex-flow: wrap
+					width: 100%
+					input
+						width: 100% !important
+						border-right: 1px solid #999 !important
 
 
