@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				          centerMode: true,
 				          centerPadding: '60px',
 				          slidesToShow: 1,
+				          arrows: false,
 				          responsive: [
 				            {
 				              breakpoint: 768,
