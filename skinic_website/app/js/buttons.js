@@ -80,7 +80,6 @@ $('#nameEdit').click(function() {
         $('.addressButtons').removeClass('visible')
     })
     $('#methodEdit').click(function() {
-        // $('.methodEdit').focus()
         $(this).addClass('hidden')
         $('.methodClose').addClass('visible')
         $('.methodEdit').removeAttr('disabled')

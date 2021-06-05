@@ -1,4 +1,7 @@
 .book
+	.header__top
+		.centerLink
+			display: flex
 	.searchContainer
 		position: relative
 		background-color: #fff
@@ -10,6 +13,7 @@
 				width: 30%
 				padding: 15px 15px 15px 55px
 				position: relative
+				cursor: pointer
 				.function
 				  position: absolute
 				  padding: 15px 30px 15px 30px
@@ -90,11 +94,19 @@
 						width: 22px
 						height: 22px
 						top: 3px
-				span
+				input, span
+					appearance: none
+					border: none
+					position: relative
 					font-size: 13px
 					font-family: RobotoRegular
 					color: #a48e8b
+					&::placeholder
+						color: #a48e8b
 				&:first-child
+					padding: 0
+					.guests
+						padding: 15px 15px 15px 55px
 					h3
 						&::before
 							background: url('../images/src/guests.svg') center center/contain no-repeat
@@ -514,13 +526,16 @@
 				flex-flow: wrap
 				li
 					border-bottom: 1px solid #999
-					padding-right: 5px
-					padding-left: 45px
+					padding: 15px 5px 15px 40px
+					input
+						width: 120px
 					&:nth-child(1), &:nth-child(2)
 						width: 50%
 					&:nth-child(3)
 						width: 100%
 						border-bottom: none
+					.guests
+	    				padding: 15px 5px 15px 40px !important
 
 			&__wrapper
 				padding-bottom: 100px

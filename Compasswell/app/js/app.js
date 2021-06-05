@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   
+
+
 	if ($('body').hasClass('haveSlider')) {
 				  if ($(window).width() < 1025) {
 			        $('.slider').slick({
@@ -136,5 +138,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	    $(this).addClass('active').siblings().removeClass('active');
 	    $('.AAScontent').removeClass('in-view').eq($(this).index()).addClass('in-view');
 	});
+
+	var pickers = document.querySelectorAll('.datePicker');
+	pickers.forEach(function(el) {
+
+	    datepicker(el)
+	})
 
 })

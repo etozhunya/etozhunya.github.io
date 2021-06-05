@@ -72,8 +72,24 @@ $('.passwordClose').click(function() {
     $('.passwordEdit').removeClass('editable');
     $('.passwordButtons').removeClass('visible')
 })
+$('#addressEdit').click(function() {
+    // $('.addressEdit').focus()
+    $(this).addClass('hidden')
+    $('.addressClose').addClass('visible')
+    $('.addressEdit').addClass('editable');
+    $('.addressEdit').prop('readonly', false);
+    $('.addressButtons').addClass('visible')
+})
+$('.addressClose').click(function() {
+    $('.addressClose').removeClass('hidden')
+    $('.addressClose').removeClass('visible')
+    $('.addressEdit').removeClass('editable');
+    $('#addressEdit').removeClass('hidden')
+    $('#addressEdit').addClass('visible')
+    $('.addressEdit').prop('readonly', true);
+    $('.addressButtons').removeClass('visible')
+})
 $('#methodEdit').click(function() {
-    // $('.methodEdit').focus()
     $(this).addClass('hidden')
     $('.methodClose').addClass('visible')
     $('.methodEdit').prop('readonly', false);
@@ -88,4 +104,18 @@ $('.methodClose').click(function() {
     $('.methodEdit').prop('readonly', true);
     $('.methodEdit').removeClass('editable');
     $('.methodButtons').removeClass('visible')
+})
+$('#deliverEdit').click(function() {
+    $(this).addClass('hidden')
+    $('.deliverClose').addClass('visible')
+    $('.deliverEdit').removeAttr('disabled')
+    $('.deliverButtons').addClass('visible')
+})
+$('.deliverClose').click(function() {
+    $('.deliverClose').removeClass('hidden')
+    $('.deliverClose').removeClass('visible')
+    $('#deliverEdit').removeClass('hidden')
+    $('#deliverEdit').addClass('visible')
+    $('.deliverEdit').attr('disabled', true);
+    $('.deliverButtons').removeClass('visible')
 })
