@@ -45,8 +45,34 @@
 		<div class="widthWrapper searchContainer">
 			<ul class="searchContainer__searchBar">
 				<li>
-					<h3>Guests</h3>
-					<span>1 Adult, 0 Children</span>
+					<div class="guests">
+						<h3>Guests</h3>
+						<span>1 Adult, 0 Children</span>
+					</div>
+					<div class="function">
+						<div class="function__wrapper">
+							<div>
+								<h3>Adults</h3>
+								<span>From 13 years</span>
+							</div>
+							<div class="calculator">
+							    <button class="calc" value="minus">-</button>
+							    <input id="adults" type="text" class="calcInput" value="0">  
+							    <button class="calc" value="plus">+</button>
+							</div>
+						</div>
+						<div class="function__wrapper">
+							<div>
+								<h3>Children</h3>
+								<span>Age 2-12</span>
+							</div>
+							<div class="calculator">
+							    <button class="calc" value="minus">-</button>
+							    <input id="children" type="text" readonly="" class="calcInput" value="0">  
+							    <button class="calc" value="plus">+</button>
+							</div>
+						</div>
+					</div>
 				</li>
 				<li>
 					<h3>Check-in</h3>
@@ -257,10 +283,12 @@
 		<div class="widthWrapper hours">
 			<div class="hours__top">
 				<input type="text" placeholder="Arrange your spa experience with us. ">
-				<a href="tel:1 (818) 575 -3000">1 (818) 575 -3000</a>
-				<a href="#" class="button">BOOK NOW</a>
+				<div>
+					<a href="tel:1 (818) 575 -3000" class="tel">1 (818) 575 -3000</a>
+					<a href="#" class="button noHover">BOOK NOW</a>
+				</div>
 			</div>
-			<h1>HOURS</h1>
+			<h1 class="title">HOURS</h1>
 			<ul class="hours__schedule">
 				<li>
 					<h5>Spa reception</h5>
@@ -285,15 +313,17 @@
 
 		</div>
 
-		<div class="reservations">
+		<div class="reservation">
 			<div class="widthWrapper">
-				<h1>FIND YOUR RESERVATIONS</h1>
+				<h1 class="title">FIND YOUR RESERVATIONS</h1>
 				<div class="reservation__container">
 					<h2>WITH CONFIRMATION # OR LTINERARY #</h2>
 					<form action="">
-						<input type="text">
-						<input type="text">
-						<button type="button" class="button">FIND RESERVATION</button>
+						<div class="deliverInputs">
+							<input class="input" id="confirmation" type="text" placeholder="Confirmation or itinerary Number">
+							<input class="input" id="address" type="text" placeholder="Email Address">
+						</div>
+						<button type="button" class="button disabled noHover deliverButton">FIND RESERVATION</button>
 					</form>
 					<h3>Don’t know your confirmation #?</h3>
 					<p>Your Confirmation # was included in an email sent at the time of Booking. Pleas check Your email to recover the number. </p>

@@ -19,6 +19,11 @@
 	margin: 0 auto
 	a
 		text-decoration: none
+	.noHover
+		background-color: #947147
+		color: #fff
+		&::before
+			content: none	
 .transformed
 	transform: translateY(-172px)
 .widthWrapper
@@ -73,6 +78,7 @@
 							
 .button
 	position: relative
+	cursor: pointer
 	display: inline-block
 	line-height: normal
 	border-radius: 0

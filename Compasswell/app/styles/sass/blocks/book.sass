@@ -1,10 +1,4 @@
 .book
-	.noHover
-		background-color: #947147
-		color: #fff
-		&::before
-			content: none
-
 	.searchContainer
 		position: relative
 		background-color: #fff
@@ -16,6 +10,69 @@
 				width: 30%
 				padding: 15px 15px 15px 55px
 				position: relative
+				.function
+				  position: absolute
+				  padding: 15px 30px 15px 30px
+				  left: 0
+				  background-color: #fff
+				  z-index: 1
+				  border: 1px solid #999999
+				  border-top: none
+				  border-left: none
+				  top: 102%
+				  width: 100.3%
+				  display: flex
+				  justify-content: space-between
+				  align-items: center
+				  flex-flow: wrap
+				  display: none
+				  &.active
+				  	display: block
+				  &__wrapper
+				  		width: 100%
+				  		display: flex
+				  		justify-content: space-between
+				  		align-items: center
+				  		position: relative
+				  		&:first-child
+				  			margin-bottom: 29px
+				  			&::after
+				  				content: ''
+				  				display: block
+				  				position: absolute
+				  				bottom: -17.5px
+				  				width: 100%
+				  				height: 1px
+				  				background-color: #F0F0F0
+
+				  		h3
+				  			&::before
+				  				content: none
+				  		.calculator
+				  		  width: 40%
+				  		  display: flex
+				  		  justify-content: space-between
+
+				  		  .calcInput
+				  		    margin: 0 5px
+				  		    font-size: 16px
+				  		    padding: 0
+				  		    border: none
+				  		    background-color: transparent
+				  		    font-family: robotoMedium
+				  		    text-align: center
+				  		    width: 25px
+				  		    color: $chocolate
+				  		  .calc
+				  		    margin: 0
+				  		    width: 30px
+				  		    height: 30px
+				  		    border-radius: 50px
+				  		    border: solid 1px #A48E8B
+				  		    background-color: #fff
+				  		    appearance: none
+				  		    &:focus
+				  		    	outline: none
 				h3
 					display: block
 					font-family: RobotoMedium
@@ -23,6 +80,7 @@
 					position: relative
 					color: $chocolate
 					margin-bottom: 5px
+					display: block
 					&::before
 						content: ''
 						display: block
@@ -204,39 +262,176 @@
 					top: 40%
 					&::before
 						background: url('../images/src/smallArrow.svg') center center/contain no-repeat
-				&--payment
-					border: 1px solid #8F7F72
-					padding: 18px 0 18px 45px
-					border-radius: 4px
-					height: 75px
+			&--payment
+				border: 1px solid #8F7F72
+				padding: 18px 0 18px 45px
+				border-radius: 4px
+				height: 75px
+				position: relative
+				width: 175px
+				h4
+					font-family: helveticaRegular
+					font-size: 15px
+					color: $chocolate
+					margin-bottom: 10px
 					position: relative
-					width: 175px
-					h4
-						font-family: helveticaRegular
-						font-size: 15px
-						color: $chocolate
-						margin-bottom: 10px
-						position: relative
 
-					span
-						font-family: helveticaLight
-						font-size: 12px
-						color: #8F7F72
-					&::before
-						content: ''
-						display: block
-						position: absolute
-						left: 20px
-						top: 50%
-						transform: translateY(-50%)
-						width: 16px
-						height: 15px
-						background: url('../images/src/card.svg') center center/contain no-repeat
+				span
+					font-family: helveticaLight
+					font-size: 12px
+					color: #8F7F72
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					left: 20px
+					top: 50%
+					transform: translateY(-50%)
+					width: 16px
+					height: 15px
+					background: url('../images/src/card.svg') center center/contain no-repeat
 	.reverseContent 
 		.cardContent__text 
 			.button
 				&:hover
 					color: #fff
+	.hours
+		background-color: #FCFAF5
+		padding: 33px
+		&__top
+			display: flex
+			justify-content: space-between
+			align-items: center
+			background-color: #fff
+			position: relative
+			padding: 22px 28px
+			input
+				appearance: none
+				border: none
+				font-family: EBGaramondItalic
+				font-size: 19px
+				color: #4A1D18
+				width: 50%
+				color: $chocolate
+				&::placeholder
+					color: $chocolate
+			.tel
+				color: $chocolate
+				font-family: robotoMedium
+				font-size: 12px
+				margin-right: 42px
+				position: relative
+				&::after
+					content: ''
+					display: block
+					width: 100%
+					height: 1px
+					bottom: -3px
+					position: absolute
+					background-color: #4A1D18
+			.button
+				font-size: 13px
+
+			input
+				a
+				.button
+		h1
+			font-size: 26px
+			text-align: center
+			margin: 35px 0 40px
+		&__schedule
+			width: 100%
+			li
+				font-family: robotoMedium
+				border-bottom: 1px solid #DDDDDD
+				display: flex
+				justify-content: space-between
+				align-items: flex-start
+				color: #957248
+				padding: 16px 0
+				h5
+					font-size: 12px
+					text-transform: uppercase
+					letter-spacing: 1.6px
+				span
+					letter-spacing: 1.6px
+					text-transform: uppercase
+					line-height: 20px
+					font-size: 11px
+	.reservation
+		margin-top: 60px
+		background-color: #FCFAF5
+		padding-bottom: 55px
+		h1
+			fz26px
+			text-align: center
+			padding: 42px 0 44px
+		&__container
+			padding: 55px
+			background-color: #fff
+			h2
+				font-family: helveticaLight
+				font-size: 19px
+			form
+				div
+					display: flex
+					justify-content: space-between
+					input
+						width: 49%
+						margin: 28px 0 22px
+						padding: 18px 21px
+						font-family: helveticaRegular
+						font-size: 13px
+						color: #ADADAD
+						border-radius: 0
+						border: 1px solid #999999
+						&::placeholder
+							color: #ADADAD
+				.button
+					float: right
+					padding: 18px 48px
+					font-size: 13px
+					&.disabled
+						color: #7D7E83
+						background-color: #EEEEEE
+						border: 1px solid #EEEEEE
+						pointer-events: none
+			h3
+				font-family: helveticaMedium
+				font-size: 13px
+				color: #7D7E83
+				margin: 106px 0 7px 0
+			p
+				font-family: helveticaRegular
+				font-size: 12px
+				color: #7D7E83
+
+
+
+
+
+
+
+
+
+		// h1
+		//     font-size: 26px
+		//     text-align: center
+		//     padding: 42px 0 44px
+	 //    &__container
+	 //    	    &__container
+	 //    	    	h2
+	 //    	    		font-family: helveticaLight
+	 //    	    		font-size: 19px
+	 //    	    		form
+	 //    	    			display: flex
+	 //    	    			justify-content: space-between
+	 //    	    			input
+	 //    	    				width: 45%
+	 //        				.button
+	 //        					width: 100%
+
+
 
 
 @media (max-width: 1024px) 
