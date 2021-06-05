@@ -116,7 +116,6 @@
 						text-transform: capitalize
 	.bookTreatment
 		padding-top: 53px
-		overflow: hidden
 		h1
 			text-align: center
 		p
@@ -149,35 +148,96 @@
 								background-color:#ccc3bf
 						p
 							color: #8f7f72
-			.slick-dots
-				li
-					margin: 0
-					button
-						&::before
-							color: #ccc3bf
-							font-size: 10px
-					&.slick-active
-						button
-							&::before
-								color: #a48e8b
-								opacity: 1
-			.slick-prev
-				&::before
-					content: ''
-					display: block
-					background: url('../images/src/sliderArrow.svg') center center/contain no-repeat
-					height: 43px
-					width: 12px
-			.slick-next
-				&::before
-					content: ''
-					display: block
-					transform: rotate(180deg)
-					background: url('../images/src/sliderArrow.svg') center center/contain no-repeat
-					height: 43px
-					width: 12px					
-			.slick-list
-				overflow: hidden
+
+.book2
+	.customizeCard
+		h5
+			font-size: 15px
+			font-family: helveticaRegular
+			color: $chocolate
+			margin-bottom: 30px
+		&__flexContainer
+			display: flex
+			justify-content: space-between			
+			padding-left: 24px
+			&--items
+				> ul
+					max-width: 305px
+					position: relative
+					.list
+						background-color: #F8F2EE
+						text-align: center
+						position: relative
+						padding: 30px 0 40px 0
+						border-radius: 13px
+						img
+							display: block
+							margin: 0 auto
+							width: 65px
+						h1
+							font-family: helveticaRegular
+							font-size: 22px
+							margin: 16px 0 5px 0
+							color: #947147
+						span
+							font-family: helveticaLight
+							font-size: 12px
+							color: #947147
+						&::after
+							content: ''
+							display: block
+							position: absolute
+							border: 1px solid #947147
+							border-radius: 13px
+							left: 13px
+							top: 13px
+							width: calc(100% - 26px)
+							height: calc(100% - 26px)
+				.button
+						font-size: 13px
+						width: 100%
+						display: block
+						text-align: center
+				.slick-dots
+					bottom: -5px
+				.slick-arrow
+					top: 40%
+					&::before
+						background: url('../images/src/smallArrow.svg') center center/contain no-repeat
+				&--payment
+					border: 1px solid #8F7F72
+					padding: 18px 0 18px 45px
+					border-radius: 4px
+					height: 75px
+					position: relative
+					width: 175px
+					h4
+						font-family: helveticaRegular
+						font-size: 15px
+						color: $chocolate
+						margin-bottom: 10px
+						position: relative
+
+					span
+						font-family: helveticaLight
+						font-size: 12px
+						color: #8F7F72
+					&::before
+						content: ''
+						display: block
+						position: absolute
+						left: 20px
+						top: 50%
+						transform: translateY(-50%)
+						width: 16px
+						height: 15px
+						background: url('../images/src/card.svg') center center/contain no-repeat
+	.reverseContent 
+		.cardContent__text 
+			.button
+				&:hover
+					color: #fff
+
 
 @media (max-width: 1024px) 
 	.book

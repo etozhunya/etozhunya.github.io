@@ -37,12 +37,40 @@
 			.slick-slide
 				> div
 					margin: 0 10px
-					li
-						// max-width: 600px !important
-						// display: block !important
-						// margin: 0 auto
-		// .slick-next, .slick-prev
-		// 	display: none !important	
+	.slider4
+		.slick-track
+			display: flex
+	.slick-dots
+		li
+			margin: 0
+			button
+				&::before
+					color: #ccc3bf
+					font-size: 10px
+			&.slick-active
+				button
+					&::before
+						color: #a48e8b
+						opacity: 1
+	.slick-prev
+		&::before
+			content: ''
+			display: block
+			background: url('../images/src/sliderArrow.svg') center center/contain no-repeat
+			height: 43px
+			width: 12px
+	.slick-next
+		right: -35px
+		&::before
+			content: ''
+			display: block
+			transform: rotate(180deg)
+			background: url('../images/src/sliderArrow.svg') center center/contain no-repeat
+			height: 43px
+			width: 12px					
+	.slick-list
+		overflow: hidden
+							
 .button
 	position: relative
 	display: inline-block
@@ -83,6 +111,116 @@
 		transform-origin: right center
 		z-index: -1
 		transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86)	
+.generalSteps
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	position: relative
+	margin: 50px 0 30px
+	li
+		&:first-child
+			> p::after
+				content: ''
+				display: inline-block
+				position: relative
+				margin: 0 20px 0 10px
+				top: -4px
+				width: 80px
+				height: 1px
+				background-color: #CCC3BF
+		p
+			font-size: 12px
+			font-family: helveticaRegular
+			color: #957248
+
+			.digit
+				font-size: 13px
+				font-family: helveticaBold
+				margin-right: 15px
+				position: relative
+				&::after
+					content: ''
+					display: block
+					border-radius: 50px
+					left: -9px
+					top: -4px
+					z-index: -1
+					position: absolute
+					width: 26px
+					height: 26px
+					background-color: #FCFAF6
+		&.active
+			p
+				color: #4C1F1A
+				.digit
+					color: #fff
+					&::after
+						background-color: #BF9159
+
+			
+
+
+
+
+
+
+
+
+.cardContentWrapper
+			background-color: #fcfaf6	
+			padding: 110px 0 133px				
+			.cardContent
+				display: flex
+				justify-content: space-between
+				align-items: center
+				position: relative
+				&__text
+					width: 60%
+					span
+						color: #8f7f72
+						letter-spacing: 0.34px
+						font-size: 18px
+						font-family: helveticaLight
+					h2
+						font-size: 36px
+						font-family: helveticaLight
+						margin: 10px 0 19px 0
+						display: block
+						color: $chocolate
+						letter-spacing: 4.39px
+					p
+						font-family: garamond
+						font-size: 18px
+						line-height: 22px
+						color: #000
+						padding-right: 55px
+
+				&__pic
+					width: 40%
+					img
+						width: 100%
+						display: block
+.cardContentWrapper
+		background-color: transparent
+		.reverseContent
+			.cardContent__text
+				background-color: #fcfaf6
+				padding: 30px 0 30px 50px
+				margin-left: 40%
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				.button
+					margin-top: 20px
+					color: #957248
+				p
+					line-height: 19px
+					font-size: 16px
+			.cardContent__pic
+				position: relative
+				z-index: -1
+				width: 70%
+
 .cardsList
 		display: flex
 		justify-content: space-between
