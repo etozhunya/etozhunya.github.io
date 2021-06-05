@@ -601,7 +601,7 @@
 								font-size: 12px
 				.headings
 					li
-						padding: 10px !important
+						padding: 5px !important
 						.table
 							flex-flow: wrap
 							align-items: flex-start
@@ -637,6 +637,7 @@
 								width: 100%
 								padding: 14px 0
 								margin-top: 20px
+								margin-bottom: 10px
 						&::after
 							right: 20px
 @media (max-width: 767px) 
@@ -645,5 +646,17 @@
 			padding: 0 10px 10px 10px
 			.headings
 				li
-					&:last-child
-						margin-bottom: 0
+					.table
+						h5
+							font-size: 12px
+						span
+							font-size: 12px
+						&:last-child
+							margin-bottom: 0
+							span
+							font-size: 12px !important
+					.tableInside
+						flex-flow: wrap
+						li
+							span
+								line-height: 16px

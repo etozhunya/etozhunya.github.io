@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   
-
+	// $(document).on("click",".qs-square", function(){
+	// 	console.log('asda')
+	// 	$('.datePicker').next().toggleClass('none');
+	// })
+	
 
 	if ($('body').hasClass('haveSlider')) {
 				  if ($(window).width() < 1025) {
