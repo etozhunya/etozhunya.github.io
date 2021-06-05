@@ -52,24 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
 			      slidesToScroll: 1,
 			      dots: true,
 			      centerPadding: '0px',
-			      // responsive: [
-			      //   {
-			      //     breakpoint: 769,
-			      //     settings: {
-			      //       centerMode: true,
-			      //       centerPadding: '0px',
-			      //       slidesToShow: 1
-			      //     }
-			      //   },
-			      //   {
-			      //   	breakpoint: 767,
-			      //   	settings: {
-			      //   	  arrows: false,
-			      //   	  slidesToShow: 1,
-			      //   	  slidesToScroll: 1
-			      //   	}
-			      //   }
-			      // ]
+			      responsive: [
+			        {
+			        	breakpoint: 767,
+			        	settings: {
+			        	  arrows: false,
+			        	  slidesToShow: 1,
+			        	  slidesToScroll: 1
+			        	}
+			        }
+			      ]
 			    });
 	}
 	$('.input').on('input', function () {
