@@ -55,7 +55,7 @@
 				  			&::before
 				  				content: none
 				  		.calculator
-				  		  width: 40%
+				  		  width: auto
 				  		  display: flex
 				  		  justify-content: space-between
 
@@ -538,6 +538,10 @@
 				li
 					border-bottom: 1px solid #999
 					padding: 15px 0px 15px 0px
+					h3, input
+						padding-left: 40px
+						&::before
+							left: 10px
 					input
 						width: 100%
 					.specialWrapper
@@ -552,6 +556,8 @@
 						border-bottom: none
 					.guests
 	    				padding: 15px 5px 15px 0px !important
+	    				.openCalc
+	    					padding-left: 40px !important
 	    				.function
 	    					width: 300px
 
@@ -582,6 +588,7 @@
 					.tel
 						margin: 0 0 15px 0				
 					.button
+						display: block
 						margin-top: 20px
 			&__schedule
 				li

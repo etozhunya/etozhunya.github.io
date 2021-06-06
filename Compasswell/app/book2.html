@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title><!--#echo var="title" --></title>
+	<title>Book2</title>
 	<meta name="description" content="Startup HTML template OptimizedHTML 5">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -48,41 +48,45 @@
 				<li>
 					<div class="guests">
 						<h3>Guests</h3>
-						<span>1 Adult, 0 Children</span>
-					</div>
-					<div class="function">
-						<div class="function__wrapper">
-							<div>
-								<h3>Adults</h3>
-								<span>From 13 years</span>
+						<span class="openCalc">1 Adult, 0 Children</span>
+						<div class="function">
+							<div class="function__wrapper">
+								<div>
+									<h3>Adults</h3>
+									<span>From 13 years</span>
+								</div>
+								<div class="calculator">
+								    <button class="calc" value="minus">-</button>
+								    <input id="adults" type="text" class="calcInput" value="0">  
+								    <button class="calc" value="plus">+</button>
+								</div>
 							</div>
-							<div class="calculator">
-							    <button class="calc" value="minus">-</button>
-							    <input id="adults" type="text" class="calcInput" value="0">  
-							    <button class="calc" value="plus">+</button>
-							</div>
-						</div>
-						<div class="function__wrapper">
-							<div>
-								<h3>Children</h3>
-								<span>Age 2-12</span>
-							</div>
-							<div class="calculator">
-							    <button class="calc" value="minus">-</button>
-							    <input id="children" type="text" readonly="" class="calcInput" value="0">  
-							    <button class="calc" value="plus">+</button>
+							<div class="function__wrapper">
+								<div>
+									<h3>Children</h3>
+									<span>Age 2-12</span>
+								</div>
+								<div class="calculator">
+								    <button class="calc" value="minus">-</button>
+								    <input id="children" type="text" readonly="" class="calcInput" value="0">  
+								    <button class="calc" value="plus">+</button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</li>
 				<li>
 					<h3>Check-in</h3>
-					<input type="text" class="datePicker" readonly="" placeholder="Tue 21 April 2021">
+					<span class="dateContainer specialWrapper">
+						<input type="text" class="datePicker" readonly="" id="checkin" placeholder="Tue 21 April 2021">
+					</span>
 				</li>
 				<li>
-					<h3>Check-out</h3>
-					<input type="text" placeholder="Tue 28 April 2021" readonly="" class="datePicker">
-				    <button class="button noHover">SEARCH</button>
+					<label for="checkout">
+						<h3>Check-out</h3>
+						<input type="text" placeholder="Tue 28 April 2021" readonly="" class="datePicker">
+					</label>
+				    <button class="button noHover">SEARCH</button>					
 				</li>
 			</ul>
 			<div class="searchContainer__wrapper">
@@ -356,7 +360,7 @@
 				<a href="#" class="hover">Job opportunities</a>
 			</li>
 			<li><h3>CONTACT</h3>
-				<a href="#" class="hover">Contact Us</a></li>
+				<a href="contactUs.html" class="hover">Contact Us</a></li>
 			<li>
 				<h3>SOCIAL MEDIA</h3>
 				<ul>
