@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
  	    } 
 	});
 
-	$('.guests').click(function() {
+	$('.openCalc').click(function() {
 		$('.function').toggleClass('active')
 	})
 
