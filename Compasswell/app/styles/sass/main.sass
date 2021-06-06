@@ -91,6 +91,8 @@
 				background: $chocolate !important
 				border-radius: 50px
 				color: #fff	
+.transformed2ver
+	transform: translateY(-122px)
 .widthWrapper
 	.slider
 		.slick-track
@@ -190,16 +192,15 @@
 	position: relative
 	margin: 50px 0 30px
 	li
-		&:first-child
-			> p::after
-				content: ''
-				display: inline-block
-				position: relative
-				margin: 0 20px 0 10px
-				top: -4px
-				width: 80px
-				height: 1px
-				background-color: #CCC3BF
+		> p::after
+			content: ''
+			display: inline-block
+			position: relative
+			margin: 0 20px 0 10px
+			top: -4px
+			width: 80px
+			height: 1px
+			background-color: #CCC3BF
 		p
 			font-size: 12px
 			font-family: helveticaRegular
@@ -221,6 +222,10 @@
 					width: 26px
 					height: 26px
 					background-color: #FCFAF6
+		&:last-child
+			p
+				&::after
+					content: none
 		&.active
 			p
 				color: #4C1F1A

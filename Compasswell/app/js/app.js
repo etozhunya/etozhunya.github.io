@@ -144,6 +144,27 @@ document.addEventListener('DOMContentLoaded', () => {
 	    $('.AAScontent').removeClass('in-view').eq($(this).index()).addClass('in-view');
 	});
 
+	// GALLERY
+
+	$('.play').click(function(e){
+		e.preventDefault()
+		$('.mainVideo').trigger('play')
+		$('.mainVideo').prop("controls",true); 
+	})
+
+
+	$('.videoPart__gallery li').click(function() {
+		console.log('asdsa')
+        // $(this).addClass('active').siblings().removeClass('active');
+        $('.videoPart__text').removeClass('active').eq($(this).index()).addClass('active');
+        $('.videoPart__video img').removeClass('active').eq($(this).index()).addClass('active');
+    });
+
+
+
+
+
+
 	var pickers = document.querySelectorAll('.datePicker');
 	pickers.forEach(function(el) {
 
