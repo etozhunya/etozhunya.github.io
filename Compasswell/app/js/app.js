@@ -78,10 +78,23 @@ document.addEventListener('DOMContentLoaded', () => {
  	    	$('.deliverButton').addClass('disabled')	
 	});
 
-	$('#adults').on('input', function () {
- 	    if ( $(this).val().length > 0  ) {
- 	    	console.log('11a')
- 	    } 
+	// $('#adults').on('input', function () {
+ // 	    if ( $(this).val() == 0  ) {
+ // 	    	console.log('11input')
+ // 	    } 
+	// });
+
+	$('#adults').on('change', function () {
+ 	    if ( $(this).val() == 0  ) {
+ 	    	$(this).prev().addClass('disabled')
+ 	    } else
+ 	    	$(this).prev().removeClass('disabled')
+	});
+	$('#children').on('change', function () {
+ 	    if ( $(this).val() == 0  ) {
+ 	    	$(this).prev().addClass('disabled')
+ 	    } else
+ 	    	$(this).prev().removeClass('disabled')
 	});
 
 	$('.openCalc').click(function() {
@@ -94,14 +107,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-	if ( $('#adults').val() > 0 ) {
-				console.log('sdasdasda')
-			}
-	$('#adults').on('input', function () {
-			if ( $(this).val() > 0 ) {
-				console.log('sdasdasda')
-			}
-	})	
+	// if ( $('#adults').val() > 0 ) {
+	// 		}
+	// $('#adults').on('input', function () {
+	// 		if ( $(this).val() > 0 ) {
+	// 			console.log('sdasdasda')
+	// 		}
+	// })	
 
 	if ( $('#adults').val() == 0 ) {
 	    $('#adults').addClass('disabled')
@@ -117,7 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	        } else if(val > 0) {
 	            val--;
 	        }
-	        $(this).siblings('input').val(val);
+	        $(this).siblings('input').val(val).trigger('change');
+
 	    })
 
 
@@ -131,6 +144,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	    } else
 	        $(this).find('.animated').slideUp();
 	});
+
+
+	$('.form input').click(function(){
+            if($(this).prop("checked") == true){
+            	$('.form label').removeClass('active')
+                $(this).parent('label').addClass('active')
+            }
+        });
 	
 	$('.steps li').click(function() {
 	    $(this).addClass('active').siblings().removeClass('active');
@@ -165,9 +186,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-	var pickers = document.querySelectorAll('.datePicker');
-	pickers.forEach(function(el) {
+	var checkin = document.querySelectorAll('#checkin');
+	var checkoff = document.querySelectorAll('#checkoff');
 
+
+	// checkin.forEach(function(el) {
+	//     datepicker(el)
+	//     onSelect: (instance, date) => {
+	//     	console.log('asdsa')
+	//      }
+	// })
+	const picker = datepicker('#checkin', {
+	  // Event callbacks.
+	  onSelect: instance => {
+	    $('#checkoff').next().removeClass('qs-hidden')
+	  }
+	})
+
+
+	checkoff.forEach(function(el) {
 	    datepicker(el)
 	})
 

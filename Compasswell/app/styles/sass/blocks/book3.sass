@@ -35,6 +35,9 @@
           padding: 10px 30px
           font-size: 13px
     .mainContent
+        text-align: center
+        .generalSteps
+            margin: 30px 0 50px
         h1
             font-size: 29px
             margin-top: 62px
@@ -45,7 +48,7 @@
             font-size: 14px
             color: #8f7f72
             text-align: center
-            margin-bottom: 39px
+            // margin-bottom: 39px
             height: 36px
         .generalSteps
             justify-content: space-between    
@@ -54,7 +57,281 @@
                     &::after
                         margin: 0 20px
         &--change
-            height: 200px
+
+
+            .section0
+                .month
+                .calendarWrapper
+                    &__week
+                        display: flex
+                        justify-content: space-between
+                        li
+                            width: 14%                        
+                            text-align: right
+
+                    &__day
+                        display: flex
+                        justify-content: space-between
+                        flex-flow: wrap
+                        li
+                            width: 14%
+                            padding-bottom: 60px
+                            text-align: right
+                            border: 1px solid #CCC3BF
+
+
+
+
+
+            .section1
+                .form
+                    text-align: left
+                    label
+                        -webkit-user-select: none
+                        -moz-user-select: none
+                        -ms-user-select: none
+                        user-select: none
+                        cursor: pointer
+                        width: 100%
+                        display: block
+                        position: relative
+                        padding: 13px 0 18px
+                        border-top: 1px solid #F7F2EE
+                        cursor: pointer
+                        input
+                            position: absolute
+                            cursor: pointer
+                            left: 0
+                            top: 0
+                            width: 100%
+                            height: 100%
+                            opacity: 0
+                            &:checked ~ .checkmark::before
+                              content: ''
+                              display: block
+                              right: 5px
+                              top: 50%
+                              transform: translateY(-50%)
+                              width: 14px
+                              height: 14px
+                              position: absolute
+                              background-color: #957248
+                              border-radius: 50px
+                        h2
+                            font-family: RobotoMedium
+                            font-size: 16px
+                            color: #957248
+                            position: relative
+                            padding-left: 25px
+                            margin-bottom: 7px
+                            &::before
+                                content: ''
+                                display: block
+                                position: absolute
+                                left: 0px
+                                width: 16px
+                                height: 16px
+                                top: 0
+                                background: url('../images/src/time.svg') center center/contain no-repeat
+                        span
+                            font-family: robotoRegular
+                            font-size: 10px
+                            color: #CCC3BF
+                            text-transform: uppercase
+                            letter-spacing: 0.5px
+                        .checkmark
+                          border: solid 1px white
+                          cursor: pointer
+                          position: absolute
+                          top: 50%
+                          transform: translateY(-50%)
+                          right: 10px
+                          height: 15px
+                          width: 15px
+
+                        .checkmark:after
+                          content: ''
+                          display: block
+                          width: 24px
+                          height: 24px
+                          border-radius: 50px
+                          border: 1px solid #957248
+                          position: absolute
+                          top: 50%
+                          right: 0
+                          transform: translateY(-50%,)    
+                        &:last-child
+                            border-bottom: 1px solid #F7F2EE
+                        &.active
+                            background-color: #fcfaf6
+            .section3
+                text-align: left
+                .note
+                    padding: 15px 23px
+                    background-color: #FFF6F3
+                    h4
+                        margin: 0 0 12px 0
+                        padding-left: 0px
+                    span
+                        font-family: robotoRegular
+                        font-size: 15px
+                        color: $chocolate
+                        position: relative
+                        margin-bottom: 7px
+                        display: block
+                        padding-left: 25px 
+                        &::before
+                            content: ''
+                            display: block
+                            position: absolute
+                            left: 0
+                            width: 16px
+                            height: 16px
+                            background: url('../images/src/calendar.svg') center center/contain no-repeat
+
+                        &:last-child
+                            &::before
+                                background: url('../images/src/attention.svg') center center/contain no-repeat
+                span
+                    font-family: robotoRegular
+                    font-size: 16px
+                    color: #957248
+                    padding-left: 23px                                    
+
+                form
+                    padding-left: 23px
+                    .labels
+                        display: flex
+                        justify-content: space-between
+                        margin-bottom: 45px
+                        label, .label
+                            width: 30%
+                            position: relative
+                            div
+                                position: relative
+                                padding: 20px 0
+                                border-bottom: 1px solid #b6b6b682;
+                                &::after
+                                    content: ''
+                                    display: block
+                                    position: absolute
+                                    right: 0
+                                    top: 50%
+                                    transform: translateY(-50%)
+                                    background: url('../images/src/ok.svg') center center/contain no-repeat
+                                    width: 17px
+                                    height: 11px
+                                input
+                                    width: 100%
+                                    padding: 0
+                                    border: none
+                                    font-size: 16px
+                                    color: $chocolate
+                        .label
+                            label
+                                width: 80px
+                        &:nth-of-type(2)
+                            justify-content: 
+                            margin-bottom: 0
+                        
+                    h4, span
+                        padding-left: 0px
+                    span
+                        margin: 6px 0 21px
+                        display: block
+                    .check
+                      position: relative
+                      display: flex
+                      width: 350px
+                      margin-top: 22px
+                      -webkit-user-select: none
+                      -moz-user-select: none
+                      -ms-user-select: none
+                      user-select: none
+                      cursor: pointer
+                      span
+                        margin: 0
+                        &:first-of-type
+                            padding-left: 40px
+
+                      input
+                        width: auto
+                        position: absolute
+                        opacity: 0
+                        cursor: pointer
+                        height: 0
+                        width: 0
+
+                      input:checked ~ .checkmark:after
+                        content: ''
+                        display: block
+                        left: 0px
+                        top: -50%
+                        width: 24px
+                        height: 24px
+                        background: url('../images/src/ok2.svg') center center/contain no-repeat
+                        position: absolute
+                        background-color: transparent
+
+                      .checkmark
+                        
+                        border: solid 1px white
+                        cursor: pointer
+                        position: absolute
+                        top: 50%
+                        transform: translateY(-50%)
+                        left: 0
+                        height: 15px
+                        width: 15px
+
+                      .checkmark:after
+                        content: ''
+                        display: block
+                        width: 12px
+                        height: 2px
+                        background-color: #957248
+                        position: absolute
+                        top: 6px
+                        left: 5px
+                    .button
+                        text-align: center
+                        margin: 100px auto 0 auto
+                        display: block
+                h4
+                    font-family: RobotoMedium
+                    font-size: 17px
+                    color: #957248  
+                    margin: 25px 0 6px
+                    padding-left: 23px
+            
+            .section4
+                text-align: center
+                h1
+                    font-size: 55px
+                    font-family: EBGaramond
+                    color: #957248
+                p
+                    font-family: RobotoRegular
+                    font-size: 16px
+                    color: #957248
+                    margin-top: 25px
+                img
+                    width: 250px
+                    height: auto
+                    display: block
+                    margin: 60px auto 0 auto           
+            .bookTreatment
+                padding-top: 0
+            h1
+                margin-top: 0
+            .next
+                width: 214px
+                text-align: center
+                margin: 50px auto 0
+                font-size: 14px
+                padding: 12px 0
+                display: block
+            
 
     .videoGalleryContainer
         margin-top: 130px

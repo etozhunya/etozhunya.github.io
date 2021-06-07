@@ -58,7 +58,6 @@
 				  		  width: auto
 				  		  display: flex
 				  		  justify-content: space-between
-
 				  		  .calcInput
 				  		    margin: 0 5px
 				  		    font-size: 16px
@@ -80,6 +79,9 @@
 				  		    border: solid 1px #A48E8B
 				  		    background-color: #fff
 				  		    appearance: none
+				  		    &.disabled
+				  		    	border: 1px solid #F8F2EE
+				  		    	color: #CCC3BF	
 				  		    &:focus
 				  		    	outline: none
 				h3
@@ -101,6 +103,8 @@
 						top: 3px
 						z-index: 10
 				input
+					width: 100%
+					padding: 0
 					padding-left: 55px
 				input, span
 					appearance: none

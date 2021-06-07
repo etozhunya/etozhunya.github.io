@@ -142,6 +142,28 @@
 			width: 12px					
 	.slick-list
 		overflow: hidden
+
+input
+	width: 368px
+	display: block
+	appearance: none
+	border: none
+	border-bottom: 1px solid #b6b6b682
+	font-size: 15px
+	font-family: helveticaMedium
+	color: #b6b6b682
+	padding: 20px 0
+	border-radius: 0
+	&::placeholder
+		opacity: 0.3
+	&:focus
+		border-bottom: 1px solid $chocolate
+		opacity: 1
+		color: $chocolate
+		&::placeholder
+			opacity: 1
+input:focus::-webkit-input-placeholder
+    color: $chocolate
 							
 .button
 	position: relative
@@ -367,7 +389,7 @@
 					line-height: 22px
 					display: block
 					padding: 0 30px
-					margin-bottom: 21px
+					margin: 11px 0 13px !important
 				a
 					color: #4A1D18
 					font-family: 'helveticaBold'
