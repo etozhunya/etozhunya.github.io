@@ -487,6 +487,18 @@
             // text-align: center
         // .button
         //     margin: 0 auto
+@media (max-width: 1024px)
+    .book3
+        .generalSteps
+            li
+                p
+                    &::after
+                        content: none
+        .videoGalleryContainer
+            .videoPart
+                &__text
+                    width: 100%
+                    max-width: 500px
 @media (max-width: 768px) 
     .book3
         .globalContent
@@ -496,6 +508,7 @@
             &__text
                 width: 100%
                 .button
+                    display: block
                     float: none
                     margin: 20px 0
         .videoGalleryContainer
