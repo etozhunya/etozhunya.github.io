@@ -107,13 +107,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-	// if ( $('#adults').val() > 0 ) {
-	// 		}
-	// $('#adults').on('input', function () {
-	// 		if ( $(this).val() > 0 ) {
-	// 			console.log('sdasdasda')
-	// 		}
-	// })	
+	$('.calendarWrapper li').click(function() {
+		$('.calendarWrapper li').removeClass('active')
+		$(this).addClass('active')
+	})
 
 	if ( $('#adults').val() == 0 ) {
 	    $('#adults').addClass('disabled')
@@ -132,6 +129,48 @@ document.addEventListener('DOMContentLoaded', () => {
 	        $(this).siblings('input').val(val).trigger('change');
 
 	    })
+
+	
+
+
+	// const array = $( ".wrap div" );
+	// let delay = 0;
+	// cicle();
+
+	// function cicle () {
+	//   for (let i = 0; i < array.length; i++) {
+	//     checker( array[i], delay );
+	//     delay += 500;
+	    
+	//     if (array.length - i === 1) cicle();
+	//   }
+	// 	}
+	//     $(elem).addClass('active').siblings().removeClass('active');
+	//   }, delay);
+	 
+	
+
+
+
+
+
+
+	$('.next').click(function(e) {
+		e.preventDefault()
+		console.log('jgv')
+		$(this).parent().removeClass('visible').next().addClass('visible')
+		$('.slider3').slick('setPosition');
+
+		var that = $(this)
+		$('html, body').animate({
+		    scrollTop: $('.title').offset().top + 200
+		});
+		// window.setTimeout(function() {
+		//     $('html, body').animate({
+		//         scrollTop: $('.next').offset().top - 500
+		//     });
+		// }, 200)
+	})
 
 
 	$('.specTable li').click(function() {
@@ -185,27 +224,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-	var checkin = document.querySelectorAll('#checkin');
-	var checkoff = document.querySelectorAll('#checkoff');
-
-
-	// checkin.forEach(function(el) {
-	//     datepicker(el)
-	//     onSelect: (instance, date) => {
-	//     	console.log('asdsa')
-	//      }
-	// })
-	const picker = datepicker('#checkin', {
-	  // Event callbacks.
-	  onSelect: instance => {
-	    $('#checkoff').next().removeClass('qs-hidden')
-	  }
-	})
+	if( $('body').hasClass('haveDatePicker')) {
+		var checkin = document.querySelectorAll('#checkin');
+		var checkoff = document.querySelectorAll('#checkoff');
+		const picker = datepicker('#checkin', {
+		  // Event callbacks.
+		  onSelect: instance => {
+		    $('#checkoff').next().removeClass('qs-hidden')
+		  }
+		})
 
 
-	checkoff.forEach(function(el) {
-	    datepicker(el)
-	})
+		checkoff.forEach(function(el) {
+		    datepicker(el)
+		})
+	}
 
 })

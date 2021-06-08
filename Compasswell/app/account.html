@@ -13,10 +13,12 @@
 
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dist/preview.jpg">
-	
+	<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
+
+<body class="account haveDatePicker">
 	<header class="header">
 		<div class="header__top widthWrapper">
 			<a href="home.html" class="logo">
@@ -39,8 +41,6 @@
 			<img src="images/src/video.jpg" alt="">
 		</div>
 	</header>
-
-<body class="account">
 	<section class="transformed">
 		<div class="widthWrapper contentWrapper">
 			<div class="greetings">
@@ -84,9 +84,10 @@
 									<p>Awaiting confirmation</p>
 								</li>
 							</ul>
-							<a href="#">
+							<label for="checkin">
 								<img src="images/src/calendar.svg" alt="">
-							</a>
+								<input type="text" id="checkin">
+							</label>
 						</div>
 					</div>
 					<ul class="headings specTable">
@@ -470,6 +471,7 @@
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/js-datepicker"></script>
 	<script src="js/buttons.js"></script>
 	<script src="js/app.js"></script>
 </body>

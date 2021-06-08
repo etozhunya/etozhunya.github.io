@@ -58,17 +58,48 @@
                         margin: 0 20px
         &--change
 
-
+            .sections
+                display: none
+                &.visible
+                    display: block
             .section0
                 .month
+                    display: flex
+                    max-width: 260px
+                    margin: 0 auto 60px auto
+                    justify-content: space-between
+                    align-items: center
+                    .prevArrow, .nextArrow
+                        display: block
+                        cursor: pointer
+                        &:hover
+                            svg
+                                #Сгруппировать_1391
+                                    #Контур_3
+                                        fill: $chocolate    
+                    .prevArrow
+                        transform: rotate(90deg)
+                    .nextArrow
+                        transform: rotate(-90deg)
+                    h1
+                        margin-bottom: 0
+                .globalCalendar
+                    display: none
+                    &.visible
+                        display: block
                 .calendarWrapper
+                    transform: translateX(2px)
                     &__week
                         display: flex
-                        justify-content: space-between
+                        justify-content: flex-start
                         li
                             width: calc(100% / 7)                        
                             text-align: right
-
+                            font-family: SFpro
+                            font-size: 14px
+                            color: #957248
+                            margin-bottom: 25px
+                            transform: translateX(-5px)
                     &__day
                         display: flex
                         justify-content: space-aroun
@@ -76,13 +107,47 @@
                         padding-top: 1px
                         padding-left: 1px
                         li
+                            cursor: pointer
                             width: calc(100% / 7)
-                            padding-bottom: 60px
+                            font-family: helveticaMedium
+                            font-size: 15px
+                            color: #957248
+                            padding: 10px 10px 80px 
                             text-align: right
                             border: 1px solid #CCC3BF
                             margin-left: -1px
                             margin-top: -1px
+                            position: relative
+                            span
+                                position: absolute
+                                right: 10px
+                                top: 10px
 
+                            &.disabled
+                                background-color: #ccc3bf
+                                color: #FFFFFF
+                                pointer-events: none
+                            &.anotherMonth
+                                pointer-events: none
+                                span
+                                    color: #ABABAB
+                            &.active
+                                span
+                                    color: #fff
+                                    background-color: #957248
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    width: 23px
+                                    height: 23px
+                                    border-radius: 50px
+                                    right: 5px
+                                    top: 5px
+                            &.weekend
+                                background-color: #FCFAF6
+                                color: #7E7E7E
+                            &:hover
+                                background-color: #9572484a    
 
 
 
@@ -331,7 +396,7 @@
             .next
                 width: 214px
                 text-align: center
-                margin: 50px auto 0
+                margin: 100px auto 0
                 font-size: 14px
                 padding: 12px 0
                 display: block
