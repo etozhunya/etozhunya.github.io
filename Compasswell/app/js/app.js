@@ -5,6 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	// 	$('.datePicker').next().toggleClass('none');
 	// })
 	
+	if ($('body').hasClass('hash')) {
+	    $(window.location.hash).addClass('active')
+	    if( $(window.location.hash).length > 0 ) {
+	    	$('.containerWrapper__One').addClass('in-view').siblings().removeClass('in-view')
+	    }
+
+	}
 
 	if ($('body').hasClass('haveSlider')) {
 				  if ($(window).width() < 1025) {
@@ -15,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			          arrows: false,
 			          responsive: [
 			            {
-			              breakpoint: 768,
+			              breakpoint: 1025,
 			              settings: {
 			                arrows: false,
 			                dots: true,
@@ -78,6 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
  	    	$('.deliverButton').addClass('disabled')	
 	});
 
+	$('.toContactUs').click(function() {
+		window.location.href = 'contactUs.html';
+	})
+
 	// $('#adults').on('input', function () {
  // 	    if ( $(this).val() == 0  ) {
  // 	    	console.log('11input')
@@ -129,26 +140,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	        $(this).siblings('input').val(val).trigger('change');
 
 	    })
-
-	
-
-
-	// const array = $( ".wrap div" );
-	// let delay = 0;
-	// cicle();
-
-	// function cicle () {
-	//   for (let i = 0; i < array.length; i++) {
-	//     checker( array[i], delay );
-	//     delay += 500;
-	    
-	//     if (array.length - i === 1) cicle();
-	//   }
-	// 	}
-	//     $(elem).addClass('active').siblings().removeClass('active');
-	//   }, delay);
-	 
-	
+	$(document).on("keyup", function (e) { 
+	  if (e.keyCode === 13) { 
+	    $('.function').removeClass('active');
+	  }
+	});
+	if ($('.function').hasClass('active')) {
+		$(document).on("click", function(e) {
+		    if ($(e.target).is('.function') === false) {
+		      $('.function').addClass('active2')
+		    }
+		  });
+	}
 
 
 
@@ -157,9 +160,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	$('.next').click(function(e) {
 		e.preventDefault()
-		console.log('jgv')
+		var index = $(this).attr('index')
+		console.log(index)
 		$(this).parent().removeClass('visible').next().addClass('visible')
 		$('.slider3').slick('setPosition');
+		$('.generalSteps li').removeClass('active').eq(index).addClass('active');
 
 		var that = $(this)
 		$('html, body').animate({

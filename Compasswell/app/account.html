@@ -18,7 +18,7 @@
 
 </head>
 
-<body class="account haveDatePicker">
+<body class="account haveDatePicker hash">
 	<header class="header">
 		<div class="header__top widthWrapper">
 			<a href="home.html" class="logo">
@@ -27,7 +27,7 @@
 				Health & Relax</p>
 			</a>
 			<div class="centerLink">
-				<a href="#">all bookings</a>
+				<a href="book.html">all bookings</a>
 			</div>
 			<div class="rightLinks">
 				<a href="aboutUs.html">About Us</a>
@@ -54,18 +54,18 @@
 				</div>
 			</div>
 			<ul class="steps">
-				<li data-index="0" class="active">
+				<li data-index="0" id="bookinglist">
 					<h2>Booking list</h2>
 					<p>active, past, awaiting confirmation</p>
 				</li>
-				<li data-index="1">
+				<li data-index="1" style="pointer-events: none">
 					<h2>Prices for SPA services</h2>
 					<p>PDF 23 mb</p>
 				</li>
 			</ul>
 
 			<div class="containerWrapper">
-				<div class="tableWrapper containerWrapper__One in-view">
+				<div class="tableWrapper containerWrapper__One">
 					<div class="tables">
 						<h3 class="title">Booking list</h3>
 						<p>active, past, awaiting confirmation</p>
@@ -223,7 +223,7 @@
 					</ul>
 				</div>	
 
-				<div class="tableWrapper containerWrapper__Two">
+				<div class="tableWrapper containerWrapper__Two in-view">
 					<ul class="AAS">
 						<li data-index="0" class="active">
 							<p>Account</p>
