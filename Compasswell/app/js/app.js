@@ -10,8 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
 	    if( $(window.location.hash).length > 0 ) {
 	    	$('.containerWrapper__One').addClass('in-view').siblings().removeClass('in-view')
 	    }
+	    $('.greetings').click(function(){
+	    	$('.containerWrapper__Two').addClass('in-view').siblings().removeClass('in-view')
+	    	$('.steps li').removeClass('active')
+	    })
 
 	}
+	$(document).click(function(event) { 
+	  var $target = $(event.target);
+	  if($(event.target).closest('.guests').length == 0)
+	  {
+	   $('.function').removeClass('active')
+	  }        
+	});
 
 	if ($('body').hasClass('haveSlider')) {
 				  if ($(window).width() < 1025) {
@@ -138,6 +149,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	            val--;
 	        }
 	        $(this).siblings('input').val(val).trigger('change');
+	        var adults = $('#adults').val()
+	        var children = $('#children').val()
+	        $('#adultDigit').text(adults)
+	        $('#childrenDigit').text(children)
 
 	    })
 	$(document).on("keyup", function (e) { 
