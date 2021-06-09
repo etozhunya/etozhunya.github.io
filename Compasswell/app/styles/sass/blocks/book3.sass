@@ -233,6 +233,30 @@
                             border-bottom: 1px solid #F7F2EE
                         &.active
                             background-color: #fcfaf6
+            
+            .section2
+                .hotelList
+                    &__item
+                        opacity: 0.5
+                        &:hover
+                            opacity: 1
+                            .learnMore
+                                span
+                                    opacity: 0
+                                &::before
+                                    content: none    
+                        &.active
+                            opacity: 1
+                            .learnMore
+                                span
+                                    opacity: 0
+                                &::before
+                                    content: none
+                            .cardText
+                                background-color: #fcfaf6
+                                h3, .price, p
+                                    color: #957248
+
             .section3
                 text-align: left
                 .note

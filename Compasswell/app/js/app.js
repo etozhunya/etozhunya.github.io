@@ -100,11 +100,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		window.location.href = 'contactUs.html';
 	})
 
-	// $('#adults').on('input', function () {
- // 	    if ( $(this).val() == 0  ) {
- // 	    	console.log('11input')
- // 	    } 
-	// });
+	$('.section2 .hotelList__item').click(function() {
+		$(this).addClass('active')
+		if ($('.section2 .hotelList__item').hasClass('active')) {
+			$('.next2').removeClass('disabled')
+		}
+	})
+
+	$('.form label').click(function(){
+		if ($(this).hasClass('active')) {
+			$('.next3').removeClass('disabled')
+		}
+	})
 
 	$('#adults').on('change', function () {
  	    if ( $(this).val() == 0  ) {

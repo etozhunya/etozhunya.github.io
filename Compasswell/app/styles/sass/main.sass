@@ -186,6 +186,11 @@ input:focus::-webkit-input-placeholder
 	border: 1px solid $mainColor
 	letter-spacing: 1.3px
 	background-color: transparent
+	&.disabled
+		pointer-events: none
+		background-color: #E8E5E2
+		color: #fff
+		border: 1px solid #E8E5E2
 	&:hover
 		color: #fff
 		&:before
