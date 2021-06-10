@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			currentInput.prop('readonly', false)
 		} else
 			currentInput.prop('readonly', true)
+
+	    $('.deliverEdit').removeAttr('disabled')	
 	})
 	$('.close').click(function() {
 		var buttons = $(this).parent().next().next('.short')
@@ -34,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		currentInput.removeClass('editable')
 		$(this).parent().parent().removeClass('editable')
 		buttons.removeClass('visible')
+	    $('.deliverEdit').attr('disabled', true)
 	})
 	$('.button').click(function(){
 		$(this).parents('.AASwrapper').removeClass('editable')
