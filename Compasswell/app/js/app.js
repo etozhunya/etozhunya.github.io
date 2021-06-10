@@ -1,9 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  
-	// $(document).on("click",".qs-square", function(){
-	// 	console.log('asda')
-	// 	$('.datePicker').next().toggleClass('none');
-	// })
 	
 	if ($('body').hasClass('hash')) {
 	    $(window.location.hash).addClass('active')
@@ -16,6 +11,39 @@ document.addEventListener('DOMContentLoaded', () => {
 	    })
 
 	}
+
+
+	// account buttons
+
+	
+	$('.edit').click(function() {
+		var currentInput = $(this).parent().next('input')
+		var buttons = $(this).parent().next().next('.short')
+		buttons.addClass('visible')
+		$(this).parent().parent().addClass('editable')
+		$(this).focus()
+		currentInput.addClass('editable')
+		if( currentInput.hasClass('editable') ) {
+			currentInput.prop('readonly', false)
+		} else
+			currentInput.prop('readonly', true)
+	})
+	$('.close').click(function() {
+		var buttons = $(this).parent().next().next('.short')
+		var currentInput = $(this).parent().next('input')
+		currentInput.removeClass('editable')
+		$(this).parent().parent().removeClass('editable')
+		buttons.removeClass('visible')
+	})
+	$('.button').click(function(){
+		$(this).parents('.AASwrapper').removeClass('editable')
+		$(this).parents('.short').removeClass('visible')
+
+	})
+
+
+
+
 	$(document).click(function(event) { 
 	  var $target = $(event.target);
 	  if($(event.target).closest('.guests').length == 0)

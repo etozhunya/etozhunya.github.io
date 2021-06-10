@@ -176,7 +176,8 @@
 						opacity: 1
 						transition: 1s
 				.buttons
-					&.visible
+				&.visible
+					.buttons
 						display: flex
 			.pseudoWrapper
 				&.editable::after
@@ -214,10 +215,14 @@
 
 						.close
 							display: none
-							&.hidden
-								display: none !important
-							&.visible
-								display: block 
+					&.editable
+						.edit
+							display: none
+						.close
+							display: block
+						input
+							pointer-events: all
+
 					&:last-child
 						border: none
 				.email
