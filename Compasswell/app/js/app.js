@@ -45,6 +45,30 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 
+	// var index
+	// for (index = 0; index < 12; index++) {
+	//   // Запускается 5 раз, с шагом от 0 до 4.
+	//   console.log(index);
+	// }
+
+	$('.nextArrow').click(function() {
+		$('.globalCalendar.visible').next().addClass('visible').siblings().removeClass('visible')
+		if($('.globalCalendar:not(.visible)').length == 11) {
+			$('.globalCalendar').eq(0).addClass('visible')
+		}
+
+	})
+	$('.prevArrow').click(function() {
+		$('.globalCalendar.visible').prev().addClass('visible').siblings().removeClass('visible')
+		if($('.globalCalendar').eq(0).hasClass('visible')) {
+			$('.globalCalendar').removeClass('visible')
+			$('.globalCalendar').eq(10).addClass('visible')
+		}
+
+	})
+
+	
+
 
 
 	$(document).click(function(event) { 
@@ -223,11 +247,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('html, body').animate({
 		    scrollTop: $('.title').offset().top + 200
 		});
-		// window.setTimeout(function() {
-		//     $('html, body').animate({
-		//         scrollTop: $('.next').offset().top - 500
-		//     });
-		// }, 200)
 	})
 
 
