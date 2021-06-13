@@ -1,0 +1,106 @@
+// TEMPLATE PROJECT STYLES
+.page
+	display: flex
+	justify-content: space-between
+	position: relative
+	height: 100vh
+	&__left-side
+		width: 17%
+	.side-bar
+		background-color: #474749
+		padding: 36px 25px 17px 30px
+		overflow: hidden
+		position: relative
+		&__header
+			display: flex
+			justify-content: space-between
+			align-items: center
+			a
+				display: block
+				img
+					width: 93px
+		&__hamburger
+			cursor: pointer
+			span
+				width: 18px
+				height: 2px
+				background-color: #fff
+				display: block
+				position: relative
+				&::before, &::after
+					content: ''
+					display: block
+					width: 100%
+					height: 2px
+					background-color: #fff
+					position: absolute
+					left: 0
+				&::before
+					top: -5px
+				&::after
+					top: 5px
+
+		&__container
+			display: flex
+			justify-content: space-between
+			flex-direction: column
+			height: calc( 100% - 23px)
+		&__list
+			margin: 45px 0
+			li
+				padding: 22px 0
+				font-family: helveticaMedium
+				font-size: 20px
+				position: relative
+				a
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					svg
+						position: relative
+						z-index: 1
+						margin-right: 16px
+					span
+						position: relative
+						z-index: 1
+				&:hover
+					a
+						color: $highlighted
+					svg
+						path, #Rectangle_147601, #Line_218, #Line_217, #Ellipse_9374, #Line_246, #Line_247
+							stroke: $highlighted
+						#Union_5, #Path_83318
+							stroke: none
+							fill: $highlighted
+
+					&::after
+						content: ''
+						display: block
+						height: 100%
+						width: 130%
+						position: absolute
+						border-radius: 30px 0px 0px 30px
+						left: -25px
+						top: 0
+						background-color: #000
+
+		&__footer
+			font-family: helveticaRegular
+			font-size: 14px
+			color: #fff
+			opacity: 0.38
+			line-height: 16px
+			letter-spacing: 2px
+			a
+				color: #fff
+				
+
+
+	&__right-side
+		width: 83%
+	.global-content
+		&__header
+		&__buttons
+
+
+	
