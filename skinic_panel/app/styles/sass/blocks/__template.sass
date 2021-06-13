@@ -4,10 +4,17 @@
 	justify-content: space-between
 	position: relative
 	height: 100vh
+	background-color: #474749
 	&__left-side
 		width: 17%
+	&__right-side
+		width: 83%
+		background-color: #fff
+		border-radius: 8px 0 0 8px
+
+
+
 	.side-bar
-		background-color: #474749
 		padding: 36px 25px 17px 30px
 		overflow: hidden
 		position: relative
@@ -63,7 +70,7 @@
 					span
 						position: relative
 						z-index: 1
-				&:hover
+				&:hover, &.active
 					a
 						color: $highlighted
 					svg
@@ -90,17 +97,70 @@
 			color: #fff
 			opacity: 0.38
 			line-height: 16px
-			letter-spacing: 2px
+			letter-spacing: 1px
 			a
 				color: #fff
 				
-
-
-	&__right-side
-		width: 83%
-	.global-content
-		&__header
-		&__buttons
-
-
 	
+
+
+	.global-content
+		padding: 36px
+		&__header
+			display: flex
+			justify-content: space-between
+			align-items: center
+		&__buttons
+			border: 1px solid #E2E6EA
+			cursor: pointer
+			border-radius: 8px
+			margin-right: 31px
+			width: 96px
+			height: 38px
+			position: relative
+			display: flex
+			div
+				width: 50%
+				height: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				img
+					display: block
+					width: auto
+				&.active
+					background-color: #E2E6EA
+		&__title
+			display: inline-block
+			h1
+				display: block
+				font-size: 24px
+				font-family: helveticaRegular
+				color: #343434
+				margin-bottom: 3px
+			p
+				font-family: helveticaMedium
+				font-size: 14px
+				color: #838383
+				opacity: 0.5
+		&__flex-container
+			display: flex
+
+		&__account, .account
+			display: flex
+			img
+				width: 46px
+				margin-right: 15px
+			span
+				display: block
+				color: #555555
+				font-size: 14px
+				font-family: helveticaRegular
+			&__head
+				font-family: helveticaMedium
+				margin: 5px 0
+
+
+
+
+
