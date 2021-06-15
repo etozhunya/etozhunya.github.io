@@ -16,7 +16,89 @@
 		background-color: #fff
 		border-radius: 8px 0 0 8px
 
+	.global-content
+		padding: 36px
+		overflow: hidden
+		&__header
+			display: flex
+			justify-content: space-between
+			align-items: center
+		&__buttons
+			border: 1px solid #E2E6EA
+			cursor: pointer
+			border-radius: 8px
+			margin-right: 31px
+			width: 96px
+			height: 38px
+			position: relative
+			display: flex
+			div
+				width: 50%
+				height: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				img
+					display: block
+					width: auto
+				&.active
+					background-color: #E2E6EA
+		&__title
+			display: inline-block
+			h1
+				display: block
+				font-size: 24px
+				font-family: helveticaBold
+				color: #343434
+				margin-bottom: 3px
+			p
+				font-family: helveticaMedium
+				font-size: 14px
+				color: #838383
+				opacity: 0.5
+		&__flex-container
+			display: flex
 
+		&__account, .account
+			display: flex
+			img
+				width: 46px
+				margin-right: 15px
+			span
+				display: block
+				color: #555555
+				font-size: 14px
+				font-family: helveticaRegular
+				&:first-child
+					font-family: helveticaMedium
+					margin: 5px 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// SIDEBAR CSS
 	.side-bar
 		padding: 36px 25px 17px 30px
 		overflow: hidden
@@ -113,7 +195,7 @@
 			letter-spacing: 1px
 			a
 				color: #fff
-	.side-bar__desktop
+	.full
 		right: 0
 		transition-delay: 0.5s
 		min-width: 230px
@@ -121,9 +203,7 @@
 			span
 				&::before, &::after
 					transition-delay: 0.8s
-
-
-	.side-bar__compact
+	.minimized
 		width: 100%
 		overflow: hidden
 		right: 100%
@@ -167,9 +247,6 @@
 		.side-bar__footer
 			padding: 0 15px
 			line-height: 21px
-	
-
-
 	&.wide
 		.page__left-side
 			width: 10%
@@ -178,14 +255,14 @@
 				position: absolute
 				top: 0
 				transition: 0.5s
-			.side-bar__desktop
+			.full
 				right: 100%
 				.side-bar__hamburger
 					span
 						&::before, &::after
 							top: 0
 							transition: 0.2s
-			.side-bar__compact
+			.minimized
 				right: 0
 				transition: 0.5s
 				transition-delay: 0.5s
@@ -202,62 +279,7 @@
 		.page__right-side
 			width: 90%
 			transition: 1s
-	.global-content
-		padding: 36px
-		overflow: hidden
-		&__header
-			display: flex
-			justify-content: space-between
-			align-items: center
-		&__buttons
-			border: 1px solid #E2E6EA
-			cursor: pointer
-			border-radius: 8px
-			margin-right: 31px
-			width: 96px
-			height: 38px
-			position: relative
-			display: flex
-			div
-				width: 50%
-				height: 100%
-				display: flex
-				justify-content: center
-				align-items: center
-				img
-					display: block
-					width: auto
-				&.active
-					background-color: #E2E6EA
-		&__title
-			display: inline-block
-			h1
-				display: block
-				font-size: 24px
-				font-family: helveticaBold
-				color: #343434
-				margin-bottom: 3px
-			p
-				font-family: helveticaMedium
-				font-size: 14px
-				color: #838383
-				opacity: 0.5
-		&__flex-container
-			display: flex
-
-		&__account, .account
-			display: flex
-			img
-				width: 46px
-				margin-right: 15px
-			span
-				display: block
-				color: #555555
-				font-size: 14px
-				font-family: helveticaRegular
-				&:first-child
-					font-family: helveticaMedium
-					margin: 5px 0
+	// SIDEBAR CSS END
 
 
 
