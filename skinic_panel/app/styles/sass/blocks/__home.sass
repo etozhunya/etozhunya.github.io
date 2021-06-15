@@ -1,0 +1,139 @@
+.content-wrapper
+	overflow: hidden
+	&__flex-table
+		width: 100%
+		position: relative
+		padding: 10px 0 100px 0
+		height: calc(100vh - 72px - 46px - 83px - 38px)
+		overflow: scroll
+		&::-webkit-scrollbar
+			display: none
+		.table-slot
+			cursor: pointer
+			&__time
+				display: block
+				position: relative
+				z-index: 2
+				width: 100%
+				background-color: #C2C2C2
+				height: 1px
+				margin-left: 35px
+				span
+					display: inline-block
+					z-index: 2
+					position: absolute
+					top: -5px
+					left: -35px
+					color: #C2C2C2
+					font-family: helveticaMedium
+					font-size: 12px
+		.block-hours
+			z-index: 1
+			position: relative
+			background-color: #E2E6EA
+			> span
+				display: block
+				padding: 5px 0
+				margin-left: 35px
+				color: #151515
+		.info-wrapper
+			display: flex
+			justify-content: space-between
+			position: relative
+			z-index: 1
+			&:hover
+				background-color: #FAFBFC
+			&__info
+				display: flex
+				justify-content: space-between
+				align-items: center
+				width: 50%
+				li
+					width: 33%
+					height: 43px
+					margin: 20px 0
+					.client-type
+						font-size: 12px
+						padding: 4px 14px 4px 25px
+						border-radius: 8px
+						display: inline-block
+						position: relative
+						&::before
+							content: ''
+							display: block
+							position: absolute
+							left: 11px
+							top: 50%
+							transform: translateY(-50%)
+							width: 9px
+							height: 9px
+						&.bonus-program
+							color: #FF7979
+							background-color: rgba(255,121,121,0.10)
+							&::before
+								content: ''
+								background: url('../images/dist/bonus-program-icon.svg') center center/contain no-repeat
+						&.vip-client
+							color: #E09E00
+							background-color: rgba(224,158,40,0.10)
+							&::before
+								background: url('../images/dist/vip-client-icon.svg') center center/cover no-repeat
+						&.regular-customer
+							color: #407292
+							background-color: rgba(64,146,146,0.10)
+							&::before
+								background: url('../images/dist/regular-customer-icon.svg') center center/cover no-repeat
+						&.black-list
+							background-color: rgba(52,52,52,0.10)
+							color: #343434
+							&::before
+								background: url('../images/dist/black-list-icon.svg') center center/cover no-repeat
+
+					img
+						width: 43px
+						height: 43px
+						display: block
+						margin-right: 10px
+					h2
+						font-family: helveticaMedium
+						font-size: 14px
+						color: #151515
+						display: block
+						margin-bottom: 12px
+					span
+						font-size: 12px
+						color: #343434
+					p
+						color: #343434
+						font-size: 14px
+						line-height: 26px
+						transform: translateY(-5px)
+					&:first-child
+						display: flex
+						width: 35%
+					&:nth-child(2)
+						width: 25%
+						span
+							position: relative
+							&::before
+								content: ''
+								display: inline-block
+								position: relative
+								margin-right: 5px
+								background: url('../images/dist/clock-icon.svg') center center/contain no-repeat
+								width: 10px
+								height: 10px
+								transform: translateY(1px)
+
+			&__notes
+				width: 50%
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				li
+					width: 23%
+					margin: 0 0.5%
+					height: 43px
+
+
+	

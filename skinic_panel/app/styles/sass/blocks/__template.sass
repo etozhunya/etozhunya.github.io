@@ -5,29 +5,37 @@
 	position: relative
 	height: 100vh
 	background-color: #474749
+	box-sizing: border-box
 	&__left-side
 		width: 17%
+		position: relative
+		transition: 1s
 	&__right-side
+		transition: 1s
 		width: 83%
 		background-color: #fff
 		border-radius: 8px 0 0 8px
 
 
-
 	.side-bar
 		padding: 36px 25px 17px 30px
 		overflow: hidden
-		position: relative
+		position: absolute
+		transition: 0.5s
+		height: 100%
 		&__header
-			display: flex
-			justify-content: space-between
-			align-items: center
+			position: relative
 			a
 				display: block
 				img
 					width: 93px
 		&__hamburger
+			position: absolute
+			right: -15px
+			top: 50%
+			transform: translateY(-50%)
 			cursor: pointer
+			padding: 15px 
 			span
 				width: 18px
 				height: 2px
@@ -44,8 +52,10 @@
 					left: 0
 				&::before
 					top: -5px
+					transition: 0.2s
 				&::after
 					top: 5px
+					transition: 0.2s
 
 		&__container
 			display: flex
@@ -59,10 +69,12 @@
 				font-family: helveticaMedium
 				font-size: 20px
 				position: relative
+				cursor: pointer
 				a
 					display: flex
 					justify-content: flex-start
 					align-items: center
+					color: #fff
 					svg
 						position: relative
 						z-index: 1
@@ -80,6 +92,7 @@
 							stroke: none
 							fill: $highlighted
 
+				&.active
 					&::after
 						content: ''
 						display: block
@@ -100,12 +113,98 @@
 			letter-spacing: 1px
 			a
 				color: #fff
-				
+	.side-bar__desktop
+		right: 0
+		transition-delay: 0.5s
+		min-width: 230px
+		.side-bar__hamburger
+			span
+				&::before, &::after
+					transition-delay: 0.8s
+
+
+	.side-bar__compact
+		width: 100%
+		overflow: hidden
+		right: 100%
+		transition: 0.5s
+		padding: 36px 0 17px 0
+		.side-bar__header
+			position: relative
+			overflow: hidden
+			.hamburger
+				position: relative
+				width: auto
+				right: auto
+				top: 10px
+				text-align: center
+				span
+					display: inline-block
+					background-color: transparent
+					&::before, &::after
+						top: 0
+						transition: .2s
+			a
+				text-align: center
+		.side-bar__container
+			height: calc(100% - 68px)
+		.side-bar__list
+			li
+				a
+					display: block
+					text-align: center
+					svg
+						margin: 0 auto 8px auto
+						display: block
+					span
+						font-size: 16px
+				&::after
+					left: 5%
+					top: 5%
+					width: 90%
+					height: 90%
+					border-radius: 50px
+		.side-bar__footer
+			padding: 0 15px
+			line-height: 21px
 	
 
 
+	&.wide
+		.page__left-side
+			width: 10%
+			transition: 1s
+			.side-bar
+				position: absolute
+				top: 0
+				transition: 0.5s
+			.side-bar__desktop
+				right: 100%
+				.side-bar__hamburger
+					span
+						&::before, &::after
+							top: 0
+							transition: 0.2s
+			.side-bar__compact
+				right: 0
+				transition: 0.5s
+				transition-delay: 0.5s
+				.side-bar__hamburger
+					span
+						&::before
+							transform: rotate(45deg)
+							transition: 0.2s
+							transition-delay: 0.8s 
+						&::after
+							transform: rotate(-45deg)
+							transition: 0.2s
+							transition-delay: 0.8s 
+		.page__right-side
+			width: 90%
+			transition: 1s
 	.global-content
 		padding: 36px
+		overflow: hidden
 		&__header
 			display: flex
 			justify-content: space-between
@@ -135,7 +234,7 @@
 			h1
 				display: block
 				font-size: 24px
-				font-family: helveticaRegular
+				font-family: helveticaBold
 				color: #343434
 				margin-bottom: 3px
 			p
@@ -156,10 +255,9 @@
 				color: #555555
 				font-size: 14px
 				font-family: helveticaRegular
-			&__head
-				font-family: helveticaMedium
-				margin: 5px 0
-
+				&:first-child
+					font-family: helveticaMedium
+					margin: 5px 0
 
 
 

@@ -1,0 +1,18 @@
+<svg id="Group_163788" data-name="Group 163788" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="43" viewBox="0 0 43 43">
+  <defs>
+    <linearGradient id="linear-gradient" y1="1" x2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#efc96e"/>
+      <stop offset="1" stop-color="#ffe5a5"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_163787" data-name="Group 163787">
+    <g id="Group_163786" data-name="Group 163786">
+      <g id="Group_163785" data-name="Group 163785">
+        <g id="Group_163778" data-name="Group 163778">
+          <circle id="Ellipse_9424" data-name="Ellipse 9424" cx="21.5" cy="21.5" r="21.5" fill="url(#linear-gradient)"/>
+        </g>
+        <text id="AG" transform="translate(11 27)" fill="#fff" font-size="16" font-family="HelveticaNeue-Medium, Helvetica Neue" font-weight="500"><tspan x="0" y="0">AG</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
