@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	$('.select').select2()
-	$('.select3').select2()
 
 	$('.side-bar__hamburger').click(function() {
 		$('.page').toggleClass('wide')
