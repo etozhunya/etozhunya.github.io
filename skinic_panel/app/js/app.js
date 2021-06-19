@@ -23,6 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 
+	// home table change content
+	$('.global-list-button').click(function(){
+		$('.flex-table__list').removeClass('in-view').eq(0).addClass('in-view');
+		$('#calendar').css('display', 'none');
+	})
+	$('.global-calendar-button').click(function(){
+		$('.flex-table__list').removeClass('in-view').eq(1).addClass('in-view');
+		// $('#calendar').fullCalendar('render');
+	})
+
+
 
 	// modal head reset steps
 	$('.modal-details__head .click-item').click(function() {
@@ -38,9 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-	// datepicker
-	const picker = datepicker('#open-calendar', {
-	})
+	
 
 	$('.select').select2()
 
@@ -59,6 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.steps-item').removeClass('in-view').eq(0).addClass('in-view')
 	})
 
+
+	// buttons
 	$('.close-button').click(function(){
 		$('.edit-logo').removeClass('edit')
 		$('.modal').removeClass('visible')
@@ -84,6 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	})
 
+
+
+	////
+	datepicker("#open-calendar",{})
 
 
 	$('.add-note').click(function() {
@@ -138,7 +153,93 @@ document.addEventListener('DOMContentLoaded', () => {
 		$(this).parents('.step-item').removeClass('in-view').prev().addClass('in-view')
 	})
 
-
-
-
 })
+
+// SIMULATIN CLICKS FULL CALLENDAR
+$('.TWM__days span').click(function(){
+	if(!$('.global-list-button').hasClass('active')) {
+		$('.day-button').click(function(){
+			$( '.fc-today-button' ).click ()
+		})
+		$('.week-button').click(function(){
+			$( '.fc-timeGridWeek-button' ).click ()
+		})
+		$('.month-button').click(function(){
+			$( '.fc-dayGridMonth-button' ).click ()
+		})
+
+		$('.TWM__arrow--prev').click(function(){
+			$( '.fc-prev-button' ).click ()
+		})
+		$('.TWM__arrow--next').click(function(){
+			$( '.fc-next-button' ).click ()
+		})
+	}
+})
+
+
+// VANILLA JAVASCRIPT CALENDAR
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+var text = document.getElementById('DATE')
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = 'Today ' + monthNames[today.getMonth()] + ' ' + dd + ' st, ' + yyyy;
+text.innerHTML = today
+
+// var y = document.getElementsByClassName('fc-toolbar-title');
+// var aNode = y[0];
+// console.log(y)
+
+
+
+// CALENDAR VANILLA JS
+
+document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'timeGridWeek',
+           initialDate: "2021-02-15",
+          selectable: true,
+          editable: true,
+          eventContent: function( arg ) {
+                return { html: arg.event.title };
+           },
+          events: [
+                {
+                  id: 1,
+                  title: 'Conference<ul><li>Morning Committee Meetings</li><li>Networking Brunch</li><li>Concurrent Sessions</li><li>Evening Network Reception</li><li>Conference Closing</li></ul>',
+                  start: '2021-02-15 07:00:00',
+                  end: '2021-02-15 12:00:00'
+                },
+                {
+                  id: 2,
+                  title: 'Another <b>Entry with HTML</b>',
+                  start: '2021-02-16 07:00:00',
+                  end: '2021-02-16 08:00:00'
+                },
+                      {
+                  id: 3,
+                  title: '<i>Third Entry with HTML</i>',
+                  start: '2021-02-16 09:00:00',
+                  end: '2021-02-16 10:00:00'
+                }
+              ],
+          headerToolbar: {
+                center: 'today,timeGridWeek,dayGridMonth,prev,next',
+      		}
+        });
+        calendar.render();
+
+        calendarEl.style.display="none"
+
+        document.querySelector('.global-calendar-button').addEventListener('click', () => {
+          calendarEl.style.display="block"
+        }); 
+
+
+      });

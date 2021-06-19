@@ -14,6 +14,7 @@
 
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dist/preview.jpg">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="css/main.min.css">
@@ -229,17 +230,17 @@
 
 				<div class="global-content__flex-container">
 					<div class="global-content__buttons">
-						<div class="active click-item">
+						<div class="active click-item global-list-button">
 							<img src="images/dist/content-header-button1.svg" alt="">		
 						</div>
-						<div class="click-item">
+						<div class="click-item global-calendar-button">
 							<img src="images/dist/content-header-button2.svg" alt="">	
 						</div>
 					</div>
 
 
 					<div class="global-content__title">
-						<h1>Today March 23 st, 2021</h1>
+						<h1 id="DATE"></h1>
 						<p>12 appointment </p>
 					</div>
 				</div>
@@ -254,8 +255,6 @@
 				</a>
 			</div>
 
-
-
 		<div class="content-wrapper">
 			<div class="content-wrapper__header">
 				<div class="content-wrapper__app-hours">
@@ -264,13 +263,13 @@
 				</div>
 				<div class="content-wrapper__TWM TWM">
 					<div class="TWM__days">
-						<span class="active hover click-item">Today</span>
-						<span class="hover click-item">Week</span>
-						<span class="hover click-item">Month</span>
+						<span class="active hover click-item day-button">Today</span>
+						<span class="hover click-item week-button">Week</span>
+						<span class="hover click-item month-button">Month</span>
 					</div>
 					<div class="TWM__arrows">
-						<img src="images/dist/header-arrow-icon.svg">
-						<img src="images/dist/header-arrow-icon.svg">
+						<img src="images/dist/header-arrow-icon.svg" class="TWM__arrow--prev">
+						<img src="images/dist/header-arrow-icon.svg" class="TWM__arrow--next">
 					</div>
 				</div>
 				<div class="content-wrapper__filter-calendar">
@@ -279,421 +278,540 @@
 				</div>
 				
 			</div>
-			<ul class="content-wrapper__flex-table">
-				<li class="table-slot">
-					<div class="table-slot__time"><span>08:00</span></div>
-					<div class="table-slot__client info-wrapper">
-						<ul class="info-wrapper__info">
-							<li>
-								<img src="images/dist/client-icon-1-5.svg" alt="">
-								<div>
-									<h2>Liza Ilona Bühler</h2>
-									<span class="client-type bonus-program">Bonus program</span>
-								</div>
-							</li>
-							<li>
-								<h2>Dr. med. Dan Iselin</h2>
-								<span>08:00—08:30 (30 min.)</span>
-							</li>
-							<li>
-								<p>Forehead wrinkles and crow’s feet (combination)  </p>
-							</li>
+			<div class="flex-table">
+				<ul class="flex-table__list flex-table__days in-view">
+					<li class="table-slot">
+						<div class="table-slot__time"><span>08:00</span></div>
+						<div class="table-slot__client info-wrapper">
+							<ul class="info-wrapper__info">
+								<li>
+									<img src="images/dist/client-icon-1-5.svg" alt="">
+									<div>
+										<h2>Liza Ilona Bühler</h2>
+										<span class="client-type bonus-program">Bonus program</span>
+									</div>
+								</li>
+								<li>
+									<h2>Dr. med. Dan Iselin</h2>
+									<span>08:00—08:30 (30 min.)</span>
+								</li>
+								<li>
+									<p>Forehead wrinkles and crow’s feet (combination)  </p>
+								</li>
+							</ul>
+							<ul class="info-wrapper__notes">
+								<li class="widget widget--red">
+									<p>medical history</p>
+									<span>Takes blood thinners</span>
+								</li>
+								<li class="widget widget--green">
+									<p>Client comment</p>
+									<span>I am very sensitive to sunlight</span>
+								</li>
+								<li class="widget widget--violet">
+									<p>Internal client note</p>
+									<span>He is a very capricious customer, he only …</span>
+								</li>
+								<li class="widget widget--blue">
+									<p>Internal booking comment</p>
+									<span>I was vaccinated against covid 3 weeks ago</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="table-slot">
+						<div class="table-slot__time"><span>09:00</span></div>
+						<div class="table-slot__client info-wrapper">
+							<ul class="info-wrapper__info">
+								<li>
+									<img src="images/dist/client-icon-3.svg" alt="">
+									<div>
+										<h2>Liza Ilona Bühler</h2>
+										<span class="client-type vip-client">VIP client</span>
+									</div>
+								</li>
+								<li>
+									<h2>Dr. med. Dan Iselin</h2>
+									<span>08:00—08:30 (30 min.)</span>
+								</li>
+								<li>
+									<p>Forehead wrinkles and crow’s feet (combination)  </p>
+								</li>
+							</ul>
+							<ul class="info-wrapper__notes">
+								<li class="widget widget--red">
+									<p>medical history</p>
+									<span>Takes blood thinners</span>
+								</li>
+								<li class="widget widget--blue">
+									<p>Internal booking comment</p>
+									<span>I was vaccinated against covid 3 weeks ago</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="table-slot">
+						<div class="table-slot__time"><span>10:00</span></div>
+						<div class="table-slot__client info-wrapper">
+							<ul class="info-wrapper__info">
+								<li>
+									<img src="images/dist/client-icon-3.svg" alt="">
+									<div>
+										<h2>Liza Ilona Bühler</h2>
+										<span class="client-type regular-customer">regular customer</span>
+									</div>
+								</li>
+								<li>
+									<h2>Dr. med. Dan Iselin</h2>
+									<span>08:00—08:30 (30 min.)</span>
+								</li>
+								<li>
+									<p>Forehead wrinkles and crow’s feet (combination)  </p>
+								</li>
+							</ul>
+							<ul class="info-wrapper__notes">
+								<li class="widget widget--red">
+									<p>medical history</p>
+									<span>Takes blood thinners</span>
+								</li>
+								<li class="widget widget--green">
+									<p>Client comment</p>
+									<span>I am very sensitive to sunlight</span>
+								</li>
+								<li class="widget widget--violet">
+									<p>Internal client note</p>
+									<span>He is a very capricious customer, he only …</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="table-slot block-hours">
+						<div class="table-slot__time"><span>10:00</span></div>
+						<span>Block hours</span>
+					</li>
+					<li class="table-slot">
+						<div class="table-slot__time"><span>10:30</span></div>
+						<div class="table-slot__client info-wrapper">
+							<ul class="info-wrapper__info">
+								<li>
+									<img src="images/dist/client-icon-3.svg" alt="">
+									<div>
+										<h2>Liza Ilona Bühler</h2>
+										<span class="client-type black-list">Black list</span>
+									</div>
+								</li>
+								<li>
+									<h2>Dr. med. Dan Iselin</h2>
+									<span>08:00—08:30 (30 min.)</span>
+								</li>
+								<li>
+									<p>Forehead wrinkles and crow’s feet (combination)  </p>
+								</li>
+							</ul>
+							<ul class="info-wrapper__notes">
+								<li class="widget widget--green">
+									<p>Client comment</p>
+									<span>I am very sensitive to sunlight</span>
+								</li>
+								<li class="widget widget--violet">
+									<p>Internal client note</p>
+									<span>He is a very capricious customer, he only …</span>
+								</li>
+								<li class="widget widget--blue">
+									<p>Internal booking comment</p>
+									<span>I was vaccinated against covid 3 weeks ago</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="table-slot">
+						<div class="table-slot__time"><span>11:00</span></div>
+						<div class="table-slot__client info-wrapper">
+							<ul class="info-wrapper__info">
+								<li>
+									<img src="images/dist/client-icon-3.svg" alt="">
+									<div>
+										<h2>Liza Ilona Bühler</h2>
+										<span class="client-type bonus-program">Bonus program</span>
+									</div>
+								</li>
+								<li>
+									<h2>Dr. med. Dan Iselin</h2>
+									<span>08:00—08:30 (30 min.)</span>
+								</li>
+								<li>
+									<p>Forehead wrinkles and crow’s feet (combination)  </p>
+								</li>
+							</ul>
+							<ul class="info-wrapper__notes">
+								<li class="widget widget--red">
+									<p>medical history</p>
+									<span>Takes blood thinners</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="table-slot">
+						<div class="table-slot__time"><span>11:15</span></div>
+						<div class="table-slot__client info-wrapper">
+							<ul class="info-wrapper__info">
+								<li>
+									<img src="images/dist/client-icon-3.svg" alt="">
+									<div>
+										<h2>Liza Ilona Bühler</h2>
+										<span class="client-type bonus-program">Bonus program</span>
+									</div>
+								</li>
+								<li>
+									<h2>Dr. med. Dan Iselin</h2>
+									<span>08:00—08:30 (30 min.)</span>
+								</li>
+								<li>
+									<p>Forehead wrinkles and crow’s feet (combination)  </p>
+								</li>
+							</ul>
+							<ul class="info-wrapper__notes">
+								<li class="widget widget--red">
+									<p>medical history</p>
+									<span>Takes blood thinners</span>
+								</li>
+								<li class="widget widget--green">
+									<p>Client comment</p>
+									<span>I am very sensitive to sunlight</span>
+								</li>
+								<li class="widget widget--violet">
+									<p>Internal client note</p>
+									<span>He is a very capricious customer, he only …</span>
+								</li>
+								<li class="widget widget--blue">
+									<p>Internal booking comment</p>
+									<span>I was vaccinated against covid 3 weeks ago</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="table-slot">
+						<div class="table-slot__time"><span>13:00</span></div>
+						<div class="table-slot__client info-wrapper">
+							<ul class="info-wrapper__info">
+								<li>
+									<img src="images/dist/client-icon-3.svg" alt="">
+									<div>
+										<h2>Liza Ilona Bühler</h2>
+										<span class="client-type bonus-program">Bonus program</span>
+									</div>
+								</li>
+								<li>
+									<h2>Dr. med. Dan Iselin</h2>
+									<span>08:00—08:30 (30 min.)</span>
+								</li>
+								<li>
+									<p>Forehead wrinkles and crow’s feet (combination)  </p>
+								</li>
+							</ul>
+							<ul class="info-wrapper__notes">
+								<li class="widget widget--violet">
+									<p>Internal client note</p>
+									<span>He is a very capricious customer, he only …</span>
+								</li>
+								<li class="widget widget--blue">
+									<p>Internal booking comment</p>
+									<span>I was vaccinated against covid 3 weeks ago</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="table-slot">
+						<div class="table-slot__time"><span>14:00</span></div>
+						<div class="table-slot__client info-wrapper">
+							<ul class="info-wrapper__info">
+								<li>
+									<img src="images/dist/client-icon-3.svg" alt="">
+									<div>
+										<h2>Liza Ilona Bühler</h2>
+										<span class="client-type bonus-program">Bonus program</span>
+									</div>
+								</li>
+								<li>
+									<h2>Dr. med. Dan Iselin</h2>
+									<span>08:00—08:30 (30 min.)</span>
+								</li>
+								<li>
+									<p>Forehead wrinkles and crow’s feet (combination)  </p>
+								</li>
+							</ul>
+							<ul class="info-wrapper__notes">
+								<li class="widget widget--red">
+									<p>medical history</p>
+									<span>Takes blood thinners</span>
+								</li>
+								<li class="widget widget--green">
+									<p>Client comment</p>
+									<span>I am very sensitive to sunlight</span>
+								</li>
+								<li class="widget widget--violet">
+									<p>Internal client note</p>
+									<span>He is a very capricious customer, he only …</span>
+								</li>
+								<li class="widget widget--blue">
+									<p>Internal booking comment</p>
+									<span>I was vaccinated against covid 3 weeks ago</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="table-slot">
+						<div class="table-slot__time"><span>16:00</span></div>
+						<div class="table-slot__client info-wrapper">
+							<ul class="info-wrapper__info">
+								<li>
+									<img src="images/dist/client-icon-3.svg" alt="">
+									<div>
+										<h2>Liza Ilona Bühler</h2>
+										<span class="client-type bonus-program">Bonus program</span>
+									</div>
+								</li>
+								<li>
+									<h2>Dr. med. Dan Iselin</h2>
+									<span>08:00—08:30 (30 min.)</span>
+								</li>
+								<li>
+									<p>Forehead wrinkles and crow’s feet (combination)  </p>
+								</li>
+							</ul>
+							<ul class="info-wrapper__notes">
+								<li class="widget widget--violet">
+									<p>Internal client note</p>
+									<span>He is a very capricious customer, he only …</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="table-slot">
+						<div class="table-slot__time"><span>16:00</span></div>
+						<div class="table-slot__client info-wrapper">
+							<ul class="info-wrapper__info">
+								<li>
+									<img src="images/dist/client-icon-3.svg" alt="">
+									<div>
+										<h2>Liza Ilona Bühler</h2>
+										<span class="client-type bonus-program">Bonus program</span>
+									</div>
+								</li>
+								<li>
+									<h2>Dr. med. Dan Iselin</h2>
+									<span>08:00—08:30 (30 min.)</span>
+								</li>
+								<li>
+									<p>Forehead wrinkles and crow’s feet (combination)  </p>
+								</li>
+							</ul>
+							<ul class="info-wrapper__notes">
+								<li class="widget widget--red">
+									<p>medical history</p>
+									<span>Takes blood thinners</span>
+								</li>
+								<li class="widget widget--violet">
+									<p>Internal client note</p>
+									<span>He is a very capricious customer, he only …</span>
+								</li>
+								<li class="widget widget--blue">
+									<p>Internal booking comment</p>
+									<span>I was vaccinated against covid 3 weeks ago</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="table-slot">
+						<div class="table-slot__time"><span>16:00</span></div>
+						<div class="table-slot__client info-wrapper">
+							<ul class="info-wrapper__info">
+								<li>
+									<img src="images/dist/client-icon-3.svg" alt="">
+									<div>
+										<h2>Liza Ilona Bühler</h2>
+										<span class="client-type bonus-program">Bonus program</span>
+									</div>
+								</li>
+								<li>
+									<h2>Dr. med. Dan Iselin</h2>
+									<span>08:00—08:30 (30 min.)</span>
+								</li>
+								<li>
+									<p>Forehead wrinkles and crow’s feet (combination)  </p>
+								</li>
+							</ul>
+							<ul class="info-wrapper__notes">
+								<li class="widget widget--green">
+									<p>Client comment</p>
+									<span>I am very sensitive to sunlight</span>
+								</li>
+								<li class="widget widget--blue">
+									<p>Internal booking comment</p>
+									<span>I was vaccinated against covid 3 weeks ago</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="table-slot">
+						<div class="table-slot__time"><span>16:00</span></div>
+						<div class="table-slot__client info-wrapper">
+							<ul class="info-wrapper__info">
+								<li>
+									<img src="images/dist/client-icon-3.svg" alt="">
+									<div>
+										<h2>Liza Ilona Bühler</h2>
+										<span class="client-type bonus-program">Bonus program</span>
+									</div>
+								</li>
+								<li>
+									<h2>Dr. med. Dan Iselin</h2>
+									<span>08:00—08:30 (30 min.)</span>
+								</li>
+								<li>
+									<p>Forehead wrinkles and crow’s feet (combination)  </p>
+								</li>
+							</ul>
+							<ul class="info-wrapper__notes">
+								<li class="widget widget--red">
+									<p>medical history</p>
+									<span>Takes blood thinners</span>
+								</li>
+								<li class="widget widget--green">
+									<p>Client comment</p>
+									<span>I am very sensitive to sunlight</span>
+								</li>
+								<li class="widget widget--violet">
+									<p>Internal client note</p>
+									<span>He is a very capricious customer, he only …</span>
+								</li>
+								<li class="widget widget--blue">
+									<p>Internal booking comment</p>
+									<span>I was vaccinated against covid 3 weeks ago</span>
+								</li>
+							</ul>
+						</div>
+					</li>				
+				</ul>
+				<div id="calendar"></div>
+
+				<!-- <div class="flex-table__list flex-table__week">
+					<div class="calendarWrapper">
+						<ul class="calendarWrapper__week">
+							<li><span>Monday, March 1st</span></li>
+							<li><span>Tuesday, March 2st</span></li>
+							<li><span>Wednesday, March 3st</span></li>
+							<li><span>Thursday, March 4st</span></li>
+							<li><span>Friday, March 5st</span></li>
+							<li><span>Saturday, March 6st</span></li>
+							<li><span>Sunday, March 7st</span></li>
 						</ul>
-						<ul class="info-wrapper__notes">
-							<li class="widget widget--red">
-								<p>medical history</p>
-								<span>Takes blood thinners</span>
-							</li>
-							<li class="widget widget--green">
-								<p>Client comment</p>
-								<span>I am very sensitive to sunlight</span>
-							</li>
-							<li class="widget widget--violet">
-								<p>Internal client note</p>
-								<span>He is a very capricious customer, he only …</span>
-							</li>
-							<li class="widget widget--blue">
-								<p>Internal booking comment</p>
-								<span>I was vaccinated against covid 3 weeks ago</span>
-							</li>
+						<ul class="calendarWrapper__day">
+							<li class="anotherMonth"><span>28</span></li>
+							<li class="anotherMonth"><span>29</span></li>
+							<li class="anotherMonth"><span>30</span></li>
+							<li class="anotherMonth"><span>31</span></li>
+							<li><span>1 Feb</span></li>
+							<li class="weekend"><span>2</span></li>
+							<li class="weekend"><span>3</span></li>
+							<li><span>4</span></li>
+							<li><span>5</span></li>
+							<li><span>6</span></li>
+							<li><span>7</span></li>
+							<li class="active"><span>8</span></li>
+							<li class="weekend"><span>9</span></li>
+							<li class="weekend"><span>10</span></li>
+							<li><span>11</span></li>
+							<li><span>12</span></li>
+							<li class="disabled"><span>13</span></li>
+							<li><span>14</span></li>
+							<li><span>15</span></li>
+							<li class="weekend"><span>16</span></li>
+							<li class="weekend"><span>17</span></li>
+							<li><span>18</span></li>
+							<li><span>19</span></li>
+							<li><span>20</span></li>
+							<li><span>21</span></li>
+							<li><span>22</span></li>
+							<li class="weekend"><span>23</span></li>
+							<li class="weekend"><span>24</span></li>
+							<li><span>25</span></li>
+							<li><span>26</span></li>
+							<li><span>27</span></li>
+							<li><span>28</span></li>
+							<li><span>29</span></li>
+							<li class="weekend"><span>30</span></li>
+							<li class="weekend"><span>31</span></li>
+							<li class="anotherMonth"><span>1 March</span></li>
+							<li class="anotherMonth"><span>2</span></li>
+							<li class="anotherMonth"><span>3</span></li>
+							<li class="anotherMonth"><span>4</span></li>
+							<li class="anotherMonth"><span>5</span></li>
+							<li class="anotherMonth weekend"><span>6</span></li>
+							<li class="anotherMonth weekend"><span>7</span></li>
 						</ul>
 					</div>
-				</li>
-				<li class="table-slot">
-					<div class="table-slot__time"><span>09:00</span></div>
-					<div class="table-slot__client info-wrapper">
-						<ul class="info-wrapper__info">
-							<li>
-								<img src="images/dist/client-icon-3.svg" alt="">
-								<div>
-									<h2>Liza Ilona Bühler</h2>
-									<span class="client-type vip-client">VIP client</span>
-								</div>
-							</li>
-							<li>
-								<h2>Dr. med. Dan Iselin</h2>
-								<span>08:00—08:30 (30 min.)</span>
-							</li>
-							<li>
-								<p>Forehead wrinkles and crow’s feet (combination)  </p>
-							</li>
-						</ul>
-						<ul class="info-wrapper__notes">
-							<li class="widget widget--red">
-								<p>medical history</p>
-								<span>Takes blood thinners</span>
-							</li>
-							<li class="widget widget--blue">
-								<p>Internal booking comment</p>
-								<span>I was vaccinated against covid 3 weeks ago</span>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="table-slot">
-					<div class="table-slot__time"><span>10:00</span></div>
-					<div class="table-slot__client info-wrapper">
-						<ul class="info-wrapper__info">
-							<li>
-								<img src="images/dist/client-icon-3.svg" alt="">
-								<div>
-									<h2>Liza Ilona Bühler</h2>
-									<span class="client-type regular-customer">regular customer</span>
-								</div>
-							</li>
-							<li>
-								<h2>Dr. med. Dan Iselin</h2>
-								<span>08:00—08:30 (30 min.)</span>
-							</li>
-							<li>
-								<p>Forehead wrinkles and crow’s feet (combination)  </p>
-							</li>
-						</ul>
-						<ul class="info-wrapper__notes">
-							<li class="widget widget--red">
-								<p>medical history</p>
-								<span>Takes blood thinners</span>
-							</li>
-							<li class="widget widget--green">
-								<p>Client comment</p>
-								<span>I am very sensitive to sunlight</span>
-							</li>
-							<li class="widget widget--violet">
-								<p>Internal client note</p>
-								<span>He is a very capricious customer, he only …</span>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="table-slot block-hours">
-					<div class="table-slot__time"><span>10:00</span></div>
-					<span>Block hours</span>
-				</li>
-				<li class="table-slot">
-					<div class="table-slot__time"><span>10:30</span></div>
-					<div class="table-slot__client info-wrapper">
-						<ul class="info-wrapper__info">
-							<li>
-								<img src="images/dist/client-icon-3.svg" alt="">
-								<div>
-									<h2>Liza Ilona Bühler</h2>
-									<span class="client-type black-list">Black list</span>
-								</div>
-							</li>
-							<li>
-								<h2>Dr. med. Dan Iselin</h2>
-								<span>08:00—08:30 (30 min.)</span>
-							</li>
-							<li>
-								<p>Forehead wrinkles and crow’s feet (combination)  </p>
-							</li>
-						</ul>
-						<ul class="info-wrapper__notes">
-							<li class="widget widget--green">
-								<p>Client comment</p>
-								<span>I am very sensitive to sunlight</span>
-							</li>
-							<li class="widget widget--violet">
-								<p>Internal client note</p>
-								<span>He is a very capricious customer, he only …</span>
-							</li>
-							<li class="widget widget--blue">
-								<p>Internal booking comment</p>
-								<span>I was vaccinated against covid 3 weeks ago</span>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="table-slot">
-					<div class="table-slot__time"><span>11:00</span></div>
-					<div class="table-slot__client info-wrapper">
-						<ul class="info-wrapper__info">
-							<li>
-								<img src="images/dist/client-icon-3.svg" alt="">
-								<div>
-									<h2>Liza Ilona Bühler</h2>
-									<span class="client-type bonus-program">Bonus program</span>
-								</div>
-							</li>
-							<li>
-								<h2>Dr. med. Dan Iselin</h2>
-								<span>08:00—08:30 (30 min.)</span>
-							</li>
-							<li>
-								<p>Forehead wrinkles and crow’s feet (combination)  </p>
-							</li>
-						</ul>
-						<ul class="info-wrapper__notes">
-							<li class="widget widget--red">
-								<p>medical history</p>
-								<span>Takes blood thinners</span>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="table-slot">
-					<div class="table-slot__time"><span>11:15</span></div>
-					<div class="table-slot__client info-wrapper">
-						<ul class="info-wrapper__info">
-							<li>
-								<img src="images/dist/client-icon-3.svg" alt="">
-								<div>
-									<h2>Liza Ilona Bühler</h2>
-									<span class="client-type bonus-program">Bonus program</span>
-								</div>
-							</li>
-							<li>
-								<h2>Dr. med. Dan Iselin</h2>
-								<span>08:00—08:30 (30 min.)</span>
-							</li>
-							<li>
-								<p>Forehead wrinkles and crow’s feet (combination)  </p>
-							</li>
-						</ul>
-						<ul class="info-wrapper__notes">
-							<li class="widget widget--red">
-								<p>medical history</p>
-								<span>Takes blood thinners</span>
-							</li>
-							<li class="widget widget--green">
-								<p>Client comment</p>
-								<span>I am very sensitive to sunlight</span>
-							</li>
-							<li class="widget widget--violet">
-								<p>Internal client note</p>
-								<span>He is a very capricious customer, he only …</span>
-							</li>
-							<li class="widget widget--blue">
-								<p>Internal booking comment</p>
-								<span>I was vaccinated against covid 3 weeks ago</span>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="table-slot">
-					<div class="table-slot__time"><span>13:00</span></div>
-					<div class="table-slot__client info-wrapper">
-						<ul class="info-wrapper__info">
-							<li>
-								<img src="images/dist/client-icon-3.svg" alt="">
-								<div>
-									<h2>Liza Ilona Bühler</h2>
-									<span class="client-type bonus-program">Bonus program</span>
-								</div>
-							</li>
-							<li>
-								<h2>Dr. med. Dan Iselin</h2>
-								<span>08:00—08:30 (30 min.)</span>
-							</li>
-							<li>
-								<p>Forehead wrinkles and crow’s feet (combination)  </p>
-							</li>
-						</ul>
-						<ul class="info-wrapper__notes">
-							<li class="widget widget--violet">
-								<p>Internal client note</p>
-								<span>He is a very capricious customer, he only …</span>
-							</li>
-							<li class="widget widget--blue">
-								<p>Internal booking comment</p>
-								<span>I was vaccinated against covid 3 weeks ago</span>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="table-slot">
-					<div class="table-slot__time"><span>14:00</span></div>
-					<div class="table-slot__client info-wrapper">
-						<ul class="info-wrapper__info">
-							<li>
-								<img src="images/dist/client-icon-3.svg" alt="">
-								<div>
-									<h2>Liza Ilona Bühler</h2>
-									<span class="client-type bonus-program">Bonus program</span>
-								</div>
-							</li>
-							<li>
-								<h2>Dr. med. Dan Iselin</h2>
-								<span>08:00—08:30 (30 min.)</span>
-							</li>
-							<li>
-								<p>Forehead wrinkles and crow’s feet (combination)  </p>
-							</li>
-						</ul>
-						<ul class="info-wrapper__notes">
-							<li class="widget widget--red">
-								<p>medical history</p>
-								<span>Takes blood thinners</span>
-							</li>
-							<li class="widget widget--green">
-								<p>Client comment</p>
-								<span>I am very sensitive to sunlight</span>
-							</li>
-							<li class="widget widget--violet">
-								<p>Internal client note</p>
-								<span>He is a very capricious customer, he only …</span>
-							</li>
-							<li class="widget widget--blue">
-								<p>Internal booking comment</p>
-								<span>I was vaccinated against covid 3 weeks ago</span>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="table-slot">
-					<div class="table-slot__time"><span>16:00</span></div>
-					<div class="table-slot__client info-wrapper">
-						<ul class="info-wrapper__info">
-							<li>
-								<img src="images/dist/client-icon-3.svg" alt="">
-								<div>
-									<h2>Liza Ilona Bühler</h2>
-									<span class="client-type bonus-program">Bonus program</span>
-								</div>
-							</li>
-							<li>
-								<h2>Dr. med. Dan Iselin</h2>
-								<span>08:00—08:30 (30 min.)</span>
-							</li>
-							<li>
-								<p>Forehead wrinkles and crow’s feet (combination)  </p>
-							</li>
-						</ul>
-						<ul class="info-wrapper__notes">
-							<li class="widget widget--violet">
-								<p>Internal client note</p>
-								<span>He is a very capricious customer, he only …</span>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="table-slot">
-					<div class="table-slot__time"><span>16:00</span></div>
-					<div class="table-slot__client info-wrapper">
-						<ul class="info-wrapper__info">
-							<li>
-								<img src="images/dist/client-icon-3.svg" alt="">
-								<div>
-									<h2>Liza Ilona Bühler</h2>
-									<span class="client-type bonus-program">Bonus program</span>
-								</div>
-							</li>
-							<li>
-								<h2>Dr. med. Dan Iselin</h2>
-								<span>08:00—08:30 (30 min.)</span>
-							</li>
-							<li>
-								<p>Forehead wrinkles and crow’s feet (combination)  </p>
-							</li>
-						</ul>
-						<ul class="info-wrapper__notes">
-							<li class="widget widget--red">
-								<p>medical history</p>
-								<span>Takes blood thinners</span>
-							</li>
-							<li class="widget widget--violet">
-								<p>Internal client note</p>
-								<span>He is a very capricious customer, he only …</span>
-							</li>
-							<li class="widget widget--blue">
-								<p>Internal booking comment</p>
-								<span>I was vaccinated against covid 3 weeks ago</span>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="table-slot">
-					<div class="table-slot__time"><span>16:00</span></div>
-					<div class="table-slot__client info-wrapper">
-						<ul class="info-wrapper__info">
-							<li>
-								<img src="images/dist/client-icon-3.svg" alt="">
-								<div>
-									<h2>Liza Ilona Bühler</h2>
-									<span class="client-type bonus-program">Bonus program</span>
-								</div>
-							</li>
-							<li>
-								<h2>Dr. med. Dan Iselin</h2>
-								<span>08:00—08:30 (30 min.)</span>
-							</li>
-							<li>
-								<p>Forehead wrinkles and crow’s feet (combination)  </p>
-							</li>
-						</ul>
-						<ul class="info-wrapper__notes">
-							<li class="widget widget--green">
-								<p>Client comment</p>
-								<span>I am very sensitive to sunlight</span>
-							</li>
-							<li class="widget widget--blue">
-								<p>Internal booking comment</p>
-								<span>I was vaccinated against covid 3 weeks ago</span>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="table-slot">
-					<div class="table-slot__time"><span>16:00</span></div>
-					<div class="table-slot__client info-wrapper">
-						<ul class="info-wrapper__info">
-							<li>
-								<img src="images/dist/client-icon-3.svg" alt="">
-								<div>
-									<h2>Liza Ilona Bühler</h2>
-									<span class="client-type bonus-program">Bonus program</span>
-								</div>
-							</li>
-							<li>
-								<h2>Dr. med. Dan Iselin</h2>
-								<span>08:00—08:30 (30 min.)</span>
-							</li>
-							<li>
-								<p>Forehead wrinkles and crow’s feet (combination)  </p>
-							</li>
-						</ul>
-						<ul class="info-wrapper__notes">
-							<li class="widget widget--red">
-								<p>medical history</p>
-								<span>Takes blood thinners</span>
-							</li>
-							<li class="widget widget--green">
-								<p>Client comment</p>
-								<span>I am very sensitive to sunlight</span>
-							</li>
-							<li class="widget widget--violet">
-								<p>Internal client note</p>
-								<span>He is a very capricious customer, he only …</span>
-							</li>
-							<li class="widget widget--blue">
-								<p>Internal booking comment</p>
-								<span>I was vaccinated against covid 3 weeks ago</span>
-							</li>
-						</ul>
-					</div>
-				</li>
-				
-			</ul>
+				</div>
+
+				<div class="flex-table__list flex-table__month">
+						<div class="calendarWrapper">
+							<ul class="calendarWrapper__week">
+								<li><span>SUN</span></li>
+								<li><span>MON</span></li>
+								<li><span>TUE</span></li>
+								<li><span>WED</span></li>
+								<li><span>THU</span></li>
+								<li><span>FRI</span></li>
+								<li><span>SAT</span></li>
+							</ul>
+							<ul class="calendarWrapper__day">
+								<li class="anotherMonth"><span>28</span></li>
+								<li class="anotherMonth"><span>29</span></li>
+								<li class="anotherMonth"><span>30</span></li>
+								<li class="anotherMonth"><span>31</span></li>
+								<li><span>1 Feb</span></li>
+								<li class="weekend"><span>2</span></li>
+								<li class="weekend"><span>3</span></li>
+								<li><span>4</span></li>
+								<li><span>5</span></li>
+								<li><span>6</span></li>
+								<li><span>7</span></li>
+								<li class="active"><span>8</span></li>
+								<li class="weekend"><span>9</span></li>
+								<li class="weekend"><span>10</span></li>
+								<li><span>11</span></li>
+								<li><span>12</span></li>
+								<li class="disabled"><span>13</span></li>
+								<li><span>14</span></li>
+								<li><span>15</span></li>
+								<li class="weekend"><span>16</span></li>
+								<li class="weekend"><span>17</span></li>
+								<li><span>18</span></li>
+								<li><span>19</span></li>
+								<li><span>20</span></li>
+								<li><span>21</span></li>
+								<li><span>22</span></li>
+								<li class="weekend"><span>23</span></li>
+								<li class="weekend"><span>24</span></li>
+								<li><span>25</span></li>
+								<li><span>26</span></li>
+								<li><span>27</span></li>
+								<li><span>28</span></li>
+								<li><span>29</span></li>
+								<li class="weekend"><span>30</span></li>
+								<li class="weekend"><span>31</span></li>
+								<li class="anotherMonth"><span>1 March</span></li>
+								<li class="anotherMonth"><span>2</span></li>
+								<li class="anotherMonth"><span>3</span></li>
+								<li class="anotherMonth"><span>4</span></li>
+								<li class="anotherMonth"><span>5</span></li>
+								<li class="anotherMonth weekend"><span>6</span></li>
+								<li class="anotherMonth weekend"><span>7</span></li>
+							</ul>
+						</div>
+					</div>					
+				</div>	 -->			
+			</div>
 		</div>
 
 
@@ -1917,6 +2035,7 @@
 		</div>
 	</div>
 </section>
+	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://unpkg.com/js-datepicker"></script>
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>

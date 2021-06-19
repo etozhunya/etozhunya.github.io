@@ -1,106 +1,245 @@
 .content-wrapper
-	&__flex-table
-		width: 100%
-		position: relative
-		padding: 10px 0 0px 0
-		height: calc(100vh - 72px - 46px - 83px - 38px)
-		overflow: scroll
-		&::-webkit-scrollbar
+	.flex-table
+		&__list
 			display: none
-		.table-slot
-			cursor: pointer
-			&__time
+			&.in-view
 				display: block
-				position: relative
-				z-index: 2
-				width: 100%
-				background-color: #C2C2C2
-				height: 1px
-				margin-left: 35px
-				span
-					display: inline-block
+		&__days
+			
+			width: 100%
+			position: relative
+			padding: 10px 0 0px 0
+			height: calc(100vh - 72px - 46px - 83px - 38px)
+			overflow-x: hidden
+			overflow-y: scroll
+			&::-webkit-scrollbar
+				display: none
+			.table-slot
+				cursor: pointer
+				&__time
+					display: block
+					position: relative
 					z-index: 2
-					position: absolute
-					top: -5px
-					left: -35px
-					color: #C2C2C2
-					font-family: helveticaMedium
-					font-size: 12px
-		.block-hours
-			z-index: 1
-			position: relative
-			background-color: #E2E6EA
-			> span
-				display: block
-				padding: 5px 0
-				margin-left: 35px
-				color: rgba(21,21,21,0.58)
-		.info-wrapper
-			display: flex
-			justify-content: space-between
-			position: relative
-			z-index: 1
-			&:hover
-				background-color: #FAFBFC
-			&__info
+					width: 100%
+					background-color: #C2C2C2
+					height: 1px
+					margin-left: 35px
+					span
+						display: inline-block
+						z-index: 2
+						position: absolute
+						top: -5px
+						left: -35px
+						color: #C2C2C2
+						font-family: helveticaMedium
+						font-size: 12px
+			.block-hours
+				z-index: 1
+				position: relative
+				background-color: #E2E6EA
+				> span
+					display: block
+					padding: 5px 0
+					margin-left: 35px
+					color: rgba(21,21,21,0.58)
+			.info-wrapper
 				display: flex
 				justify-content: space-between
-				align-items: center
-				width: 50%
-				padding-left: 15px
-				li
-					width: 33%
-					height: 43px
-					margin: 20px 0
-					img
-						width: 43px
+				position: relative
+				z-index: 1
+				&:hover
+					background-color: #FAFBFC
+				&__info
+					display: flex
+					justify-content: space-between
+					align-items: center
+					width: 50%
+					padding-left: 15px
+					li
+						width: 33%
 						height: 43px
-						display: block
-						margin-right: 10px
-					h2
-						font-family: helveticaMedium
-						font-size: $desktopsize
-						color: #151515
-						display: block
-						margin-bottom: 12px
-					span
-						font-size: 12px
-						color: #343434
-					p
-						color: #343434
-						font-size: $desktopsize
-						line-height: 26px
-						transform: translateY(-5px)
-					&:first-child
-						display: flex
-						width: 35%
-					&:nth-child(2)
-						width: 25%
+						margin: 20px 0
+						img
+							width: 43px
+							height: 43px
+							display: block
+							margin-right: 10px
+						h2
+							font-family: helveticaMedium
+							font-size: $desktopsize
+							color: #151515
+							display: block
+							margin-bottom: 12px
 						span
-							position: relative
-							&::before
-								content: ''
-								display: inline-block
+							font-size: 12px
+							color: #343434
+						p
+							color: #343434
+							font-size: $desktopsize
+							line-height: 26px
+							transform: translateY(-5px)
+						&:first-child
+							display: flex
+							width: 35%
+						&:nth-child(2)
+							width: 25%
+							span
 								position: relative
-								margin-right: 5px
-								background: url('../images/dist/clock-icon.svg') center center/contain no-repeat
-								width: 10px
-								height: 10px
-								transform: translateY(1px)
+								&::before
+									content: ''
+									display: inline-block
+									position: relative
+									margin-right: 5px
+									background: url('../images/dist/clock-icon.svg') center center/contain no-repeat
+									width: 10px
+									height: 10px
+									transform: translateY(1px)
 
-			&__notes
-				width: 50%
-				display: flex
-				justify-content: flex-start
-				align-items: center
-				li
-					width: 23%
-					margin: 0 0.5%
-					height: 53px
-				.widget--red
-					width: 19%
-				.widget--blue
-					width: 25%
+				&__notes
+					width: 50%
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					li
+						width: 23%
+						margin: 0 0.5%
+						height: 53px
+					.widget--red
+						width: 19%
+					.widget--blue
+						width: 25%
+		#calendar
+			.fc-header-toolbar
+				display: none
+		&__week
+			.calendarWrapper
+			    transform: translateX(2px)
+			    &__week
+			        display: flex
+			        justify-content: flex-start
+			        li
+			            width: calc(100% / 7)                        
+			            text-align: center
+			            margin-bottom: 25px
+			            transform: translateX(-5px)
+			            span
+			            	font-family: helveticaBold
+			            	font-size: 13px
+			            	color: #171616
+		            	&:last-child
+		            		span
+		            			color: #FF4040
 
+			    &__day
+			        display: flex
+			        justify-content: space-aroun
+			        flex-flow: wrap
+			        padding-top: 1px
+			        padding-left: 1px
+			        li
+			            cursor: pointer
+			            width: calc(100% / 7)
+			            font-family: helveticaMedium
+			            font-size: 15px
+			            color: #957248
+			            padding: 10px 10px 80px 
+			            text-align: right
+			            border: 1px solid #CCC3BF
+			            margin-left: -1px
+			            margin-top: -1px
+			            position: relative
+			            span
+			                position: absolute
+			                right: 10px
+			                top: 10px
+
+			            &.disabled
+			                background-color: #ccc3bf
+			                color: #FFFFFF
+			                pointer-events: none
+			            &.anotherMonth
+			                pointer-events: none
+			                span
+			                    color: #ABABAB
+			            &.active
+			                span
+			                    color: #fff
+			                    background-color: #957248
+			                    display: flex
+			                    justify-content: center
+			                    align-items: center
+			                    width: 23px
+			                    height: 23px
+			                    border-radius: 50px
+			                    right: 5px
+			                    top: 5px
+			            &.weekend
+			                background-color: #F5F5F5
+			                color: #7E7E7E
+			            &:hover
+			                background-color: #9572484a    
+
+		// &__month
+		// 	.calendarWrapper
+		// 	    transform: translateX(2px)
+		// 	    &__week
+		// 	        display: flex
+		// 	        justify-content: flex-start
+		// 	        li
+		// 	            width: calc(100% / 7)                        
+		// 	            text-align: right
+		// 	            font-family: SFpro
+		// 	            font-size: 14px
+		// 	            color: #957248
+		// 	            margin-bottom: 25px
+		// 	            transform: translateX(-5px)
+		// 	    &__day
+		// 	        display: flex
+		// 	        justify-content: space-aroun
+		// 	        flex-flow: wrap
+		// 	        padding-top: 1px
+		// 	        padding-left: 1px
+		// 	        li
+		// 	            cursor: pointer
+		// 	            width: calc(100% / 7)
+		// 	            font-family: helveticaMedium
+		// 	            font-size: 15px
+		// 	            color: #957248
+		// 	            padding: 10px 10px 80px 
+		// 	            text-align: right
+		// 	            border: 1px solid #CCC3BF
+		// 	            margin-left: -1px
+		// 	            margin-top: -1px
+		// 	            position: relative
+		// 	            span
+		// 	                position: absolute
+		// 	                right: 10px
+		// 	                top: 10px
+
+		// 	            &.disabled
+		// 	                background-color: #ccc3bf
+		// 	                color: #FFFFFF
+		// 	                pointer-events: none
+		// 	            &.anotherMonth
+		// 	                pointer-events: none
+		// 	                span
+		// 	                    color: #ABABAB
+		// 	            &.active
+		// 	                span
+		// 	                    color: #fff
+		// 	                    background-color: #957248
+		// 	                    display: flex
+		// 	                    justify-content: center
+		// 	                    align-items: center
+		// 	                    width: 23px
+		// 	                    height: 23px
+		// 	                    border-radius: 50px
+		// 	                    right: 5px
+		// 	                    top: 5px
+		// 	            &.weekend
+		// 	                background-color: #FCFAF6
+		// 	                color: #7E7E7E
+		// 	            &:hover
+		// 	                background-color: #9572484a    
 
 	
