@@ -4,14 +4,14 @@
 	justify-content: space-between
 	position: relative
 	height: 100vh
-	background-color: #474749
+	background-color: #323232
 	box-sizing: border-box
 	&__left-side
 		width: 17%
 		position: relative
-		transition: 1s
+		transition: all 1s cubic-bezier(.215, .61, .355, 1) 0s
 	&__right-side
-		transition: 1s
+		transition: all 1s cubic-bezier(.215, .61, .355, 1) 0s
 		width: 83%
 		background-color: #fff
 		border-radius: 8px 0 0 8px
@@ -53,7 +53,7 @@
 				margin-bottom: 3px
 			p
 				font-family: helveticaMedium
-				font-size: 14px
+				font-size: $desktopsize
 				color: #838383
 				opacity: 0.5
 		&__flex-container
@@ -67,7 +67,7 @@
 			span
 				display: block
 				color: #555555
-				font-size: 14px
+				font-size: $desktopsize
 				font-family: helveticaRegular
 				&:first-child
 					font-family: helveticaMedium
@@ -100,10 +100,10 @@
 
 	// SIDEBAR CSS
 	.side-bar
-		padding: 36px 25px 17px 30px
+		padding: 36px 15px 17px 30px
 		overflow: hidden
 		position: absolute
-		transition: 0.5s
+		transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
 		height: 100%
 		&__header
 			position: relative
@@ -187,14 +187,19 @@
 						background-color: #000
 
 		&__footer
-			font-family: helveticaRegular
-			font-size: 14px
-			color: #fff
-			opacity: 0.38
-			line-height: 16px
-			letter-spacing: 1px
-			a
+			p, a, span
+				opacity: 0.38
+				font-family: helveticaRegular
+				font-size: $desktopsize
 				color: #fff
+				letter-spacing: 1px
+				display: inline-block
+			p
+				margin-bottom: 10px
+			a
+				&:hover
+					opacity: 1
+					color: $highlighted
 	.full
 		right: 0
 		transition-delay: 0.5s
@@ -207,7 +212,7 @@
 		width: 100%
 		overflow: hidden
 		right: 100%
-		transition: 0.5s
+		transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
 		padding: 36px 0 17px 0
 		.side-bar__header
 			position: relative
@@ -245,16 +250,20 @@
 					height: 90%
 					border-radius: 50px
 		.side-bar__footer
-			padding: 0 15px
+			padding: 0 15px 21px 15px
 			line-height: 21px
+			.special-link
+				margin-top: 13px
+				display: block
 	&.wide
 		.page__left-side
 			width: 10%
-			transition: 1s
+			transition: all 1s cubic-bezier(.215, .61, .355, 1) 0s
 			.side-bar
 				position: absolute
+				overflow-y: scroll
 				top: 0
-				transition: 0.5s
+				transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
 			.full
 				right: 100%
 				.side-bar__hamburger
@@ -264,7 +273,7 @@
 							transition: 0.2s
 			.minimized
 				right: 0
-				transition: 0.5s
+				transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
 				transition-delay: 0.5s
 				.side-bar__hamburger
 					span
@@ -278,7 +287,7 @@
 							transition-delay: 0.8s 
 		.page__right-side
 			width: 90%
-			transition: 1s
+			transition: all 1s cubic-bezier(.215, .61, .355, 1) 0s
 	// SIDEBAR CSS END
 
 

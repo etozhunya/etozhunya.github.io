@@ -1,0 +1,597 @@
+.modal
+	position: fixed
+	width: 100vw
+	height: 100vh
+	left: 0
+	top: 0
+	opacity: 0
+	z-index: -5
+	@include transition(.5s)
+	&.visible
+		z-index: 98
+		opacity: 1
+		.modal__overlay
+			opacity: 1
+	&__overlay
+		background-color: rgba(0,0,0,.33)
+		z-index: 99
+		height: 100%
+		width: 100%
+		opacity: 0
+
+
+
+
+	#back
+		cursor: pointer
+		font-size: 13px
+		color: #8E8E8E
+		&::before
+			content: ''
+			display: inline-block
+			margin-right: 5px
+			background: url('../images/dist/back-arrow.svg') center center/cover no-repeat
+			width: 6px
+			height: 6px
+			transform: rotate(45deg) translateY(-2px);
+	
+	.modal-details
+		position: fixed
+		z-index: 100
+		width: 60vw
+		overflow-y: scroll
+		height: 100vh
+		top: 0
+		right: -100%
+		@include transition(.5s)
+		background-color: #fff
+		padding: 32px 47px 10px 47px
+		&__relative
+			position: relative
+			height: 100%
+		&__head
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin: 27px 0 53px
+			ul
+				display: flex
+				justify-content: space-between
+				li
+					margin: 0px 4px
+					cursor: pointer
+					span
+						font-size: 16px
+						padding: 10px 16px
+						border: 1px solid #E1E6EA
+						border-radius: 8px
+					&.active
+						span
+							border-color: #E2E6EA
+							background-color: #E2E6EA
+					&:first-child
+						margin-left: 0
+					&:last-child
+						margin-right: 0
+			div	
+				display: flex
+				span
+					font-size: 16px
+					cursor: pointer
+					&:last-child
+						cursor: pointer
+						color: #DC3545
+						margin-left: 16px
+		&__create-note
+			display: none
+			&.visible
+				display: block
+
+		&__buttons
+			text-align: right
+			margin: 25px 0 31px 0
+			span
+				cursor: pointer
+				font-size: 16px
+				padding: 9px 16px
+				color: #323232
+				&:last-child
+					background-color: $highlighted
+					color: #fff
+					border-radius: 8px
+		
+
+		.info
+			height: calc(100% - 109px)
+			position: relative
+			&__name
+				display: flex
+				height: 64px
+				position: relative
+				margin-bottom: 33px
+				img
+					height: 100%
+					display: block
+				div
+					position: relative
+					&:nth-child(1)	
+						.edit-logo
+							display: none
+							width: 32px
+							height: 32px
+							position: absolute
+							bottom: -5px
+							right: -5px
+							transform: scale(1.1)
+							&.edit
+								display: block
+
+					&:nth-child(2)
+						margin-left: 9px
+						height: 100%
+						display: flex
+						flex-flow: wrap
+						align-items: center
+						h1
+							font-family: helveticaBold
+							font-size: 24px
+							width: 100%
+							display: block
+							color: #343434
+			&__wrapper__block
+				display: none
+				&.in-view
+					display: block						
+			.history__block
+				.block__nav
+					border-bottom: none
+					margin-top: 52px
+			.edit__block
+				h1
+					font-size: 21px
+					font-family: helveticaBold
+					color: #343434
+					margin: 11px 0 37px
+				form
+					display: flex
+					justify-content: space-between
+					position: relative
+					flex-flow: wrap
+					width: 100%
+					label
+						width: 45%
+						position: relative
+						margin-bottom: 30px
+						span
+							font-size: 16px
+							color: #212529
+							display: block
+							margin-bottom: 10px
+						input
+							border-radius: 8px
+							border: 1px solid #E1E6EA
+							width: 100%
+							color: #868D96
+							padding: 9px 13px
+							&:focus
+								color: #212529
+					p
+						font-size: $desktopsize
+						color: #838383			
+					.edit__buttons
+						margin-top: 60px
+						span
+							appearence: none
+							background-color: transparent
+							border: none
+							font-size: 16px
+							padding: 9px 15px
+							cursor: pointer
+							&:last-child
+								margin-left: 10px		
+								background-color: $highlighted
+								color: #fff
+								border-radius: 8px
+			&__order
+				color: #343434
+				h3
+					font-family: helveticaMedium
+					margin-bottom: 11px
+				&__time
+					position: relative
+					margin-bottom: 14px
+					display: block
+					&::before
+						content: ''
+						display: inline-block
+						position: relative
+						margin-right: 5px
+						background: url('../images/dist/clock-icon.svg') center center/contain no-repeat
+						width: 10px
+						height: 10px
+						transform: translateY(-1px)
+				select
+					margin: 36px 0 22px
+			&__contact
+				position: relative
+				width: 100%
+				margin-bottom: 24px
+				li
+					display: flex
+					justify-content: space-between
+					align-items: center
+					padding: 13px 0
+					border-bottom: 1px solid #E1E1E1
+					h4
+						font-size: 11px
+						color: #A2A2A2
+						font-family: helveticaMedium
+					span
+						color: #343434
+						font-size: $desktopsize
+			&__notes
+				padding-bottom: 50px
+				&__client-comments
+					margin-top: 24px
+					overflow-y: scroll
+					height: auto
+					height: 295px
+					li
+						padding: 9px 14px
+						margin-bottom: 8px
+
+					&::-webkit-scrollbar
+						display: none
+			.block__nav
+				display: flex
+				justify-content: flex-start
+				border-bottom: 2px solid #E1E1E1
+				li
+					margin: 0 11px
+					cursor: pointer
+					span
+						font-size: 16px
+						color: #8E8E8E
+						padding-bottom: 5px
+						display: block
+						&:hover
+							color: $highlighted
+					&:first-child
+						margin-left: 0
+					&:last-child
+						margin-right: 0
+					&.active
+						span
+							font-family: helveticaMedium
+							color: #343434
+							position: relative
+							&::after
+								content: ''
+								display: block
+								position: absolute
+								bottom: -2px
+								height: 2px
+								width: 100%
+								background-color: #343434			
+			.timing
+				padding: 24px 0
+				li
+					display: flex
+					justify-content: space-between
+					display: flex
+					position: relative
+					padding: 16px 0
+					border-bottom: 1px solid #E1E1E1
+					.time-duration
+						color: #313131
+						opacity: 0.5
+						position: absolute
+						right: 0
+						top: 8px
+						font-family: helveticaMedium
+						font-size: $desktopsize
+					.time
+						width: 7%
+						position: relative
+						span
+							font-family: helveticaMedium
+							font-size: $desktopsize
+							color: #313131
+							display: block
+							margin-bottom: 5px
+							&:last-child
+								opacity: .33
+						&::after
+							content: ''
+							display: block
+							position: absolute
+							right: 0
+							top: 0
+							height: 100%
+							width: 4px		
+					div:last-child
+						margin-left: 15px
+						width: 93%
+					h3
+						font-family: helveticaMedium
+						font-size: $desktopsize
+						color: #313131
+						display: block
+					span
+						margin: 8px 0 14px
+						display: block
+						color: #A1A1A1
+					.status-button
+						margin: 0 0 8px
+						color: #fff
+						padding: 4px 5px
+						display: inline-block
+						border-radius: 4px
+						font-size: 12px
+						font-family: helveticaBold
+					p
+						font-size: $desktopsize
+						color: #000
+					&.cancelled
+						.status-button
+							background-color: #DC3545
+						.time
+							&::after
+								background-color: #E66464
+					&.not-appeard
+						.status-button
+							background-color: #17A2B8
+						.time
+							&::after
+								background-color: #B964E6
+					&:last-child
+						border: none
+			.reschedule-block
+				section
+					display: none
+					&.in-view
+						display: block
+				.next-step
+					padding: 10px 13px
+					background-color: $highlighted
+					pointer-events: auto
+					display: inline-block
+					cursor: pointer
+				&--step1
+				    border: 1px solid #E0E0E0
+				    padding: 20px 50px
+				    border-radius: 8px
+				    max-width: 470px
+				    .month
+				        display: flex
+				        max-width: 210px
+				        margin: 0 auto 17px auto
+				        justify-content: space-between
+				        align-items: center
+				        .prevArrow, .nextArrow
+				            display: block
+				            cursor: pointer
+				            &:hover
+				                svg
+				                    #Сгруппировать_1391
+				                        #Контур_3
+				                            fill: $highlighted    
+				        .prevArrow
+				            transform: rotate(90deg)
+				        .nextArrow
+				            transform: rotate(-90deg)
+				        h1
+				            margin-bottom: 0
+				            font-family: Adobeclean
+				            font-size: 23px
+				            line-height: auto
+				    .globalCalendar
+				        display: none
+				        max-width: 470px
+				        &.visible
+				            display: block
+				    .calendarWrapper
+				        transform: translateX(2px)
+				        &__week
+				            display: flex
+				            justify-content: flex-start
+				            li
+				                width: calc(100% / 7)                        
+				                text-align: center
+				                font-family: SFpro
+				                font-size: $desktopsize
+				                color: #3E3E3E
+				                opacit: 0.5
+				                margin-bottom: 25px
+				                transform: translateX(-5px)
+				                span
+				                	font-family: adobeclean
+				                	font-weight: bold
+				        &__day
+				            display: flex
+				            justify-content: space-around
+				            flex-flow: wrap
+				            padding-top: 1px
+				            padding-left: 1px
+				            li
+				                cursor: pointer
+				                width: calc(100% / 7)
+				                color: #957248
+				                padding: 15px 0
+				                text-align: center
+				                position: relative
+				                display: flex
+				                justify-content: center
+				                align-items: center
+				                span
+				                	font-family: notosansbold
+				                	font-size: 15px
+				                	color: #333
+				                // &.disabled
+				                //     background-color: #ccc3bf
+				                //     color: #FFFFFF
+				                //     pointer-events: none
+				                &.anotherMonth
+				                    pointer-events: none
+				                    span
+				                        color: #ABABAB
+				                &.active
+				                    span
+				                    	position: relative
+				                    	color: #fff
+				                    	z-index: 1
+				                    	&::after
+				                    		content: ''
+				                    		background-color: $highlighted
+				                    		position: absolute
+				                    		width: 51px
+				                    		height: 51px
+				                    		border-radius: 50px
+				                    		right: 50%
+				                    		transform: translateX(50%)
+				                    		top: -18px
+				                    		z-index: -1
+				                &.weekend
+				                    background-color: #FCFAF6
+				                    color: #7E7E7E
+				    .next-step
+				    	display: block
+				    	text-align: center
+				    	border: 1px solid $highlighted
+				    	margin: 15px 0
+				    	padding: 14px 0
+				    	cursor: pointer
+				    	background-color: #fff
+				    	border-radius: 4px
+				    	&:hover
+				    		background-color: $highlighted
+				    		color: #fff            
+				h3
+					color: #212529
+					font-size: 16px
+					font-family: helveticaRegular
+				p
+					margin-bottom: 27px
+					font-family: helveticaMedium
+					color: #343434
+				&--step2
+					text-align: right
+					.form
+					    text-align: left
+					    border: 1px solid #E0E0E0
+					    border-radius: 8px
+					    > div
+					    	text-align: center
+					    	h1
+					    		font-size: 18px
+					    		display: block
+					    		font-family: helveticaRegular
+					    		padding: 25px 0
+					    		line-height: 30px
+					    		span
+					    			display: block
+					    			font-family: helveticaBold
+					    label
+					        -webkit-user-select: none
+					        -moz-user-select: none
+					        -ms-user-select: none
+					        user-select: none
+					        cursor: pointer
+					        width: 100%
+					        display: block
+					        position: relative
+					        padding: 13px 29px
+					        border-top: 1px solid #F7F2EE
+					        cursor: pointer
+					        input
+					            position: absolute
+					            cursor: pointer
+					            left: 0
+					            top: 0
+					            width: 100%
+					            height: 100%
+					            opacity: 0
+					        h2
+					            font-family: helveticaMedium
+					            font-size: 16px
+					            color: #343434
+					            position: relative
+					            margin-bottom: 7px
+					        span
+					            font-family: helveticaRegular
+					            font-size: 12px
+					            color: #343434
+					            text-transform: uppercase
+					            letter-spacing: 1px
+					        .continue
+					        	font-size: 16px
+					        	position: absolute
+					        	right: 30px
+					        	top: 50%
+					        	transform: translateY(-50%)
+					        	color: #343434
+					        &:nth-child(2n)
+					            background-color: #EAEAEA
+					        &.active
+					        	background-color: $highlighted
+					        	h2, span
+						        	color: #fff
+					.next-step
+						margin: 21px 0 49px
+						color: #fff
+						border-radius: 4px
+						cursor: pointer
+				&--step3
+					padding-bottom: 150px
+					#step-textarea
+						height: 150px
+					&__buttons
+						text-align: right
+						margin-top: 22px
+						.next-step
+							margin-left: 10px
+							border-radius: 4px
+							color: #fff
+						.prev-step
+							font-size: 16px
+				&--step4
+					max-width: 440px
+					margin: 0 auto
+					text-align: center
+					padding-bottom: 44px
+					h1
+						font-family: helveticaBold
+						font-size: 24px
+						margin: 58px 0 42px
+					p
+						font-size: 16px
+						color: #7A7E83
+						margin: 32px 0 39px
+						line-height: 18px
+						span
+							color: #343434
+					.back-button
+						background-color: #fff
+						border: 1px solid $highlighted
+						border-radius: 4px
+						padding: 14px 60px
+						font-size: $desktopsize
+
+
+		.show-comments-button
+			font-size: $desktopsize
+			margin-top: 8px
+			cursor: pointer
+			color: #D5B168
+			padding-bottom: 2px
+			display: block
+			float: right
+			border-bottom: 1px dotted #D5B168			 
+		&.active
+			right: 0
+			@include transition(.5s)
+
+
+
+
+

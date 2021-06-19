@@ -9,54 +9,240 @@ p, span
 		background-color: $highlighted !important
 		border: 1px solid $highlighted !important
 		color: #fff
-.content-wrapper
-	.widget
-		border-radius: 8px
-		padding: 5px
-		position: relative
-		overflow-y: scroll
+.disabled
+	background-color: #E2CC99 !important
+	color: #fff !important
+	pointer-events: none !important	        	
+.widget
+	border-radius: 8px
+	padding: 5px
+	position: relative
+	overflow: hidden
+	font-size: 11px
+	cursor: pointer
+	&::-webkit-scrollbar
+		display: none
+	&__head
+		display: flex
+		justify-content: space-between
+		margin-bottom: 9px
+		h4
+			display: inline-block
+			font-family: helveticaMedium
+			font-size: $desktopsize
+		h5
+			display: inline-block
+			font-family: helveticaMedium
+			opacity: .5
+			margin-left: 12px
+		> span
+			display: inline-block
+			opacity: .5
+
+	p
+		margin-bottom: 5px
+	span
+		font-family: helveticaBold
+		line-height: 13px
 		font-size: 11px
-		&::-webkit-scrollbar
-			display: none
-		p
-			margin-bottom: 5px
-		span
-			font-family: helveticaBold
-			line-height: 13px
-			font-size: 11px
-		&::before
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+		height: 100%
+		width: 3px
+	&--red
+		background-color: #FFECF0
+		color: #FC406D
+		&::before, &:hover
+			background-color: #FC406D
+			color: #fff
+	&--green
+		color: #409292
+		background-color: #E0F4F4
+		&::before, &:hover
+			background-color: #409292
+			color: #fff
+	&--violet
+		color: #9025E5
+		background-color: #F5EBFD
+		&::before, &:hover
+			background-color: #9025E5
+			color: #fff
+	&--blue
+		color: #607BF1
+		background-color: #F1F3FE
+		&::before, &:hover
+			background-color: #607BF1
+			color: #fff	
+
+
+// SELECT CSS
+.select-ver-1
+	.select2
+		width: auto !important
+		margin: 36px 0 27px 0
+		&-selection--single
+			color: #fff
+		&-selection__arrow
+			b
+				border-width: 6px 5px 0 5px !important
+				margin-left: -6px !important
+				border-color: #fff transparent transparent transparent !important
+		&-selection--single
+			border: 1px solid #343434 !important
+			border-radius: 4px !important
+			background-color: #343434 !important
+			color: #fff
+		&-selection__rendered
+			color: #fff !important
+			padding-right: 43px !important
+
+		&:focus
+			outline: none
+
+.select2-container
+.select2-dropdown
+	margin-top: 10px
+	width: 200px !important
+	border-radius: 8px !important
+	border: 1px solid #E0E0E0 !important
+	overflow: hidden
+.select2-results__options	
+	background-color: #fff
+.select2-results__option--selected
+	background-color: #34343469
+.select2-results__option
+		padding:  15px 0 15px 30px
+		position: relative
+		&:before
 			content: ''
 			display: block
 			position: absolute
-			left: 0
-			top: 0
-			height: 100%
-			width: 3px
-		&--red
-			background-color: #FFECF0
-			color: #FC406D
-			&::before, &:hover
+			left: 13px
+			top: 43%
+			width: 7px
+			height: 7px
+			border-radius: 50%
+		&:nth-child(1)
+			&::before
 				background-color: #FC406D
-				color: #fff
-		&--green
-			color: #409292
-			background-color: #E0F4F4
-			&::before, &:hover
-				background-color: #409292
-				color: #fff
-		&--violet
-			color: #9025E5
-			background-color: #F5EBFD
-			&::before, &:hover
+		&:nth-child(2)
+			&::before
 				background-color: #9025E5
-				color: #fff
-		&--blue
-			color: #607BF1
-			background-color: #F1F3FE
-			&::before, &:hover
-				background-color: #607BF1
-				color: #fff
+		&:nth-child(3)
+			&::before
+				background-color: #409292
+		&:nth-child(4)
+			&::before
+				background-color: #000
+		&--highlighted
+			background-color: $highlighted !important
 
+.select2-search
+	display: none
+.select-ver-2
+	.select2
+		width: 470px !important
+		margin: 12px 0 32px
+		&-search--dropdown
+			display: none
+		&-selection--single 
+		    border: 1px solid #E0E0E0!important
+		    height: auto
+		    padding: 4px 14px
+		    border-radius: 4px!important
+		    background-color:  transparent !important
+		&-selection__rendered
+			color: #868E96 !important
+		&-selection__arrow
+			b
+				border: none
+				left: 30% !important
+				background: url('../images/dist/select-arrow.svg') center center/contain no-repeat
+				width: 8px !important
+				height: 4px !important
+				margin-top: 4px !important
+				border-style: none !important
+				transform: rotate(0deg)
+				@include transition(.1s)
+		&:focus
+			outline: none
+.select2-container
+	.selection
+		.select2-selection__arrow
+			b
+				@include transition(.1s)
+	&--open
+		.selection
+			.select2-selection__arrow
+				b
+					transform: rotate(180deg)
+					@include transition(.1s)
+
+
+///////
+
+					
+.client-type
+	font-size: 12px
+	padding: 4px 14px 4px 25px
+	border-radius: 8px
+	display: inline-block
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		left: 11px
+		top: 50%
+		transform: translateY(-50%)
+		width: 9px
+		height: 9px
+	&.bonus-program
+		color: #FF7979
+		background-color: rgba(255,121,121,0.10)
+		&::before
+			content: ''
+			background: url('../images/dist/bonus-program-icon.svg') center center/contain no-repeat
+	&.vip-client
+		color: #E09E00
+		background-color: rgba(224,158,40,0.10)
+		&::before
+			background: url('../images/dist/vip-client-icon.svg') center center/cover no-repeat
+	&.regular-customer
+		color: #407292
+		background-color: rgba(64,146,146,0.10)
+		&::before
+			background: url('../images/dist/regular-customer-icon.svg') center center/cover no-repeat
+	&.black-list
+		background-color: rgba(52,52,52,0.10)
+		color: #343434
+		&::before
+			background: url('../images/dist/black-list-icon.svg') center center/cover no-repeat
+
+.create-note
+	h3
+		font-size: 16px
+		display: block
+		margin-bottom: 10px
+		font-family: helveticaRegular
+	textarea
+		border: 3px solid #E0E0E0
+		border-radius: 8px
+		padding: 15px 13px
+		width: 100%
+		font-family: helveticaRegular
+		height: 112px
+		&::placeholder
+			color: #868D96
+			font-family: helveticaRegular
+		&:focus
+			border: 2px solid #A6CBF3
+
+.content-wrapper
 	&__header
 		margin: 56px 0 27px 0
 		display: flex
@@ -85,15 +271,6 @@ p, span
 		display: flex
 		div
 			display: flex
-		&__loupe
-			img
-				cursor: pointer
-				width: 18px
-				display: block
-				border-radius: 8px
-				padding: 10px 15px
-				&:hover
-					background-color: #E2E6EA
 		&__days
 			margin: 0px 10px 0px 58px
 			border-radius: 8px
@@ -109,7 +286,6 @@ p, span
 				border-radius: 0 8px 8px 0
 		&__arrows
 			img
-				width: 6px
 				padding: 10px 15px
 				cursor: pointer
 				border-radius: 8px
@@ -204,7 +380,7 @@ p, span
 		.qs-day
 			text-transform: uppercase
 			font-weight: bold
-			font-size: 14px
+			font-size: $desktopsize
 			color: rgba(62, 62, 62, 0.5)
 			font-family: adobeclean
 		.qs-num

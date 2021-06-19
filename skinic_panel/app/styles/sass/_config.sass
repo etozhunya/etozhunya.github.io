@@ -2,7 +2,7 @@
 
 $highlighted: #D2B162
 $accent: #707070 // Accent Color
-$fontsize: 16px // Body Font Size
+$desktopsize: 14px // Body Font Size
 $textcolor: #333 // Text Color
 $lineheight: 1.65 // Document Line Height
 $userfont: roboto-oh5, sans-serif // User Font Family
@@ -27,6 +27,16 @@ $gutter: $grid-gutter-width
 		font-style: $fstyle
 		font-weight: $fweight
 		src: url($furl) format('woff2')
+@mixin transition($duration)
+	transition-duration: $duration
+	transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+  
+
+// @mixin transition
+// 	-webkit-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s
+// 	-o-transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s
+// 	transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s
+
 
 @include font('helveticaMedium', normal, 500, '../fonts/HelveticaNeue-Medium.woff')
 @include font('helveticaLight', normal, 400, '../fonts/HelveticaNeue-Light.woff')
@@ -65,7 +75,6 @@ input, textarea
 
 body
 	font-family: $userfont
-	font-size: $fontsize
 	line-height: $lineheight
 	color: $textcolor
 	min-width: 320px

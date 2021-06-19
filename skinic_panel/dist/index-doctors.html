@@ -15,6 +15,7 @@
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dist/preview.jpg">
 	<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
@@ -113,7 +114,13 @@
 							</a>
 						</li>
 					</ul>
-					<p class="side-bar__footer">© Praxis Dr. med. Dan Iselin <br><a href="privacyPolicy.html">Privacy Policy</a> & <a href="impressum.html">Impressum</a></p>
+					<div class="side-bar__footer">
+						<p>© Praxis Dr med. Dan Iselin</p>
+
+						<a href="privacyPolicy.html">Privacy Policy</a>
+						<span>&</span>
+						<a href="impressum.html">Impressum</a>
+					</div>
 				</div>
 			</div>
 			<div class="side-bar minimized">
@@ -206,7 +213,12 @@
 							</a>
 						</li>
 					</ul>
-					<p class="side-bar__footer">© Praxis Dr. med. Dan Iselin <br><a href="privacyPolicy.html">Privacy Policy</a> & <a href="impressum.html">Impressum</a></p>
+					<div class="side-bar__footer">
+						<p>© Praxis Dr <br> med. Dan Iselin</p>
+						<a href="privacyPolicy.html">Privacy Policy</a>	
+						<span>&</span>
+						 <a href="impressum.html">Impressum</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -269,13 +281,1217 @@
 		
 		</div>
 	</section>
-<section class="modals">
-	<div class="modal__overlay">
-		
+<section class="modal">
+	<div class="modal__overlay close-button">
+	</div>
+	<div class="modal-details modal-block">
+		<div class="modal-details__relative">
+			<span class="back-button" id="back">Back</span>
+			<div class="modal-details__head">
+				<ul>
+					<li class="click-item"><span class="hover">History</span></li>
+					<li class="click-item"><span class="hover">Edit</span></li>
+					<li class="click-item"><span class="hover">Reschedule</span></li>
+					<li class="click-item"><span class="hover">Appointments list</span></li>
+					<li class="add-note"><span class="hover">Add note</span></li>
+				</ul>
+				<div>
+					<span class="add-note">Not appeared</span>
+					<span class="add-note">Cancel</span>
+				</div>
+			</div>
+			<div class="modal-details__create-note create-note">
+				<h3>Cancel request</h3>
+				<textarea name="" id="" cols="30" rows="10" value="Private notes about client"></textarea>
+				<div class="modal-details__buttons">
+					<span>Cancel</span>
+					<span>Save</span>
+				</div>
+
+			</div>
+			<div class="modal-details__client-info info">
+				<div class="info__name">
+					<div>
+						<img src="images/dist/client-icon-3.svg" alt="">
+						<img class="edit-logo" src="images/dist/edit-logo.svg" alt="">
+					</div>
+					<div>
+						<h1>Liza Ilona Bühler</h1>
+						<span class="client-type bonus-program">Bonus program</span>
+					</div>
+				</div>
+
+				<!-- CONTENT -->
+				<div class="info__wrapper">
+
+
+					<div class="info__wrapper__block home__block in-view">
+						<div class="info__order select-ver-1">
+							<h3>Wednesday, March 17, 2021</h3>
+							<span class="info__order__time">09:00—09:15 (15 min.)</span>
+							<h3>Eingefallene Stirnkontur / Forehead contouring with Dr. med. Dan Iselin</h3>
+							<select name="" id="" class="select">
+								<option value="">Label</option>
+								<option value="">Label</option>
+								<option value="">Label</option>
+								<option value="">Label</option>
+							</select>
+							<select name="" id="" class="select">
+								<option value="">Label status</option>
+								<option value="">Label status</option>
+								<option value="">Label status</option>
+								<option value="">Label status</option>
+							</select>
+						</div>
+						<ul class="info__contact">
+							<li>
+								<h4>PHONE</h4>
+								<span>+41 17 61 23 176</span>
+							</li>
+							<li>
+								<h4>EMAIL</h4>
+								<span>prestigejoe@icloud.com</span>
+							</li>
+						</ul>
+						<div class="info__notes">
+							<ul class="block__nav">
+								<li class="click-item active"><span>All notes</span></li>
+								<li class="click-item"><span>Medical history</span></li>
+								<li class="click-item"><span>Client comment</span></li>
+								<li class="click-item"><span>Internal client note</span></li>
+								<li class="click-item"><span>Internal booking comment</span></li>
+							</ul>
+							<ul class="info__notes__client-comments">
+								<li class="widget widget--green">
+									<div class="widget__head">
+										<div>
+											<h4>Liza Ilona Bühler</h4>
+											<h5>client comment</h5>
+										</div>
+										<span>December 4, 2020 at 16:34</span>
+									</div>
+									<p>The information obtained in this way, together with the physical examination, enables the physician and other health professionals to form a diagnosis and treatment plan. If a diagnosis cannot be made,a provisional diagnosis may be formulated, and other possibilities (the differential diagnoses) may be added, listed in order of likelihood by convention. </p>
+								</li>
+								<li class="widget widget--red">
+									<div class="widget__head">
+										<div>
+											<h4>Liza Ilona Bühler</h4>
+											<h5>client comment</h5>
+										</div>
+										<span>December 4, 2020 at 16:34</span>
+									</div>
+									<p>The information obtained in this way, together with the physical examination, enables the physician and other health professionals to form a diagnosis and treatment plan. If a diagnosis cannot be made,a provisional diagnosis may be formulated, and other possibilities (the differential diagnoses) may be added, listed in order of likelihood by convention. </p>
+								</li>
+								<li class="widget widget--violet">
+									<div class="widget__head">
+										<div>
+											<h4>Liza Ilona Bühler</h4>
+											<h5>client comment</h5>
+										</div>
+										<span>December 4, 2020 at 16:34</span>
+									</div>
+									<p>The information obtained in this way, together with the physical examination, enables the physician and other health professionals to form a diagnosis and treatment plan. If a diagnosis cannot be made,a provisional diagnosis may be formulated, and other possibilities (the differential diagnoses) may be added, listed in order of likelihood by convention. </p>
+								</li>
+								<li class="widget widget--green">
+									<div class="widget__head">
+										<div>
+											<h4>Liza Ilona Bühler</h4>
+											<h5>client comment</h5>
+										</div>
+										<span>December 4, 2020 at 16:34</span>
+									</div>
+									<p>The information obtained in this way, together with the physical examination, enables the physician and other health professionals to form a diagnosis and treatment plan. If a diagnosis cannot be made,a provisional diagnosis may be formulated, and other possibilities (the differential diagnoses) may be added, listed in order of likelihood by convention. </p>
+								</li>
+								<li class="widget widget--green">
+									<div class="widget__head">
+										<div>
+											<h4>Liza Ilona Bühler</h4>
+											<h5>client comment</h5>
+										</div>
+										<span>December 4, 2020 at 16:34</span>
+									</div>
+									<p>The information obtained in this way, together with the physical examination, enables the physician and other health professionals to form a diagnosis and treatment plan. If a diagnosis cannot be made,a provisional diagnosis may be formulated, and other possibilities (the differential diagnoses) may be added, listed in order of likelihood by convention. </p>
+								</li>
+								<li class="widget widget--green">
+									<div class="widget__head">
+										<div>
+											<h4>Liza Ilona Bühler</h4>
+											<h5>client comment</h5>
+										</div>
+										<span>December 4, 2020 at 16:34</span>
+									</div>
+									<p>The information obtained in this way, together with the physical examination, enables the physician and other health professionals to form a diagnosis and treatment plan. If a diagnosis cannot be made,a provisional diagnosis may be formulated, and other possibilities (the differential diagnoses) may be added, listed in order of likelihood by convention. </p>
+								</li>
+								<li class="widget widget--blue">
+									<div class="widget__head">
+										<div>
+											<h4>Liza Ilona Bühler</h4>
+											<h5>client comment</h5>
+										</div>
+										<span>December 4, 2020 at 16:34</span>
+									</div>
+									<p>The information obtained in this way, together with the physical examination, enables the physician and other health professionals to form a diagnosis and treatment plan. If a diagnosis cannot be made,a provisional diagnosis may be formulated, and other possibilities (the differential diagnoses) may be added, listed in order of likelihood by convention. </p>
+								</li>
+							</ul>
+							<span class="show-comments-button">Show more comments</span>
+						</div>
+					</div>
+
+
+					<div class="info__wrapper__block history__block">
+						<div class="info__order">
+							<h3>Wednesday, March 17, 2021</h3>
+							<span class="info__order__time">09:00—09:15 (15 min.)</span>
+							<h3>Eingefallene Stirnkontur / Forehead contouring with Dr. med. Dan Iselin</h3>
+						</div>
+						<ul class="block__nav">
+							<li class="click-item active"><span>All</span></li>
+							<li class="click-item"><span>Past</span></li>
+							<li class="click-item"><span>Future</span></li>
+							<li class="click-item"><span>Cancelled</span></li>
+						</ul>
+						<ul class="timing">
+							<li class="cancelled">
+								<span class="time-duration">45min</span>
+								<div class="time">
+									<span>10:00</span>
+									<span>10:30</span>
+								</div>
+								<div>
+									<h3>Montag, 1. März 2021</h3>
+									<h3>Nathalie Svetec</h3>
+									<span>Nachkontrolle Botulinum with Dr. med. Dan Iselin</span
+									>
+									<span class="status-button">Cancelled</span>
+									<p>The client refused the procedure due to ill health, suspicion of COVID 19</p>
+								</div>
+							</li>
+							<li class="not-appeard">
+								<span class="time-duration">45min</span>
+								<div class="time">
+									<span>10:00</span>
+									<span>10:30</span>
+								</div>
+								<div>
+									<h3>Montag, 1. März 2021</h3>
+									<h3>Nathalie Svetec</h3>
+									<span>Nachkontrolle Botulinum with Dr. med. Dan Iselin</span
+									>
+									<span class="status-button">Not appeard</span>
+									<p>The client refused the procedure due to ill health, suspicion of COVID 19</p>
+								</div>
+							</li>
+							<li class="not-appeard">
+								<span class="time-duration">45min</span>
+								<div class="time">
+									<span>10:00</span>
+									<span>10:30</span>
+								</div>
+								<div>
+									<h3>Montag, 1. März 2021</h3>
+									<h3>Nathalie Svetec</h3>
+									<span>Nachkontrolle Botulinum with Dr. med. Dan Iselin</span
+									>
+									<span class="status-button">Not appeard</span>
+									<p>The client refused the procedure due to ill health, suspicion of COVID 19</p>
+								</div>
+							</li>
+							<li class="not-appeard">
+								<span class="time-duration">45min</span>
+								<div class="time">
+									<span>10:00</span>
+									<span>10:30</span>
+								</div>
+								<div>
+									<h3>Montag, 1. März 2021</h3>
+									<h3>Nathalie Svetec</h3>
+									<span>Nachkontrolle Botulinum with Dr. med. Dan Iselin</span
+									>
+									<span class="status-button">Not appeard</span>
+									<p>The client refused the procedure due to ill health, suspicion of COVID 19</p>
+								</div>
+							</li>
+							<li class="not-appeard">
+								<span class="time-duration">45min</span>
+								<div class="time">
+									<span>10:00</span>
+									<span>10:30</span>
+								</div>
+								<div>
+									<h3>Montag, 1. März 2021</h3>
+									<h3>Nathalie Svetec</h3>
+									<span>Nachkontrolle Botulinum with Dr. med. Dan Iselin</span
+									>
+									<span class="status-button">Not appeard</span>
+									<p>The client refused the procedure due to ill health, suspicion of COVID 19</p>
+								</div>
+							</li>
+							<li class="cancelled">
+								<span class="time-duration">45min</span>
+								<div class="time">
+									<span>10:00</span>
+									<span>10:30</span>
+								</div>
+								<div>
+									<h3>Montag, 1. März 2021</h3>
+									<h3>Nathalie Svetec</h3>
+									<span>Nachkontrolle Botulinum with Dr. med. Dan Iselin</span
+									>
+									<span class="status-button">Cancelled</span>
+									<p>The client refused the procedure due to ill health, suspicion of COVID 19</p>
+								</div>
+							</li>
+							<li class="not-appeard">
+								<span class="time-duration">45min</span>
+								<div class="time">
+									<span>10:00</span>
+									<span>10:30</span>
+								</div>
+								<div>
+									<h3>Montag, 1. März 2021</h3>
+									<h3>Nathalie Svetec</h3>
+									<span>Nachkontrolle Botulinum with Dr. med. Dan Iselin</span
+									>
+									<span class="status-button">Not appeard</span>
+									<p>The client refused the procedure due to ill health, suspicion of COVID 19</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="info__wrapper__block edit__block">
+						<h1>Personal Info</h1>
+						<form action="">
+							<label for="">
+								<span>First name</span>
+								<input type="text" value="Liza Ilona">
+							</label>
+							<label for="">
+								<span>Last name</span>
+								<input type="text" value="Bühler">
+							</label>
+							<label for="">
+								<span>Email</span>
+								<input type="EMAIL" value="giuseppe@gmail.com">
+							</label>
+							<label for="">
+								<span>Phone</span>
+								<input type="tel" value="+41788900522">
+							</label>
+							<p>Want to turn on or off all email notifications? <br>(view appointment emails)</p>
+							<div class="edit__buttons">
+								<span class="edit-cancel back-button">Cancel</span>
+								<span class="edit-save back-button">Save Changes</span>
+							</div>
+						</form>
+					</div>
+
+					<div class="info__wrapper__block reschedule-block">
+						<h3>Fixed doctor</h3>
+						<div class="select-ver-2">
+							<select name="" id="" class="select">
+								<option value="Dr. Med. Dan Iselin">Dr. Med. Dan Iselin</option>
+								<option value="">Dr. Med. Dan Iselin</option>
+								<option value="">Dr. Med. Dan Iselin</option>
+								<option value="">Dr. Med. Dan Iselin</option>
+							</select>
+						</div>
+
+						<p>Reschedule Verena Grotz with From 16 März 2021, 09:45</p>
+
+						<section class="step-item reschedule-block--step1 in-view">
+							<div class="globalCalendar visible">
+								<div class="month">
+									<span class="calendarArrow prevArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+									<h1 class="title">January 2021</h1>
+
+									<span class="calendarArrow nextArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+								</div>
+								<div class="calendarWrapper">
+									<ul class="calendarWrapper__week">
+										<li><span>SUN</span></li>
+										<li><span>MON</span></li>
+										<li><span>TUE</span></li>
+										<li><span>WED</span></li>
+										<li><span>THU</span></li>
+										<li><span>FRI</span></li>
+										<li><span>SAT</span></li>
+									</ul>
+									<ul class="calendarWrapper__day">
+										<li class="anotherMonth"><span>28</span></li>
+										<li class="anotherMonth"><span>29</span></li>
+										<li class="anotherMonth"><span>30</span></li>
+										<li class="anotherMonth"><span>31</span></li>
+										<li><span>1 Jan</span></li>
+										<li><span>2</span></li>
+										<li><span>3</span></li>
+										<li><span>4</span></li>
+										<li><span>5</span></li>
+										<li><span>6</span></li>
+										<li><span>7</span></li>
+										<li class="active"><span>8</span></li>
+										<li><span>9</span></li>
+										<li><span>10</span></li>
+										<li><span>11</span></li>
+										<li><span>12</span></li>
+										<li><span>13</span></li>
+										<li><span>14</span></li>
+										<li><span>15</span></li>
+										<li><span>16</span></li>
+										<li><span>17</span></li>
+										<li><span>18</span></li>
+										<li><span>19</span></li>
+										<li><span>20</span></li>
+										<li><span>21</span></li>
+										<li><span>22</span></li>
+										<li><span>23</span></li>
+										<li><span>24</span></li>
+										<li><span>25</span></li>
+										<li><span>26</span></li>
+										<li><span>27</span></li>
+										<li><span>28</span></li>
+										<li><span>29</span></li>
+										<li><span>30</span></li>
+										<li><span>31</span></li>
+										<li class="anotherMonth"><span>1 Feb</span></li>
+										<li class="anotherMonth"><span>2</span></li>
+										<li class="anotherMonth"><span>3</span></li>
+										<li class="anotherMonth"><span>4</span></li>
+										<li class="anotherMonth"><span>5</span></li>
+										<li class=><span>6</span></li>
+										<li class=><span>7</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="globalCalendar">
+								<div class="month">
+									<span class="calendeaArrow prevArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+									<h1 class="title">February 2021</h1>
+
+									<span class="calendarArrow nextArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+								</div>
+								<div class="calendarWrapper">
+									<ul class="calendarWrapper__week">
+										<li><span>SUN</span></li>
+										<li><span>MON</span></li>
+										<li><span>TUE</span></li>
+										<li><span>WED</span></li>
+										<li><span>THU</span></li>
+										<li><span>FRI</span></li>
+										<li><span>SAT</span></li>
+									</ul>
+									<ul class="calendarWrapper__day">
+										<li class="anotherMonth"><span>28</span></li>
+										<li class="anotherMonth"><span>29</span></li>
+										<li class="anotherMonth"><span>30</span></li>
+										<li class="anotherMonth"><span>31</span></li>
+										<li><span>1 Feb</span></li>
+										<li><span>2</span></li>
+										<li><span>3</span></li>
+										<li><span>4</span></li>
+										<li><span>5</span></li>
+										<li><span>6</span></li>
+										<li><span>7</span></li>
+										<li class="active"><span>8</span></li>
+										<li><span>9</span></li>
+										<li><span>10</span></li>
+										<li><span>11</span></li>
+										<li><span>12</span></li>
+										<li><span>13</span></li>
+										<li><span>14</span></li>
+										<li><span>15</span></li>
+										<li><span>16</span></li>
+										<li><span>17</span></li>
+										<li><span>18</span></li>
+										<li><span>19</span></li>
+										<li><span>20</span></li>
+										<li><span>21</span></li>
+										<li><span>22</span></li>
+										<li><span>23</span></li>
+										<li><span>24</span></li>
+										<li><span>25</span></li>
+										<li><span>26</span></li>
+										<li><span>27</span></li>
+										<li><span>28</span></li>
+										<li><span>29</span></li>
+										<li><span>30</span></li>
+										<li><span>31</span></li>
+										<li class="anotherMonth"><span>1 March</span></li>
+										<li class="anotherMonth"><span>2</span></li>
+										<li class="anotherMonth"><span>3</span></li>
+										<li class="anotherMonth"><span>4</span></li>
+										<li class="anotherMonth"><span>5</span></li>
+										<li class=><span>6</span></li>
+										<li class=><span>7</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="globalCalendar">
+								<div class="month">
+									<span class="calendeaArrow prevArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+									<h1 class="title">April 2021</h1>
+
+									<span class="calendarArrow nextArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+								</div>
+								<div class="calendarWrapper">
+									<ul class="calendarWrapper__week">
+										<li><span>SUN</span></li>
+										<li><span>MON</span></li>
+										<li><span>TUE</span></li>
+										<li><span>WED</span></li>
+										<li><span>THU</span></li>
+										<li><span>FRI</span></li>
+										<li><span>SAT</span></li>
+									</ul>
+									<ul class="calendarWrapper__day">
+										<li class="anotherMonth"><span>28</span></li>
+										<li class="anotherMonth"><span>29</span></li>
+										<li class="anotherMonth"><span>30</span></li>
+										<li class="anotherMonth"><span>31</span></li>
+										<li><span>1 Apr</span></li>
+										<li><span>2</span></li>
+										<li><span>3</span></li>
+										<li><span>4</span></li>
+										<li><span>5</span></li>
+										<li><span>6</span></li>
+										<li><span>7</span></li>
+										<li class="active"><span>8</span></li>
+										<li><span>9</span></li>
+										<li><span>10</span></li>
+										<li><span>11</span></li>
+										<li><span>12</span></li>
+										<li><span>13</span></li>
+										<li><span>14</span></li>
+										<li><span>15</span></li>
+										<li><span>16</span></li>
+										<li><span>17</span></li>
+										<li><span>18</span></li>
+										<li><span>19</span></li>
+										<li><span>20</span></li>
+										<li><span>21</span></li>
+										<li><span>22</span></li>
+										<li><span>23</span></li>
+										<li><span>24</span></li>
+										<li><span>25</span></li>
+										<li><span>26</span></li>
+										<li><span>27</span></li>
+										<li><span>28</span></li>
+										<li><span>29</span></li>
+										<li><span>30</span></li>
+										<li><span>31</span></li>
+										<li class="anotherMonth"><span>1 May</span></li>
+										<li class="anotherMonth"><span>2</span></li>
+										<li class="anotherMonth"><span>3</span></li>
+										<li class="anotherMonth"><span>4</span></li>
+										<li class="anotherMonth"><span>5</span></li>
+										<li class=><span>6</span></li>
+										<li class=><span>7</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="globalCalendar">
+								<div class="month">
+									<span class="calendeaArrow prevArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+									<h1 class="title">May 2021</h1>
+
+									<span class="calendarArrow nextArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+								</div>
+								<div class="calendarWrapper">
+									<ul class="calendarWrapper__week">
+										<li><span>SUN</span></li>
+										<li><span>MON</span></li>
+										<li><span>TUE</span></li>
+										<li><span>WED</span></li>
+										<li><span>THU</span></li>
+										<li><span>FRI</span></li>
+										<li><span>SAT</span></li>
+									</ul>
+									<ul class="calendarWrapper__day">
+										<li class="anotherMonth"><span>28</span></li>
+										<li class="anotherMonth"><span>29</span></li>
+										<li class="anotherMonth"><span>30</span></li>
+										<li class="anotherMonth"><span>31</span></li>
+										<li><span>1 May</span></li>
+										<li><span>2</span></li>
+										<li><span>3</span></li>
+										<li><span>4</span></li>
+										<li><span>5</span></li>
+										<li><span>6</span></li>
+										<li><span>7</span></li>
+										<li class="active"><span>8</span></li>
+										<li><span>9</span></li>
+										<li><span>10</span></li>
+										<li><span>11</span></li>
+										<li><span>12</span></li>
+										<li><span>13</span></li>
+										<li><span>14</span></li>
+										<li><span>15</span></li>
+										<li><span>16</span></li>
+										<li><span>17</span></li>
+										<li><span>18</span></li>
+										<li><span>19</span></li>
+										<li><span>20</span></li>
+										<li><span>21</span></li>
+										<li><span>22</span></li>
+										<li><span>23</span></li>
+										<li><span>24</span></li>
+										<li><span>25</span></li>
+										<li><span>26</span></li>
+										<li><span>27</span></li>
+										<li><span>28</span></li>
+										<li><span>29</span></li>
+										<li><span>30</span></li>
+										<li><span>31</span></li>
+										<li class="anotherMonth"><span>1 June</span></li>
+										<li class="anotherMonth"><span>2</span></li>
+										<li class="anotherMonth"><span>3</span></li>
+										<li class="anotherMonth"><span>4</span></li>
+										<li class="anotherMonth"><span>5</span></li>
+										<li class=><span>6</span></li>
+										<li class=><span>7</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="globalCalendar">
+								<div class="month">
+									<span class="calendeaArrow prevArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+									<h1 class="title">June 2021</h1>
+
+									<span class="calendarArrow nextArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+								</div>
+								<div class="calendarWrapper">
+									<ul class="calendarWrapper__week">
+										<li><span>SUN</span></li>
+										<li><span>MON</span></li>
+										<li><span>TUE</span></li>
+										<li><span>WED</span></li>
+										<li><span>THU</span></li>
+										<li><span>FRI</span></li>
+										<li><span>SAT</span></li>
+									</ul>
+									<ul class="calendarWrapper__day">
+										<li class="anotherMonth"><span>28</span></li>
+										<li class="anotherMonth"><span>29</span></li>
+										<li class="anotherMonth"><span>30</span></li>
+										<li class="anotherMonth"><span>31</span></li>
+										<li><span>1 June</span></li>
+										<li><span>2</span></li>
+										<li><span>3</span></li>
+										<li><span>4</span></li>
+										<li><span>5</span></li>
+										<li><span>6</span></li>
+										<li><span>7</span></li>
+										<li class="active"><span>8</span></li>
+										<li><span>9</span></li>
+										<li><span>10</span></li>
+										<li><span>11</span></li>
+										<li><span>12</span></li>
+										<li><span>13</span></li>
+										<li><span>14</span></li>
+										<li><span>15</span></li>
+										<li><span>16</span></li>
+										<li><span>17</span></li>
+										<li><span>18</span></li>
+										<li><span>19</span></li>
+										<li><span>20</span></li>
+										<li><span>21</span></li>
+										<li><span>22</span></li>
+										<li><span>23</span></li>
+										<li><span>24</span></li>
+										<li><span>25</span></li>
+										<li><span>26</span></li>
+										<li><span>27</span></li>
+										<li><span>28</span></li>
+										<li><span>29</span></li>
+										<li><span>30</span></li>
+										<li><span>31</span></li>
+										<li class="anotherMonth"><span>1 July</span></li>
+										<li class="anotherMonth"><span>2</span></li>
+										<li class="anotherMonth"><span>3</span></li>
+										<li class="anotherMonth"><span>4</span></li>
+										<li class="anotherMonth"><span>5</span></li>
+										<li class=><span>6</span></li>
+										<li class=><span>7</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="globalCalendar">
+								<div class="month">
+									<span class="calendeaArrow prevArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+									<h1 class="title">July 2021</h1>
+
+									<span class="calendarArrow nextArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+								</div>
+								<div class="calendarWrapper">
+									<ul class="calendarWrapper__week">
+										<li><span>SUN</span></li>
+										<li><span>MON</span></li>
+										<li><span>TUE</span></li>
+										<li><span>WED</span></li>
+										<li><span>THU</span></li>
+										<li><span>FRI</span></li>
+										<li><span>SAT</span></li>
+									</ul>
+									<ul class="calendarWrapper__day">
+										<li class="anotherMonth"><span>28</span></li>
+										<li class="anotherMonth"><span>29</span></li>
+										<li class="anotherMonth"><span>30</span></li>
+										<li class="anotherMonth"><span>31</span></li>
+										<li><span>1 July</span></li>
+										<li><span>2</span></li>
+										<li><span>3</span></li>
+										<li><span>4</span></li>
+										<li><span>5</span></li>
+										<li><span>6</span></li>
+										<li><span>7</span></li>
+										<li class="active"><span>8</span></li>
+										<li><span>9</span></li>
+										<li><span>10</span></li>
+										<li><span>11</span></li>
+										<li><span>12</span></li>
+										<li><span>13</span></li>
+										<li><span>14</span></li>
+										<li><span>15</span></li>
+										<li><span>16</span></li>
+										<li><span>17</span></li>
+										<li><span>18</span></li>
+										<li><span>19</span></li>
+										<li><span>20</span></li>
+										<li><span>21</span></li>
+										<li><span>22</span></li>
+										<li><span>23</span></li>
+										<li><span>24</span></li>
+										<li><span>25</span></li>
+										<li><span>26</span></li>
+										<li><span>27</span></li>
+										<li><span>28</span></li>
+										<li><span>29</span></li>
+										<li><span>30</span></li>
+										<li><span>31</span></li>
+										<li class="anotherMonth"><span>1 Aug</span></li>
+										<li class="anotherMonth"><span>2</span></li>
+										<li class="anotherMonth"><span>3</span></li>
+										<li class="anotherMonth"><span>4</span></li>
+										<li class="anotherMonth"><span>5</span></li>
+										<li class=><span>6</span></li>
+										<li class=><span>7</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="globalCalendar">
+								<div class="month">
+									<span class="calendeaArrow prevArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+									<h1 class="title">August 2021</h1>
+
+									<span class="calendarArrow nextArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+								</div>
+								<div class="calendarWrapper">
+									<ul class="calendarWrapper__week">
+										<li><span>SUN</span></li>
+										<li><span>MON</span></li>
+										<li><span>TUE</span></li>
+										<li><span>WED</span></li>
+										<li><span>THU</span></li>
+										<li><span>FRI</span></li>
+										<li><span>SAT</span></li>
+									</ul>
+									<ul class="calendarWrapper__day">
+										<li class="anotherMonth"><span>28</span></li>
+										<li class="anotherMonth"><span>29</span></li>
+										<li class="anotherMonth"><span>30</span></li>
+										<li class="anotherMonth"><span>31</span></li>
+										<li><span>1 August</span></li>
+										<li><span>2</span></li>
+										<li><span>3</span></li>
+										<li><span>4</span></li>
+										<li><span>5</span></li>
+										<li><span>6</span></li>
+										<li><span>7</span></li>
+										<li class="active"><span>8</span></li>
+										<li><span>9</span></li>
+										<li><span>10</span></li>
+										<li><span>11</span></li>
+										<li><span>12</span></li>
+										<li><span>13</span></li>
+										<li><span>14</span></li>
+										<li><span>15</span></li>
+										<li><span>16</span></li>
+										<li><span>17</span></li>
+										<li><span>18</span></li>
+										<li><span>19</span></li>
+										<li><span>20</span></li>
+										<li><span>21</span></li>
+										<li><span>22</span></li>
+										<li><span>23</span></li>
+										<li><span>24</span></li>
+										<li><span>25</span></li>
+										<li><span>26</span></li>
+										<li><span>27</span></li>
+										<li><span>28</span></li>
+										<li><span>29</span></li>
+										<li><span>30</span></li>
+										<li><span>31</span></li>
+										<li class="anotherMonth"><span>1 Sep</span></li>
+										<li class="anotherMonth"><span>2</span></li>
+										<li class="anotherMonth"><span>3</span></li>
+										<li class="anotherMonth"><span>4</span></li>
+										<li class="anotherMonth"><span>5</span></li>
+										<li class=><span>6</span></li>
+										<li class=><span>7</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="globalCalendar">
+								<div class="month">
+									<span class="calendeaArrow prevArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+									<h1 class="title">September 2021</h1>
+
+									<span class="calendarArrow nextArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+								</div>
+								<div class="calendarWrapper">
+									<ul class="calendarWrapper__week">
+										<li><span>SUN</span></li>
+										<li><span>MON</span></li>
+										<li><span>TUE</span></li>
+										<li><span>WED</span></li>
+										<li><span>THU</span></li>
+										<li><span>FRI</span></li>
+										<li><span>SAT</span></li>
+									</ul>
+									<ul class="calendarWrapper__day">
+										<li class="anotherMonth"><span>28</span></li>
+										<li class="anotherMonth"><span>29</span></li>
+										<li class="anotherMonth"><span>30</span></li>
+										<li class="anotherMonth"><span>31</span></li>
+										<li><span>1 Sep</span></li>
+										<li><span>2</span></li>
+										<li><span>3</span></li>
+										<li><span>4</span></li>
+										<li><span>5</span></li>
+										<li><span>6</span></li>
+										<li><span>7</span></li>
+										<li class="active"><span>8</span></li>
+										<li><span>9</span></li>
+										<li><span>10</span></li>
+										<li><span>11</span></li>
+										<li><span>12</span></li>
+										<li><span>13</span></li>
+										<li><span>14</span></li>
+										<li><span>15</span></li>
+										<li><span>16</span></li>
+										<li><span>17</span></li>
+										<li><span>18</span></li>
+										<li><span>19</span></li>
+										<li><span>20</span></li>
+										<li><span>21</span></li>
+										<li><span>22</span></li>
+										<li><span>23</span></li>
+										<li><span>24</span></li>
+										<li><span>25</span></li>
+										<li><span>26</span></li>
+										<li><span>27</span></li>
+										<li><span>28</span></li>
+										<li><span>29</span></li>
+										<li><span>30</span></li>
+										<li><span>31</span></li>
+										<li class="anotherMonth"><span>1 Oct</span></li>
+										<li class="anotherMonth"><span>2</span></li>
+										<li class="anotherMonth"><span>3</span></li>
+										<li class="anotherMonth"><span>4</span></li>
+										<li class="anotherMonth"><span>5</span></li>
+										<li class=><span>6</span></li>
+										<li class=><span>7</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="globalCalendar">
+								<div class="month">
+									<span class="calendeaArrow prevArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+									<h1 class="title">October 2021</h1>
+
+									<span class="calendarArrow nextArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+								</div>
+								<div class="calendarWrapper">
+									<ul class="calendarWrapper__week">
+										<li><span>SUN</span></li>
+										<li><span>MON</span></li>
+										<li><span>TUE</span></li>
+										<li><span>WED</span></li>
+										<li><span>THU</span></li>
+										<li><span>FRI</span></li>
+										<li><span>SAT</span></li>
+									</ul>
+									<ul class="calendarWrapper__day">
+										<li class="anotherMonth"><span>28</span></li>
+										<li class="anotherMonth"><span>29</span></li>
+										<li class="anotherMonth"><span>30</span></li>
+										<li class="anotherMonth"><span>31</span></li>
+										<li><span>1 Oct</span></li>
+										<li><span>2</span></li>
+										<li><span>3</span></li>
+										<li><span>4</span></li>
+										<li><span>5</span></li>
+										<li><span>6</span></li>
+										<li><span>7</span></li>
+										<li class="active"><span>8</span></li>
+										<li><span>9</span></li>
+										<li><span>10</span></li>
+										<li><span>11</span></li>
+										<li><span>12</span></li>
+										<li><span>13</span></li>
+										<li><span>14</span></li>
+										<li><span>15</span></li>
+										<li><span>16</span></li>
+										<li><span>17</span></li>
+										<li><span>18</span></li>
+										<li><span>19</span></li>
+										<li><span>20</span></li>
+										<li><span>21</span></li>
+										<li><span>22</span></li>
+										<li><span>23</span></li>
+										<li><span>24</span></li>
+										<li><span>25</span></li>
+										<li><span>26</span></li>
+										<li><span>27</span></li>
+										<li><span>28</span></li>
+										<li><span>29</span></li>
+										<li><span>30</span></li>
+										<li><span>31</span></li>
+										<li class="anotherMonth"><span>1 Nov</span></li>
+										<li class="anotherMonth"><span>2</span></li>
+										<li class="anotherMonth"><span>3</span></li>
+										<li class="anotherMonth"><span>4</span></li>
+										<li class="anotherMonth"><span>5</span></li>
+										<li class=><span>6</span></li>
+										<li class=><span>7</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="globalCalendar">
+								<div class="month">
+									<span class="calendeaArrow prevArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+									<h1 class="title">November 2021</h1>
+
+									<span class="calendarArrow nextArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+								</div>
+								<div class="calendarWrapper">
+									<ul class="calendarWrapper__week">
+										<li><span>SUN</span></li>
+										<li><span>MON</span></li>
+										<li><span>TUE</span></li>
+										<li><span>WED</span></li>
+										<li><span>THU</span></li>
+										<li><span>FRI</span></li>
+										<li><span>SAT</span></li>
+									</ul>
+									<ul class="calendarWrapper__day">
+										<li class="anotherMonth"><span>28</span></li>
+										<li class="anotherMonth"><span>29</span></li>
+										<li class="anotherMonth"><span>30</span></li>
+										<li class="anotherMonth"><span>31</span></li>
+										<li><span>1 Nov</span></li>
+										<li><span>2</span></li>
+										<li><span>3</span></li>
+										<li><span>4</span></li>
+										<li><span>5</span></li>
+										<li><span>6</span></li>
+										<li><span>7</span></li>
+										<li class="active"><span>8</span></li>
+										<li><span>9</span></li>
+										<li><span>10</span></li>
+										<li><span>11</span></li>
+										<li><span>12</span></li>
+										<li><span>13</span></li>
+										<li><span>14</span></li>
+										<li><span>15</span></li>
+										<li><span>16</span></li>
+										<li><span>17</span></li>
+										<li><span>18</span></li>
+										<li><span>19</span></li>
+										<li><span>20</span></li>
+										<li><span>21</span></li>
+										<li><span>22</span></li>
+										<li><span>23</span></li>
+										<li><span>24</span></li>
+										<li><span>25</span></li>
+										<li><span>26</span></li>
+										<li><span>27</span></li>
+										<li><span>28</span></li>
+										<li><span>29</span></li>
+										<li><span>30</span></li>
+										<li><span>31</span></li>
+										<li class="anotherMonth"><span>1 Dec</span></li>
+										<li class="anotherMonth"><span>2</span></li>
+										<li class="anotherMonth"><span>3</span></li>
+										<li class="anotherMonth"><span>4</span></li>
+										<li class="anotherMonth"><span>5</span></li>
+										<li class=><span>6</span></li>
+										<li class=><span>7</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="globalCalendar">
+								<div class="month">
+									<span class="calendeaArrow prevArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+									<h1 class="title">December 2021</h1>
+
+									<span class="calendarArrow nextArrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+										  <g id="Сгруппировать_1391" data-name="Сгруппировать 1391" transform="translate(0 0)">
+										    <path id="Контур_3" data-name="Контур 3" d="M614.958,1027.646a.991.991,0,0,1-.609-.208l-6.5-5a1,1,0,1,1,1.218-1.584l5.891,4.53,5.891-4.53a1,1,0,1,1,1.218,1.584l-6.5,5A.991.991,0,0,1,614.958,1027.646Z" transform="translate(-607.458 -1020.646)" fill="#ccc3bf"/>
+										  </g>
+										</svg>
+									</span>
+								</div>
+								<div class="calendarWrapper">
+									<ul class="calendarWrapper__week">
+										<li><span>SUN</span></li>
+										<li><span>MON</span></li>
+										<li><span>TUE</span></li>
+										<li><span>WED</span></li>
+										<li><span>THU</span></li>
+										<li><span>FRI</span></li>
+										<li><span>SAT</span></li>
+									</ul>
+									<ul class="calendarWrapper__day">
+										<li class="anotherMonth"><span>28</span></li>
+										<li class="anotherMonth"><span>29</span></li>
+										<li class="anotherMonth"><span>30</span></li>
+										<li class="anotherMonth"><span>31</span></li>
+										<li><span>1 Dec</span></li>
+										<li><span>2</span></li>
+										<li><span>3</span></li>
+										<li><span>4</span></li>
+										<li><span>5</span></li>
+										<li><span>6</span></li>
+										<li><span>7</span></li>
+										<li class="active"><span>8</span></li>
+										<li><span>9</span></li>
+										<li><span>10</span></li>
+										<li><span>11</span></li>
+										<li><span>12</span></li>
+										<li><span>13</span></li>
+										<li><span>14</span></li>
+										<li><span>15</span></li>
+										<li><span>16</span></li>
+										<li><span>17</span></li>
+										<li><span>18</span></li>
+										<li><span>19</span></li>
+										<li><span>20</span></li>
+										<li><span>21</span></li>
+										<li><span>22</span></li>
+										<li><span>23</span></li>
+										<li><span>24</span></li>
+										<li><span>25</span></li>
+										<li><span>26</span></li>
+										<li><span>27</span></li>
+										<li><span>28</span></li>
+										<li><span>29</span></li>
+										<li><span>30</span></li>
+										<li><span>31</span></li>
+										<li class="anotherMonth"><span>1 Jan</span></li>
+										<li class="anotherMonth"><span>2</span></li>
+										<li class="anotherMonth"><span>3</span></li>
+										<li class="anotherMonth"><span>4</span></li>
+										<li class="anotherMonth"><span>5</span></li>
+										<li class=><span>6</span></li>
+										<li class=><span>7</span></li>
+									</ul>
+								</div>
+							</div>
+							<span class="next-step">NEXT, SELECT THE HOURS</span>
+						</section>
+
+						<section class="step-item reschedule-block--step2">
+							<form class="form">
+								<div>
+									<h1>Available Appointments on <span>April 16, 2021</span></h1>
+								</div>
+								<label class="click-item">
+									<input type="radio" name="time">
+									<h2>8:00 am – 9:00 am</h2>
+									<span>3 spaces available</span>
+									<span class="continue">CONTINUE</span>
+								</label>
+								<label class="click-item">
+									<input type="radio" name="time">
+									<h2>8:00 am – 9:00 am</h2>
+									<span>3 spaces available</span>
+									<span class="continue">CONTINUE</span>
+								</label>
+								<label class="click-item">
+									<input type="radio" name="time">
+									<h2>8:00 am – 9:00 am</h2>
+									<span>3 spaces available</span>
+									<span class="continue">CONTINUE</span>
+								</label>
+								<label class="click-item">
+									<input type="radio" name="time">
+									<h2>8:00 am – 9:00 am</h2>
+									<span>3 spaces available</span>
+									<span class="continue">CONTINUE</span>
+								</label>
+								<label class="click-item">
+									<input type="radio" name="time">
+									<h2>8:00 am – 9:00 am</h2>
+									<span>3 spaces available</span>
+									<span class="continue">CONTINUE</span>
+								</label>
+							</form>
+							<span class="next-step disabled">Postpone appointment</span>
+						</section>
+
+						<section class="step-item reschedule-block--step3">
+							<div class="create-note">
+								<h3>Cancel request</h3>
+								<textarea name="" id="step-textarea" cols="30" rows="10"></textarea>
+							</div>
+							<div class="reschedule-block--step3__buttons">
+								<span class="prev-step">Cancel</span>
+								<span class="next-step disabled">NEXT</span>
+							</div>
+						</section>
+						<section class="step-item reschedule-block--step4">
+							<h1>Appointment <br>successfully postponed</h1>
+							<img src="images/dist/finish-step-bg.svg">
+							<p>Your destination has been successfully transferred <br>The date of the new reception is <span>June 21, 2021</span></p>
+							<span class="back-button hover">OKAY</span>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
-	<script src="https://unpkg.com/js-datepicker"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/js-datepicker"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 	<script src="js/app.min.js"></script>
 </body>
 </html>

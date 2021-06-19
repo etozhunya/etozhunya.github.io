@@ -1,9 +1,8 @@
 .content-wrapper
-	overflow: hidden
 	&__flex-table
 		width: 100%
 		position: relative
-		padding: 10px 0 100px 0
+		padding: 10px 0 0px 0
 		height: calc(100vh - 72px - 46px - 83px - 38px)
 		overflow: scroll
 		&::-webkit-scrollbar
@@ -35,7 +34,7 @@
 				display: block
 				padding: 5px 0
 				margin-left: 35px
-				color: #151515
+				color: rgba(21,21,21,0.58)
 		.info-wrapper
 			display: flex
 			justify-content: space-between
@@ -48,47 +47,11 @@
 				justify-content: space-between
 				align-items: center
 				width: 50%
+				padding-left: 15px
 				li
 					width: 33%
 					height: 43px
 					margin: 20px 0
-					.client-type
-						font-size: 12px
-						padding: 4px 14px 4px 25px
-						border-radius: 8px
-						display: inline-block
-						position: relative
-						&::before
-							content: ''
-							display: block
-							position: absolute
-							left: 11px
-							top: 50%
-							transform: translateY(-50%)
-							width: 9px
-							height: 9px
-						&.bonus-program
-							color: #FF7979
-							background-color: rgba(255,121,121,0.10)
-							&::before
-								content: ''
-								background: url('../images/dist/bonus-program-icon.svg') center center/contain no-repeat
-						&.vip-client
-							color: #E09E00
-							background-color: rgba(224,158,40,0.10)
-							&::before
-								background: url('../images/dist/vip-client-icon.svg') center center/cover no-repeat
-						&.regular-customer
-							color: #407292
-							background-color: rgba(64,146,146,0.10)
-							&::before
-								background: url('../images/dist/regular-customer-icon.svg') center center/cover no-repeat
-						&.black-list
-							background-color: rgba(52,52,52,0.10)
-							color: #343434
-							&::before
-								background: url('../images/dist/black-list-icon.svg') center center/cover no-repeat
-
 					img
 						width: 43px
 						height: 43px
@@ -96,7 +59,7 @@
 						margin-right: 10px
 					h2
 						font-family: helveticaMedium
-						font-size: 14px
+						font-size: $desktopsize
 						color: #151515
 						display: block
 						margin-bottom: 12px
@@ -105,7 +68,7 @@
 						color: #343434
 					p
 						color: #343434
-						font-size: 14px
+						font-size: $desktopsize
 						line-height: 26px
 						transform: translateY(-5px)
 					&:first-child
@@ -133,7 +96,11 @@
 				li
 					width: 23%
 					margin: 0 0.5%
-					height: 43px
+					height: 53px
+				.widget--red
+					width: 19%
+				.widget--blue
+					width: 25%
 
 
 	
