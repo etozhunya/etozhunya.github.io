@@ -79,33 +79,204 @@ p, span
 			color: #fff	
 
 
+
+
+// CHOOSE TIME
+
+.choose-time-section
+	.form
+	    text-align: left
+	    border: 1px solid #E0E0E0
+	    border-radius: 8px
+	    .current-date
+	    	text-align: center
+	    	h1
+	    		font-size: 18px
+	    		display: block
+	    		font-family: helveticaRegular
+	    		padding: 25px 0
+	    		line-height: 30px
+	    		span
+	    			display: block
+	    			font-family: helveticaBold
+	    label
+	        -webkit-user-select: none
+	        -moz-user-select: none
+	        -ms-user-select: none
+	        user-select: none
+	        cursor: pointer
+	        width: 100%
+	        display: block
+	        position: relative
+	        padding: 13px 29px
+	        border-top: 1px solid #F7F2EE
+	        cursor: pointer
+	        input
+	            position: absolute
+	            cursor: pointer
+	            left: 0
+	            top: 0
+	            width: 100%
+	            height: 100%
+	            opacity: 0
+	        h2
+	            font-family: helveticaMedium
+	            font-size: 16px
+	            color: #343434
+	            position: relative
+	            margin-bottom: 7px
+	        span
+	            font-family: helveticaRegular
+	            font-size: 12px
+	            color: #343434
+	            text-transform: uppercase
+	            letter-spacing: 1px
+	        .continue
+	        	font-size: 16px
+	        	position: absolute
+	        	right: 30px
+	        	top: 50%
+	        	transform: translateY(-50%)
+	        	color: #343434
+	        &:nth-child(2n)
+	            background-color: #EAEAEA
+	        &.active
+	        	background-color: $highlighted
+	        	h2, span
+		        	color: #fff
+
+
+// CALENDAR MIN CSS
+.month
+    display: flex
+    max-width: 210px
+    margin: 0 auto 17px auto
+    justify-content: space-between
+    align-items: center
+    .prevArrow, .nextArrow
+        display: block
+        cursor: pointer
+        &:hover
+            svg
+                #Сгруппировать_1391
+                    #Контур_3
+                        fill: $highlighted    
+    .prevArrow
+        transform: rotate(90deg)
+    .nextArrow
+        transform: rotate(-90deg)
+    h1
+        margin-bottom: 0
+        font-family: Adobeclean
+        font-size: 23px
+        line-height: auto
+.globalCalendar
+    display: none
+    max-width: 470px
+    &.visible
+        display: block
+.calendarWrapper
+    transform: translateX(2px)
+    &__week
+        display: flex
+        justify-content: flex-start
+        li
+            width: calc(100% / 7)                        
+            text-align: center
+            font-family: SFpro
+            font-size: $desktopsize
+            color: #3E3E3E
+            opacit: 0.5
+            margin-bottom: 15px
+            transform: translateX(-5px)
+            span
+            	font-family: adobeclean
+            	font-weight: bold
+    &__day
+        display: flex
+        justify-content: space-around
+        flex-flow: wrap
+        padding-top: 1px
+        padding-left: 1px
+        li
+            cursor: pointer
+            width: calc(100% / 7)
+            color: #957248
+            padding: 15px 0
+            text-align: center
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
+            span
+            	font-family: notosansbold
+            	font-size: 15px
+            	color: #333
+            // &.disabled
+            //     background-color: #ccc3bf
+            //     color: #FFFFFF
+            //     pointer-events: none
+            &.anotherMonth
+                pointer-events: none
+                span
+                    color: #ABABAB
+            &.active
+                span
+                	position: relative
+                	color: #fff
+                	z-index: 1
+                	&::after
+                		content: ''
+                		background-color: $highlighted
+                		position: absolute
+                		width: 51px
+                		height: 51px
+                		border-radius: 50px
+                		right: 50%
+                		transform: translateX(50%)
+                		top: -18px
+                		z-index: -1
+            &.weekend
+                background-color: #FCFAF6
+                color: #7E7E7E
+
+
+// CALENDAR MIN CSS END
+
+
+//FULL CALENDAR CSS
+.fc-theme-standard 
+	.fc-scrollgrid
+		border-top: none !important
+		// border-left: none !important
+		border-right: none !important
+.fc-col-header 
+	tr, th
+		border-left: none
+		border-right: none
+	th:last-child
+		.fc-col-header-cell-cushion 
+			color: #FF4040
+	.fc-col-header-cell-cushion 
+		font-family: helveticaBold
+		font-size: 13px
+		color: #171616
+		margin-bottom: 8px
+.fc-daygrid-day-top
+	flex-direction: row
+	font-size: 17px
+	font-family: helveticaRegular
+	color: #343A40
+	padding: 10px 0 0 10px
+
+
+	
+
+
+
+
 // SELECT CSS
-.select-ver-1
-	.select2
-		width: auto !important
-		margin: 36px 0 27px 0
-		&-selection--single
-			color: #fff
-		&-selection__arrow
-			b
-				border-width: 6px 5px 0 5px !important
-				margin-left: -6px !important
-				border-color: #fff transparent transparent transparent !important
-		&-selection--single
-			border: 1px solid #343434 !important
-			border-radius: 4px !important
-			background-color: #343434 !important
-			color: #fff
-		&-selection__rendered
-			color: #fff !important
-			padding-right: 43px !important
-
-		&:focus
-			outline: none
-
-
 .select2-dropdown
-	margin-top: 10px
 	border-radius: 4px !important
 	border: 1px solid #E0E0E0 !important
 	overflow: hidden
@@ -143,7 +314,7 @@ p, span
 					background-color: #000
 			&--highlighted
 				background-color: $highlighted !important
-#select2-sel3-results
+#select2-sel3-results, #select2-sel4-results 
 	background-color: #fff
 	width: 470px
 	.select2-results__option--selected
@@ -157,6 +328,28 @@ p, span
 
 .select2-search
 	display: none
+.select-ver-1
+	.select2
+		width: auto !important
+		margin: 36px 0 27px 0
+		&-selection--single
+			color: #fff
+		&-selection__arrow
+			b
+				border-width: 6px 5px 0 5px !important
+				margin-left: -6px !important
+				border-color: #fff transparent transparent transparent !important
+		&-selection--single
+			border: 1px solid #343434 !important
+			border-radius: 4px !important
+			background-color: #343434 !important
+			color: #fff
+		&-selection__rendered
+			color: #fff !important
+			padding-right: 43px !important
+
+		&:focus
+			outline: none
 .select-ver-2
 	.select2
 		width: 470px !important
@@ -195,8 +388,6 @@ p, span
 				b
 					transform: rotate(180deg)
 					@include transition(.1s)
-
-
 ///////
 
 
@@ -341,6 +532,46 @@ p, span
 				&:hover, &.active
 					&::before
 							background: url('../images/dist/calendar-icon-hover.svg') center center/contain no-repeat
+		.filter-container
+			display: none
+			background-color: #323232
+			position: absolute
+			left: -50%
+			top: calc(100% + 10px)
+			border-radius: 4px
+			z-index: 50
+			padding: 34px 24px
+			div
+				display: block
+				position: relative
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					width: 0
+					height: 0
+					top: -209%
+					border-color: transparent transparent rgb(52, 52, 52)
+					border-width: 0px 6.5px 6px
+					border-style: solid
+			label
+				border: none
+				width: 100%
+				position: relative
+				display: flex
+				cursor: pointer
+				&:first-child
+					margin-bottom: 10px
+				span
+					margin-left: 5px
+					color: #fff
+					border: none
+					padding: 0
+			&.active
+				display: block
+
 			
 
 // DATEPICKER CSS
@@ -353,6 +584,7 @@ p, span
 	width: 300px
 	left: auto !important
 	right: 0 !important
+	top: 47px !important
 	span
 		padding: 0
 		border: none

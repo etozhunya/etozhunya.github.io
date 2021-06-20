@@ -4,8 +4,8 @@
 		<div class="content-wrapper">
 			<div class="content-wrapper__header">
 				<div class="content-wrapper__app-hours">
-					<span class="hover active click-item">New appointment</span>
-					<span class="hover click-item">Block hours</span>
+					<span class="hover active click-item" id="NA-btn">New appointment</span>
+					<span class="hover click-item" id="BH-btn">Block hours</span>
 				</div>
 				<div class="content-wrapper__TWM TWM">
 					<div class="TWM__days">
@@ -19,8 +19,20 @@
 					</div>
 				</div>
 				<div class="content-wrapper__filter-calendar">
-					<span class="hover click-item">Filter</span>
-					<span class="hover click-item" id="open-calendar">Calendar</span>
+					<span class="hover click-item filter-calendar-buttons" id="open-filter">Filter</span>
+					<span class="hover click-item filter-calendar-buttons" id="open-calendar">Calendar</span>
+					<div class="filter-container filter-calendar-buttons">
+						<div>
+							<label for="iselin">
+								<input type="checkbox" id="iselin">
+								<span>Dr. med. Dan Iselin</span>
+							</label>
+						</div>
+						<label for="schrammek">
+							<input type="checkbox" id="schrammek">
+							<span>Dr. med. Christine Schrammek</span>
+						</label>
+					</div>
 				</div>
 				
 			</div>
