@@ -43,19 +43,34 @@
 			background-color: $highlighted !important
 			color: #fff
 	.cancel-save__buttons
-		text-align: right
 		margin-top: 22px
-		.next-step
-			margin-left: 10px
-			border-radius: 4px
-			color: #fff
-		.prev-step
+		text-align: right
+		span
+			appearence: none
+			background-color: transparent
+			border: none
 			font-size: 16px
-	label
+			padding: 9px 15px
+			cursor: pointer
+			&:last-child
+				margin-left: 10px		
+				background-color: $highlighted
+				color: #fff
+				border-radius: 8px
+	// .cancel-save__buttons
+	// 	text-align: right
+	// 	margin-top: 22px
+	// 	.next-step
+	// 		margin-left: 10px
+	// 		border-radius: 4px
+	// 		color: #fff
+	// 	.prev-step
+	// 		font-size: 16px
+	label, .label
 		width: 100%
 		position: relative
 		// margin-bottom: 30px
-		span
+		> span
 			font-size: 16px
 			color: #212529
 			display: block
@@ -63,7 +78,7 @@
 		input
 			border-radius: 8px
 			border: 1px solid #E1E6EA
-			width: 100%
+			width: calc(100% - 26px)
 			color: #868D96
 			padding: 9px 13px
 			&:focus
@@ -71,6 +86,8 @@
 	.label-list
 		height: 284px
 		overflow-y: scroll
+		overflow-x: hidden
+		border-radius: 4px
 		text-align: left
 		&::-webkit-scrollbar
 			display: none
@@ -215,21 +232,10 @@
 						margin-bottom: 30px
 					p
 						font-size: $desktopsize
-						color: #838383			
-					.edit__buttons
-						margin-top: 60px
-						span
-							appearence: none
-							background-color: transparent
-							border: none
-							font-size: 16px
-							padding: 9px 15px
-							cursor: pointer
-							&:last-child
-								margin-left: 10px		
-								background-color: $highlighted
-								color: #fff
-								border-radius: 8px
+						color: #838383		
+					.cancel-save__buttons
+						margin-top: 60px	
+					
 			&__order
 				color: #343434
 				h3
@@ -403,7 +409,6 @@
 				    padding: 20px 50px
 				    border-radius: 8px
 				    max-width: 470px
-				    margin-bottom: 150px
 				h3
 					color: #212529
 					font-size: 16px
@@ -556,10 +561,86 @@
 			font-size: 16px
 			display: inline-block
 			text-align: right
+			margin-top: 10px
 
 
 	.modal-block-hours
 		@extend .modal-new-appt
+		p
+			font-size: 14px
+			color: #343434
+			line-height: 16px
+		form
+			.multiple-on-off
+				display: flex
+				cursor: pointer
+				align-items: center
+				margin: 31px 0 33px
+				&__container
+					border: 1px solid #BFBFBF
+					border-radius: 15px
+					width: 40px
+					height: 24px
+					position: relative
+					div
+						width: 18px
+						height: 18px
+						background-color: #BFBFBF
+						border-radius: 50%
+						position: absolute
+						left: 5%
+						top: 50%
+						transform: translateY(-50%)
+						@include transition(.2s)
+				h2
+					margin-left: 15px
+					font-size: 16px
+					color: #343434
+					font-family: helveticaRegular
+				&.multiple
+					.multiple-on-off__container
+						border: 1px solid $highlighted
+						background-color: $highlighted
+						@include transition(.2s)
+						div	
+							left: 45%
+							background-color: #fff
+			.label-container
+				display: flex
+				justify-content: space-between
+				margin-bottom: 47px
+				&__version
+					@include transition(.2s)
+					width: 100%
+					display: none
+					justify-content: space-between
+					.label
+						width: 45%
+						display: inline-block
+						input
+							cursor: pointer
+						.timepicker-container
+							display: flex
+							justify-content: space-between
+							align-items: center
+							input
+								width: 30%
+							span
+								margin-bottom: 0
+
+					&.active
+						position: relative
+						display: flex
+						@include transition(.2s)	
+			h3
+				font-size: 16px
+				color: #343434
+				font-family: helveticaRegular	
+				margin-bottom: 15px
+			.create-note
+				margin-top: 41px
+
+
 
 		
 

@@ -14,8 +14,11 @@
 
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dist/preview.jpg">
+
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
+	<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"> -->
+
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="css/main.min.css">
 
@@ -274,17 +277,19 @@
 				</div>
 				<div class="content-wrapper__filter-calendar">
 					<span class="hover click-item filter-calendar-buttons" id="open-filter">Filter</span>
-					<span class="hover click-item filter-calendar-buttons" id="open-calendar">Calendar</span>
-					<div class="filter-container filter-calendar-buttons">
+					<span class="hover click-item filter-calendar-buttons open-calendar" id="open-calendar">Calendar</span>
+					<div class="filter-container">
 						<div>
-							<label for="iselin">
-								<input type="checkbox" id="iselin">
-								<span>Dr. med. Dan Iselin</span>
+							<label class="checkbox-container">
+									<input type="checkbox">
+									<span class="checkmark"></span>	
+									<p>Dr. med. Dan Iselin</p>
 							</label>
 						</div>
-						<label for="schrammek">
-							<input type="checkbox" id="schrammek">
-							<span>Dr. med. Christine Schrammek</span>
+						<label class="checkbox-container">
+								<input type="checkbox">
+								<span class="checkmark"></span>	
+								<p>Dr. med. Christine Schrammek</p>
 						</label>
 					</div>
 				</div>
@@ -1137,9 +1142,9 @@
 								<input type="tel" value="+41788900522">
 							</label>
 							<p>Want to turn on or off all email notifications? <br>(view appointment emails)</p>
-							<div class="edit__buttons">
-								<span class="edit-cancel back-button">Cancel</span>
-								<span class="edit-save back-button">Save Changes</span>
+							<div class="cancel-save__buttons">
+								<span class="back-button">Cancel</span>
+								<span class="back-button">Save Changes</span>
 							</div>
 						</form>
 					</div>
@@ -2028,7 +2033,7 @@
 						<section class="step-item reschedule-block--step3">
 							<div class="create-note">
 								<h3>Cancel request</h3>
-								<textarea name="" id="step-textarea" cols="30" rows="10"></textarea>
+								<textarea name="" class="step-textarea" cols="30" rows="10"></textarea>
 							</div>
 							<div class="cancel-save__buttons">
 								<span class="prev-step">Cancel</span>
@@ -3007,31 +3012,49 @@
 				</div>
 				<h2>Block Multiple Days</h2>
 			</div>
-			<label for="">
-				<span>Block off time</span>
-				<input type="text">
-			</label>
-			<label for="">
-				<span>Through</span>
-				<input type="text">
-			</label>
+			<div class="label-container">
+				<div class="label-container__version active">
+					<div class="label">
+						<span>Block off time</span>
+						<input type="text" autocomplete="off" id="checkin" placeholder="Sat Jun 05 2021">
+					</div>	
+					<div class="label right-label">
+						<span>Through</span>
+						<input type="text" autocomplete="off" id="checkoff" placeholder="Sat Jun 05 2021">
+					</div>	
+				</div>
+				<div class="label-container__version">
+					<div class="label">
+						<span>Data</span>
+						<input type="text" autocomplete="off" id="checkoff" placeholder="Sat Jun 05 2021">
+					</div>
+					<div class="label">
+						<span>Block off time</span>
+						<div class="timepicker-container">
+							<input type="text" autocomplete="off" value="11:00 AM">
+							<span>to</span>
+							<input type="text" autocomplete="off" value="11:00 AM">
+						</div>
+					</div>
+				</div>
+			</div>
+			
 			<h3>On calendar:</h3>
-			<label>
-				<input type="checkbox" >	
-				<span>Dr. med. Dan Iselin</span>
+			<label class="checkbox-container">
+					<input type="checkbox">
+					<span class="checkmark"></span>	
+					<p>Dr. med. Dan Iselin</p>
 			</label>
-			<label>
-				<input type="checkbox">	
-				<span>Dr. med. Christine Schrammek </span>
+			<label class="checkbox-container">
+					<input type="checkbox">
+					<span class="checkmark"></span>	
+					<p>Dr. med. Christine Schrammek</p>
 			</label>
 
 			<div class="create-note">
 				<h3>Cancel request</h3>
-				<textarea name="" id="" cols="30" rows="10" value="Private notes about client"></textarea>
-				<div>
-					<span>Cancel</span>
-					<span>Save</span>
-				</div>
+				<textarea name="" class="step-textarea" cols="30" rows="10" value="Private notes about client"></textarea>
+				<span class="close-button next-step-black next-step hover disabled">Block hours</span>
 			</div>
 			
 		</form>
@@ -3039,9 +3062,12 @@
 	</div>
 </section>
 	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js"></script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://unpkg.com/js-datepicker"></script>
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script> -->
+	
 	<script src="js/app.min.js"></script>
 </body>
 </html>

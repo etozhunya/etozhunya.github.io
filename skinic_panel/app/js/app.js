@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	$('#BH-btn').click( function() {
+		$('.step-textarea').val('')
 		$('.modal').addClass('visible')
 		$('.modal-block-hours').addClass('active')
 	})
@@ -125,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.modal-details__create-note').removeClass('visible')
 		$('.reschedule-block--step2 .next-step').addClass('disabled')
 		$('.form .click-item').removeClass('active')
-		$('#step-textarea').val('')
+		$('.step-textarea').val('')
 	})
 
 
@@ -155,6 +156,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	  if (e.keyCode === 27) { 
 	    $('.modal').removeClass('visible')
 			$('.modal-block').removeClass('active')	
+			$('.filter-calendar-buttons').removeClass('active')
+			$('.filter-container').removeClass('active')
+			$('.qs-datepicker-container').addClass('qs-hidden')
+			
 	  }
 	});
 
@@ -206,7 +211,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	////datepicker
+	$(document).on("click",".qs-square", function(){
+	    $('#open-calendar').removeClass('active')
+	});
 	datepicker("#open-calendar",{})
+
+	var checkin = document.querySelectorAll('#checkin');
+	var checkoff = document.querySelectorAll('#checkoff');
+
+	const picker = datepicker('#checkin', {
+		  // Event callbacks.
+		  onSelect: instance => {
+		    $('#checkoff').next().removeClass('qs-hidden')
+		  }
+		})
+
+
+	checkoff.forEach(function(el) {
+		    datepicker(el)
+	})
+
+	// $('.timepicker1').timepicker({
+	// 	change: function(time) {
+	// 		$( '.timepicker2' ).click()
+	// 		$( '.timepicker2' ).focus()
+			
+	// 	}
+
+	// });
+
+	// $('input.timepicker1').timepicker({});
+	// $('input.timepicker2').timepicker({});
+	// $('.timepicker2').click(function(){
+	// 	console.log('asdasd')
+	// })
+
+	$('.multiple-on-off').click(function(){
+		$(this).toggleClass('multiple')
+		$('.label-container__version').eq(1).toggleClass('active').siblings().toggleClass('active')
+	})
+
 
 
 	// modals
@@ -251,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	})
 
-	$('#step-textarea').on('input', function () {
+	$('.step-textarea').on('input', function () {
  	    if ( $(this).val().length > 0 ) {
  	    	$('.next-step').removeClass('disabled')
  	    } else

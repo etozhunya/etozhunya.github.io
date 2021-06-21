@@ -296,9 +296,9 @@
 								<input type="tel" value="+41788900522">
 							</label>
 							<p>Want to turn on or off all email notifications? <br>(view appointment emails)</p>
-							<div class="edit__buttons">
-								<span class="edit-cancel back-button">Cancel</span>
-								<span class="edit-save back-button">Save Changes</span>
+							<div class="cancel-save__buttons">
+								<span class="back-button">Cancel</span>
+								<span class="back-button">Save Changes</span>
 							</div>
 						</form>
 					</div>
@@ -1187,7 +1187,7 @@
 						<section class="step-item reschedule-block--step3">
 							<div class="create-note">
 								<h3>Cancel request</h3>
-								<textarea name="" id="step-textarea" cols="30" rows="10"></textarea>
+								<textarea name="" class="step-textarea" cols="30" rows="10"></textarea>
 							</div>
 							<div class="cancel-save__buttons">
 								<span class="prev-step">Cancel</span>
@@ -2166,31 +2166,49 @@
 				</div>
 				<h2>Block Multiple Days</h2>
 			</div>
-			<label for="">
-				<span>Block off time</span>
-				<input type="text">
-			</label>
-			<label for="">
-				<span>Through</span>
-				<input type="text">
-			</label>
+			<div class="label-container">
+				<div class="label-container__version active">
+					<div class="label">
+						<span>Block off time</span>
+						<input type="text" autocomplete="off" id="checkin" placeholder="Sat Jun 05 2021">
+					</div>	
+					<div class="label right-label">
+						<span>Through</span>
+						<input type="text" autocomplete="off" id="checkoff" placeholder="Sat Jun 05 2021">
+					</div>	
+				</div>
+				<div class="label-container__version">
+					<div class="label">
+						<span>Data</span>
+						<input type="text" autocomplete="off" id="checkoff" placeholder="Sat Jun 05 2021">
+					</div>
+					<div class="label">
+						<span>Block off time</span>
+						<div class="timepicker-container">
+							<input type="text" autocomplete="off" value="11:00 AM">
+							<span>to</span>
+							<input type="text" autocomplete="off" value="11:00 AM">
+						</div>
+					</div>
+				</div>
+			</div>
+			
 			<h3>On calendar:</h3>
-			<label>
-				<input type="checkbox" >	
-				<span>Dr. med. Dan Iselin</span>
+			<label class="checkbox-container">
+					<input type="checkbox">
+					<span class="checkmark"></span>	
+					<p>Dr. med. Dan Iselin</p>
 			</label>
-			<label>
-				<input type="checkbox">	
-				<span>Dr. med. Christine Schrammek </span>
+			<label class="checkbox-container">
+					<input type="checkbox">
+					<span class="checkmark"></span>	
+					<p>Dr. med. Christine Schrammek</p>
 			</label>
 
 			<div class="create-note">
 				<h3>Cancel request</h3>
-				<textarea name="" id="" cols="30" rows="10" value="Private notes about client"></textarea>
-				<div>
-					<span>Cancel</span>
-					<span>Save</span>
-				</div>
+				<textarea name="" class="step-textarea" cols="30" rows="10" value="Private notes about client"></textarea>
+				<span class="close-button next-step-black next-step hover disabled">Block hours</span>
 			</div>
 			
 		</form>
