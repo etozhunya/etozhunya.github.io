@@ -1,0 +1,82 @@
+.global-content__core
+	.flex-table
+		display: block
+		height: calc(100vh - 72px - 46px - 83px - 38px)
+		overflow-y: scroll
+		&::-webkit-scrollbar
+			display: none
+		.table-slot__reqDoc
+			cursor: pointer
+			ul
+				display: flex
+				width: 100%
+				justify-content: space-between
+				align-items: center
+				border-bottom: 1px solid #E0E0E0
+				padding: 0 18px
+				> li
+					display: flex
+					align-items: center
+					padding: 17px 0
+					> span
+						color: #343434
+					a
+						color: $highlighted
+					&:nth-child(1)
+						img
+							margin-right: 38px
+						span
+							font-family: helveticaMedium
+					&:nth-child(2)
+						span
+							position: relative
+							&::before
+								content: ''
+								width: 20px
+								height: 22px
+								display: block
+								position: absolute
+								left: -40px
+								top: 50%
+								transform: translateY(-50%)
+					&:last-child
+						span
+							padding: 9px 15px
+							border-radius: 4px
+							border: 1px solid #E0E0E0
+							&:nth-child(2)
+								margin-left: 16px	
+	.requests-table
+		.table-slot__reqDoc
+			ul
+				li
+					&:nth-child(2)
+						span
+							&::before
+								background: url('../images/dist/calendar-table-icon.svg') center center/contain no-repeat
+					&:nth-child(3)
+						span
+							position: relative
+							&::before
+								content: ''
+								width: 20px
+								height: 22px
+								display: block
+								position: absolute
+								left: -40px
+								top: 50%
+								transform: translateY(-50%)
+								background: url('../images/dist/time-table-icon.svg') center center/contain no-repeat
+				&:hover
+					background-color: #FAFBFC
+
+	.doctors-table
+		background-color: #FAFBFC
+		.table-slot__reqDoc
+			ul
+				li
+					&:nth-child(2)
+						span
+							&::before
+								background: url('../images/dist/cake-icon.svg') center center/contain no-repeat
+

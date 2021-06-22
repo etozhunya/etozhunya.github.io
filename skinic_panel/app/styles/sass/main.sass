@@ -1,14 +1,14 @@
 @import config
 @import 'blocks/**/*'
 
-p, span
+p, span, a
 	font-family: helveticaRegular
 .hover
 	cursor: pointer
 	&:hover
 		background-color: $highlighted !important
 		border: 1px solid $highlighted !important
-		color: #fff
+		color: #fff !important
 .next-step-black
 	&.disabled
 		background-color: #8e8888 !important
@@ -98,6 +98,12 @@ label, .label, .global-content__search
 		&::before, &:hover
 			background-color: #607BF1
 			color: #fff	
+	&--yellow
+		color: #D2B162
+		background-color: rgba(210,177,98, .16)
+		&::before, &:hover
+			background-color: #D2B162
+			color: #fff
 
 .ui-timepicker-container
 	z-index: 100 !important
@@ -573,7 +579,7 @@ label, .label, .global-content__search
 			margin-right: -1px		
 
 	.TWM
-		display: flex
+		display: none
 		div
 			display: flex
 		&__days
@@ -598,6 +604,8 @@ label, .label, .global-content__search
 					background-color: #E2E6EA
 				&:last-child
 					transform: rotate(180deg)
+		&.home
+			display: flex
 	&__filter-calendar
 		display: flex
 		position: relative

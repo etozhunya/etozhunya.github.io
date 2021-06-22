@@ -8,9 +8,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	if(window.location.hash == false && $('.flex-table__days').hasClass('in-view')) {
-		$('#homePage').addClass('active')
-	}
 	$(window.location.hash).addClass('active').siblings().removeClass('active')
 
 
@@ -43,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	// HEADER BUTTONS CLICK
-	$('#NA-btn').click( function() {
+	$('.NA-btn').click( function() {
 		$('.animated__order .step-item').removeClass('in-view').eq(0).addClass('in-view')
 		$('.modal').addClass('visible')
 		$('.modal-new-appt').addClass('active')
@@ -148,6 +145,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 
 	// FLEX TABLE SLOT CLICK
+	// $('.clients-table .table-slot').click(function(){
+	// 	$('.modal-details').addClass('clients-mode')
+	// })
+
 	$('.table-slot').click(function() {
 		if($(this).hasClass('block-hours')) {
 			$(this).off('click')
@@ -222,21 +223,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-	////datepicker
-	// $(document).on("click",".qs-square", function(){
-	//     $('#open-calendar').removeClass('active')
-	// });
-	// datepicker("#open-calendar",{})
+	//datepicker
+	$(document).on("click",".qs-square", function(){
+	    $('#open-calendar').removeClass('active')
+	});
+	datepicker("#open-calendar",{})
 
-	// var checkin = document.querySelectorAll('#checkin');
-	// var checkoff = document.querySelectorAll('#checkoff');
+	var checkin = document.querySelectorAll('#checkin');
+	var checkoff = document.querySelectorAll('#checkoff');
 
-	// const picker = datepicker('#checkin', {
-	// 	  // Event callbacks.
-	// 	  onSelect: instance => {
-	// 	    $('#checkoff').next().removeClass('qs-hidden')
-	// 	  }
-	// 	})
+	const picker = datepicker('#checkin', {
+		  // Event callbacks.
+		  onSelect: instance => {
+		    $('#checkoff').next().removeClass('qs-hidden')
+		  }
+		})
 
 
 	// checkoff.forEach(function(el) {
@@ -355,6 +356,11 @@ var yyyy = today.getFullYear();
 
 today = 'Today ' + monthNames[today.getMonth()] + ' ' + dd + ' st, ' + yyyy;
 text.innerHTML = today
+
+if(window.location.hash == false && $('.flex-table__days').hasClass('in-view')) {
+	$('#homePage').addClass('active')
+	
+}
 
 document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
