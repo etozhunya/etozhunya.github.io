@@ -11,10 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	$(window.location.hash).addClass('active').siblings().removeClass('active')
 
 
-	
+	var mainText = $('.global-content__core').attr('data-name')
 	if(!$('#homePage').hasClass('active')) {
-		var mainText = $('.global-content__core').attr('data-name')
 		$('#headText').text(mainText)	
+
+	}
+
+	if( mainText == 'Doctors') {
+		var digit = 1700
+		$('.global-content__title p').text(digit + ' ' + 'Clients')
+	} else {
+		var appDigit = 13
+		$('.global-content__title p').text(appDigit + ' ' + 'appointments')
 	}
 
 	if($('.flex-table__days').hasClass('in-view')) {
