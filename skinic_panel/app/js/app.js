@@ -8,16 +8,31 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+	if(window.location.hash == false && $('.flex-table__days').hasClass('in-view')) {
+		$('#homePage').addClass('active')
+	}
+	$(window.location.hash).addClass('active').siblings().removeClass('active')
+
+
+	
+	if(!$('#homePage').hasClass('active')) {
+		var mainText = $('.global-content__core').attr('data-name')
+		$('#headText').text(mainText)	
+	}
+
+	if($('.flex-table__days').hasClass('in-view')) {
+		$('.global-content__home-only').addClass('home')
+	}
+
+
 	$('.select').select2()
-	$('.side-bar__list li a').click(function(event) {
-	    event.preventDefault();
-	});
 
 	$('.side-bar__hamburger').click(function() {
 		$('.page').toggleClass('wide')
 	})
 
 	$('.click-item').click(function() {
+
 		$(this).addClass('active').siblings('').removeClass('active')
 
 		if($('.modal-details__head ul li').eq(1).hasClass('active')) {
@@ -49,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	  var $target = $(event.target);
 	  if($(event.target).closest('.content-wrapper__filter-calendar').length == 0)
 	  {
+	  	$('.filter-container').removeClass('active')
 	   $('.filter-calendar-buttons').removeClass('active')
 	  }        
 	});
@@ -86,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	     	.next().slideToggle(300)
 	});
 	$('.animated__steps .click-item').click(function() {
-		console.log('aasdad')
 		$(this)
 			.parents('.animated').slideUp(300)
 			.parents('li').find('h4').removeClass('active')
@@ -182,11 +197,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// RESCHEDULE	MODAL
 		if ($('.reschedule-block--step4').hasClass('in-view')) {
-			console.log('LAST')
 			$('.info__wrapper__block').removeClass('in-view').eq(0).addClass('in-view')
 		}
 		if ($('.reschedule-block--step1').hasClass('in-view') && $('.reschedule-block').hasClass('in-view') ) {
-					console.log('11111')
 					$('.modal-details__head .click-item').removeClass('active')
 					
 					$('.info__wrapper__block').removeClass('in-view').eq(0).addClass('in-view')
@@ -195,7 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		if ($('.reschedule-block').hasClass('in-view')) {
 			$('.step-item.in-view').prev().addClass('in-view').siblings().removeClass('in-view')
-			console.log('home')
 		}
 		if (!$('.reschedule-block').hasClass('in-view')) {
 			$('.info__wrapper__block').removeClass('in-view').eq(0).addClass('in-view')	
@@ -211,25 +223,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	////datepicker
-	$(document).on("click",".qs-square", function(){
-	    $('#open-calendar').removeClass('active')
-	});
-	datepicker("#open-calendar",{})
+	// $(document).on("click",".qs-square", function(){
+	//     $('#open-calendar').removeClass('active')
+	// });
+	// datepicker("#open-calendar",{})
 
-	var checkin = document.querySelectorAll('#checkin');
-	var checkoff = document.querySelectorAll('#checkoff');
+	// var checkin = document.querySelectorAll('#checkin');
+	// var checkoff = document.querySelectorAll('#checkoff');
 
-	const picker = datepicker('#checkin', {
-		  // Event callbacks.
-		  onSelect: instance => {
-		    $('#checkoff').next().removeClass('qs-hidden')
-		  }
-		})
+	// const picker = datepicker('#checkin', {
+	// 	  // Event callbacks.
+	// 	  onSelect: instance => {
+	// 	    $('#checkoff').next().removeClass('qs-hidden')
+	// 	  }
+	// 	})
 
 
-	checkoff.forEach(function(el) {
-		    datepicker(el)
-	})
+	// checkoff.forEach(function(el) {
+	// 	    datepicker(el)
+	// })
 
 	// $('.timepicker1').timepicker({
 	// 	change: function(time) {
@@ -243,7 +255,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	// $('input.timepicker1').timepicker({});
 	// $('input.timepicker2').timepicker({});
 	// $('.timepicker2').click(function(){
-	// 	console.log('asdasd')
 	// })
 
 	$('.multiple-on-off').click(function(){
@@ -336,7 +347,7 @@ $('.TWM__days span').click(function(){
 const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
-var text = document.getElementById('DATE')
+var text = document.getElementById('headText')
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!

@@ -30,7 +30,7 @@
 			width: 96px
 			height: 38px
 			position: relative
-			display: flex
+			display: none
 			div
 				width: 50%
 				height: 100%
@@ -42,19 +42,38 @@
 					width: auto
 				&.active
 					background-color: #E2E6EA
+			&.home
+				display: flex
+
 		&__title
-			display: inline-block
 			h1
 				display: block
 				font-size: 24px
 				font-family: helveticaBold
 				color: #343434
 				margin-bottom: 3px
+				display: inline-block
 			p
 				font-family: helveticaMedium
 				font-size: $desktopsize
 				color: #838383
 				opacity: 0.5
+			
+		&__search
+			width: 282px
+			position: relative
+			svg
+				position: absolute
+				display: block
+				width: 14px
+				height: 14px
+				right: 10px
+				top: 50%
+				transform: translateY(-50%)
+				cursor: pointer
+				padding: 5px
+			&.home
+				display: none
 		&__flex-container
 			display: flex
 
@@ -147,12 +166,12 @@
 		&__list
 			margin: 45px 0
 			li
-				padding: 22px 0
 				font-family: helveticaMedium
 				font-size: 20px
 				position: relative
 				cursor: pointer
 				a
+					padding: 22px 0
 					display: flex
 					justify-content: flex-start
 					align-items: center

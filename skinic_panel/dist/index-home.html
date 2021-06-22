@@ -17,8 +17,6 @@
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
-	<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"> -->
-
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="css/main.min.css">
 
@@ -30,7 +28,7 @@
 		<div class="page__left-side ">
 			<div class="side-bar full">
 				<div class="side-bar__header">
-					<a href="index.html">
+					<a href="index-home.html#homePage">
 						<img src="images/dist/logo.svg" alt="">
 					</a>
 					<div class="side-bar__hamburger">
@@ -39,8 +37,8 @@
 				</div>
 				<div class="side-bar__container">
 					<ul class="side-bar__list">
-						<li class="active click-item">
-							<a href="home.html">
+						<li class="click-item" id="homePage">
+							<a href="index-home.html#homePage" data-name="Home">
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22">
 							  <g id="Group_163762" data-name="Group 163762" transform="translate(1 -1)">
 							    <g id="Group_163761" data-name="Group 163761">
@@ -54,8 +52,8 @@
 							<span>Home</span>
 							</a>
 						</li>
-						<li class="click-item">
-							<a href="#">
+						<li class="click-item" id="Requests">
+							<a href="index-requests.html#Requests" data-name="Requests">
 								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22">
 								  <g id="Group_163763" data-name="Group 163763" transform="translate(1 -1)">
 								    <g id="clipboard" transform="translate(0 2)">
@@ -67,8 +65,8 @@
 								<span>Requests</span>
 							</a>
 						</li>
-						<li class="click-item">
-							<a href="clients.html">
+						<li class="click-item" id="Clients">
+							<a href="index-clients.html#Clients" data-name="Clients">
 								<svg xmlns="http://www.w3.org/2000/svg" width="19.446" height="22.569" viewBox="0 0 19.446 22.569">
 								  <g id="Group_163764" data-name="Group 163764" transform="translate(0 0)">
 								    <path id="Path_83318" data-name="Path 83318" d="M13.723,12.153a4.867,4.867,0,1,0-3.436-1.426A4.857,4.857,0,0,0,13.723,12.153Zm0-7.292a2.436,2.436,0,1,1-1.717.713A2.427,2.427,0,0,1,13.723,4.861ZM23.09,17.955a13.169,13.169,0,0,0-6.877-3.638l-2.49,3.077-2.49-3.077a13.169,13.169,0,0,0-6.877,3.638L4,18.311V25H23.446V18.311Zm-2.075,4.614H6.431V19.335a10.723,10.723,0,0,1,3.893-2.278l1.509,1.867,1.89,2.335,1.89-2.335,1.509-1.867a10.723,10.723,0,0,1,3.893,2.278Z" transform="translate(-4 -2.431)" fill="#fff"/>
@@ -77,8 +75,8 @@
 								<span>Clients</span>
 							</a>
 						</li>
-						<li class="click-item">
-							<a href="doctors.html">
+						<li class="click-item" id="Doctors">
+							<a href="index-doctors.html#Doctors" data-name="Doctors">
 								<svg xmlns="http://www.w3.org/2000/svg" width="20.446" height="23.571" viewBox="0 0 20.446 23.571">
 								  <g id="Group_163767" data-name="Group 163767" transform="translate(0.5 0.503)">
 								    <path id="Union_5" data-name="Union 5" d="M14120.724,7730.568v-6.689l.354-.354a13.183,13.183,0,0,1,6.877-3.638l2.491,3.077,2.488-3.077a13.169,13.169,0,0,1,6.877,3.638l.358.354v6.689Zm17.016-2.431V7724.9a10.745,10.745,0,0,0-3.893-2.278l-1.512,1.867-.888,1.1v2.547Zm-14.585-3.233v3.233h6.292v-2.545l-.892-1.1-1.508-1.867A10.745,10.745,0,0,0,14123.154,7724.9Zm11.132,2.594v-1h-1v-1h1v-1h1v1h1v1h-1v1Zm-7.274-11.2a4.853,4.853,0,1,1,3.435,1.427A4.846,4.846,0,0,1,14127.012,7716.3Zm1.718-5.153a2.429,2.429,0,1,0,4.1,2.193,2.469,2.469,0,0,0-.138-1.405,2.429,2.429,0,0,0-3.964-.788Z" transform="translate(-14120.724 -7708)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
@@ -87,8 +85,8 @@
 								<span>Doctors</span>
 							</a>
 						</li>
-						<li class="click-item">
-							<a href="personalinfo.html">
+						<li class="click-item" id="PersonalInfo">
+							<a href="index-personal-info.html#PersonalInfo" data-name="Personal Info">
 								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
 								  <g id="Group_163765" data-name="Group 163765" transform="translate(1 -1)">
 								    <g id="info" transform="translate(0 2)">
@@ -101,8 +99,8 @@
 								<span>Personal Info</span>
 							</a>
 						</li>
-						<li class="click-item">
-							<a href="reports.html">
+						<li class="click-item" id="Reports">
+							<a href="index-reports.html#Reports" data-name="Reports">
 								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22">
 								  <g id="Group_163766" data-name="Group 163766" transform="translate(1 -1)">
 								    <g id="file-text" transform="translate(0 2)">
@@ -153,8 +151,8 @@
 							<span>Homes</span>
 							</a>
 						</li>
-						<li class="click-item">
-							<a href="#">
+						<li class="click-item" id="Requests">
+							<a href="request.html">
 								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22">
 								  <g id="Group_163763" data-name="Group 163763" transform="translate(1 -1)">
 								    <g id="clipboard" transform="translate(0 2)">
@@ -232,6 +230,46 @@
 			<div class="global-content__header">
 
 				<div class="global-content__flex-container">
+					<div class="global-content__buttons global-content__home-only">
+						<div class="active click-item global-list-button">
+							<img src="images/dist/content-header-button1.svg" alt="">		
+						</div>
+						<div class="click-item global-calendar-button">
+							<img src="images/dist/content-header-button2.svg" alt="">	
+						</div>
+					</div>
+
+
+					<div class="global-content__title">
+						<h1 id="headText" class="global-content__home-only"></h1>
+						<p>12 appointment </p>
+					</div>
+				</div>
+
+				<div class="global-content__search global-content__home-only">
+					<input type="text">
+					<svg xmlns="http://www.w3.org/2000/svg" width="15.707" height="15.707" viewBox="0 0 15.707 15.707">
+					  <g id="Group_163788" data-name="Group 163788" transform="translate(-253.52 -11)">
+					    <g id="search" transform="translate(254.52 12)">
+					      <circle id="Ellipse_9396" data-name="Ellipse 9396" cx="6" cy="6" r="6" fill="none" stroke="#868d96" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+					      <line id="Line_317" data-name="Line 317" x1="4.35" y1="4.35" transform="translate(9.65 9.65)" fill="none" stroke="#868d96" stroke-linejoin="round" stroke-width="2"/>
+					    </g>
+					  </g>
+					</svg>
+				</div>
+
+
+				<a href="" class="global-content__account account">
+					<img src="images/dist/acc-image.svg">
+					<div>
+						<span>My Account</span>
+						<span>praxis@daniselin.ch</span>
+					</div>
+				</a>
+			</div>
+<!-- <div class="global-content__header">
+
+				<div class="global-content__flex-container">
 					<div class="global-content__buttons">
 						<div class="active click-item global-list-button">
 							<img src="images/dist/content-header-button1.svg" alt="">		
@@ -249,14 +287,14 @@
 				</div>
 
 
-				<a href="#" class="global-content__account account">
+				<a href="" class="global-content__account account">
 					<img src="images/dist/acc-image.svg">
 					<div>
 						<span>My Account</span>
 						<span>praxis@daniselin.ch</span>
 					</div>
 				</a>
-			</div>
+			</div> -->
 
 		<div class="content-wrapper">
 			<div class="content-wrapper__header">
@@ -3026,7 +3064,7 @@
 				<div class="label-container__version">
 					<div class="label">
 						<span>Data</span>
-						<input type="text" autocomplete="off" id="checkoff" placeholder="Sat Jun 05 2021">
+						<input type="text" autocomplete="off" placeholder="Sat Jun 05 2021">
 					</div>
 					<div class="label">
 						<span>Block off time</span>

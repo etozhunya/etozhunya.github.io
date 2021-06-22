@@ -16,7 +16,24 @@ p, span
 .disabled
 	background-color: #E2CC99 !important
 	color: #fff !important
-	pointer-events: none !important	        	
+	pointer-events: none !important	   
+label, .label, .global-content__search
+		width: 100%
+		position: relative
+		// margin-bottom: 30px
+		> span
+			font-size: 16px
+			color: #212529
+			display: block
+			margin-bottom: 10px
+		input
+			border-radius: 8px
+			border: 1px solid #E1E6EA
+			width: calc(100% - 26px)
+			color: #868D96
+			padding: 9px 13px
+			&:focus
+				color: #212529       	
 .widget
 	border-radius: 8px
 	padding: 5px
@@ -583,6 +600,7 @@ p, span
 					transform: rotate(180deg)
 	&__filter-calendar
 		display: flex
+		position: relative
 		> span
 			border-radius: 8px
 			padding-left: 35px
