@@ -21,7 +21,8 @@
       text-overflow: ellipsis;
       white-space: nowrap; 
       font-family: helveticaRegular !important;
-      font-size: 21px !important;
+      font-size: 17px !important;
+      padding: 0 10px 0 0;
       color: #212529 !important;
     }
     .select2-container .select2-selection--single .select2-selection__clear {

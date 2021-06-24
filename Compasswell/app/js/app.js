@@ -167,6 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	$('.section2 .hotelList__item').click(function() {
+		$('.section2 .hotelList__item').removeClass('active')
 		$(this).addClass('active')
 		if ($('.section2 .hotelList__item').hasClass('active')) {
 			$('.next2').removeClass('disabled')

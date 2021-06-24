@@ -614,15 +614,26 @@
 						&.single
 							display: inline-block
 					&.multiple
+						display: flex
+						justify-content: center
 						.button
 							&.multiple-btn
 								display: inline-block
+								width: 45%
 								&:last-child
 									margin-left: 15px
 							&.single
 								display: none
 
 @media (max-width: 1024px) 
+	.contentWrapper 
+		.containerWrapper__One
+			.headings.admin-version
+				li
+					.table 
+						li
+							&:nth-child(3) 
+	    						width: 20% !important;
 	.shortTable
 		width: 100% !important
 	.widthWrapper
@@ -712,7 +723,7 @@
 									width: 50%
 							.button
 								transform: translate3d(0,0,0)
-								display: block
+								// display: block
 								float: none
 								text-align: center
 								width: 100%
