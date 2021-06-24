@@ -80,6 +80,9 @@
 				background-color: #fff
 	.sub-steps
 		margin-bottom: 56px
+		display: none
+		&.active
+			display: flex
 		li
 			padding: 10px
 			&::after
@@ -113,6 +116,8 @@
 						p
 							font-family: helveticaBold
 							color: $chocolate
+				&.therapist
+					justify-content: flex-start
 			.calendarOpen
 				padding: 10px 21px
 				border-radius: 8px
@@ -605,6 +610,17 @@
 						margin-top: 30px
 						float: none
 						transform: none !important
+						display: none
+						&.single
+							display: inline-block
+					&.multiple
+						.button
+							&.multiple-btn
+								display: inline-block
+								&:last-child
+									margin-left: 15px
+							&.single
+								display: none
 
 @media (max-width: 1024px) 
 	.shortTable

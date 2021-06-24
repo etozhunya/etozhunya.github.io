@@ -6,16 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	    	$('.containerWrapper__One').addClass('in-view').siblings().removeClass('in-view')
 	    }
 	    $('.greetings').click(function(){
-	    	$('.sub-steps li').removeClass('active')
+	    	$('.sub-steps').removeClass('active')
 	    	$('.containerWrapper__Two').addClass('in-view').siblings().removeClass('in-view')
 	    	$('.steps li').removeClass('active')
 	    })
 
 	}
-
-	$(function () {
-	  $('.bs-timepicker').timepicker();
-	});
+	if ($('body').hasClass('haveTimePicker')) {
+		$(function () {
+		  $('.bs-timepicker').timepicker();
+		});
+	}
+	
 
 
 	if ($('body').hasClass('haveSelect')) {
@@ -278,11 +280,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	// 	$(this).parents('.animated').slideDown()
 	// })		
 
-	$('.specTable li').click(function() {
-	    $(this).find('h4').toggleClass('active');
-	    $(this).toggleClass('active');
-	    $(this).siblings().find('.animated').slideUp()
-	    $(this).siblings().removeClass('active')
+	$('.specTable li').click(function(event) {
+	    
+	    if(!event.target.closest('.select-container')) {
+	    	$(this).find('h4').toggleClass('active');
+	    	$(this).toggleClass('active');
+	    	$(this).siblings().find('.animated').slideUp()
+	    	$(this).siblings().removeClass('active')	
+	      	console.log('1')
+	    }
+
 	    if ($(this).hasClass('active')) {
 	        $(this).find('.animated').slideDown();
 	    } else
@@ -303,15 +310,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 	
 	$('.steps li').click(function() {
-	    $(this).addClass('active').siblings().removeClass('active');
 	    $('.sub-steps li').removeClass('active')
+	    $(this).addClass('active').siblings().removeClass('active');
 	    $('.tableWrapper').removeClass('in-view').eq($(this).attr('data-index')).addClass('in-view');
+	    if ($('#bookinglist').hasClass('active')) {
+	    	$('.sub-steps').addClass('active')
+	    } else
+	    	$('.sub-steps').removeClass('active')
+
 	});
 	$('.sub-steps li').click(function() {
 	    $(this).addClass('active').siblings().removeClass('active');
 	});
 	$('.preTable li').click(function() {
 	    $(this).addClass('active').siblings().removeClass('active');
+	    if( $('#AC').hasClass('active') ) {
+	    	$('.admin-version .button-container').addClass('multiple')
+	    } else 
+	    	$('.admin-version .button-container').removeClass('multiple')
+
 	});
 	$('.AAS li').click(function() {
 	    $(this).addClass('active').siblings().removeClass('active');
