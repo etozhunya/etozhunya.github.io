@@ -490,7 +490,44 @@ label, .label, .global-content__search
 					transform: rotate(180deg)
 					@include transition(.1s)
 ///////
-
+.cancel-save__buttons
+	margin-top: 22px
+	text-align: right
+	span
+		appearence: none
+		background-color: transparent
+		border: none
+		font-size: 16px
+		padding: 9px 15px
+		cursor: pointer
+		&:last-child
+			margin-left: 10px		
+			background-color: $highlighted
+			color: #fff
+			border-radius: 8px
+.info-form
+	h1
+		font-size: 21px
+		font-family: helveticaBold
+		color: #343434
+		margin: 11px 0 37px
+	form
+		display: flex
+		justify-content: space-between
+		position: relative
+		flex-flow: wrap
+		width: 100%
+		label
+			width: 45%
+			margin-bottom: 30px
+		div
+			display: flex
+			justify-content: space-between
+		p
+			font-size: $desktopsize
+			color: #838383		
+		.cancel-save__buttons
+			margin-top: 60px	
 
 .client-type
 	font-size: 12px

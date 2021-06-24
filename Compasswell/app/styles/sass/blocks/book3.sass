@@ -155,7 +155,7 @@
             .section1
                 .form
                     text-align: left
-                    label
+                    label, .label
                         -webkit-user-select: none
                         -moz-user-select: none
                         -ms-user-select: none
@@ -164,7 +164,7 @@
                         width: 100%
                         display: block
                         position: relative
-                        padding: 13px 0 18px
+                        padding: 13px 15px 18px 15px
                         border-top: 1px solid #F7F2EE
                         cursor: pointer
                         input
@@ -175,17 +175,17 @@
                             width: 100%
                             height: 100%
                             opacity: 0
-                            &:checked ~ .checkmark::before
-                              content: ''
-                              display: block
-                              right: 5px
-                              top: 50%
-                              transform: translateY(-50%)
-                              width: 14px
-                              height: 14px
-                              position: absolute
-                              background-color: #957248
-                              border-radius: 50px
+                        input:first-child:checked ~ .checkmark::before, .checkmark.active::before 
+                          content: ''
+                          display: block
+                          right: 5px
+                          top: 50%
+                          transform: translateY(-50%)
+                          width: 14px
+                          height: 14px
+                          position: absolute
+                          background-color: #957248
+                          border-radius: 50px
                         h2
                             font-family: RobotoMedium
                             font-size: 16px
@@ -231,8 +231,28 @@
                           transform: translateY(-50%,)    
                         &:last-child
                             border-bottom: 1px solid #F7F2EE
+                        .bs-timepicker
+                            z-index: 99
+                            pointer-events: none
                         &.active
                             background-color: #fcfaf6
+                .timepicker-container
+                    padding: 22px 15px 23px 15px
+                    &__flex
+                        display: flex
+                        .bs-timepicker
+                            opacity: 0
+                            position: absolute
+                            width: 70px
+                            &:first-child
+                                margin-right: 15px
+                    &.active
+                        .bs-timepicker
+                            opacity: 1
+                            pointer-events: all
+                            position: relative
+                            background-color: #fcfaf6
+                            color: $chocolate
             
             .section2
                 .hotelList

@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		var appDigit = 13
 		$('.global-content__title p').text(appDigit + ' ' + 'appointments')
 	}
+	if( mainText == 'My Account') {
+		$('.global-content__title p').css('display', 'none')
+	}
 
 	if($('.flex-table__days').hasClass('in-view')) {
 		$('.global-content__home-only').addClass('home')

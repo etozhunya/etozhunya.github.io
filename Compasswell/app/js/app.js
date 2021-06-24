@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	}
 
-
+	$(function () {
+	  $('.bs-timepicker').timepicker();
+	});
 	// account buttons
 
 	
@@ -163,9 +165,24 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	$('.form label').click(function(){
+		if( $('.timepicker-on').is(":checked")) {
+			// $('.bs-timepicker').addClass('visible')
+		}
 		if ($(this).hasClass('active')) {
 			$('.next3').removeClass('disabled')
 		}
+	})
+	// $(document).on("click",".bs-timepicker", function(){
+	// 	console.log('sadasd')
+	// })
+
+	$('.bs-timepicker').on('change', function () {
+		console.log('asdasd')
+		$('.timepicker-on').prop( "checked" )
+	})
+	$('.bs-timepicker').click( function(){
+
+	    console.log('asdasd')
 	})
 
 	$('#adults').on('change', function () {
@@ -271,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	$('.steps li').click(function() {
 	    $(this).addClass('active').siblings().removeClass('active');
-	    $('.tableWrapper').removeClass('in-view').eq($(this).index()).addClass('in-view');
+	    $('.tableWrapper').removeClass('in-view').eq($(this).attr('data-index')).addClass('in-view');
 	});
 	$('.preTable li').click(function() {
 	    $(this).addClass('active').siblings().removeClass('active');
@@ -296,8 +313,6 @@ document.addEventListener('DOMContentLoaded', () => {
         $('.videoPart__text').removeClass('active').eq($(this).index()).addClass('active');
         $('.videoPart__video img').removeClass('active').eq($(this).index()).addClass('active');
     });
-
-
 
 
 

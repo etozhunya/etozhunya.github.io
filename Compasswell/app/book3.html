@@ -13,7 +13,9 @@
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dist/preview.jpg">
 	
+
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/timepicker.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
 </head>
@@ -1059,6 +1061,15 @@
 							<span>3 spaces available</span>
 							<span class="checkmark"></span>
 						</label>
+						<label class="timepicker-container">
+							<input type="radio" name="time" class="timepicker-on">
+							<h2>Choose another time</h2>
+							<span class="checkmark"></span>
+							<div class="timepicker-container__flex">
+								<input type="text" class="bs-timepicker" placeholder="12:00">
+								<input type="text" class="bs-timepicker" placeholder="13:00">
+							</div>
+						</label>
 					</form>
 					<a href="#" index="3" class="button noHover next next3 disabled">NEXT</a>
 				</section>
@@ -1284,6 +1295,7 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+	<script src="timepicker.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>
