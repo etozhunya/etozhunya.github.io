@@ -45,9 +45,9 @@
 					color: #a48e8b
 					&:hover
 						color: $chocolate	
-	.steps
+	.steps, .sub-steps
 		display: flex
-		margin: 29px 0 56px
+		margin: 29px 0 26px
 		justify-content: space-between
 		li
 			border: 1px solid #E0E0E0
@@ -78,6 +78,12 @@
 				color: #a48e8b
 			&.active
 				background-color: #fff
+	.sub-steps
+		margin-bottom: 56px
+		li
+			padding: 10px
+			&::after
+				content: none
 	.tables
 		position: relative
 		text-align: center
@@ -372,7 +378,12 @@
 					position: relative
 
 		&__One
-
+			.headings
+				&.admin-version
+					li
+						.table
+							li:nth-child(3)
+								width: 10%
 		&__Two
 
 		&__Three
@@ -478,6 +489,7 @@
 				display: flex
 				justify-content: space-between
 				align-items: center
+				position: relative
 				li
 					width: 25%
 					.btn
@@ -509,6 +521,9 @@
 						// width: 100px
 					&:nth-child(3)
 						width: 35%
+					&:nth-child(4)
+						width: 25%
+						padding-left: 15px
 					&:last-child
 						width: 15%
 						text-align: right
@@ -532,6 +547,7 @@
 						span
 							font-family: helveticaRegular
 					&:last-child
+						width: auto
 						text-align: left
 						span
 							font-size: 16px
@@ -563,8 +579,34 @@
 				.button
 					float: right
 					transform: translateY(-45px)
+		&.admin-version
+			.animated
+				position: relative
+				.select-container
+					position: absolute
+					right: 0
+					bottom: 0
+					h5
+						color: #a48e8b;
+						font-family: helveticaRegular;
+						font-size: 14px;
+					.selection
+						margin-bottom: 0
+					.select2-selection__rendered
+						margin-bottom: 0
+					// float: right
+					// transform: translateY(-45px)
+				.button-container
+					width: 100%
+					position: relative
+					text-align: right
+					.button
+						position: relative
+						margin-top: 30px
+						float: none
+						transform: none !important
 
-@media (max-width: 768px) 
+@media (max-width: 1024px) 
 	.shortTable
 		width: 100% !important
 	.widthWrapper

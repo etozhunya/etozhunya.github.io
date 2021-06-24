@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	    	$('.containerWrapper__One').addClass('in-view').siblings().removeClass('in-view')
 	    }
 	    $('.greetings').click(function(){
+	    	$('.sub-steps li').removeClass('active')
 	    	$('.containerWrapper__Two').addClass('in-view').siblings().removeClass('in-view')
 	    	$('.steps li').removeClass('active')
 	    })
@@ -15,6 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	$(function () {
 	  $('.bs-timepicker').timepicker();
 	});
+
+
+	if ($('body').hasClass('haveSelect')) {
+	        $('.select2').select2();
+	}
+
 	// account buttons
 
 	
@@ -266,6 +273,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	})
 
+	// $(document).on("click",".select2", function(){
+	// 	console.log('asdsadssss')
+	// 	$(this).parents('.animated').slideDown()
+	// })		
 
 	$('.specTable li').click(function() {
 	    $(this).find('h4').toggleClass('active');
@@ -277,7 +288,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	    } else
 	        $(this).find('.animated').slideUp();
 	});
-
+	// $('.specTable li .table').click(function() {
+	// 	if (!$(this).parent().hasClass('active')) {
+	// 	    $(this).parent().find('.animated').slideDown();
+	// 	} else
+	// 	    $(this).parent().find('.animated').slideUp();
+	// 	})
 
 	$('.form input').click(function(){
             if($(this).prop("checked") == true){
@@ -288,7 +304,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	$('.steps li').click(function() {
 	    $(this).addClass('active').siblings().removeClass('active');
+	    $('.sub-steps li').removeClass('active')
 	    $('.tableWrapper').removeClass('in-view').eq($(this).attr('data-index')).addClass('in-view');
+	});
+	$('.sub-steps li').click(function() {
+	    $(this).addClass('active').siblings().removeClass('active');
 	});
 	$('.preTable li').click(function() {
 	    $(this).addClass('active').siblings().removeClass('active');
