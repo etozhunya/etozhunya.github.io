@@ -10,6 +10,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	$(window.location.hash).addClass('active').siblings().removeClass('active')
 
+	$('.slider').slick({
+	    slidesToShow: 7,
+	    infinite: false,
+	    centerPadding: '10px',
+	    responsive: [{
+	        breakpoint: 767,
+	        settings: {
+	            slidesToShow: 1,
+	            slidesToScroll: 1
+	        }
+	    }]
+	});
+	$('.remove-photo').click(function() {
+		$('.slider li').toggleClass('editable')
+	})
+	$('.delete-button').click(function() {
+		$(this).parents('.slick-slide').css('display', 'none');
+	})
 
 	var mainText = $('.global-content__core').attr('data-name')
 	if(!$('#homePage').hasClass('active')) {
@@ -30,6 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if($('.flex-table__days').hasClass('in-view')) {
 		$('.global-content__home-only').addClass('home')
+		$('.modal-details__head .clients-mode').css('display', 'none');
+	}
+	if( $('.personal-info__info').hasClass('info-form') ) {
+		$('.content-wrapper__header').css('display', 'none');
 	}
 
 
@@ -55,6 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.animated__order .step-item').removeClass('in-view').eq(0).addClass('in-view')
 		$('.modal').addClass('visible')
 		$('.modal-new-appt').addClass('active')
+		if ( $(this).hasClass('swap')) {
+				$('.modal-details').removeClass('active')
+		}
 	})
 
 	$('.back-to-date-button').click(function() {
@@ -74,7 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	  {
 	  	$('.filter-container').removeClass('active')
 	   $('.filter-calendar-buttons').removeClass('active')
-	  }        
+	  }      
+
+	  if($(event.target).closest('.info__photos__gallery').length == 0)
+	  {
+	   $('.slider li ').removeClass('editable')
+	   return
+	  }        f
 	});
 
 	$('#open-filter').click(function() {
@@ -164,13 +195,22 @@ document.addEventListener('DOMContentLoaded', () => {
 		if($(this).hasClass('block-hours')) {
 			$(this).off('click')
 		}
+
+		if($(this).hasClass('clients-mode')) {
+			$('.modal-details').addClass('clients-mode')
+			$('.clients-mode .NA-btn').addClass('swap')
+			$('.slider').slick('setPosition');
+		}
 		$('.modal').addClass('visible')
 		$('.modal-details__head .click-item').removeClass('active')
 		$('.modal-details__create-note').removeClass('visible')
 		$('.modal-details').addClass('active')
 		$('.info__wrapper__block').removeClass('in-view').eq(0).addClass('in-view')
 		$('.steps-item').removeClass('in-view').eq(0).addClass('in-view')
+
 	})
+
+
 
 
 	// buttons next prev
@@ -373,47 +413,124 @@ if(window.location.hash == false && $('.flex-table__days').hasClass('in-view')) 
 	
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'timeGridWeek',
-           initialDate: "2021-02-15",
-          selectable: true,
-          editable: true,
-          eventContent: function( arg ) {
-                return { html: arg.event.title };
-           },
-          events: [
-                {
-                  id: 1,
-                  title: 'Conference<ul><li>Morning Committee Meetings</li><li>Networking Brunch</li><li>Concurrent Sessions</li><li>Evening Network Reception</li><li>Conference Closing</li></ul>',
-                  start: '2021-02-15 07:00:00',
-                  end: '2021-02-15 12:00:00'
-                },
-                {
-                  id: 2,
-                  title: 'Another <b>Entry with HTML</b>',
-                  start: '2021-02-16 07:00:00',
-                  end: '2021-02-16 08:00:00'
-                },
-                      {
-                  id: 3,
-                  title: '<i>Third Entry with HTML</i>',
-                  start: '2021-02-16 09:00:00',
-                  end: '2021-02-16 10:00:00'
-                }
-              ],
-          headerToolbar: {
-                center: 'today,timeGridWeek,dayGridMonth,prev,next',
-      		}
-        });
-        calendar.render();
+$('.browse-files').click(function() {
+	$(".upload").click();
+})
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function (e) {
+            $('#newImgGallery').attr('src', e.target.result);
+        }
+        
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+function readURL2(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function (e) {
+            $('#newImg').attr('src', e.target.result);
+        }
+        
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$("#addImgGallery").change(function(){
+    readURL(this);
+    $(this).parent().addClass('added')
+});
+$("#imgInp").change(function(){
+    readURL2(this);
+});
 
-        calendarEl.style.display="none"
+//VANILLA JAVASCRIPT DRAG AND DROP
 
-        document.querySelector('.global-calendar-button').addEventListener('click', () => {
-          calendarEl.style.display="block"
-        }); 
+let file;
+
+const dragArea = document.querySelector('.info__photos__drag-and-drop')
+
+dragArea.addEventListener("dragover", (event)=> {
+	event.preventDefault();
+	console.log('file is over dragarea');
+})
+
+dragArea.addEventListener("dragleave", ()=> {
+	console.log('file is outside dragarea')
+})
+
+dragArea.addEventListener("drop", (event)=> {
+	event.preventDefault();
+	file = event.dataTransfer.files[0]
+	let fileType = file.type
+	console.log(fileType)
+	let validExtensions = ['image/png', 'image/jpg']
+	var fileReader = new FileReader();
+
+	fileReader.onload = ()=> {
+		let fileURL = fileReader.result
+		console.log(fileURL)
+		document.getElementById('newImg').setAttribute('src', fileURL)
+		// let imgTag = `<img src="${fileURL}" alt="">`
+		// dragArea.innerHTML = imgTag
+	}
 
 
-      });
+	if (fileReader.readAsDataURL) {
+		fileReader.readAsDataURL(file);
+	} else if (fr.readAsDataurl) {
+		fileReader.readAsDataurl(file);
+	}
+})
+
+
+
+
+// // SLIDER
+
+// document.addEventListener('DOMContentLoaded', function() {
+//         var calendarEl = document.getElementById('calendar');
+//         var calendar = new FullCalendar.Calendar(calendarEl, {
+//           initialView: 'timeGridWeek',
+//            initialDate: "2021-02-15",
+//           selectable: true,
+//           editable: true,
+//           eventContent: function( arg ) {
+//                 return { html: arg.event.title };
+//            },
+//           events: [
+//                 {
+//                   id: 1,
+//                   title: 'Conference<ul><li>Morning Committee Meetings</li><li>Networking Brunch</li><li>Concurrent Sessions</li><li>Evening Network Reception</li><li>Conference Closing</li></ul>',
+//                   start: '2021-02-15 07:00:00',
+//                   end: '2021-02-15 12:00:00'
+//                 },
+//                 {
+//                   id: 2,
+//                   title: 'Another <b>Entry with HTML</b>',
+//                   start: '2021-02-16 07:00:00',
+//                   end: '2021-02-16 08:00:00'
+//                 },
+//                       {
+//                   id: 3,
+//                   title: '<i>Third Entry with HTML</i>',
+//                   start: '2021-02-16 09:00:00',
+//                   end: '2021-02-16 10:00:00'
+//                 }
+//               ],
+//           headerToolbar: {
+//                 center: 'today,timeGridWeek,dayGridMonth,prev,next',
+//       		}
+//         });
+//         calendar.render();
+
+//         calendarEl.style.display="none"
+
+//         document.querySelector('.global-calendar-button').addEventListener('click', () => {
+//           calendarEl.style.display="block"
+//         }); 
+
+
+//       });

@@ -1,0 +1,49 @@
+.personal-info
+	padding: 70px 0 100px 132px
+	max-width: 750px
+	// height: calc(100vh - 82px)
+	// overflow-y: scroll
+	&__name
+		display: flex
+		margin-bottom: 54px
+		div
+			&:nth-child(1)
+				width: 80px
+				height: 80px
+				position: relative
+				img
+					&:nth-child(2)
+						position: absolute
+						right: 0
+						bottom: 0
+						width: 32px
+						height: 32px
+						transform: scale(1.2)
+		
+			&:nth-child(2)
+				display: flex
+				flex-direction: column 
+				justify-content: center
+				padding-left: 16px
+				h1
+					font-family: helveticaBold
+					font-size: 34px
+					margin-bottom: 8px
+					color: #343434
+				span
+					display: block
+					font-size: 14px
+					color: #838383
+
+
+.info-form
+	// padding-bottom: 200px
+	div
+		&:first-child
+			width: 47%
+			label	
+				width: 48%
+	.cancel-save__buttons
+		display: block
+		width: 100%
+		text-align: right

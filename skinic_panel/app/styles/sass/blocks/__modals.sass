@@ -121,9 +121,13 @@
 						margin-left: 16px
 		&__create-note
 			display: none
+			h3
+				&:nth-child(2)
+					display: none
+			.create-note__clients-mode
+				display: none
 			&.visible
 				display: block
-
 		&__buttons
 			text-align: right
 			margin: 25px 0 31px 0
@@ -136,8 +140,6 @@
 					background-color: $highlighted
 					color: #fff
 					border-radius: 8px
-		
-
 		.info
 			height: calc(100% - 109px)
 			position: relative
@@ -159,7 +161,7 @@
 							position: absolute
 							bottom: -5px
 							right: -5px
-							transform: scale(1.1)
+							transform: scale(1.5)
 							&.edit
 								display: block
 
@@ -175,6 +177,12 @@
 							width: 100%
 							display: block
 							color: #343434
+			.unban-button
+				display: none
+			&__status
+				display: none
+			&__photos
+				display: none
 			&__wrapper__block
 				display: none
 				&.in-view
@@ -407,8 +415,6 @@
 						border-radius: 4px
 						padding: 14px 60px
 						font-size: $desktopsize
-
-
 		.show-comments-button
 			font-size: $desktopsize
 			margin-top: 8px
@@ -419,6 +425,159 @@
 			float: right
 			border-bottom: 1px dotted #D5B168			 
 
+
+
+		// CLIENTS MODE MODAL	
+		&.clients-mode
+			.modal-details__head
+				ul
+					&:first-child
+						.add-note
+							display: none
+				div
+					display: none
+			.create-note
+				h3
+					&:first-child
+						display: none
+					&:nth-child(2)
+						display: block
+				&__clients-mode
+					border-radius: 8px
+					border: 1px solid #E0E0E0
+					overflow: hidden
+					display: block
+					#select2-sel6-container
+						padding-left: 30px
+						&::before
+							content: ''
+							display: block
+							position: absolute
+							left: 11px
+							top: 50%
+							transform: translateY(-50%)
+							background: url('../images/dist/calendar-white-icon.svg') center center/contain no-repeat
+							width: 11px
+							height: 11px
+				&__select2-container
+					padding: 8px
+					background-color: #E0E0E0
+				textarea
+					width: calc(100% - 32px)
+					border: none
+				.select2
+					margin: 0	
+				> textarea
+					display: none
+			.info
+				&__name
+					div
+						&:nth-child(1)
+							.edit-logo
+								display: block
+					.unban-button
+						display: inline-block
+						position: absolute
+						right: 0
+						top: 50%
+						transform: translateY(-50%)
+						padding: 9px 26px 
+						border: 1px solid #E0E0E0
+						border-radius: 8px
+				&__status
+					color: #721C24
+					padding: 17px 21px
+					border: 1px solid #F5C6CB
+					display: block
+					border-radius: 4px
+				.delete-container
+					display: none
+				&__photos
+					padding-bottom: 70px
+					overflow: hidden
+					position: relative
+					display: block
+					h3
+						font-family: helveticaMedium
+						font-size: 16px
+						color: #343434
+						margin-bottom: 30px
+					.state
+						color: #A2A2A2
+						font-size: 11px
+						font-family: helveticaMedium
+						position: absolute
+						left: 0
+						top: -20px
+					&__gallery
+						position: relative
+						.remove-photo
+							color: $highlighted
+							font-size: 14px
+							cursor: pointer
+							position: absolute
+							right: 0
+							top: -30px
+						ul
+							li
+								width: 100px
+								height: 100px
+								position: relative
+								.delete-button
+									display: none
+								&.editable
+									.delete-button
+										display: block
+										cursor: pointer
+										position: absolute
+										right: 0
+										top: -10px
+										z-index: 99	
+								&.addImage
+									border: 2px dashed rgba(122,126,131,0.38)
+									border-radius: 8px
+									display: flex !important
+									justify-content: center
+									align-items: center
+									width: 100px !important
+									img
+
+									
+									input 
+										width: 100%
+										height: 100%
+										cursor: pointer
+										position: absolute
+										opacity: 0
+								&.added
+									border: none
+
+					&__drag-and-drop
+						margin-top: 41px
+						padding: 15px
+						border: 2px dashed rgba(122,126,131,0.38)
+						border-radius: 8px
+						display: flex
+						justify-content: center
+						position: relative
+						align-items: center
+						flex-direction: column
+						p
+							color: #8E8E8E
+							&:nth-of-type(1)
+								font-family: helveticaMedium
+								margin: 10px 0
+								color: #343434
+								span
+									color: $highlighted
+									cursor: pointer
+						input 
+							position: absolute
+							opacity: 0
+
+				// &__order
+				// 	h3, span
+				// 		display: none
 
 	.modal-new-appt
 		width: 40vw
