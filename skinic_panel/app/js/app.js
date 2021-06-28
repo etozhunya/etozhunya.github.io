@@ -11,9 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	$(window.location.hash).addClass('active').siblings().removeClass('active')
 
 	$('.slider').slick({
-	    slidesToShow: 7,
+	    slidesToShow: 6,
+	    slidesToScroll: 2,
 	    infinite: false,
-	    centerPadding: '10px',
+	    arrows: false,
 	    responsive: [{
 	        breakpoint: 767,
 	        settings: {
@@ -77,6 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.animated__order .step-item').removeClass('in-view').eq(0).addClass('in-view')
 		$('.modal').addClass('visible')
 		$('.modal-new-appt').addClass('active')
+		if ( $(this).hasClass('swap')) {
+				$('.modal-details').removeClass('active')
+		}
+	})
+	$('.invite-client-button').click( function() {
+		$('.modal').addClass('visible')
+		$('.modal-block-invite').addClass('active')
 		if ( $(this).hasClass('swap')) {
 				$('.modal-details').removeClass('active')
 		}
@@ -195,12 +203,19 @@ document.addEventListener('DOMContentLoaded', () => {
 		if($(this).hasClass('block-hours')) {
 			$(this).off('click')
 		}
-
+		console.log('click-1')
 		if($(this).hasClass('clients-mode')) {
+			console.log('click-1-client')
+			if(event.target.closest('.NA-btn')) {
+				console.log('NA')
+				$('.modal-details').removeClass('active')
+				return
+			}
 			$('.modal-details').addClass('clients-mode')
 			$('.clients-mode .NA-btn').addClass('swap')
 			$('.slider').slick('setPosition');
 		}
+
 		$('.modal').addClass('visible')
 		$('.modal-details__head .click-item').removeClass('active')
 		$('.modal-details__create-note').removeClass('visible')

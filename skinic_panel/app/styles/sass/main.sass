@@ -1,7 +1,7 @@
 @import config
 @import 'blocks/**/*'
 
-p, span, a
+p, span, a, h1,h2,h3,h4,h5
 	font-family: helveticaRegular
 .hover
 	cursor: pointer
@@ -10,6 +10,17 @@ p, span, a
 		border: 1px solid $highlighted !important
 		color: #fff !important
 .next-step-black
+	padding: 9px 11px
+	background-color: #313131
+	border: 1px solid #313131
+	float: right
+	color: #fff
+	border-radius: 4px
+	cursor: pointer
+	font-size: 16px
+	display: inline-block
+	text-align: right
+	margin-top: 10px
 	&.disabled
 		background-color: #8e8888 !important
 		border-color: #8e8888 !important
@@ -565,6 +576,19 @@ label, .label, .global-content__search
 		color: #343434
 		&::before
 			background: url('../images/dist/black-list-icon.svg') center center/cover no-repeat
+textarea
+	border-radius: 8px
+	border: 1px solid #E0E0E0
+	padding: 15px 13px
+	width: 100%
+	box-sizing: border-box
+	font-family: helveticaRegular
+	height: 112px
+	&::placeholder
+		color: #868D96
+		font-family: helveticaRegular
+	&:focus
+		border: 2px solid #A6CBF3
 
 .create-note
 	h3
@@ -572,19 +596,8 @@ label, .label, .global-content__search
 		display: block
 		margin-bottom: 10px
 		font-family: helveticaRegular
-	textarea
-		border: 3px solid #E0E0E0
-		border-radius: 8px
-		padding: 15px 13px
-		width: calc(100% - 32px)
-		font-family: helveticaRegular
-		height: 112px
-		&::placeholder
-			color: #868D96
-			font-family: helveticaRegular
-		&:focus
-			border: 2px solid #A6CBF3
-
+		textarea
+			border: 3px solid #E0E0E0
 .content-wrapper
 	&__header
 		margin: 56px 0 27px 0
@@ -725,6 +738,8 @@ label, .label, .global-content__search
 // SLIDER
 .slick-track
 	display: flex
+	.slick-slide
+		display: flex
 // DATEPICKER CSS
 .content-wrapper__filter-calendar
 	.qs-datepicker-container

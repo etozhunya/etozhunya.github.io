@@ -520,9 +520,19 @@
 							top: -30px
 						ul
 							li
-								width: 100px
+								width: 100px !important
 								height: 100px
 								position: relative
+								overflow: hidden
+								border-radius: 12px
+								cursor: pointer
+								img
+									&:first-child
+										transform: scale(1)
+										transition: 0.2s
+										&:hover
+											transform: scale(1.2)
+											transition: 0.2s
 								.delete-button
 									display: none
 								&.editable
@@ -656,18 +666,7 @@
 			padding: 20px 50px
 		.choose-time-section
 			padding: 0 15px
-		.next-step-black
-			padding: 9px 11px
-			background-color: #313131
-			border: 1px solid #313131
-			float: right
-			color: #fff
-			border-radius: 4px
-			cursor: pointer
-			font-size: 16px
-			display: inline-block
-			text-align: right
-			margin-top: 10px
+			
 
 
 	.modal-block-hours
@@ -746,6 +745,14 @@
 			.create-note
 				margin-top: 41px
 
+	.modal-block-invite
+		@extend .modal-new-appt
+		form
+			label
+				margin-bottom: 30px
+				display: block
+			h3
+				margin-bottom: 10px
 
 
 		

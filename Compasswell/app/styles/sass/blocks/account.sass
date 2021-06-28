@@ -737,11 +737,14 @@
 		.contentWrapper
 			padding: 0 10px 10px 10px
 			.sub-steps
-				display: block
-				width: 100%
-				li
+				&.active
+					display: flex
+					justify-content: space-between
+					flex-flow: wrap
 					width: 100%
-					margin: 0 0 10px 0
+					li
+						width: 45%
+						margin: 0 0 10px 0
 			.headings
 				li
 					.table
