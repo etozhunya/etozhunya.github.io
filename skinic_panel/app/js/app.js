@@ -30,7 +30,31 @@ document.addEventListener('DOMContentLoaded', () => {
 		$(this).parents('.slick-slide').css('display', 'none');
 	})
 
-	var mainText = $('.global-content__core').attr('data-name')
+	mainText = $('.global-content__core').attr('data-name')
+
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+    var text = document.getElementById('headText')
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    mainText = $('.global-content__core').attr('data-name')
+    if( mainText == 'Report') {
+        mainText = 'Report for ' + monthNames[today.getMonth()] + ' ' + yyyy
+        console.log(mainText)
+        $('#headText').text(mainText)
+    }
+    today = 'Today ' + monthNames[today.getMonth()] + ' ' + dd + ' st, ' + yyyy;
+
+    text.innerHTML = today
+
+    if(window.location.hash == false && $('.flex-table__days').hasClass('in-view')) {
+        $('#homePage').addClass('active')
+        
+    }
+
 	if(!$('#homePage').hasClass('active')) {
 		$('#headText').text(mainText)	
 
@@ -384,6 +408,78 @@ document.addEventListener('DOMContentLoaded', () => {
 		$(this).parents('.step-item').removeClass('in-view').prev().addClass('in-view')
 	})
 
+
+
+    // CHART
+    if ($('.global-content__core').attr('data-name') == 'Report') {
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"
+        ];
+        const d = new Date();
+        let currentMonth = ' ' +monthNames[d.getMonth()]
+
+
+        var ctx = document.getElementById('chart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2' + currentMonth, '4' + currentMonth, '6' + currentMonth, '8' + currentMonth, '10' + currentMonth, '12' + currentMonth,
+                 '14' + currentMonth, '16' + currentMonth, '18' + currentMonth, '20' + currentMonth, '22' + currentMonth, '24' + currentMonth, '26' + currentMonth, '28' + currentMonth, '30' + currentMonth],
+                datasets: [{
+                    label: 'Scheduled 1', // Name the series
+                    data: [11, 22, 3, 14, 1, 29, 25, 4, 13, 11, 1, 19, 14, 7, 29], // Specify the data values array
+                    fill: false,
+                    borderColor: '#56E2F8', // Add custom color border (Line)
+                    backgroundColor: '#56E2F8', // Add custom color background (Points and Fill)
+                    borderWidth: 3 // Specify bar border width
+                },
+                          {
+                    label: 'Cancelled', // Name the series
+                    data: [1, 3, 4, 1, 4, 2, 1, 5, 2, 1, 5, 3, 2, 3, 7], // Specify the data values array
+                    fill: false,
+                    borderColor: '#FF5E5C', // Add custom color border (Line)
+                    backgroundColor: '#FF5E5C', // Add custom color background (Points and Fill)
+                    borderWidth: 3 // Specify bar border width
+                },
+                          {
+                    label: 'No show', // Name the series
+                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Specify the data values array
+                    fill: false,
+                    borderColor: '#FFA600', // Add custom color border (Line)
+                    backgroundColor: '#FFA600', // Add custom color background (Points and Fill)
+                    borderWidth: 3 // Specify bar border width
+                }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                            title: {
+                                display: true,
+                                text: 'Number of Appointments',
+                                align: 'start',
+                                color: '#6D6D6D',
+                            },
+                            legend: {
+                                        display: true,
+                                        position: 'top',
+                                        align: 'center',
+                                        labels: {
+                                            font: {
+                                                size: 14
+                                            },
+                                        }
+                            },
+                        }
+            }
+        });
+       
+    }
+
 })
 
 
@@ -408,25 +504,6 @@ $('.TWM__days span').click(function(){
 		})
 	}
 })
-
-
-// VANILLA JAVASCRIPT CALENDAR
-const monthNames = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
-];
-var text = document.getElementById('headText')
-var today = new Date();
-var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-var yyyy = today.getFullYear();
-
-today = 'Today ' + monthNames[today.getMonth()] + ' ' + dd + ' st, ' + yyyy;
-text.innerHTML = today
-
-if(window.location.hash == false && $('.flex-table__days').hasClass('in-view')) {
-	$('#homePage').addClass('active')
-	
-}
 
 $('.browse-files').click(function() {
 	$(".upload").click();
@@ -503,49 +580,53 @@ dragArea.addEventListener("drop", (event)=> {
 
 
 
-// // SLIDER
+// FULL CALENDAR
 
-// document.addEventListener('DOMContentLoaded', function() {
-//         var calendarEl = document.getElementById('calendar');
-//         var calendar = new FullCalendar.Calendar(calendarEl, {
-//           initialView: 'timeGridWeek',
-//            initialDate: "2021-02-15",
-//           selectable: true,
-//           editable: true,
-//           eventContent: function( arg ) {
-//                 return { html: arg.event.title };
-//            },
-//           events: [
-//                 {
-//                   id: 1,
-//                   title: 'Conference<ul><li>Morning Committee Meetings</li><li>Networking Brunch</li><li>Concurrent Sessions</li><li>Evening Network Reception</li><li>Conference Closing</li></ul>',
-//                   start: '2021-02-15 07:00:00',
-//                   end: '2021-02-15 12:00:00'
-//                 },
-//                 {
-//                   id: 2,
-//                   title: 'Another <b>Entry with HTML</b>',
-//                   start: '2021-02-16 07:00:00',
-//                   end: '2021-02-16 08:00:00'
-//                 },
-//                       {
-//                   id: 3,
-//                   title: '<i>Third Entry with HTML</i>',
-//                   start: '2021-02-16 09:00:00',
-//                   end: '2021-02-16 10:00:00'
-//                 }
-//               ],
-//           headerToolbar: {
-//                 center: 'today,timeGridWeek,dayGridMonth,prev,next',
-//       		}
-//         });
-//         calendar.render();
+    document.addEventListener('DOMContentLoaded', function() {
+        if($('#homePage').hasClass('active')) {
 
-//         calendarEl.style.display="none"
+            var mainText = $('.global-content__core').attr('data-name')
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+              initialView: 'timeGridWeek',
+               initialDate: "2021-02-15",
+              selectable: true,
+              editable: true,
+              eventContent: function( arg ) {
+                    return { html: arg.event.title };
+               },
+              events: [
+                    {
+                      id: 1,
+                      title: 'Conference<ul><li>Morning Committee Meetings</li><li>Networking Brunch</li><li>Concurrent Sessions</li><li>Evening Network Reception</li><li>Conference Closing</li></ul>',
+                      start: '2021-02-15 07:00:00',
+                      end: '2021-02-15 12:00:00'
+                    },
+                    {
+                      id: 2,
+                      title: 'Another <b>Entry with HTML</b>',
+                      start: '2021-02-16 07:00:00',
+                      end: '2021-02-16 08:00:00'
+                    },
+                          {
+                      id: 3,
+                      title: '<i>Third Entry with HTML</i>',
+                      start: '2021-02-16 09:00:00',
+                      end: '2021-02-16 10:00:00'
+                    }
+                  ],
+              headerToolbar: {
+                    center: 'today,timeGridWeek,dayGridMonth,prev,next',
+                }
+            });
+            calendar.render();
 
-//         document.querySelector('.global-calendar-button').addEventListener('click', () => {
-//           calendarEl.style.display="block"
-//         }); 
+            calendarEl.style.display="none"
 
+            document.querySelector('.global-calendar-button').addEventListener('click', () => {
+              calendarEl.style.display="block"
+            }); 
 
-//       });
+        }
+  });   
+
