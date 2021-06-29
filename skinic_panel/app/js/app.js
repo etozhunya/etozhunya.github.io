@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if( mainText == 'Report') {
         mainText = 'Report for ' + monthNames[today.getMonth()] + ' ' + yyyy
         console.log(mainText)
+        $('.global-content__core').addClass('reports-mode')
         $('#headText').text(mainText)
     }
     today = 'Today ' + monthNames[today.getMonth()] + ' ' + dd + ' st, ' + yyyy;
@@ -578,7 +579,23 @@ dragArea.addEventListener("drop", (event)=> {
 })
 
 
+// DATA TABLE
 
+$(document).ready(function() {
+  
+ 
+  
+  var table = $('#data-table').DataTable({ 
+        
+    });//End of create main table
+
+  
+  $('#example tbody').on( 'click', 'tr', function () {
+   
+    alert(table.row( this ).data()[0]);
+
+} );
+});
 
 // FULL CALENDAR
 

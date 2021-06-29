@@ -1,0 +1,32 @@
+.global-content__core
+	&.reports-mode
+		height: calc(100vh - 206px)
+		overflow-y: scroll
+		padding-right: 120px
+		position: relative
+		padding-bottom: 100px
+		#data-table_wrapper
+			font-family: helveticaMedium
+			color: #555555
+			#data-table_length, #data-table_filter, #data-table_info, #data-table_paginate
+				display: none
+			thead
+				tr
+					font-size: 15px
+					th
+						padding: 17px 10px 17px 10px
+						border-bottom: 1px solid #ddd
+					.sorting
+						text-align: right
+						padding-right: 20px
+						&:first-child
+							text-align: left
+			tbody
+				tr
+					font-size: 14px
+					text-align: right
+					td
+						padding: 10px
+						&:first-child
+							text-align: left
+
