@@ -1,10 +1,45 @@
 .global-content__core
 	&.reports-mode
-		height: calc(100vh - 206px)
+		height: calc(100vh - 135px)
 		overflow-y: scroll
 		padding-right: 120px
 		position: relative
 		padding-bottom: 100px
+		margin-top: 50px
+		.reports-wrapper
+			&__select
+				display: flex
+				justify-content: space-between
+				align-items: flex-end
+				margin: 39px 0 13px
+				label
+					width: 28%
+					.select2
+						width: 100% !important
+						margin-bottom: 0
+			&__export
+				border-radius: 8px
+				background-color: #F7F7F7
+				width: 28%
+				padding: 11px 22px 11px 40px
+				display: inline-block
+				margin-bottom: 40px
+				cursor: pointer
+				p
+					font-size: 14px
+					color: #343434
+					position: relative
+					&::before
+						content: ''
+						display: inline-block
+						height: 15px
+						width: 12px
+						position: absolute
+						left: -23px
+						top: 50%
+						transform: translateY(-50%)
+						background: url('../images/dist/export-icon.svg') center center/contain no-repeat
+
 		#data-table_wrapper
 			font-family: helveticaMedium
 			color: #555555
@@ -29,4 +64,6 @@
 						padding: 10px
 						&:first-child
 							text-align: left
+			table.dataTable.no-footer
+				border: none
 

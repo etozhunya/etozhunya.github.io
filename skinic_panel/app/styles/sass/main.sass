@@ -256,6 +256,44 @@ label, .label, .global-content__search
 	        	background-color: $highlighted
 	        	h2, span
 		        	color: #fff
+.mfp-container
+	background-color: #000
+.mfp-counter
+		font-family: helveticaRegular
+		font-size: 14px
+.mfp-bottom-bar
+	display: none
+.mfp-content
+	&::after
+		content: 'December 4, 2020 at 16:34'
+		display: block
+		text-align: center
+		position: relative
+		z-index: 1050
+		font-family: helveticaMedium
+		font-size: 16px
+		color: #fff
+		margin-top: 10px
+.mfp-arrow-left, .mfp-arrow-right
+	&::before
+		opacity: 0
+	&::after
+		background: url('../images/dist/gallery-icon.svg') center center/contain no-repeat
+		width: 12px
+		height: 43px
+		border: none
+		margin-left: 0
+.mfp-arrow-left
+	&::after
+		left: 30px
+		transform: rotate(180deg)
+.mfp-arrow-right
+	&::after
+		right: 30px
+		left: auto
+
+
+
 
 
 // CALENDAR MIN CSS
@@ -392,7 +430,7 @@ label, .label, .global-content__search
 	border-radius: 4px !important
 	border: 1px solid #E0E0E0 !important
 	overflow: hidden
-	width: auto !important
+	// width: auto !important
 .select2-results
 	width: auto
 #select2-sel1-results, #select2-sel2-results, #select2-sel5-results, #select2-sel6-results	

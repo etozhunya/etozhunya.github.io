@@ -10,27 +10,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	$(window.location.hash).addClass('active').siblings().removeClass('active')
 
-	$('.slider').slick({
-	    slidesToShow: 6,
-	    slidesToScroll: 2,
-	    infinite: false,
-	    arrows: false,
-	    responsive: [{
-	        breakpoint: 767,
-	        settings: {
-	            slidesToShow: 1,
-	            slidesToScroll: 1
-	        }
-	    }]
+	$('.gallery-button').magnificPopup({
+	    gallery: {
+	        enabled: true
+	    },
+	    type: 'image'
 	});
+
+
+	mainText = $('.global-content__core').attr('data-name')
+
+	if( mainText == 'Clients') {
+		$('.slider').slick({
+		    slidesToShow: 6,
+		    slidesToScroll: 2,
+		    infinite: false,
+		    arrows: false,
+		    responsive: [{
+		        breakpoint: 767,
+		        settings: {
+		            slidesToShow: 1,
+		            slidesToScroll: 1
+		        }
+		    }]
+		});
+	}
+	$('.click-item').click(function() {
+
+		$(this).addClass('active').siblings('').removeClass('active')
+
+		if($('.modal-details__head ul li').eq(1).hasClass('active')) {
+			$('.edit-logo').addClass('edit')
+		} else {
+			$('.edit-logo').removeClass('edit')
+		}
+	})
 	$('.remove-photo').click(function() {
 		$('.slider li').toggleClass('editable')
 	})
 	$('.delete-button').click(function() {
 		$(this).parents('.slick-slide').css('display', 'none');
 	})
-
-	mainText = $('.global-content__core').attr('data-name')
 
     const monthNames = ["January", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December"
@@ -45,6 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
         mainText = 'Report for ' + monthNames[today.getMonth()] + ' ' + yyyy
         console.log(mainText)
         $('.global-content__core').addClass('reports-mode')
+        $('.content-wrapper__header').css('display', 'none');
+        $('.global-content__title p').css('display', 'none');
         $('#headText').text(mainText)
     }
     today = 'Today ' + monthNames[today.getMonth()] + ' ' + dd + ' st, ' + yyyy;
@@ -85,17 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	$('.side-bar__hamburger').click(function() {
 		$('.page').toggleClass('wide')
-	})
-
-	$('.click-item').click(function() {
-
-		$(this).addClass('active').siblings('').removeClass('active')
-
-		if($('.modal-details__head ul li').eq(1).hasClass('active')) {
-			$('.edit-logo').addClass('edit')
-		} else {
-			$('.edit-logo').removeClass('edit')
-		}
 	})
 
 	// HEADER BUTTONS CLICK

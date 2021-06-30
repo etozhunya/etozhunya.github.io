@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
@@ -309,6 +310,113 @@
 		</div>
 		<div class="global-content__core" data-name="Report">
 			<canvas id="chart"></canvas>
+			<div class="reports-wrapper">
+				<div class="reports-wrapper__select">
+					<label for="" class="select-ver-2">
+						<h3>Date range</h3>
+						<select name="" class="select" id="sel7">
+							<option value="">March 2021</option>
+							<option value="">June 2021</option>
+						</select>
+					</label>
+					<label for="" class="select-ver-2">
+						<h3>Calendar</h3>
+						<select name="" class="select" id="sel8">
+							<option value="">All</option>
+							<option value="">All</option>
+						</select>
+					</label>
+					<label for="" class="select-ver-2">
+						<h3>Show</h3>
+						<select name="" class="select" id="sel9">
+							<option value="">All scheduled appointments</option>
+							<option value="">All scheduled appointments</option>
+						</select>
+					</label>
+					<span class="next-step-black hover">Show</span>
+
+				</div>
+				<div class="reports-wrapper__export">
+					<p>Want to Export to a spreadsheet?</p>
+				</div>
+				<table id="data-table" class="display" cellspacing="0" width="100%">
+				        <thead>
+				            <tr>
+				                <th>Type</th>
+				                <th>Cost</th>
+				                <th>Quantity</th>
+				                <th>Total</th>
+				                <th>Total Hours</th>
+				            </tr>
+				        </thead>
+				 
+				        <tbody>
+				            <tr>
+				                <td>Augenring-Korrektur / Correction of tear troughs and dark circles</td>
+				                <td>1 000,00 CHF</td>
+				                <td>2</td>
+				                <td>9 000,00 CHF</td>
+				                <td>4,25</td>
+				            </tr>
+				            <tr>
+				                <td>Besondere Behandlung</td>
+				                <td>1 000,00 CHF</td>
+				                <td>8</td>
+				                <td>9 000,00 CHF</td>
+				                <td>4,8333</td>
+				            </tr>
+				            <tr>
+				                <td>Augenring-Korrektur / Correction of tear troughs and dark circles</td>
+				                <td>1 000,00 CHF</td>
+				                <td>2</td>
+				                <td>3 000,00 CHF</td>
+				                <td>4,35</td>
+				            </tr>
+				            <tr>
+				                <td>Ganze Stirn (inkl. Zornesfalten)</td>
+				                <td>1 000,00 CHF</td>
+				                <td>2</td>
+				                <td>2 000,00 CHF</td>
+				                <td>4,15</td>
+				            </tr>
+				            <tr>
+				                <td>Wangen-Volumenaufbau / Modellierung</td>
+				                <td>1 000,00 CHF</td>
+				                <td>2</td>
+				                <td>1 000,00 CHF</td>
+				                <td>3,5</td>
+				            </tr>
+				            <tr>
+				                <td>Augenring-Korrektur / Correction of tear troughs and dark circles</td>
+				                <td>1 000,00 CHF</td>
+				                <td>2</td>
+				                <td>9 000,00 CHF</td>
+				                <td>4,25</td>
+				            </tr>
+				            <tr>
+				                <td>Augenring-Korrektur / Correction of tear troughs and dark circles</td>
+				                <td>1 000,00 CHF</td>
+				                <td>2</td>
+				                <td>9 000,00 CHF</td>
+				                <td>4,25</td>
+				            </tr>
+				            <tr>
+				                <td>Augenring-Korrektur / Correction of tear troughs and dark circles</td>
+				                <td>1 000,00 CHF</td>
+				                <td>2</td>
+				                <td>9 000,00 CHF</td>
+				                <td>4,25</td>
+				            </tr>
+				            <tr>
+				                <td>Augenring-Korrektur / Correction of tear troughs and dark circles</td>
+				                <td>1 000,00 CHF</td>
+				                <td>2</td>
+				                <td>9 000,00 CHF</td>
+				                <td>4,25</td>
+				            </tr>
+				        </tbody>
+				    </table>
+			</div>
 		</div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.0/dist/chart.min.js"></script>
@@ -2637,10 +2745,11 @@
 		<span class="close-button next-step-black hover">Сonfirm</span>
 	</div>
 </section>
-	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js"></script>
 	<script src="https://unpkg.com/js-datepicker"></script>
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js" ></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
 	
 	<script src="js/app.min.js"></script>
