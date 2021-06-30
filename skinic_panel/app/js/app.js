@@ -10,14 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	$(window.location.hash).addClass('active').siblings().removeClass('active')
 
-	$('.gallery-button').magnificPopup({
-	    gallery: {
-	        enabled: true
-	    },
-	    type: 'image'
-	});
-
-
 	mainText = $('.global-content__core').attr('data-name')
 
 	if( mainText == 'Clients') {
@@ -45,6 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
 			$('.edit-logo').removeClass('edit')
 		}
 	})
+	if ($('.gallery-page__gallery').hasClass('gallery')) {
+		console.log('YEP')
+		$('.gallery-button').magnificPopup({
+		    gallery: {
+		        enabled: true
+		    },
+		    type: 'image'
+		});
+		return
+	}
 	$('.remove-photo').click(function() {
 		$('.slider li').toggleClass('editable')
 	})
