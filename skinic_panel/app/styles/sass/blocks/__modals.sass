@@ -128,6 +128,39 @@
 				display: none
 			&.visible
 				display: block
+		.create-note
+			h3
+				&:first-child
+					display: none
+				&:nth-child(2)
+					display: block
+			&__clients-mode
+				border-radius: 8px
+				border: 1px solid #E0E0E0
+				overflow: hidden
+				display: block
+				#select2-sel6-container
+					padding-left: 30px
+					&::before
+						content: ''
+						display: block
+						position: absolute
+						left: 11px
+						top: 50%
+						transform: translateY(-50%)
+						background: url('../images/dist/calendar-white-icon.svg') center center/contain no-repeat
+						width: 11px
+						height: 11px
+			&__select2-container
+				padding: 8px
+				background-color: #E0E0E0
+			textarea
+				width: calc(100% - 32px)
+				border: none
+			.select2
+				margin: 0	
+			> textarea
+				display: none
 		&__buttons
 			text-align: right
 			margin: 25px 0 31px 0
@@ -435,39 +468,6 @@
 						.add-note
 							display: none
 				div
-					display: none
-			.create-note
-				h3
-					&:first-child
-						display: none
-					&:nth-child(2)
-						display: block
-				&__clients-mode
-					border-radius: 8px
-					border: 1px solid #E0E0E0
-					overflow: hidden
-					display: block
-					#select2-sel6-container
-						padding-left: 30px
-						&::before
-							content: ''
-							display: block
-							position: absolute
-							left: 11px
-							top: 50%
-							transform: translateY(-50%)
-							background: url('../images/dist/calendar-white-icon.svg') center center/contain no-repeat
-							width: 11px
-							height: 11px
-				&__select2-container
-					padding: 8px
-					background-color: #E0E0E0
-				textarea
-					width: calc(100% - 32px)
-					border: none
-				.select2
-					margin: 0	
-				> textarea
 					display: none
 			.info
 				&__name

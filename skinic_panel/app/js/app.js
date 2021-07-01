@@ -107,9 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	$('.select').select2()
 
-	$('.side-bar__hamburger').click(function() {
-		$('.page').toggleClass('wide')
-	})
+	if ($(window).width() > 1024) {
+		$('.side-bar__hamburger').click(function() {
+			$('.page').toggleClass('wide')
+			console.log('asdasd')
+		})
+	}
 
 	// HEADER BUTTONS CLICK
 	$('.NA-btn').click( function() {
@@ -224,6 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	$('.modal-details__head .click-item').click(function() {
 		$('.step-item').removeClass('in-view').eq(0).addClass('in-view')
 		$('.modal-details__create-note').removeClass('visible')
+		$('.add-note').removeClass('active')
 		$('.reschedule-block--step2 .next-step').addClass('disabled')
 		$('.form .click-item').removeClass('active')
 		$('.step-textarea').val('')
@@ -371,11 +375,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// modals
 	$('.add-note').click(function() {
+		$('.add-note-general').addClass('active')
 		$('.modal-details__create-note').addClass('visible')
+		if($('.modal-details__create-note').hasClass('visible')) {
+			$(this).addClass('active')
+		}
+
 	})
 
 	$('.modal-details__buttons span').click(function() {
 		$('.modal-details__create-note').removeClass('visible')
+		$('.add-note-general').removeClass('active')
+		if(!$('.modal-details__create-note').hasClass('visible')) {
+			$(this).addClass('active')
+		} else {
+			$(this).removeClass('active')
+		}
 	})
 
 	$('.modal-details__head .click-item').click(function() {

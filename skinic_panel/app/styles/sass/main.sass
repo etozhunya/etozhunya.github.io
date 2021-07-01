@@ -395,15 +395,15 @@ label, .label, .global-content__search
 
 
 //FULL CALENDAR CSS
-.fc-theme-standard 
-	.fc-scrollgrid
-		border-top: none !important
-		// border-left: none !important
-		border-right: none !important
+// .fc-theme-standard 
+// 	.fc-scrollgrid
+// 		border-top: none !important
+// 		border-left: none !important
+// 		border-right: none !important
 .fc-col-header 
 	tr, th
-		border-left: none
-		border-right: none
+		// border-left: none
+		// border-right: none
 	th:last-child
 		.fc-col-header-cell-cushion 
 			color: #FF4040
@@ -411,7 +411,8 @@ label, .label, .global-content__search
 		font-family: helveticaBold
 		font-size: 13px
 		color: #171616
-		margin-bottom: 8px
+		// margin-bottom: 8px
+		padding: 8px 0
 .fc-daygrid-day-top
 	flex-direction: row
 	font-size: 17px
@@ -709,7 +710,8 @@ textarea
 				height: 12px
 				position: absolute
 				left: 12px
-				top: 12px
+				top: 50%
+				transform: translateY(-50%)
 			&:first-child
 				margin-right: 16px
 				&::before
@@ -854,5 +856,5 @@ textarea
 			border-radius: 50px
 			color: #fff	
 
-
+@import 'media/**/*'
 
