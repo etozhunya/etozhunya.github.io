@@ -19,10 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		    infinite: false,
 		    arrows: false,
 		    responsive: [{
-		        breakpoint: 767,
+		        breakpoint: 1024,
 		        settings: {
-		            slidesToShow: 1,
-		            slidesToScroll: 1
+		            slidesToShow: 3,
+		            slidesToScroll: 2
 		        }
 		    }]
 		});
@@ -47,9 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 		return
 	}
+
 	$('.remove-photo').click(function() {
 		$('.slider li').toggleClass('editable')
 	})
+
 	$('.delete-button').click(function() {
 		$(this).parents('.slick-slide').css('display', 'none');
 	})
@@ -217,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('#calendar').css('display', 'none');
 	})
 	$('.global-calendar-button').click(function(){
-		$('.flex-table__list').removeClass('in-view').eq(1).addClass('in-view');
+		$('.flex-table__list').removeClass('in-view')
 		// $('#calendar').fullCalendar('render');
 	})
 
@@ -513,7 +515,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // SIMULATIN CLICKS FULL CALLENDAR
-$('.TWM__days span').click(function(){
+$('.calendar-nav').click(function(){
+	if ( $('.fc-today-button').attr('disabled')) {
+		$('.day-button').addClass('disabled')
+	} 
+
+	if (!$('.fc-today-button').attr('disabled')) {
+		$('.day-button').removeClass('disabled')
+	} 
 	if(!$('.global-list-button').hasClass('active')) {
 		$('.day-button').click(function(){
 			$( '.fc-today-button' ).click ()

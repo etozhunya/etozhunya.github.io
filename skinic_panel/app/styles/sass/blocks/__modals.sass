@@ -221,7 +221,7 @@
 				&.in-view
 					display: block						
 			.history__block
-				.block__nav
+				.block-nav
 					border-bottom: none
 					margin-top: 52px
 			&__order
@@ -274,7 +274,7 @@
 
 					&::-webkit-scrollbar
 						display: none
-			.block__nav
+			.block-nav
 				display: flex
 				justify-content: flex-start
 				border-bottom: 2px solid #E1E1E1
@@ -414,9 +414,13 @@
 						cursor: pointer
 				&--step3
 					padding-bottom: 150px
-					#step-textarea
+					.step-textarea
+						display: block
 						height: 150px
 						width: 96%
+						border: 1px solid #e0e0e0
+						&:focus
+							border: 3px solid #A6CBF3
 					&__buttons
 						text-align: right
 						margin-top: 22px
@@ -523,16 +527,18 @@
 								width: 100px !important
 								height: 100px
 								position: relative
-								overflow: hidden
 								border-radius: 12px
 								cursor: pointer
+								div
+									overflow: hidden
+									border-radius: 12px
 								img
 									&:first-child
 										transform: scale(1)
-										transition: 0.2s
+										transition: 0.1s
 										&:hover
-											transform: scale(1.2)
-											transition: 0.2s
+											transform: scale(1.4)
+											transition: 0.1s
 								.delete-button
 									display: none
 								&.editable

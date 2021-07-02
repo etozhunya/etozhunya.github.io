@@ -4,6 +4,7 @@
 		.flex-table
 			&__list
 				.table-slot
+					margin-bottom: 25px
 					&__time
 						span
 							top: -9px
@@ -15,11 +16,12 @@
 							width: 100%
 							padding-left: 0
 							li
-								margin: 10px 0
+								margin: 15px 0
 								.client-type
 									padding: 4px 14px 4px 25px
 								p
 									text-align: right
+									font-size: 12px
 								&:nth-child(2)
 									span
 										padding: 0
@@ -28,8 +30,23 @@
 							width: 100%
 							li
 								margin: 0 1.5%
+								height: 47px
 								span
 									padding: 0
 				
 			&__days
+
+
+
+			#calendar
+				.fc-view-harness
+					height: 570px !important
+
+
+@media (max-width: 768px)
+	.content-wrapper
+		.flex-table
+			#calendar
+				.fc-view-harness
+					height: 820px !important
 				

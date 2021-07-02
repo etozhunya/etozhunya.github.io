@@ -138,8 +138,8 @@
 				</div>
 				<div class="side-bar__container">
 					<ul class="side-bar__list">
-						<li class="active click-item">
-							<a href="home.html">
+						<li class="click-item" id="homePage">
+							<a href="index-home.html#homePage" data-name="Home">
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22">
 							  <g id="Group_163762" data-name="Group 163762" transform="translate(1 -1)">
 							    <g id="Group_163761" data-name="Group 163761">
@@ -150,11 +150,11 @@
 							    </g>
 							  </g>
 							</svg>
-							<span>Homes</span>
+							<span>Home</span>
 							</a>
 						</li>
 						<li class="click-item" id="Requests">
-							<a href="index-requests.html">
+							<a href="index-requests.html#Requests" data-name="Requests">
 								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22">
 								  <g id="Group_163763" data-name="Group 163763" transform="translate(1 -1)">
 								    <g id="clipboard" transform="translate(0 2)">
@@ -166,8 +166,8 @@
 								<span>Requests</span>
 							</a>
 						</li>
-						<li class="click-item">
-							<a href="index-clients.html">
+						<li class="click-item" id="Clients">
+							<a href="index-clients.html#Clients" data-name="Clients">
 								<svg xmlns="http://www.w3.org/2000/svg" width="19.446" height="22.569" viewBox="0 0 19.446 22.569">
 								  <g id="Group_163764" data-name="Group 163764" transform="translate(0 0)">
 								    <path id="Path_83318" data-name="Path 83318" d="M13.723,12.153a4.867,4.867,0,1,0-3.436-1.426A4.857,4.857,0,0,0,13.723,12.153Zm0-7.292a2.436,2.436,0,1,1-1.717.713A2.427,2.427,0,0,1,13.723,4.861ZM23.09,17.955a13.169,13.169,0,0,0-6.877-3.638l-2.49,3.077-2.49-3.077a13.169,13.169,0,0,0-6.877,3.638L4,18.311V25H23.446V18.311Zm-2.075,4.614H6.431V19.335a10.723,10.723,0,0,1,3.893-2.278l1.509,1.867,1.89,2.335,1.89-2.335,1.509-1.867a10.723,10.723,0,0,1,3.893,2.278Z" transform="translate(-4 -2.431)" fill="#fff"/>
@@ -176,8 +176,8 @@
 								<span>Clients</span>
 							</a>
 						</li>
-						<li class="click-item">
-							<a href="index-doctors.html">
+						<li class="click-item" id="Doctors">
+							<a href="index-doctors.html#Doctors" data-name="Doctors">
 								<svg xmlns="http://www.w3.org/2000/svg" width="20.446" height="23.571" viewBox="0 0 20.446 23.571">
 								  <g id="Group_163767" data-name="Group 163767" transform="translate(0.5 0.503)">
 								    <path id="Union_5" data-name="Union 5" d="M14120.724,7730.568v-6.689l.354-.354a13.183,13.183,0,0,1,6.877-3.638l2.491,3.077,2.488-3.077a13.169,13.169,0,0,1,6.877,3.638l.358.354v6.689Zm17.016-2.431V7724.9a10.745,10.745,0,0,0-3.893-2.278l-1.512,1.867-.888,1.1v2.547Zm-14.585-3.233v3.233h6.292v-2.545l-.892-1.1-1.508-1.867A10.745,10.745,0,0,0,14123.154,7724.9Zm11.132,2.594v-1h-1v-1h1v-1h1v1h1v1h-1v1Zm-7.274-11.2a4.853,4.853,0,1,1,3.435,1.427A4.846,4.846,0,0,1,14127.012,7716.3Zm1.718-5.153a2.429,2.429,0,1,0,4.1,2.193,2.469,2.469,0,0,0-.138-1.405,2.429,2.429,0,0,0-3.964-.788Z" transform="translate(-14120.724 -7708)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
@@ -186,8 +186,8 @@
 								<span>Doctors</span>
 							</a>
 						</li>
-						<li class="click-item">
-							<a href="index-personal-info.html">
+						<li class="click-item" id="PersonalInfo">
+							<a href="index-personal-info.html#PersonalInfo" data-name="Personal Info">
 								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
 								  <g id="Group_163765" data-name="Group 163765" transform="translate(1 -1)">
 								    <g id="info" transform="translate(0 2)">
@@ -197,11 +197,11 @@
 								    </g>
 								  </g>
 								</svg>
-								<span>Personal <br> Info</span>
+								<span>Personal Info</span>
 							</a>
 						</li>
-						<li class="click-item">
-							<a href="index-reports.html">
+						<li class="click-item" id="Reports">
+							<a href="index-reports.html#Reports" data-name="Reports">
 								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22">
 								  <g id="Group_163766" data-name="Group 163766" transform="translate(1 -1)">
 								    <g id="file-text" transform="translate(0 2)">
@@ -278,13 +278,13 @@
 				</div>
 				<div class="content-wrapper__TWM TWM global-content__home-only">
 					<div class="TWM__days">
-						<span class="active hover click-item day-button">Today</span>
-						<span class="hover click-item week-button">Week</span>
-						<span class="hover click-item month-button">Month</span>
+						<span class="active hover click-item day-button calendar-nav">Today</span>
+						<span class="hover click-item week-button calendar-nav">Week</span>
+						<span class="hover click-item month-button calendar-nav">Month</span>
 					</div>
 					<div class="TWM__arrows">
-						<img src="images/dist/header-arrow-icon.svg" class="TWM__arrow--prev">
-						<img src="images/dist/header-arrow-icon.svg" class="TWM__arrow--next">
+						<img src="images/dist/header-arrow-icon.svg" class="TWM__arrow--prev calendar-nav">
+						<img src="images/dist/header-arrow-icon.svg" class="TWM__arrow--next calendar-nav">
 					</div>
 				</div>
 				<div class="content-wrapper__filter-calendar">
@@ -971,7 +971,7 @@
 							</li>
 						</ul>
 						<div class="info__notes">
-							<ul class="block__nav">
+							<ul class="block-nav">
 								<li class="click-item active"><span>All notes</span></li>
 								<li class="click-item"><span>Medical history</span></li>
 								<li class="click-item"><span>Client comment</span></li>
@@ -1063,36 +1063,68 @@
 										<img src="images/dist/plus-image.svg" alt="" id="newImgGallery">
 									</li>
 									<li>
-										<img src="images/dist/mini-photo1.png" alt="">
-										<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										<a href="index-gallery.html">
+											<div>
+												<img src="images/dist/mini-photo1.png" alt="">
+											</div>
+											<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										</a>	
 									</li>
 									<li>
-										<img src="images/dist/mini-photo2.png" alt="">
-										<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										<a href="index-gallery.html">
+											<div>
+												<img src="images/dist/mini-photo2.png" alt="">
+											</div>
+											<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										</a>	
 									</li>
 									<li>
-										<img src="images/dist/mini-photo3.png" alt="">
-										<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										<a href="index-gallery.html">
+											<div>
+												<img src="images/dist/mini-photo3.png" alt="">
+											</div>
+											<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										</a>	
 									</li>
 									<li>
-										<img src="images/dist/mini-photo4.png" alt="">
-										<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										<a href="index-gallery.html">
+											<div>
+												<img src="images/dist/mini-photo4.png" alt="">
+											</div>
+											<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										</a>	
 									</li>
 									<li>
-										<img src="images/dist/mini-photo5.png" alt="">
-										<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										<a href="index-gallery.html">
+											<div>
+												<img src="images/dist/mini-photo5.png" alt="">
+											</div>
+											<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										</a>	
 									</li>
 									<li>
-										<img src="images/dist/mini-photo6.png" alt="">
-										<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										<a href="index-gallery.html">
+											<div>
+												<img src="images/dist/mini-photo6.png" alt="">
+											</div>
+											<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										</a>	
 									</li>
 									<li>
-										<img src="images/dist/mini-photo7.png" alt="">
-										<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										<a href="index-gallery.html">
+											<div>
+												<img src="images/dist/mini-photo7.png" alt="">
+											</div>
+											<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										</a>	
 									</li>
 									<li>
-										<img src="images/dist/mini-photo8.png" alt="">
-										<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										<a href="index-gallery.html">
+											<div>
+												<img src="images/dist/mini-photo8.png" alt="">
+											</div>
+											<img src="images/dist/delete-button.svg" alt="" class="delete-button">
+										</a>	
 									</li>
 								</ul>
 							</div>
@@ -1114,7 +1146,7 @@
 							<span class="info__order__time">09:00—09:15 (15 min.)</span>
 							<h3>Eingefallene Stirnkontur / Forehead contouring with Dr. med. Dan Iselin</h3>
 						</div>
-						<ul class="block__nav">
+						<ul class="block-nav">
 							<li class="click-item active"><span>All</span></li>
 							<li class="click-item"><span>Past</span></li>
 							<li class="click-item"><span>Future</span></li>
@@ -1268,6 +1300,7 @@
 						</div>
 
 						<p>Reschedule Verena Grotz with From 16 März 2021, 09:45</p>
+
 
 						<section class="step-item reschedule-block--step1 in-view calendar-min-section">
 							<div class="globalCalendar visible">

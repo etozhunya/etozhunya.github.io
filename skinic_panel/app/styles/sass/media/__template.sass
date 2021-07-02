@@ -68,8 +68,6 @@
 				p
 					font-size: 10px
 		.content-wrapper
-			span
-				padding: 5px 10px
 			&__header
 				margin: 26px 0
 				flex-flow: wrap
@@ -82,14 +80,24 @@
 				margin-top: 20px
 				.TWM__days
 					margin-left: 0
-					height: 28px
-					span
-						padding: 5px 10px
-				.TWM__arrows
-					img
-						padding: 5px 10px
 			&__filter-calendar
 				width: auto
-				> span
-					padding-left: 30px
+				.filter-container
+					padding: 15px 
+					left: -37%
+					div
+						&::before
+							top: -20px
+					.checkbox-container
+						p
+							font-size: 12px
+						.checkmark
+							height: 10px
+							width: 10px
+							&::after
+								width: 5px
+								height: 8px
+								top: -2px
+				.click-item
+					padding-left: 30px 
 
