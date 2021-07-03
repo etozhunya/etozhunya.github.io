@@ -233,10 +233,10 @@
 
 				<div class="global-content__flex-container">
 					<div class="global-content__buttons global-content__home-only">
-						<div class="active click-item global-list-button">
+						<div class="active click-item global-list-button" id="home-table-button">
 							<img src="images/dist/content-header-button1.svg" alt="">		
 						</div>
-						<div class="click-item global-calendar-button">
+						<div class="click-item global-calendar-button" id="cal-button">
 							<img src="images/dist/content-header-button2.svg" alt="">	
 						</div>
 					</div>
@@ -277,10 +277,10 @@
 					<span class="hover click-item" id="BH-btn">Block hours</span>
 				</div>
 				<div class="content-wrapper__TWM TWM global-content__home-only">
-					<div class="TWM__days">
-						<span class="active hover click-item day-button calendar-nav">Today</span>
-						<span class="hover click-item week-button calendar-nav">Week</span>
-						<span class="hover click-item month-button calendar-nav">Month</span>
+					<div class="">
+						<span class="day-button calendar-nav">Today</span>
+						<span class="week-button calendar-nav">Week</span>
+						<span class="month-button calendar-nav">Month</span>
 					</div>
 					<div class="TWM__arrows">
 						<img src="images/dist/header-arrow-icon.svg" class="TWM__arrow--prev calendar-nav">
@@ -2721,6 +2721,7 @@
 	</div>
 </section>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src='https://cdn.jsdelivr.net/npm/moment@2.27.0/min/moment.min.js'></script>
 	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js"></script>
 	<script src="https://unpkg.com/js-datepicker"></script>
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
@@ -2728,5 +2729,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
 	
 	<script src="js/app.min.js"></script>
+	,
 </body>
 </html>

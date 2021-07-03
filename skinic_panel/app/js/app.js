@@ -5,6 +5,8 @@
 
 // // Import vendor jQuery plugin example (not module)
 // require('~/app/libs/mmenu/dist/mmenu.js')
+// FULL CALENDAR
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -38,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	})
 	if ($('.gallery-page__gallery').hasClass('gallery')) {
-		console.log('YEP')
 		$('.gallery-button').magnificPopup({
 		    gallery: {
 		        enabled: true
@@ -67,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     mainText = $('.global-content__core').attr('data-name')
     if( mainText == 'Report') {
         mainText = 'Report for ' + monthNames[today.getMonth()] + ' ' + yyyy
-        console.log(mainText)
         $('.global-content__core').addClass('reports-mode')
         $('.content-wrapper__header').css('display', 'none');
         $('.global-content__title p').css('display', 'none');
@@ -112,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	if ($(window).width() > 1024) {
 		$('.side-bar__hamburger').click(function() {
 			$('.page').toggleClass('wide')
-			console.log('asdasd')
 		})
 	}
 
@@ -216,13 +215,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	// home table change content
 	$('.global-list-button').click(function(){
 		$('.flex-table__list').removeClass('in-view').eq(0).addClass('in-view');
-		$('#calendar').css('display', 'none');
+		// $('#calendar').css('display', 'none');
 	})
 	$('.global-calendar-button').click(function(){
 		$('.flex-table__list').removeClass('in-view')
-		// $('#calendar').fullCalendar('render');
 	})
-
 
 
 	// modal head reset steps
@@ -247,11 +244,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		if($(this).hasClass('block-hours')) {
 			$(this).off('click')
 		}
-		console.log('click-1')
 		if($(this).hasClass('clients-mode')) {
-			console.log('click-1-client')
 			if(event.target.closest('.NA-btn')) {
-				console.log('NA')
 				$('.modal-details').removeClass('active')
 				return
 			}
@@ -372,6 +366,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		$(this).toggleClass('multiple')
 		$('.label-container__version').eq(1).toggleClass('active').siblings().toggleClass('active')
 	})
+
+
 
 
 
@@ -516,13 +512,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // SIMULATIN CLICKS FULL CALLENDAR
 $('.calendar-nav').click(function(){
+	console.log('sdsd')
 	if ( $('.fc-today-button').attr('disabled')) {
 		$('.day-button').addClass('disabled')
-	} 
-
-	if (!$('.fc-today-button').attr('disabled')) {
+	} else {
 		$('.day-button').removeClass('disabled')
-	} 
+	}
+
 	if(!$('.global-list-button').hasClass('active')) {
 		$('.day-button').click(function(){
 			$( '.fc-today-button' ).click ()
@@ -576,6 +572,56 @@ $("#imgInp").change(function(){
     readURL2(this);
 });
 
+document.getElementById('cal-button').onclick = function(){
+	if($('#homePage').hasClass('active')) {
+
+	    var mainText = $('.global-content__core').attr('data-name')
+	    var calendarEl = document.getElementById('calendar');
+	    var calendar = new FullCalendar.Calendar(calendarEl, {
+	      initialView: 'timeGridWeek',
+	       initialDate: "2021-02-15",
+	      selectable: true,
+	      editable: true,
+	      eventContent: function( arg ) {
+	            return { html: arg.event.title };
+	       },
+	      events: [
+	            {
+	              id: 1,
+	              title: 'Conference<ul><li>Morning Committee Meetings</li><li>Networking Brunch</li><li>Concurrent Sessions</li><li>Evening Network Reception</li><li>Conference Closing</li></ul>',
+	              start: '2021-02-15 07:00:00',
+	              end: '2021-02-15 12:00:00'
+	            },
+	            {
+	              id: 2,
+	              title: 'Another <b>Entry with HTML</b>',
+	              start: '2021-02-16 07:00:00',
+	              end: '2021-02-16 08:00:00'
+	            },
+	                  {
+	              id: 3,
+	              title: '<i>Third Entry with HTML</i>',
+	              start: '2021-02-16 09:00:00',
+	              end: '2021-02-16 10:00:00'
+	            }
+	          ],
+	      headerToolbar: {
+	            center: 'today,timeGridWeek,dayGridMonth,prev,next',
+	        }
+	    });
+	}
+	calendar.render();
+	document.querySelector('.fc-dayGridMonth-button').click();
+
+
+	document.getElementById('home-table-button').onclick = function(){
+		calendar.destroy();
+	}
+}
+document.querySelector('.global-content__search').onclick = function() {
+	document.querySelector('.fc-timeGridWeek-button').click();	
+}
+
 //VANILLA JAVASCRIPT DRAG AND DROP
 
 let file;
@@ -584,24 +630,20 @@ const dragArea = document.querySelector('.info__photos__drag-and-drop')
 
 dragArea.addEventListener("dragover", (event)=> {
 	event.preventDefault();
-	console.log('file is over dragarea');
 })
 
 dragArea.addEventListener("dragleave", ()=> {
-	console.log('file is outside dragarea')
 })
 
 dragArea.addEventListener("drop", (event)=> {
 	event.preventDefault();
 	file = event.dataTransfer.files[0]
 	let fileType = file.type
-	console.log(fileType)
 	let validExtensions = ['image/png', 'image/jpg']
 	var fileReader = new FileReader();
 
 	fileReader.onload = ()=> {
 		let fileURL = fileReader.result
-		console.log(fileURL)
 		document.getElementById('newImg').setAttribute('src', fileURL)
 		// let imgTag = `<img src="${fileURL}" alt="">`
 		// dragArea.innerHTML = imgTag
@@ -634,53 +676,6 @@ $(document).ready(function() {
 } );
 });
 
-// FULL CALENDAR
 
-    document.addEventListener('DOMContentLoaded', function() {
-        if($('#homePage').hasClass('active')) {
-
-            var mainText = $('.global-content__core').attr('data-name')
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-              initialView: 'timeGridWeek',
-               initialDate: "2021-02-15",
-              selectable: true,
-              editable: true,
-              eventContent: function( arg ) {
-                    return { html: arg.event.title };
-               },
-              events: [
-                    {
-                      id: 1,
-                      title: 'Conference<ul><li>Morning Committee Meetings</li><li>Networking Brunch</li><li>Concurrent Sessions</li><li>Evening Network Reception</li><li>Conference Closing</li></ul>',
-                      start: '2021-02-15 07:00:00',
-                      end: '2021-02-15 12:00:00'
-                    },
-                    {
-                      id: 2,
-                      title: 'Another <b>Entry with HTML</b>',
-                      start: '2021-02-16 07:00:00',
-                      end: '2021-02-16 08:00:00'
-                    },
-                          {
-                      id: 3,
-                      title: '<i>Third Entry with HTML</i>',
-                      start: '2021-02-16 09:00:00',
-                      end: '2021-02-16 10:00:00'
-                    }
-                  ],
-              headerToolbar: {
-                    center: 'today,timeGridWeek,dayGridMonth,prev,next',
-                }
-            });
-            calendar.render();
-
-            calendarEl.style.display="none"
-
-            document.querySelector('.global-calendar-button').addEventListener('click', () => {
-              calendarEl.style.display="block"
-            }); 
-
-        }
-  });   
-
+  document.addEventListener('DOMContentLoaded', function() {     
+});   
