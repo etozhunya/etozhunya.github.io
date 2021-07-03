@@ -215,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// home table change content
 	$('.global-list-button').click(function(){
 		$('.flex-table__list').removeClass('in-view').eq(0).addClass('in-view');
+		$('.day-button').addClass('active').siblings().removeClass('active')
 		// $('#calendar').css('display', 'none');
 	})
 	$('.global-calendar-button').click(function(){
@@ -518,24 +519,22 @@ $('.calendar-nav').click(function(){
 	} else {
 		$('.day-button').removeClass('disabled')
 	}
-
 	if(!$('.global-list-button').hasClass('active')) {
-		$('.day-button').click(function(){
-			$( '.fc-today-button' ).click ()
-		})
-		$('.week-button').click(function(){
+		if ($(this).hasClass('day-button')) {
+			$('.fc-today-button').click ()
+		}
+		if ($(this).hasClass('week-button')) {
 			$( '.fc-timeGridWeek-button' ).click ()
-		})
-		$('.month-button').click(function(){
+		}
+		if ($(this).hasClass('month-button')) {
 			$( '.fc-dayGridMonth-button' ).click ()
-		})
-
-		$('.TWM__arrow--prev').click(function(){
+		}
+		if ($(this).hasClass('TWM__arrow--prev')) {
 			$( '.fc-prev-button' ).click ()
-		})
-		$('.TWM__arrow--next').click(function(){
+		}
+		if ($(this).hasClass('TWM__arrow--next')) {
 			$( '.fc-next-button' ).click ()
-		})
+		}
 	}
 })
 
@@ -573,6 +572,7 @@ $("#imgInp").change(function(){
 });
 
 document.getElementById('cal-button').onclick = function(){
+	$('.week-button').addClass('active').siblings().removeClass('active')
 	if($('#homePage').hasClass('active')) {
 
 	    var mainText = $('.global-content__core').attr('data-name')
@@ -611,15 +611,11 @@ document.getElementById('cal-button').onclick = function(){
 	    });
 	}
 	calendar.render();
-	document.querySelector('.fc-dayGridMonth-button').click();
 
 
 	document.getElementById('home-table-button').onclick = function(){
 		calendar.destroy();
 	}
-}
-document.querySelector('.global-content__search').onclick = function() {
-	document.querySelector('.fc-timeGridWeek-button').click();	
 }
 
 //VANILLA JAVASCRIPT DRAG AND DROP
