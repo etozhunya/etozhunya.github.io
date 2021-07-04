@@ -49,11 +49,16 @@ label, .label, .global-content__search
 	border-radius: 8px
 	padding: 5px
 	position: relative
+	width: 100%
 	overflow: hidden
 	font-size: 11px
 	cursor: pointer
 	&::-webkit-scrollbar
 		display: none
+	.duration
+		position: absolute
+		right: 2px
+		top: 2px	
 	&__head
 		display: flex
 		justify-content: space-between
@@ -115,6 +120,16 @@ label, .label, .global-content__search
 		&::before, &:hover
 			background-color: #D2B162
 			color: #fff
+	&--blocked-hours
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		background-color: #E2E6EA
+		color: #8E8E8E
+		&::before, &:hover
+			background-color: #8E8E8E
+			color: #fff
+			
 
 .ui-timepicker-container
 	z-index: 100 !important
@@ -399,7 +414,22 @@ label, .label, .global-content__search
 // 	.fc-scrollgrid
 // 		border-top: none !important
 // 		border-left: none !important
-// 		border-right: none !important
+// 		border-right: none !important	
+.fc-timegrid-slot-label-cushion, .fc-scrollgrid-sync-inner
+	font-family: helveticaMedium
+	font-size: 12px
+	color: #C2C2C2
+.fc-scrollgrid-sync-inner	
+	color: #838383
+.fc-view-harness
+	height: 660px !important
+.fc-timegrid-slot-lane
+	border: 1px solid #E0E0E0 !important
+// .fc .fc-scrollgrid
+// 	border: none
+.fc-theme-standard td, .fc-theme-standard th
+	// border-bottom: none
+	// border-top: none
 .fc-col-header 
 	tr, th
 		// border-left: none
@@ -419,6 +449,18 @@ label, .label, .global-content__search
 	font-family: helveticaRegular
 	color: #343A40
 	padding: 10px 0 0 10px
+.fc-v-event
+	border: none
+	background-color: transparent
+.fc-event-main
+	.widget
+		height: 100%
+		span
+			font-family: helveticaRegular
+		h2
+			font-family: helveticaBold
+.fc-timegrid-slot-minor
+	border-top-style: hidden !important
 
 
 	

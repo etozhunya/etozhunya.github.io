@@ -588,21 +588,27 @@ document.getElementById('cal-button').onclick = function(){
 	      events: [
 	            {
 	              id: 1,
-	              title: 'Conference<ul><li>Morning Committee Meetings</li><li>Networking Brunch</li><li>Concurrent Sessions</li><li>Evening Network Reception</li><li>Conference Closing</li></ul>',
+	              title: '<div class="widget widget--violet"><span>Dr. med. Dan Iselin</span><h2>Sharlini Goncalves</h2><span>Nachkontrolle Hyaluron</span><span class="duration">90min</span></div',
 	              start: '2021-02-15 07:00:00',
-	              end: '2021-02-15 12:00:00'
+	              end: '2021-02-15 09:00:00'
 	            },
 	            {
 	              id: 2,
-	              title: 'Another <b>Entry with HTML</b>',
-	              start: '2021-02-16 07:00:00',
-	              end: '2021-02-16 08:00:00'
+	              title: '<div class="widget widget--red"><span>Dr. med. Dan Iselin</span><h2>Sharlini Goncalves</h2><span>Nachkontrolle Hyaluron</span><span class="duration">90min</span></div',
+	              start: '2021-02-15 10:00:00',
+	              end: '2021-02-15 12:00:00'
 	            },
 	                  {
 	              id: 3,
-	              title: '<i>Third Entry with HTML</i>',
-	              start: '2021-02-16 09:00:00',
-	              end: '2021-02-16 10:00:00'
+	              title: '<div class="widget widget--green"><span>Dr. med. Dan Iselin</span><h2>Sharlini Goncalves</h2><span>Nachkontrolle Hyaluron</span><span class="duration">90min</span></div',
+	              start: '2021-02-16 07:00:00',
+	              end: '2021-02-16 12:00:00'
+	            },
+	                  {
+	              id: 4,
+	              title: '<div class="widget widget--blocked-hours"><h2>Blocked Hours</h2><span class="duration">90min</span></div',
+	              start: '2021-02-16 14:00:00',
+	              end: '2021-02-16 15:00:00'
 	            }
 	          ],
 	      headerToolbar: {
