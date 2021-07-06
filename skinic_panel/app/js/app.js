@@ -77,8 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     text.innerHTML = today
 
-    if(window.location.hash == false && $('.flex-table__days').hasClass('in-view')) {
+    if((window.location.hash == false && window.location.hash == homePage) && $('.flex-table__days').hasClass('in-view')) {
         $('#homePage').addClass('active')
+        $('.global-content__header').addClass('home-page-mode')
         
     }
 
@@ -112,6 +113,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	if ($(window).width() > 1024) {
 		$('.side-bar__hamburger').click(function() {
 			$('.page').toggleClass('wide')
+		})
+	}
+	if ($(window).width() < 768) {
+		$('.side-bar__hamburger').click(function() {
+			$('.page__left-side').toggleClass('active')
+			$(this).find('span').toggleClass('active')
 		})
 	}
 
@@ -623,6 +630,32 @@ document.getElementById('cal-button').onclick = function(){
 		calendar.destroy();
 	}
 }
+
+// MEDIA JS
+
+var lastScrollTop = 0;
+$(window).scroll(function() {
+	var st = $(window).scrollTop();
+	if (st > lastScrollTop){
+		console.log('asdasds')
+		$('.content-wrapper__header').addClass('hidden')
+	} else {
+	  $('.content-wrapper__header').removeClass('hidden')
+	}
+	lastScrollTop = st;
+});
+// function step() {
+	
+
+//    window.requestAnimationFrame(step)
+// }   
+// window.requestAnimationFrame(step)
+
+
+
+
+
+
 
 //VANILLA JAVASCRIPT DRAG AND DROP
 

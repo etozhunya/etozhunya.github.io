@@ -36,7 +36,7 @@
 								span
 									padding: 0
 				
-			&__days, #calendar
+			&__days, #calendar.fc
 				height: calc(100vh - 72px - 46px - 83px - 18px)
 
 
@@ -45,12 +45,101 @@
 					height: 550px !important
 
 
-@media (max-width: 768px)
+@media (width: 768px)
 	.content-wrapper
 		.flex-table
 			#calendar
-				.fc-view-harness
-					height: 800px !important
-			&__days, #calendar
-				height: calc(100vh - 72px - 46px - 83px - 88px)
+				&.fc
+					.fc-view-harness
+						height: 800px !important
+			&__days, #calendar.fc
+				height: calc(100vh - 72px - 46px - 83px - 28px)
+// MOBILE
+@media (max-width: 767px)
+	.content-wrapper
+		&__header
+			flex-flow: wrap
+			margin-top: 50px
+			justify-content: space-between
+			position: fixed
+			top: 50px
+			z-index: 1090
+			background-color: #fff
+			width: calc(100vw - 20px)
+			padding-bottom: 5px
+			@include transition(.5s)
+			transition-delay: .1s
+			.click-item
+				font-size: 12px
+				padding: 12px 0
+				text-align: center
+			&.hidden
+				transform: translateY(-100%)
+				@include transition(.5s)
+				transition-delay: .1s
+		&__app-hours
+			width: 55%
+			position: relative
+			span
+				&:first-child
+					width: 60%
+				&:nth-child(2)
+					width: 40%
+		.TWM
+			order: 3
+			width: 100%
+			justify-content: center
+			margin-top: 10px
+			&__days
+				margin: 0
+				span
+					font-size: 12px
+					padding: 10px
+		&__filter-calendar
+			width: 40%
+			position: relative
+			.click-item
+				width: 50%
+				padding-left: 13px
+				&:first-child
+					margin-right: -1px
+					border-radius: 8px 0 0 8px
+					width: 40%
+					&::before
+						left: 5px
+				&:nth-child(2)
+					width: 60%
+					border-radius: 0px 8px 8px 0px
+				&::before
+					left: 7px
 				
+
+		.flex-table
+			&__list
+				.table-slot
+					&__time
+						span
+							top: -4px
+					.info-wrapper
+						flex-flow: wrap
+						&__info
+							width: 100%
+							flex-flow: wrap
+							li
+								&:nth-child(1)
+									width: 50%
+								&:nth-child(2)
+									width: 50%
+									text-align: right
+								&:nth-child(3)
+									width: 100%
+									margin: 0
+									p
+										text-align: center
+						&__notes
+							width: 100%
+							flex-flow: wrap
+							justify-content: space-between
+							li
+								width: 48% 
+								margin: 0 0 10px 0

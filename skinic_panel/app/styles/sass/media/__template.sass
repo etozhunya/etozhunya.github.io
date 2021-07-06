@@ -1,5 +1,5 @@
 // IPAD
-@media (max-width: 1024px)
+@media (min-width: 768px) and (max-width: 1024px)
 	.page
 		.page__left-side
 			transition: none
@@ -101,3 +101,126 @@
 				.click-item
 					padding-left: 30px 
 
+// MOBILE
+@media (max-width: 767px)
+	.page
+		height: auto
+		&__white-space-mob-only
+			display: block
+			position: fixed
+			left: 0
+			top: 0
+			background-color: #fff
+			width: 100vw
+			height: 100px
+			z-index: 1099
+		&__left-side
+			width: 100vw
+			height: 100vh
+			position: fixed
+			z-index: 1099
+			left: -100%
+			transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
+			&.active
+				left: 0
+				transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
+				.side-bar
+					&.full
+						display: flex
+						right: 100%
+						width: 100vw
+						transition-delay: 0s
+						right: 0
+						transition-delay: 0s
+			.side-bar
+				padding: 25px
+				background-color: #323232
+				&__header
+					position: absolute
+					left: 90px
+					top: 30px
+					a
+						
+				&__hamburger
+					position: fixed
+					left: 10px
+					top: 10px
+					transform: translate3d(0,0,0)
+					width: 50px
+					background-color: #000
+					border-radius: 12px
+					display: flex
+					justify-content: center
+					span
+						&::before, &::after
+							transition-delay: 0s !important
+						&.active
+							background-color: transparent
+							&::before
+								transform: rotate(45deg)
+								transition: 0.2s
+								top: 0
+							&::after
+								transform: rotate(-45deg)
+								transition: 0.2s
+								top: 0
+				&.minimized
+					display: none
+		.global-content
+			width: 100vw
+			padding: 55px 10px
+			border-radius: 0
+			&__header
+				position: fixed
+				left: 10px
+				width: calc(100% - 20px)
+				z-index: 1100
+				flex-flow: wrap
+				align-items: center
+				.account
+					position: fixed
+					z-index: 1100
+					right: 10px
+					top: 11px
+					width: auto
+					margin: 0
+					align-items: center
+					img
+						margin-right: 0
+						order: 2
+						width: 32px
+					span
+						font-size: 10px
+						&:first-child
+							margin-top: 0
+					div
+						order: 1
+						text-align: right
+						margin-right: 5px
+			&.hidden
+				display: none
+			&__flex-container
+				justify-content: space-between
+				width: 50%
+			&__buttons
+				&.home
+					display: none
+			&__title
+				order: 1
+				h1
+					font-size: 16px
+				p
+					font-size: 11px
+			&__search
+				width: 50%
+				order: 3
+				input
+					appearance: none
+					padding: 5px 13px
+			.flex-table
+				&__list
+					height: auto
+
+
+
+		
