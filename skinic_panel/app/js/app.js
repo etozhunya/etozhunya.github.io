@@ -636,7 +636,7 @@ document.getElementById('cal-button').onclick = function(){
 var lastScrollTop = 0;
 $(window).scroll(function() {
 	var st = $(window).scrollTop();
-	if (st > lastScrollTop){
+	if (st > 150 && st > lastScrollTop){
 		console.log('asdasds')
 		$('.content-wrapper__header').addClass('hidden')
 	} else {
