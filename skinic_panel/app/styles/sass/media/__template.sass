@@ -118,7 +118,7 @@
 			width: 100vw
 			height: 100vh
 			position: fixed
-			z-index: 1099
+			z-index: 1100
 			left: -100%
 			transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
 			&.active
@@ -140,7 +140,8 @@
 					left: 90px
 					top: 30px
 					a
-						
+				&__list
+					width: 100vw
 				&__hamburger
 					position: fixed
 					left: 10px
@@ -166,6 +167,10 @@
 								top: 0
 				&.minimized
 					display: none
+				&__footer
+						max-width: 50vw
+						p, span
+							font-size: 11px
 		.global-content
 			width: 100vw
 			padding: 55px 10px
@@ -174,7 +179,7 @@
 				position: fixed
 				left: 10px
 				width: calc(100% - 20px)
-				z-index: 1100
+				z-index: 1099
 				flex-flow: wrap
 				align-items: center
 				.account
@@ -214,13 +219,45 @@
 			&__search
 				width: 50%
 				order: 3
-				input
-					appearance: none
-					padding: 5px 13px
+				text-align: right
+				position: relative
+				&::before
+					content: none
+				.search-field
+					background-color: transparent
+					background: url('../images/dist/search-button.svg') 5px center/contain no-repeat
+					background-size: 15px 15px
+					border: none
+					cursor: pointer
+					height: 30px
+					margin: 3px 0
+					padding: 0 0 0 34px
+					position: relative
+					-webkit-transition: width 400ms ease, background 400ms ease
+					transition: width 400ms ease, background 400ms ease
+					width: 0px
+					cursor: pointer
+				.search-field:focus
+					border: 1px solid #e0e0e0
+					cursor: text
+					outline: 0
+					width: 100%
 			.flex-table
 				&__list
 					height: auto
-
+			.content-wrapper
+				&__filter-calendar
+					.filter-container
+							width: 260px
+							padding: 34px 10px
+							left: -80%
+							div
+								&::before
+									left: 56%
+							.checkbox-container
+								p
+									font-size: 14px
+									margin: 0 0 0 20px
 
 
 		

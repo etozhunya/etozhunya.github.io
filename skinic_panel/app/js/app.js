@@ -633,17 +633,39 @@ document.getElementById('cal-button').onclick = function(){
 
 // MEDIA JS
 
+
+$('.side-bar__list .click-item').click(function() {
+	console.log('asds')
+	$('.page__left-side').removeClass('active')
+	$('.page__left-side').css("transition", "0s")
+	$('.side-bar__hamburger span').toggleClass('active')
+})
+
+
+function throttle(cb, interval) {
+	var now = Date.now();
+	return function() {
+	  if ((now + interval - Date.now()) < 0) {
+		cb();
+		now = Date.now();
+	  }
+	}
+  }
+
 var lastScrollTop = 0;
-$(window).scroll(function() {
-	var st = $(window).scrollTop();
-	if (st > 150 && st > lastScrollTop){
-		console.log('asdasds')
+function scrollFunction() {
+	var currentScrollTop = $(window).scrollTop();
+	console.log(currentScrollTop)
+	if (currentScrollTop > 150 && currentScrollTop > lastScrollTop){	
 		$('.content-wrapper__header').addClass('hidden')
 	} else {
 	  $('.content-wrapper__header').removeClass('hidden')
 	}
-	lastScrollTop = st;
-});
+	lastScrollTop = currentScrollTop;
+}
+
+window.onscroll = throttle(scrollFunction, 500);
+  
 // function step() {
 	
 
