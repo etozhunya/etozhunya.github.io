@@ -1,5 +1,5 @@
 // IPAD
-@media (max-width: 1024px)
+@media (min-width: 768px) and (max-width: 1024px)
 	.modal
 		.modal-block
 			&.active
@@ -34,4 +34,13 @@
 					&:nth-child(2)
 						margin-top: 50px
 						justify-content: flex-start
+@media (max-width: 768px)
+	.modal
+		.modal-block
+			&.active
+				width: 100vw
+				padding: 25px
+		.modal-new-appt
+			.calendar-min-section
+				padding: 20px
 		

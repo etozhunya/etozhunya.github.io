@@ -520,7 +520,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // SIMULATIN CLICKS FULL CALLENDAR
 $('.calendar-nav').click(function(){
-	console.log('sdsd')
 	if ( $('.fc-today-button').attr('disabled')) {
 		$('.day-button').addClass('disabled')
 	} else {
@@ -635,7 +634,6 @@ document.getElementById('cal-button').onclick = function(){
 
 
 $('.side-bar__list .click-item').click(function() {
-	console.log('asds')
 	$('.page__left-side').removeClass('active')
 	$('.page__left-side').css("transition", "0s")
 	$('.side-bar__hamburger span').toggleClass('active')
@@ -655,8 +653,7 @@ function throttle(cb, interval) {
 var lastScrollTop = 0;
 function scrollFunction() {
 	var currentScrollTop = $(window).scrollTop();
-	console.log(currentScrollTop)
-	if (currentScrollTop > 150 && currentScrollTop > lastScrollTop){	
+	if (currentScrollTop > 200 && currentScrollTop > lastScrollTop){	
 		$('.content-wrapper__header').addClass('hidden')
 	} else {
 	  $('.content-wrapper__header').removeClass('hidden')
@@ -665,6 +662,11 @@ function scrollFunction() {
 }
 
 window.onscroll = throttle(scrollFunction, 500);
+// $(window).scroll(function() {
+// 	if ($(this).scrollTop() < 200) {
+// 		$('.content-wrapper__header').removeClass('hidden')	
+// 	}
+// })
   
 // function step() {
 	
