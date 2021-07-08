@@ -97,12 +97,14 @@
 		display: none
 .select:focus, input:focus, .image-link:focus 
 	outline: none
-.timepicker
-	.title
-		font-family: helveticaMedium
-		color: #4a1d18 !important
-		font-size: 18px
-		letter-spacing: 2px 
+.ui-timepicker
+	cursor: pointer
+	.ui-menu-item
+		.ui-corner-all
+			font-family: helveticaMedium
+			color: #4a1d18 !important
+			font-size: 15px
+			letter-spacing: 2px 
 
 
 
@@ -248,23 +250,25 @@ input:focus::-webkit-input-placeholder
 			font-size: 12px
 			font-family: helveticaRegular
 			color: #957248
+			display: inline-block
 
-			.digit
-				font-size: 13px
-				font-family: helveticaBold
-				margin-right: 15px
-				position: relative
-				&::after
-					content: ''
-					display: block
-					border-radius: 50px
-					left: -9px
-					top: -4px
-					z-index: -1
-					position: absolute
-					width: 26px
-					height: 26px
-					background-color: #FCFAF6
+		.digit
+			font-size: 13px
+			font-family: helveticaBold
+			margin-right: 15px
+			position: relative
+			&::after
+				content: ''
+				display: block
+				border-radius: 50px
+				left: 50%
+				top: 50%
+				transform: translate3d(-50%,-50%,0)
+				z-index: -1
+				position: absolute
+				width: 26px
+				height: 26px
+				background-color: #FCFAF6
 		&:last-child
 			p
 				&::after
@@ -272,10 +276,10 @@ input:focus::-webkit-input-placeholder
 		&.active
 			p
 				color: #4C1F1A
-				.digit
-					color: #fff
-					&::after
-						background-color: #BF9159
+			.digit
+				color: #fff
+				&::after
+					background-color: #BF9159
 
 			
 
@@ -483,13 +487,13 @@ input:focus::-webkit-input-placeholder
 				&::after
 					content: none
 			p
-				font-size: 13px
+				font-size: 13px !important
 				font-family: helveticaLight
 				margin: 0
 				line-height: 18px
 				&:last-of-type
-					font-size: 12px;
-					max-width: 235px;
+					font-size: 12px !important
+					max-width: 235px
 					margin: 0 auto 24px !important
 			h4
 				font-family: EBgaramondMedium

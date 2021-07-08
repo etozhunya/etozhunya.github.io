@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Book2</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.ico">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
+</head>
+
+<body class="haveSlider book2 book haveDatePicker">
+	<header class="header">
+		<div class="header__top widthWrapper">
+			<a href="home.html" class="logo">
+				<img src="images/src/logo.svg" class="logo">		
+				<p>Compasswell <br>
+				Health & Relax</p>
+			</a>
+			<div class="centerLink">
+				<a href="account.html#bookinglist">all bookings</a>
+			</div>
+			<div class="rightLinks">
+				<a href="aboutUs.html">About Us</a>
+				<div class="lang">
+					<a href="#">DE</a>
+					<a href="#" class="active">EN</a>
+				</div>
+			</div>
+		</div>
+		<div class="header__media">
+			<img src="images/src/video.jpg" alt="">
+		</div>
+	</header>
+	<section class="transformed">
+		<div class="widthWrapper searchContainer">
+			<ul class="searchContainer__searchBar">
+				<li>
+					<div class="guests">
+						<h3>Guests</h3>
+						<span class="openCalc"><span id="adultDigit">0</span> Adult, <span id="childrenDigit">0</span> Children</span>
+						<div class="function">
+							<div class="function__wrapper">
+								<div>
+									<h3>Adults</h3>
+									<span>From 13 years</span>
+								</div>
+								<div class="calculator">
+								    <button class="calc disabled" value="minus">-</button>
+								    <input id="adults" type="text" class="calcInput" value="0">  
+								    <button class="calc" value="plus">+</button>
+								</div>
+							</div>
+							<div class="function__wrapper">
+								<div>
+									<h3>Children</h3>
+									<span>Age 2-12</span>
+								</div>
+								<div class="calculator">
+								    <button class="calc disabled" value="minus">-</button>
+								    <input id="children" type="text" readonly="" class="calcInput" value="0">  
+								    <button class="calc" value="plus">+</button>
+								</div>
+							</div>
+							<div class="close"></div>
+						</div>
+					</div>
+				</li>
+				<li class="specialWrapper">
+					<h3>Check-in</h3>
+						<input type="text" class="datePicker" readonly="" id="checkin" placeholder="Tue 21 April 2021">
+				</li>
+				<li>
+					<label for="checkout">
+						<h3>Check-out</h3>
+						<input type="text" placeholder="Tue 28 April 2021" readonly="" class="datePicker" id="checkoff">
+					</label>
+				    <button class="button noHover">SEARCH</button>					
+				</li>
+			</ul>
+			<div class="searchContainer__wrapper">
+				<span class="searchContainer__wrapper-pre">Special Codes or rates</span>
+				<div class="searchContainer__wrapper-content">
+					<input type="text" placeholder="Promo Code">
+					<input type="text" placeholder="Room Number">
+					<input type="text" placeholder="Agent ID">
+				</div>
+				<div class="buttons">
+					<span class="button noHover">Cancel</span>
+					<span class="button noHover">APPLY</span>
+				</div>
+			</div>
+		</div>
+		<div class="customizeCard widthWrapper">
+			<ul class="generalSteps">
+				<li class="active"><p><span class="digit">1</span>CUSTOMIZE</p></li>
+				<li><p><span class="digit">2</span>CHECKOUT</p></li>
+			</ul>
+			<h5>Customize Your Card</h5>
+			<div class="customizeCard__flexContainer">
+				<div  class="customizeCard__flexContainer--items">
+					<ul class="customizeCard__flexContainer--items slider4">
+						<li class="list">
+							<img src="images/src/logo.svg" alt="">
+							<h1>COMPASSWELL</h1>
+							<span>HEALTH & RELAX</span>
+						</li>
+						<li class="list">
+							<img src="images/src/logo.svg" alt="">
+							<h1>COMPASSWELL</h1>
+							<span>HEALTH & RELAX</span>
+						</li>
+						<li class="list">
+							<img src="images/src/logo.svg" alt="">
+							<h1>COMPASSWELL</h1>
+							<span>HEALTH & RELAX</span>
+						</li>
+					</ul>
+					<a href="#" class="button noHover">ORDER CARDS FOR GUESTS</a>
+				</div>
+				<div class="customizeCard__flexContainer--payment">
+					<h4>Your Card</h4>
+					<span>Your card is empty</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="widthWrapper">
+			<div class="bookTreatment">
+				<h1 class="title">BOOK</h1>
+				<p>Your Treatment</p>
+				<ul class="cardsList hotelList slider3">
+					<li class="cardsList__item hotelList__item">
+						<span class="borderDiv"></span>
+						<div class="learnMore" style="background: url('images/src/turkishHotel.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+						<div class="cardText">
+							<h3>Turkish <br class="ipad2"> Experience</h3>
+							<p>The package includes full access to the Thermal Spa Experience</p>
+							<h4 class="price">$245<span>499$</span></h4>
+							<p>60 min – True Transformation Organic Facial +</p>
+							<a href="book3.html" class="button">TRY IT NOW</a>
+						</div>	
+					</li>
+					<li class="cardsList__item hotelList__item">
+						<span class="borderDiv"></span>
+						<!-- <img src="images/src/afternoons.jpg"> -->
+						<div class="learnMore" style="background: url('images/src/afternoons.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+						<div class="cardText">
+							<h3>Autumnal Afternoons</h3>
+							<p>Book yourself an afternoon in the spa for some well deserved R&R </p>
+							<h4 class="price">$187<span>499$</span></h4>
+							<p>60 min – True Transformation Organic Facial +</p>
+							<a href="book3.html" class="button">TRY IT NOW</a>
+						</div>	
+					</li>
+					<li class="cardsList__item hotelList__item">
+						<span class="borderDiv"></span>
+						<!-- <img src="images/src/tissue.jpg"> -->
+						<div class="learnMore" style="background: url('images/src/tissue.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+						<div class="cardText">
+							<h3>Deep Tissue Message</h3>
+							<p>A vigorous workout for the back, perfect to alleviate high stress levels.</p>
+							<h4 class="price">$143<span>499$</span></h4>
+							<p>60 min – True Transformation Organic Facial +</p>
+							<a href="book3.html" class="button">TRY IT NOW</a>
+						</div>	
+					</li>
+					<li class="cardsList__item hotelList__item">
+						<span class="borderDiv"></span>
+						<div class="learnMore" style="background: url('images/src/turkishHotel.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+						<div class="cardText">
+							<h3>Turkish <br class="ipad2"> Experience</h3>
+							<p>The package includes full access to the Thermal Spa Experience</p>
+							<h4 class="price">$245<span>499$</span></h4>
+							<p>60 min – True Transformation Organic Facial +</p>
+							<a href="book3.html" class="button">TRY IT NOW</a>
+						</div>	
+					</li>
+					<li class="cardsList__item hotelList__item">
+						<span class="borderDiv"></span>
+						<!-- <img src="images/src/afternoons.jpg"> -->
+						<div class="learnMore" style="background: url('images/src/afternoons.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+						<div class="cardText">
+							<h3>Autumnal Afternoons</h3>
+							<p>Book yourself an afternoon in the spa for some well deserved R&R </p>
+							<h4 class="price">$187<span>499$</span></h4>
+							<p>60 min – True Transformation Organic Facial +</p>
+							<a href="book3.html" class="button">TRY IT NOW</a>
+						</div>	
+					</li>
+					<li class="cardsList__item hotelList__item">
+						<span class="borderDiv"></span>
+						<!-- <img src="images/src/tissue.jpg"> -->
+						<div class="learnMore" style="background: url('images/src/tissue.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+						<div class="cardText">
+							<h3>Deep Tissue Message</h3>
+							<p>A vigorous workout for the back, perfect to alleviate high stress levels.</p>
+							<h4 class="price">$143<span>499$</span></h4>
+							<p>60 min – True Transformation Organic Facial +</p>
+							<a href="book3.html" class="button">TRY IT NOW</a>
+						</div>	
+					</li>
+					<li class="cardsList__item hotelList__item">
+						<span class="borderDiv"></span>
+						<div class="learnMore" style="background: url('images/src/turkishHotel.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+						<div class="cardText">
+							<h3>Turkish <br class="ipad2"> Experience</h3>
+							<p>The package includes full access to the Thermal Spa Experience</p>
+							<h4 class="price">$245<span>499$</span></h4>
+							<p>60 min – True Transformation Organic Facial +</p>
+							<a href="book3.html" class="button">TRY IT NOW</a>
+						</div>	
+					</li>
+					<li class="cardsList__item hotelList__item">
+						<span class="borderDiv"></span>
+						<!-- <img src="images/src/afternoons.jpg"> -->
+						<div class="learnMore" style="background: url('images/src/afternoons.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+						<div class="cardText">
+							<h3>Autumnal Afternoons</h3>
+							<p>Book yourself an afternoon in the spa for some well deserved R&R </p>
+							<h4 class="price">$187<span>499$</span></h4>
+							<p>60 min – True Transformation Organic Facial +</p>
+							<a href="book3.html" class="button">TRY IT NOW</a>
+						</div>	
+					</li>
+					<li class="cardsList__item hotelList__item">
+						<span class="borderDiv"></span>
+						<!-- <img src="images/src/tissue.jpg"> -->
+						<div class="learnMore" style="background: url('images/src/tissue.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+						<div class="cardText">
+							<h3>Deep Tissue Message</h3>
+							<p>A vigorous workout for the back, perfect to alleviate high stress levels.</p>
+							<h4 class="price">$143<span>499$</span></h4>
+							<p>60 min – True Transformation Organic Facial +</p>
+							<a href="book3.html" class="button">TRY IT NOW</a>
+						</div>	
+					</li>
+				</ul>
+			</div>
+
+			<div class="bookTreatment">
+				<h1 class="title">HOTELS</h1>
+				<p>Your Treatment</p>
+				<ul class="cardsList slider3">
+					<li class="cardsList__item chooseHotel">
+						<span class="borderDiv"></span>
+						<div class="learnMore" style="background: url('images/src/hotelPic.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+							<div class="cardText">
+								<h3>Turkish <br class="ipad">Experience</h3>
+								<p>Health and Prevention for your employees</p>
+						</div>	
+					</li>
+					<li class="cardsList__item chooseHotel">
+						<span class="borderDiv"></span>
+						<div class="learnMore" style="background: url('images/src/hotelPic2.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+						<div class="cardText">
+							<h3>Autumnal <br class="ipad"> Afternoons</h3>
+							<p>Reliable high class SPA service for selected hotel partners</p>
+						</div>	
+					</li>
+					<li class="cardsList__item chooseHotel">
+						<span class="borderDiv"></span>
+						<div class="learnMore" style="background: url('images/src/hotelPic3.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+						<div class="cardText">
+							<h3>Deep Tissue <br class="ipad"> Massage</h3>
+							<p>Welcome to the compasswell Family member advantages</p>
+						</div>	
+					</li>
+					<li class="cardsList__item chooseHotel">
+						<span class="borderDiv"></span>
+						<div class="learnMore" style="background: url('images/src/hotelPic.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+							<div class="cardText">
+								<h3>Turkish <br class="ipad">Experience</h3>
+								<p>Health and Prevention for your employees</p>
+						</div>	
+					</li>
+					<li class="cardsList__item chooseHotel">
+						<span class="borderDiv"></span>
+						<div class="learnMore" style="background: url('images/src/hotelPic2.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+						<div class="cardText">
+							<h3>Autumnal <br class="ipad"> Afternoons</h3>
+							<p>Reliable high class SPA service for selected hotel partners</p>
+						</div>	
+					</li>
+					<li class="cardsList__item chooseHotel">
+						<span class="borderDiv"></span>
+						<div class="learnMore" style="background: url('images/src/hotelPic3.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+						<div class="cardText">
+							<h3>Deep Tissue <br class="ipad"> Massage</h3>
+							<p>Welcome to the compasswell Family member advantages</p>
+						</div>	
+					</li>
+					<li class="cardsList__item chooseHotel">
+						<span class="borderDiv"></span>
+						<div class="learnMore" style="background: url('images/src/hotelPic.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+							<div class="cardText">
+								<h3>Turkish <br class="ipad">Experience</h3>
+								<p>Health and Prevention for your employees</p>
+						</div>	
+					</li>
+					<li class="cardsList__item chooseHotel">
+						<span class="borderDiv"></span>
+						<div class="learnMore" style="background: url('images/src/hotelPic2.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+						<div class="cardText">
+							<h3>Autumnal <br class="ipad"> Afternoons</h3>
+							<p>Reliable high class SPA service for selected hotel partners</p>
+						</div>	
+					</li>
+					<li class="cardsList__item chooseHotel">
+						<span class="borderDiv"></span>
+						<div class="learnMore" style="background: url('images/src/hotelPic3.jpg') center center/cover no-repeat">
+							<span>Learn More</span>
+						</div>
+						<div class="cardText">
+							<h3>Deep Tissue <br class="ipad"> Massage</h3>
+							<p>Welcome to the compasswell Family member advantages</p>
+						</div>	
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="cardContentWrapper">
+			<div class="widthWrapper">
+				<div class="cardContent reverseContent">
+					<div class="cardContent__text">
+						<span>Local. Authentic.  Fresh. </span>
+						<h2>The ULTIMATE</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<a href="#" class="button">LEARN MORE</a>
+					</div>
+					<div class="cardContent__pic">
+						<img src="images/src/ultimate2.jpg" alt="">
+					</div>				
+				</div>
+			</div>
+		</div>
+
+
+		<div class="widthWrapper hours">
+			<div class="hours__top">
+				<input type="text" placeholder="Arrange your spa experience with us. ">
+				<div>
+					<a href="tel:1 (818) 575 -3000" class="tel">1 (818) 575 -3000</a>
+					<a href="book3.html" class="button noHover">BOOK NOW</a>
+				</div>
+			</div>
+			<h1 class="title">HOURS</h1>
+			<ul class="hours__schedule">
+				<li>
+					<h5>Spa reception</h5>
+					<span>8:00 am – 9:00 am</span>
+				</li>
+				<li>
+					<h5>Spa services</h5>
+					<span>Sunday to Thursday 8:00 am – 9:00 am <br>
+					Sunday to Thursday 8:00 am – 9:00 am</span>
+				</li>
+				<li>
+					<h5>Spa Facilities</h5>
+					<span>Temporarily closed</span>
+				</li>
+				<li>
+					<h5>Rhythm & Hair</h5>
+					<span>7:00 am — 9:00 Pm</span>
+				</li>
+			</ul>
+
+
+
+		</div>
+
+		<div class="reservation">
+			<div class="widthWrapper">
+				<h1 class="title">FIND YOUR RESERVATIONS</h1>
+				<div class="reservation__container">
+					<h2>WITH CONFIRMATION # OR LTINERARY #</h2>
+					<form action="">
+						<div class="deliverInputs">
+							<input class="input" id="confirmation" type="text" placeholder="Confirmation or itinerary Number">
+							<input class="input" id="address" type="text" placeholder="Email Address">
+						</div>
+						<a href="account.html#bookinglist" class="button disabled noHover deliverButton">FIND RESERVATION</a>
+					</form>
+					<h3>Don’t know your confirmation #?</h3>
+					<p>Your Confirmation # was included in an email sent at the time of Booking. Pleas check Your email to recover the number. </p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<footer class="footer">
+		<ul class="footer__top widthWrapper footerTableWrapper">
+			<li><a href="#"><img src="images/src/footerLink1.svg" alt=""></a></li>
+			<li><a href=""><img src="images/src/footerLink2.svg" alt=""></a></li>
+			<li><a href=""><img src="images/src/footerLink3.svg" alt=""></a></li>
+			<li><a href=""><img src="images/src/footerLink4.svg" alt=""></a></li>
+			<li><a href=""><img src="images/src/footerLink5.svg" alt=""></a></li>
+			<li><a href=""><img src="images/src/footerLink6.svg" alt=""></a></li>
+		</ul>
+		<div class="footer__content">
+			<div class="footer__content-container widthWrapper">
+				<h1>DIRECT YOUR HEALTH</h1>
+				<p>«Find your inner compass to your wellness, wellbeeing and wellbalanced. With compasswell you contribute to your, your guests and your employees health with integration of all cultural relaxation techniques.»</p>
+			</div>
+		</div>
+		<ul class="footer__bottom widthWrapper">
+			<li>
+				<h3>CAREERS</h3>
+				<a href="#" class="hover">Job opportunities</a>
+			</li>
+			<li><h3>CONTACT</h3>
+				<a href="contactUs.html" class="hover">Contact Us</a></li>
+			<li>
+				<h3>SOCIAL MEDIA</h3>
+				<ul>
+					<li><a href="#">
+
+						<svg xmlns="http://www.w3.org/2000/svg" width="29.243" height="29.242" viewBox="0 0 29.243 29.242">
+						  <g id="Сгруппировать_1330" data-name="Сгруппировать 1330" transform="translate(-968 -2637)">
+						    <g id="Сгруппировать_560" data-name="Сгруппировать 560" transform="translate(968 2637)">
+						      <rect id="Прямоугольник_169" data-name="Прямоугольник 169" width="29.242" height="29.243" rx="8" transform="translate(29.243 0) rotate(90)" fill="#8f7f72"/>
+						      <path id="Контур_739" data-name="Контур 739" d="M217.971,156.49H220.8v9.1h-2.832Zm1.416-4.52a1.639,1.639,0,1,1-1.641,1.638,1.639,1.639,0,0,1,1.641-1.638" transform="translate(-209.481 -144.592)" fill="#fff"/>
+						      <path id="Контур_740" data-name="Контур 740" d="M222.577,156.49h2.712v1.245h.037a2.975,2.975,0,0,1,2.678-1.47c2.863,0,3.391,1.883,3.391,4.333v4.989h-2.826v-4.422c0-1.056-.021-2.413-1.47-2.413-1.471,0-1.7,1.149-1.7,2.335v4.5h-2.826Z" transform="translate(-209.481 -144.592)" fill="#fff"/>
+						    </g>
+						  </g>
+						</svg>
+
+
+						</a></li>
+					<li><a href="#">
+						<svg xmlns="http://www.w3.org/2000/svg" width="29.243" height="29.242" viewBox="0 0 29.243 29.242">
+							<g id="Сгруппировать_1394" data-name="Сгруппировать 1394" transform="translate(-35)">
+							  <rect id="Прямоугольник_169" data-name="Прямоугольник 169" width="29.242" height="29.243" rx="8" transform="translate(64.243 0) rotate(90)" fill="#8f7f72"/>
+							  <path id="Контур_85127" data-name="Контур 85127" d="M32.094,5.095a4.941,4.941,0,0,1-2.985-1A4.952,4.952,0,0,1,27.23,1.111a4.979,4.979,0,0,1-.1-.927h-3.2V8.933l0,4.792a2.9,2.9,0,1,1-1.991-2.75V7.725a6.3,6.3,0,0,0-.923-.068A6.14,6.14,0,0,0,16.4,9.72a6.017,6.017,0,0,0,.272,8.3,6.246,6.246,0,0,0,.578.505,6.14,6.14,0,0,0,3.763,1.272,6.3,6.3,0,0,0,.923-.068,6.119,6.119,0,0,0,3.419-1.71,5.994,5.994,0,0,0,1.8-4.266l-.016-7.156A8.113,8.113,0,0,0,32.1,8.281V5.094h-.009Z" transform="translate(26.125 4.815)" fill="#fff"/>
+							</g>
+						  </svg>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<svg xmlns="http://www.w3.org/2000/svg" width="29.243" height="29.242" viewBox="0 0 29.243 29.242">
+							  <g id="Сгруппировать_1332" data-name="Сгруппировать 1332" transform="translate(-1053 -2637)">
+							    <g id="Сгруппировать_558" data-name="Сгруппировать 558" transform="translate(1053 2637)">
+							      <rect id="Прямоугольник_170" data-name="Прямоугольник 170" width="29.242" height="29.243" rx="8" transform="translate(29.243 0) rotate(90)" fill="#8f7f72"/>
+							      <path id="Контур_743" data-name="Контур 743" d="M317.135,69.214a6.611,6.611,0,0,1-1.613.46c.259-.043.64-.513.793-.7A2.966,2.966,0,0,0,316.85,68c.014-.028.024-.063,0-.084a.092.092,0,0,0-.086.007,8.236,8.236,0,0,1-1.912.732.128.128,0,0,1-.132-.035,1.508,1.508,0,0,0-.167-.171,3.382,3.382,0,0,0-.926-.567,3.225,3.225,0,0,0-1.421-.229,3.39,3.39,0,0,0-1.348.381,3.468,3.468,0,0,0-1.087.888,3.332,3.332,0,0,0-.649,1.3,3.506,3.506,0,0,0-.034,1.373c.01.077,0,.087-.066.077a10.218,10.218,0,0,1-6.571-3.344c-.076-.088-.118-.088-.181.006a3.333,3.333,0,0,0,.568,3.937c.129.122.261.244.4.355a3.348,3.348,0,0,1-1.268-.355c-.077-.049-.115-.021-.122.066a2.024,2.024,0,0,0,.021.376,3.369,3.369,0,0,0,2.076,2.686,1.942,1.942,0,0,0,.422.129,3.755,3.755,0,0,1-1.244.038c-.091-.017-.125.028-.091.115a3.5,3.5,0,0,0,2.613,2.188c.118.021.237.021.356.049-.007.01-.015.01-.021.021a4.14,4.14,0,0,1-1.785.945,6.384,6.384,0,0,1-2.709.347c-.146-.021-.177-.02-.216,0s-.005.06.042.1c.184.122.372.23.564.335a8.967,8.967,0,0,0,1.811.725,9.65,9.65,0,0,0,9.367-2.19,9.833,9.833,0,0,0,2.592-7.171c0-.1.122-.16.194-.214a6.364,6.364,0,0,0,1.275-1.326.407.407,0,0,0,.084-.254v-.014C317.2,69.172,317.2,69.185,317.135,69.214Z" transform="translate(-294.435 -59.604)" fill="#fff"/>
+							    </g>
+							  </g>
+							</svg>
+
+						</a></li>
+					<li><a href="">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" width="29.243" height="29.242" viewBox="0 0 29.243 29.242">
+						  <g id="Сгруппировать_1333" data-name="Сгруппировать 1333" transform="translate(-1096 -2636.999)">
+						    <g id="Сгруппировать_557" data-name="Сгруппировать 557" transform="translate(1096 2637)">
+						      <rect id="Прямоугольник_171" data-name="Прямоугольник 171" width="29.242" height="29.243" rx="8" transform="translate(29.243 -0.001) rotate(90)" fill="#8f7f72"/>
+						      <g id="Сгруппировать_555" data-name="Сгруппировать 555" transform="translate(6.049 6.048)">
+						        <path id="Контур_744" data-name="Контур 744" d="M271.111,68.713a1.006,1.006,0,1,0,1.005,1.005A1.005,1.005,0,0,0,271.111,68.713Z" transform="translate(-258 -65.652)" fill="#fff"/>
+						        <path id="Контур_745" data-name="Контур 745" d="M266.642,70a4.222,4.222,0,1,0,4.222,4.222A4.227,4.227,0,0,0,266.642,70Zm0,6.927a2.7,2.7,0,1,1,2.7-2.705A2.707,2.707,0,0,1,266.642,76.929Z" transform="translate(-258 -65.652)" fill="#fff"/>
+						        <path id="Контур_746" data-name="Контур 746" d="M269.994,82.8H263.15A5.155,5.155,0,0,1,258,77.647V70.8a5.155,5.155,0,0,1,5.15-5.15h6.844a5.155,5.155,0,0,1,5.15,5.15v6.845A5.155,5.155,0,0,1,269.994,82.8ZM263.15,67.265a3.541,3.541,0,0,0-3.537,3.537v6.845a3.54,3.54,0,0,0,3.537,3.536h6.844a3.541,3.541,0,0,0,3.537-3.536V70.8a3.541,3.541,0,0,0-3.537-3.537Z" transform="translate(-258 -65.652)" fill="#fff"/>
+						      </g>
+						    </g>
+						  </g>
+						</svg>
+
+
+					</a></li>
+				</ul>	
+			</li>
+			<li>
+				<a href="home.html" class="logo">
+					<img src="images/src/logo.svg" class="logo">		
+					<p>© Compasswell <br>
+					GmbH, 2021</p>
+				</a>
+			</li>
+		</ul>
+	</footer>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+	<script src="https://unpkg.com/js-datepicker"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

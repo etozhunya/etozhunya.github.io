@@ -101,7 +101,7 @@
 			margin: 84px 0 18px
 			.preTable
 				justify-content: space-between
-				width: 45%
+				width: 53%
 				display: flex
 				li
 					border-radius: 5px
@@ -118,6 +118,17 @@
 							color: $chocolate
 				&.therapist
 					justify-content: flex-start
+			.button
+				padding: 8px 22px
+			> div
+				display: flex
+				align-items: center
+				.export
+					margin-right: 10px
+					font-family: helveticaBold
+					font-size: 15px
+					color: #4A1D18
+					text-decoration: underline
 			.calendarOpen
 				padding: 10px 21px
 				border-radius: 8px
@@ -140,7 +151,7 @@
 					left: auto !important
 					right: 0 !important
 				img
-					width: 100%				
+					width: 100%	
 
 	.containerWrapper
 		position: relative
@@ -163,7 +174,7 @@
 				position: relative
 				justify-content: space-between
 				li
-					width: 33%
+					width: 50%
 					cursor: pointer
 					border-bottom: 2px solid #DFDFDF
 					padding-bottom: 14px
@@ -624,10 +635,13 @@
 									margin-left: 15px
 							&.single
 								display: none
-
+	
 @media (max-width: 1024px) 
 	.contentWrapper 
 		.containerWrapper__One
+			.preTableContainer
+				&.admin
+					flex-flow: wrap
 			.headings.admin-version
 				li
 					.table 
@@ -745,6 +759,13 @@
 					li
 						width: 45%
 						margin: 0 0 10px 0
+			.preTableContainer
+				.button
+					padding: 7px 10px
+				> div
+					.export
+						font-size: 12px
+						margin-right: 15px
 			.headings
 				li
 					.table

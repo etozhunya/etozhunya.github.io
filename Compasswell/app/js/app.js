@@ -13,8 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	}
 	if ($('body').hasClass('haveTimePicker')) {
-		$(function () {
-		  $('.bs-timepicker').timepicker();
+		$('.timepicker').timepicker({
+			timeFormat: 'h:mm p',
+			interval: 60,
+			minTime: '07:00am',
+			maxTime: '8:00pm',
+			defaultTime: '07:00',
+			startTime: '07:00',
+			dynamic: false,
+			dropdown: true,
+			scrollbar: false
 		});
 	}
 	
@@ -166,11 +174,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		window.location.href = 'contactUs.html';
 	})
 
-	$('.section2 .hotelList__item').click(function() {
-		$('.section2 .hotelList__item').removeClass('active')
+	$('.section2 .cardsList__item').click(function() {
+		$('.section2 .cardsList__item').removeClass('active')
 		$(this).addClass('active')
-		if ($('.section2 .hotelList__item').hasClass('active')) {
+		if ($('.additional-section .cardsList__item').hasClass('active')) {
+			$('.additional-next').removeClass('disabled')
+			console.log('1')
+		}
+		if ($('.third-step .cardsList__item').hasClass('active')) {
 			$('.next2').removeClass('disabled')
+			console.log('11')
 		}
 	})
 
@@ -185,14 +198,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	// $(document).on("click",".bs-timepicker", function(){
 	// 	console.log('sadasd')
 	// })
-
-	$('.bs-timepicker').on('change', function () {
-		console.log('asdasd')
-		$('.timepicker-on').prop( "checked" )
-	})
-	$('.bs-timepicker').click( function(){
-
-	    console.log('asdasd')
+	$('#payment-checkbox').on('change', function() {
+		if ($(this).is(':checked')) {
+            $('.payment-labels').addClass('active')
+        } else {
+			$('.payment-labels').removeClass('active')
+		}
 	})
 
 	$('#adults').on('change', function () {
@@ -269,11 +280,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		$(this).parent().removeClass('visible').next().addClass('visible')
 		$('.slider3').slick('setPosition');
 		$('.generalSteps li').removeClass('active').eq(index).addClass('active');
+		$('.generalSteps li').eq(index).addClass('finished');
 
 		var that = $(this)
 		$('html, body').animate({
 		    scrollTop: $('.title').offset().top + 200
 		});
+	})
+	$('.generalSteps li').click(function(){
+		var index = $(this).attr('data-index')
+		$(this).addClass('active').siblings().removeClass('active')
+		console.log(index)
+		$('.mainContent--change .sections').removeClass('visible').eq(index).addClass('visible')
+		$('.slider3').slick('setPosition');
+
 	})
 
 	// $(document).on("click",".select2", function(){
