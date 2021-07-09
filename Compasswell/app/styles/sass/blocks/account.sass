@@ -515,9 +515,13 @@
 						transform: translateY(4px)
 						display: inline-block
 						font-size: 10px
+						margin-bottom: 5px
 					.btnActive
 						color: #00CE97
 						background-color: rgba(0, 206, 151, 0.2)
+					.btnContract
+						color: #81C8CE
+						background-color: rgba(129, 200, 206, 0.2)
 					.btnCompleted
 						color: #febc2e
 						background-color: rgba(254, 188, 46, 0.2)
@@ -548,6 +552,7 @@
 			.tableInside
 				justify-content: flex-start
 				align-items: flex-start
+				flex-flow: wrap
 				li
 					padding-top: 21px
 					h5
@@ -555,34 +560,46 @@
 					span
 						font-size: 14px
 						font-family: helveticaMedium
-						margin-bottom: 15px
+						margin-bottom: 5px
 						display: block
 						&:last-child
 							margin-bottom: 0
-					&:first-child
+					&.another-fontsize
 						span
 							font-family: helveticaRegular
 					&:last-child
 						width: auto
 						text-align: left
 						span
-							font-size: 16px
-
-
-			> table
-				position: relative
-			table
-				width: 100%
-				tr
-					height: 25px
-					&:first-child
-						td
-							
-					td
-						
-						&:nth-child(4)
-							width: 100px
-						
+							font-size: 14px
+					&:nth-child(3)
+						width: 25%
+					&:nth-child(4)
+						text-align: right
+						padding-left: 0
+				.button
+					float: none
+					position: absolute
+					transform: none !important
+					bottom: 0
+					right: 0
+				&.therapist-mode
+					li
+						&:nth-child(6)
+							position: absolute
+							right: 210px
+							bottom: 14px
+				&.admin-mode
+					li
+						&:nth-child(6)
+							position: absolute
+							right: 165px
+							bottom: 14px
+				
+			.table
+				li
+					&:nth-child(3)
+						width: 10%
 			.animated
 				overflow: visible
 				display: none
@@ -594,14 +611,14 @@
 							width: auto
 				.button
 					float: right
-					transform: translateY(-45px)
+					transform: translateY(-26px)
 		&.admin-version
 			.animated
 				position: relative
 				.select-container
 					position: absolute
 					right: 0
-					bottom: 0
+					bottom: 9px
 					h5
 						color: #a48e8b;
 						font-family: helveticaRegular;
@@ -640,14 +657,23 @@
 	.contentWrapper 
 		.containerWrapper__One
 			.preTableContainer
-				&.admin
-					flex-flow: wrap
-			.headings.admin-version
-				li
-					.table 
+				flex-flow: wrap
+			.headings
+				> li
+					.table
 						li
-							&:nth-child(3) 
-	    						width: 20% !important;
+							&:last-child
+								position: absolute
+								bottom: 0
+								right: 6px
+				&.admin-version
+					li
+						.table 
+							li
+								&:nth-child(3)
+									width: 20% !important
+								
+			
 	.shortTable
 		width: 100% !important
 	.widthWrapper
@@ -706,6 +732,13 @@
 							.sub
 								font-size: 12px
 				.headings
+					&.admin-version
+						li
+							.tableInside
+								.select-container, li:nth-child(6)
+									position: relative
+									bottom: auto
+									right: auto
 					li
 						padding: 5px !important
 						.table
@@ -714,8 +747,23 @@
 							justify-content: flex-start
 							li
 								width: 33%
+								margin-bottom: 10px
 								&:last-child
 									text-align: left
+						.tableInside
+							li
+								margin-bottom: 20px
+								&:nth-child(4)
+									text-align: left
+							.button
+								position: relative
+							&.therapist-mode
+								li
+									&:nth-child(6)
+										position: relative
+										right: auto
+										bottom: auto
+										
 						.tableUSE
 							flex-flow: wrap
 							li
@@ -734,7 +782,7 @@
 							.tableInside
 								width: 100%
 								li
-									width: 50%
+									width: 33%
 							.button
 								transform: translate3d(0,0,0)
 								// display: block
@@ -778,13 +826,38 @@
 							span
 							font-size: 12px !important
 					.tableInside
-						flex-flow: wrap
 						li
+							width: 50% !important
 							span
 								line-height: 16px
+						&.therapist-mode
+							li
+								&:nth-child(5)
+									order: 6
+								&:nth-child(6)
+									order: 5
 				&.admin-version
 					li
 						.table
 							li
 								&:nth-child(3)
 									width: 20%
+						.tableInside
+							li
+								&:nth-child(1)
+									order: 1
+								&:nth-child(2)
+									order: 2
+								&:nth-child(3)
+									order: 4
+								&:nth-child(4)
+									order: 3
+								&:nth-child(5)
+									order: 5
+								&:nth-child(6)
+									order: 6
+							.select-container
+								order: 7		
+								padding-left: 5px
+								bottom: auto
+									
