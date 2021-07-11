@@ -237,7 +237,7 @@
                         &:last-child
                             border-bottom: 1px solid #F7F2EE
                         .timepicker
-                            width: 120px
+                            width: 86px
                             z-index: 99
                             pointer-events: none
                             text-align: center
@@ -245,6 +245,7 @@
                             background-color: #fcfaf6
                 .timepicker-container
                     padding: 22px 15px 23px 15px
+                    display: flex !important
                     h2
                         padding: 10.5px 0 10.5px 25px
                         margin-bottom: 0 !important
@@ -256,6 +257,7 @@
                             position: absolute
                             width: 70px
                             padding: 10px 0
+                            user-select: none
                         .timepicker-info
                             opacity: 0
                             position: absolute
@@ -264,6 +266,7 @@
                             color: #B5B5B5
                         
                     &.active
+                        display: block !important
                         .timepicker
                             opacity: 1
                             pointer-events: all
