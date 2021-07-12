@@ -88,69 +88,85 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	if ($('body').hasClass('haveSlider')) {
-				  if ($(window).width() < 1025) {
-			        $('.slider').slick({
-			          centerMode: true,
-			          centerPadding: '60px',
-			          slidesToShow: 1,
-			          arrows: false,
-			          responsive: [
-			            {
-			              breakpoint: 1025,
-			              settings: {
-			                arrows: false,
-			                dots: true,
-			                centerMode: true,
-			                centerPadding: '0px',
-			                slidesToShow: 1
-			              }
-			            }
-			          ]
-			        });
-			    }
-			    $('.slider3').slick({
-			      infinite: true,
-			      slidesToShow: 3,
-			      slidesToScroll: 3,
-			      dots: true,
-			      centerPadding: '0px',
-			      arrows: true,
-			      responsive: [
-			        {
-			          breakpoint: 769,
-			          settings: {
-			            centerMode: true,
-			            centerPadding: '0px',
-			            slidesToShow: 1
-			          }
-			        },
-			        {
-			        	breakpoint: 767,
-			        	settings: {
-			        	  arrows: false,
-			        	  slidesToShow: 1,
-			        	  slidesToScroll: 1
-			        	}
-			        }
-			      ]
-			    });
-			    $('.slider4').slick({
-			      infinite: true,
-			      slidesToShow: 1,
-			      slidesToScroll: 1,
-			      dots: true,
-			      centerPadding: '0px',
-			      responsive: [
-			        {
-			        	breakpoint: 767,
-			        	settings: {
-			        	  arrows: false,
-			        	  slidesToShow: 1,
-			        	  slidesToScroll: 1
-			        	}
-			        }
-			      ]
-			    });
+		  if ($(window).width() < 1025) {
+	        $('.slider').slick({
+	          centerMode: true,
+	          centerPadding: '60px',
+	          slidesToShow: 1,
+	          arrows: false,
+	          responsive: [
+	            {
+	              breakpoint: 1025,
+	              settings: {
+	                arrows: false,
+	                dots: true,
+	                centerMode: true,
+	                centerPadding: '0px',
+	                slidesToShow: 1
+	              }
+	            }
+	          ]
+	        });
+	    }
+	    $('.slider3').slick({
+	      infinite: true,
+	      slidesToShow: 3,
+	      slidesToScroll: 3,
+	      dots: true,
+	      centerPadding: '0px',
+	      arrows: true,
+	      responsive: [
+	        {
+	          breakpoint: 769,
+	          settings: {
+	            centerMode: true,
+	            centerPadding: '0px',
+	            slidesToShow: 1
+	          }
+	        },
+	        {
+	        	breakpoint: 767,
+	        	settings: {
+	        	  arrows: false,
+	        	  slidesToShow: 1,
+	        	  slidesToScroll: 1
+	        	}
+	        }
+	      ]
+	    });
+	    if ($(window).width() < 768) {
+	    	$('.slider3').on('afterChange', 
+	    	function(event, slick, currentSlide) {
+	          if($('.slider3 .slick-active').find('li').hasClass('checkbox-item')) {
+	          	$('.checkbox-section').addClass('visible')
+	          	$('.checkbox-section').addClass('non-clickable')
+	          } else {
+	          	$('.checkbox-section').removeClass('visible')
+	          }
+
+	          if($('.slider3 .slick-active').find('li').hasClass('active')) {
+	          	$('.checkbox-section').removeClass('non-clickable')
+	          }
+
+        });
+	    }
+	    $('.slider4').slick({
+	      infinite: true,
+	      slidesToShow: 1,
+	      slidesToScroll: 1,
+	      dots: true,
+	      centerPadding: '0px',
+	      responsive: [
+	        {
+	        	breakpoint: 767,
+	        	settings: {
+	        	  arrows: false,
+	        	  slidesToShow: 1,
+	        	  slidesToScroll: 1
+	        	}
+	        }
+	      ]
+	    });
 	}
 	$('.input').on('input', function () {
  	    if ( $('#confirmation').val().length > 0 && $('#address').val().length > 0 ) {
@@ -164,6 +180,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	$('.section2 .cardsList__item').click(function() {
+		if( $(this).hasClass('checkbox-item')) {
+			$('.checkbox-section').addClass('visible')
+			$('.checkbox-section').removeClass('non-clickable')
+		} else {
+			$('.checkbox-section').removeClass('visible')
+			$('.checkbox-section').addClass('non-clickable')
+		}
 		$('.section2 .cardsList__item').removeClass('active')
 		$(this).addClass('active')
 		if ($('.additional-section .cardsList__item').hasClass('active')) {
@@ -336,12 +359,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	// 	    $(this).parent().find('.animated').slideUp();
 	// 	})
 
-	$('.form input').click(function(){
-            if($(this).prop("checked") == true){
-            	$('.form label').removeClass('active')
-                $(this).parent('label').addClass('active')
-            }
-        });
+	$('.checkbox__form input').click(function(){
+        if($(this).prop("checked") == true){
+        	$('.checkbox__form label').removeClass('active')
+            $(this).parent('label').addClass('active')
+        }
+    });
 	
 	$('.steps li').click(function() {
 	    $('.sub-steps li').removeClass('active')

@@ -300,7 +300,106 @@ input:focus::-webkit-input-placeholder
 					background-color: #BF9159
 
 			
+.checkbox__form
+    text-align: left
+    label, .label
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        cursor: pointer
+        width: 100%
+        display: block
+        position: relative
+        padding: 13px 15px 18px 15px
+        border-top: 1px solid #F7F2EE
+        cursor: pointer
+        input
+            position: absolute
+            cursor: pointer
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+        input:first-child:checked ~ .checkmark::before, .checkmark.active::before 
+          content: ''
+          display: block
+          right: 5px
+          top: 50%
+          transform: translateY(-50%)
+          width: 14px
+          height: 14px
+          position: absolute
+          background-color: #957248
+          border-radius: 50px
+        h2
+            font-family: RobotoMedium
+            font-size: 16px
+            color: #957248
+            position: relative
+            padding-left: 25px
+            margin-bottom: 7px
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                left: 0px
+                width: 16px
+                height: 16px
+                top: 50%
+                transform: translateY(-50%)
+                background: url('../images/src/time.svg') center center/contain no-repeat
+        span
+            font-family: robotoRegular
+            font-size: 10px
+            color: #CCC3BF
+            text-transform: uppercase
+            letter-spacing: 0.5px
+        .checkmark
+          border: solid 1px white
+          cursor: pointer
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          right: 10px
+          height: 15px
+          width: 15px
 
+        .checkmark:after
+          content: ''
+          display: block
+          width: 24px
+          height: 24px
+          border-radius: 50px
+          border: 1px solid #957248
+          position: absolute
+          top: 50%
+          right: 0
+          transform: translateY(-50%,)    
+        &:last-child
+            border-bottom: 1px solid #F7F2EE
+        .timepicker
+            width: 86px
+            z-index: 99
+            pointer-events: none
+            text-align: center
+        &.active
+            background-color: #fcfaf6
+
+
+.checkbox-section
+	display: none
+	label
+		h2
+			padding-left: 0
+			&::before
+				content: none
+	&.visible
+		display: block
+	&.non-clickable
+		opacity: 0.5
+		pointer-events: none
 
 
 

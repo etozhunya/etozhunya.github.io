@@ -4,15 +4,27 @@
 		.global-content__core
 			&.reports-mode
 				padding-right: 0
+				.reports-wrapper
+					&__select
+						flex-flow: wrap
+						align-items: center
+						label
+							width: 47%
+							margin-bottom: 20px
+					&__export
+						width: 100%
+				#chart-container
+					height: 500px
 				#data-table_wrapper
 					thead
 						tr
 							th
 								padding: 5px 20px 5px 0px
-								font-size: 12px
+								font-size: 10px
 					tbody
 						tr
-							font-size: 11px
+							font-size: 9px
 							td
+								padding: 2px
 								&:first-child
 									width: 35%
