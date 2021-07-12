@@ -77,10 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     text.innerHTML = today
 
-    if((window.location.hash == false && window.location.hash == homePage) && $('.flex-table__days').hasClass('in-view')) {
+    if( $('.flex-table__days').hasClass('in-view') ) {
         $('#homePage').addClass('active')
         $('.global-content__header').addClass('home-page-mode')
-        
+        console.log('sdsds')
+        $('.content-wrapper').addClass('home')
     }
 
 	if(!$('#homePage').hasClass('active')) {
