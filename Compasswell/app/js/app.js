@@ -12,25 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	    })
 
 	}
-	if ($('body').hasClass('haveTimePicker')) {
-		// $('.timepicker').timepicker({
-		// 	timeFormat: 'h:mm p',
-		// 	interval: 60,
-		// 	minTime: '07:00am',
-		// 	maxTime: '8:00pm',
-		// 	defaultTime: '07:00',
-		// 	startTime: '07:00',
-		// 	dynamic: false,
-		// 	dropdown: true,
-		// 	scrollbar: false
-		// });
-		$(function() {
-			$('.timepicker').timeselector({
-				min:'08:30',
-				max:'21:00'
-			})
-		});
-	}
 	
 
 	
