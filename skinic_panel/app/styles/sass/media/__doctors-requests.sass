@@ -2,6 +2,7 @@
 @media (min-width: 769px) and (max-width: 1024px)
 	.global-content__core
 		.flex-table
+			height: calc(100vh - 72px - 46px - 83px)
 			.table-slot__reqDoc
 				ul
 					li
@@ -39,8 +40,70 @@
 					li
 						&:nth-child(4)
 							width: 40%
-@media (max-width: 768px)
+@media (width: 768px)
+	.global-content__core
+		.flex-table
+			height: calc(100vh - 72px - 46px - 83px)
+@media (max-width: 767px)
 	.global-content__core
 		.flex-table
 			height: auto
+			.table-slot__reqDoc
+				ul
+					padding: 0
+					li
+						a, span
+							font-size: 14px	
+						.widget
+							p
+								font-size: 12px
+							span
+								font-size: 11px
+						&:nth-child(1)
+							width: 100%
+							img
+								width: 43px
+								margin-right: 10px
+							span
+								font-size: 14px
+						&:nth-child(2), &:nth-child(3)
+							width: 50%
+							span
+								display: block
+								margin: 0 auto
+						&:nth-child(4)
+							width: 100%
+							span
+								br
+									display: none
+						&:nth-child(5)
+							width: 100%
+							display: flex
+							justify-content: space-around
+						&.clients-mode
+							&:last-child
+								display: flex
+								justify-content: space-around
+			&.doctors-table
+				li
+					ul
+						li
+							&:nth-child(4)
+								a
+									margin: 0 auto
+							&:nth-child(4), &:nth-child(5)
+								width: 50%
+			&.requests-table
+				li
+					ul
+						li
+							&:nth-child(2)
+								display: inline
+								padding-left: 50px
+
+		.invite-client-button
+			position: fixed
+			right: 10px
+			bottom: 10px
+			font-size: 14px
 
