@@ -197,7 +197,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	$('.form label').click(function(){
 		if( $('.timepicker-on').is(":checked")) {
-			// $('.bs-timepicker').addClass('visible')
+			$('.hide').addClass('visible')
+		} else {
+			$('.hide').removeClass('visible')
 		}
 		if ($(this).hasClass('active')) {
 			$('.next3').removeClass('disabled')
@@ -232,7 +234,29 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 
+	var hoursSelection = "";
+	var minutesSelection = "";
+	var i = 0;
+	for(var i = 0; i <= 12; i++)
+	{
+		hoursSelection += "<option value='"+ zeroFill(i, 2) +"01'>"+ zeroFill(i, 2) + "</option>";
+	}
+	for(var i = 0; i <= 60; i++)
+	{
+		minutesSelection += "<option value='"+ zeroFill(i, 2) +"00'>"+ zeroFill(i, 2) + "</option>";
+	}
+	$("#hours").html(hoursSelection);
+	$("#minutes").html(minutesSelection);
 
+	function zeroFill( number, width )
+	{
+	width -= number.toString().length;
+	if ( width > 0 )
+	{
+		return new Array( width + (/\./.test( number ) ? 2 : 1) ).join( '0' ) + number;
+	}
+	return number + ""; // always return a string
+	}
 
 
 
@@ -396,6 +420,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		checkoff.forEach(function(el) {
 		    datepicker(el)
 		})
+	}
+
+	if ($('body').hasClass('haveSelect')) {
+		$('.select').select2();
 	}
 
 })

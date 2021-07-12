@@ -653,7 +653,9 @@ function throttle(cb, interval) {
 var lastScrollTop = 0;
 function scrollFunction() {
 	var currentScrollTop = $(window).scrollTop();
+	console.log(currentScrollTop)
 	if (currentScrollTop > 200 && currentScrollTop > lastScrollTop){	
+		console.log('sdasdsdsds')
 		$('.content-wrapper__header').addClass('hidden')
 	} else {
 	  $('.content-wrapper__header').removeClass('hidden')
@@ -662,24 +664,6 @@ function scrollFunction() {
 }
 
 window.onscroll = throttle(scrollFunction, 500);
-// $(window).scroll(function() {
-// 	if ($(this).scrollTop() < 200) {
-// 		$('.content-wrapper__header').removeClass('hidden')	
-// 	}
-// })
-  
-// function step() {
-	
-
-//    window.requestAnimationFrame(step)
-// }   
-// window.requestAnimationFrame(step)
-
-
-
-
-
-
 
 //VANILLA JAVASCRIPT DRAG AND DROP
 
