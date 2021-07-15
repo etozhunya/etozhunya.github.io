@@ -6,6 +6,7 @@
 	top: 0
 	opacity: 0
 	z-index: -5
+	overflow: hidden
 	@include transition(0s)
 	&.visible
 		z-index: 1100
@@ -97,22 +98,22 @@
 				li
 					margin: 0px 4px
 					cursor: pointer
-					span
+					span, 
 						font-size: 16px
 						padding: 10px 16px
 						border: 1px solid #E1E6EA
 						border-radius: 8px
 					&.active
 						span
-							border-color: #E2E6EA
-							background-color: #E2E6EA
+							border-color: #E2E6EA !important	
+							background-color: #E2E6EA !important
 					&:first-child
 						margin-left: 0
 					&:last-child
 						margin-right: 0
-			div	
+			> div	
 				display: flex
-				span
+				> span
 					font-size: 16px
 					cursor: pointer
 					&:last-child
@@ -472,7 +473,7 @@
 					&:first-child
 						.add-note
 							display: none
-				div
+				> div
 					display: none
 			.info
 				&__name
@@ -611,7 +612,7 @@
 				margin-bottom: 16px
 				display: block
 				input
-					width: calc(100% - 28px)
+					width: 100%
 		.select-ver-2
 			.select2
 				margin: 0

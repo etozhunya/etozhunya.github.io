@@ -5,18 +5,19 @@
 		<div class="modal-details__relative">
 			<span class="back-button" id="back">Back</span>
 			<div class="modal-details__head">
-				<ul>
-					<li class="click-item"><span class="hover">History</span></li>
-					<li class="click-item"><span class="hover">Edit</span></li>
-					<li class="click-item"><span class="hover">Reschedule</span></li>
-					<li class="click-item"><span class="hover">Appointments list</span></li>
+				<ul class="mobile-slider">
+					<li class="click-item" data-index='1'><span class="hover">History</span></li>
+					<li class="click-item edit-list" data-index='2'><span class="hover">Edit</span></li>
+					<li class="click-item" data-index='3'><span class="hover">Reschedule</span></li>
+					<li class="click-item" data-index='4'><span class="hover" >Appointments list</span></li>
+					<li class="clients-mobile-only NA-btn"><span class="hover">New Appointment</span></li>
 					<li class="add-note add-note-general"><span class="hover">Add note</span></li>
 				</ul>
 				<ul class="clients-mode">
 					<li class="NA-btn"><span class="hover">New Appointment</span></li>
 					<li class="add-note add-note-general"><span class="hover">Add note</span></li>
 				</ul>
-				<div>
+				<div class="add-note-container">
 					<span class="add-note">Not appeared</span>
 					<span class="add-note">Cancel</span>
 				</div>
@@ -97,7 +98,7 @@
 							</li>
 						</ul>
 						<div class="info__notes">
-							<ul class="block-nav">
+							<ul class="block-nav mobile-slider2">
 								<li class="click-item active"><span>All notes</span></li>
 								<li class="click-item"><span>Medical history</span></li>
 								<li class="click-item"><span>Client comment</span></li>
@@ -1313,7 +1314,7 @@
 
 
 	<div class="modal-new-appt modal-block">
-		<span class="back-button" id="back">Back</span>
+		<span class="NA-back-button back-button" id="back">Back</span>
 		<h1>New appointment</h1>
 		<ul class="headings">
 			<li>
@@ -2285,14 +2286,14 @@
 				<div class="label-container__version">
 					<div class="label">
 						<span>Data</span>
-						<input type="text" autocomplete="off" placeholder="Sat Jun 05 2021">
+						<input type="text" autocomplete="off" placeholder="Sat Jun 05 2021" id="checkin2">
 					</div>
 					<div class="label">
 						<span>Block off time</span>
 						<div class="timepicker-container">
-							<input type="text" autocomplete="off" value="11:00 AM">
+							<input type="text" autocomplete="off" placeholder="11:00 AM">
 							<span>to</span>
-							<input type="text" autocomplete="off" value="11:00 AM">
+							<input type="text" autocomplete="off" placeholder="11:00 AM">
 						</div>
 					</div>
 				</div>

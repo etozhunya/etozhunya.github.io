@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		$(this).addClass('active').siblings('').removeClass('active')
 
-		if($('.modal-details__head ul li').eq(1).hasClass('active')) {
+		if($('.edit-list').hasClass('active')) {
 			$('.edit-logo').addClass('edit')
 		} else {
 			$('.edit-logo').removeClass('edit')
@@ -100,7 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.global-content__title p').css('display', 'none')
 	}
 
+	// IF HOME
 	if($('.flex-table__days').hasClass('in-view')) {
+		$('.clients-mobile-only').remove()
 		$('.global-content__home-only').addClass('home')
 		$('.modal-details__head .clients-mode').css('display', 'none');
 	}
@@ -121,11 +123,33 @@ document.addEventListener('DOMContentLoaded', () => {
 			$('.page__left-side').toggleClass('active')
 			$(this).find('span').toggleClass('active')
 		})
+		$('.mobile-slider').slick({
+			arrows: false,
+			centerMode: false,
+			infinite: false,
+			centerPadding: '10px',
+			slidesToShow: 2,
+			slidesToScroll: 2
+
+		})
+		$('.mobile-slider2').slick({
+			centerPadding: '10px',
+			centerMode: true,
+			infinite: false,
+			arrows: false,
+			slidesToScroll: 2,
+			slidesToShow: 2,
+			infinite: true
+
+		})
+		
+		
 	}
 
 	// HEADER BUTTONS CLICK
 	$('.NA-btn').click( function() {
 		$('.animated__order .step-item').removeClass('in-view').eq(0).addClass('in-view')
+		$('.calendar-min-section').addClass('in-view')
 		$('.modal').addClass('visible')
 		$('.modal-new-appt').addClass('active')
 		if ( $(this).hasClass('swap')) {
@@ -197,6 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	     	.prev().removeClass('active')
 	     	.parents('li').next().find('h4').addClass('active')
 	     	.next().slideToggle(300)
+			//  $('.calendar-min-section').addClass('in-view')
 	});
 	$('.animated__steps .click-item').click(function() {
 		$(this)
@@ -241,6 +266,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.step-textarea').val('')
 	})
 
+	$('.block-nav .click-item').click(function() {
+		$('.block-nav .click-item').removeClass('active')
+		$(this).addClass('active')
+	})
+	
+
+
+
 
 	
 
@@ -253,7 +286,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		if($(this).hasClass('block-hours')) {
 			$(this).off('click')
 		}
+		if ($(window).width() < 768) {
+			$('.mobile-slider').slick('setPosition');
+			$('.mobile-slider2').slick('setPosition');
+		}
 		if($(this).hasClass('clients-mode')) {
+			// if ( $(window).width() < 768) {
+				// $('.mobile-slider').slick('slickAdd','<li class="click-item NA-btn"><span class="hover mobile-NA-btn">New Appointment</span></li>');
+			// }
 			if(event.target.closest('.NA-btn')) {
 				$('.modal-details').removeClass('active')
 				return
@@ -278,7 +318,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	// buttons next prev
 
 	$('.close-button').click(function() {
-		$('.modal').removeClass('visible')
+		setTimeout(function() { 
+				$('.modal').removeClass('visible') 
+		}, 200);
 		$('.modal-block').removeClass('active')	
 	})
 	$(document).on("keyup", function (e) { 
@@ -291,8 +333,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			
 	  }
 	});
+	$('.NA-back-button').click(function() {
+		console.log('check')
+		$('.modal-new-appt').removeClass('active')
+		setTimeout(function() { 
+				$('.modal').removeClass('visible') 
+		}, 200);
 
+	})
+	
 	$('.back-button').click(function() {
+		console.log('sdsds')
 		$('.edit-logo').removeClass('edit')
 		$('.modal-details__create-note').removeClass('visible')
 
@@ -301,7 +352,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
 		if($('.home__block').hasClass('in-view')) {
 	
-			$('.modal').removeClass('visible')
+			setTimeout(function() { 
+				$('.modal').removeClass('visible') 
+			}, 200);
+
 			$('.modal-block').removeClass('active')	
 			$('.info__wrapper__block').removeClass('in-view').eq(0).addClass('in-view')
 			$('.modal-details__head .click-item').removeClass('active')
@@ -343,6 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	datepicker("#open-calendar",{})
 
 	var checkin = document.querySelectorAll('#checkin');
+	var checkin2 = document.querySelectorAll('#checkin2');
 	var checkoff = document.querySelectorAll('#checkoff');
 
 	const picker = datepicker('#checkin', {
@@ -351,11 +406,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		    $('#checkoff').next().removeClass('qs-hidden')
 		  }
 		})
+	checkoff.forEach(function(el) {
+		    datepicker(el)
+	})
+	checkin2.forEach(function(el) {
+		    datepicker(el)
+	})
 
 
-	// checkoff.forEach(function(el) {
-	// 	    datepicker(el)
-	// })
+	
 
 	// $('.timepicker1').timepicker({
 	// 	change: function(time) {
@@ -401,7 +460,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	$('.modal-details__head .click-item').click(function() {
-	    $('.info__wrapper__block').removeClass('in-view').eq($(this).index() + 1).addClass('in-view');
+	    $('.info__wrapper__block').removeClass('in-view').eq($(this).attr('data-index')).addClass('in-view');
+		let that = this
+		// if (!$(that).parents('.slick-slide').hasClass('slick-active')) {
+		if($(window).width() < 768) {
+			$('.modal-details__head .click-item').removeClass('active')
+			$(this).addClass('active')
+		}
+
+		// }
 	});
 
 	$('.calendarWrapper li').click(function() {

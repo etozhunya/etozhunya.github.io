@@ -11,6 +11,8 @@ p, span, a, h1,h2,h3,h4,h5
 		background-color: $highlighted !important
 		border: 1px solid $highlighted !important
 		color: #fff !important
+.clients-mobile-only
+	display: none
 .next-step-black
 	padding: 9px 11px
 	background-color: #313131
@@ -43,6 +45,7 @@ label, .label, .global-content__search
 			border-radius: 8px
 			border: 1px solid #E1E6EA
 			width: 100%
+			appearance: none
 			color: #868D96
 			padding: 9px 13px
 			&:focus
@@ -400,8 +403,8 @@ label, .label, .global-content__search
                 		height: 51px
                 		border-radius: 50px
                 		right: 50%
-                		transform: translateX(50%)
-                		top: -18px
+                		transform: translate3d(50%,-50%,0)
+                		top: 50%
                 		z-index: -1
             &.weekend
                 background-color: #FCFAF6
@@ -828,6 +831,22 @@ textarea
 	display: flex
 	.slick-slide
 		display: flex
+.mobile-slider
+	.slick-slide
+		width: auto !important
+		margin: 0 25px
+		justify-content: center
+		&:focus
+			outline: none
+.mobile-slider2
+	.slick-list
+		width: 100%
+	.slick-slide
+		width: auto !important
+		margin: 0 10px
+		&:focus
+			outline: none
+
 // DATEPICKER CSS
 .content-wrapper__filter-calendar
 	.qs-datepicker-container
@@ -861,8 +880,13 @@ textarea
 		.qs-month-year
 			&:hover
 				border: none
+			.qs-month-year
+				font-size: 23px
+				font-family: 'adobeClean' !important
 			.qs-month, .qs-year
 				font-family: 'adobeClean' !important
+				font-size: 23px !important
+				margin-bottom: 0
 		.qs-arrow
 			&::after
 				width: 15px
