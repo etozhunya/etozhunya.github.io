@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			$('.clients-mode .NA-btn').addClass('swap')
 			$('.slider').slick('setPosition');
 		}
-
+		$('.add-note').removeClass('active')
 		$('.modal').addClass('visible')
 		$('.modal-details__head .click-item').removeClass('active')
 		$('.modal-details__create-note').removeClass('visible')
