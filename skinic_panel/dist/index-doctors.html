@@ -19,9 +19,10 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
 	<link rel="stylesheet" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
-	<script src="js/html2canvas.js"></script>
+	<link rel="stylesheet" href="css/wickedpicker.min.css">
 </head>
 
 <body>
@@ -1774,32 +1775,27 @@
 								</div>
 								<label class="click-item">
 									<input type="radio" name="time">
-									<h2>8:00 am – 9:00 am</h2>
-									<span>3 spaces available</span>
+									<h2>8:00 am</h2>
 									<span class="continue">CONTINUE</span>
 								</label>
 								<label class="click-item">
 									<input type="radio" name="time">
-									<h2>8:00 am – 9:00 am</h2>
-									<span>3 spaces available</span>
+									<h2>8:00 am</h2>
 									<span class="continue">CONTINUE</span>
 								</label>
 								<label class="click-item">
 									<input type="radio" name="time">
-									<h2>8:00 am – 9:00 am</h2>
-									<span>3 spaces available</span>
+									<h2>8:00 am</h2>
 									<span class="continue">CONTINUE</span>
 								</label>
 								<label class="click-item">
 									<input type="radio" name="time">
-									<h2>8:00 am – 9:00 am</h2>
-									<span>3 spaces available</span>
+									<h2>8:00 am</h2>
 									<span class="continue">CONTINUE</span>
 								</label>
 								<label class="click-item">
 									<input type="radio" name="time">
-									<h2>8:00 am – 9:00 am</h2>
-									<span>3 spaces available</span>
+									<h2>8:00 am</h2>
 									<span class="continue">CONTINUE</span>
 								</label>
 							</form>
@@ -2683,62 +2679,52 @@
 							<div class="label-list">
 								<label class="click-item">
 									<input type="radio" name="time">
-									<h2>8:00 am – 9:00 am</h2>
-									<span>3 spaces available</span>
+									<h2>8:00 am</h2>
 									<span class="continue">CONTINUE</span>
 								</label>
 								<label class="click-item">
 									<input type="radio" name="time">
-									<h2>9:00 am – 10:00 am</h2>
-									<span>3 spaces available</span>
+									<h2>9:00 am</h2>
 									<span class="continue">CONTINUE</span>
 								</label>
 								<label class="click-item">
 									<input type="radio" name="time">
-									<h2>11:00 am – 12:00 am</h2>
-									<span>3 spaces available</span>
+									<h2>11:00 am</h2>
 									<span class="continue">CONTINUE</span>
 								</label>
 								<label class="click-item">
 									<input type="radio" name="time">
-									<h2>01:00 pm – 02:00 pm</h2>
-									<span>3 spaces available</span>
+									<h2>01:00 pm</h2>
 									<span class="continue">CONTINUE</span>
 								</label>
 								<label class="click-item">
 									<input type="radio" name="time">
-									<h2>01:00 pm – 02:00 pm</h2>
-									<span>3 spaces available</span>
+									<h2>01:00 pm</h2>
 									<span class="continue">CONTINUE</span>
 								</label>
 								<label class="click-item">
 									<input type="radio" name="time">
-									<h2>01:00 pm – 02:00 pm</h2>
-									<span>3 spaces available</span>
+									<h2>01:00 pm</h2>
 									<span class="continue">CONTINUE</span>
 								</label>
 								<label class="click-item">
 									<input type="radio" name="time">
-									<h2>01:00 pm – 02:00 pm</h2>
-									<span>3 spaces available</span>
+									<h2>01:00 pm</h2>
 									<span class="continue">CONTINUE</span>
 								</label>
 								<label class="click-item">
 									<input type="radio" name="time">
-									<h2>01:00 pm – 02:00 pm</h2>
-									<span>3 spaces available</span>
+									<h2>01:00 pm</h2>
 									<span class="continue">CONTINUE</span>
 								</label>
 								<label class="click-item">
 									<input type="radio" name="time">
-									<h2>01:00 pm – 02:00 pm</h2>
-									<span>3 spaces available</span>
+									<h2>01:00 pm</h2>
 									<span class="continue">CONTINUE</span>
 								</label>
 								<label class="click-item">
 									<input type="radio" name="time">
-									<h2>01:00 pm – 02:00 pm</h2>
-									<span>3 spaces available</span>
+									<h2>01:00 pm</h2>
 									<span class="continue">CONTINUE</span>
 								</label>
 							</div>
@@ -2765,6 +2751,22 @@
 						<label for="">
 							<span>Email</span>
 							<input type="EMAIL" placeholder="giuseppe@gmail.com">
+						</label>
+						<label for="">
+							<span>Street:</span>
+							<input type="text" placeholder="La Tzintre">
+						</label>
+						<label for="">
+							<span>Street Number</span>
+							<input type="text" placeholder="241/7a">
+						</label>
+						<label for="">
+							<span>Postcode</span>
+							<input type="text" placeholder="18 028">
+						</label>
+						<label for="">
+							<span>Town</span>
+							<input type="text" placeholder="Berlin">
 						</label>
 						<label for="">
 							<span>Note</span>
@@ -2802,14 +2804,14 @@
 				<div class="label-container__version">
 					<div class="label">
 						<span>Data</span>
-						<input type="text" autocomplete="off" placeholder="Sat Jun 05 2021" id="checkin2">
+						<input type="text" autocomplete="off" placeholder="Sat Jun 05 2021">
 					</div>
 					<div class="label">
 						<span>Block off time</span>
 						<div class="timepicker-container">
-							<input type="text" autocomplete="off" placeholder="11:00 AM">
+							<input type="text" name="timepicker-12-hr" class="timepicker-12-hr">
 							<span>to</span>
-							<input type="text" autocomplete="off" placeholder="11:00 AM">
+							<input type="text" name="timepicker-12-hr" class="timepicker-12-hr">
 						</div>
 					</div>
 				</div>
@@ -2870,6 +2872,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 	<script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js" ></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
 	
 	<script src="js/app.min.js"></script>
 </body>
