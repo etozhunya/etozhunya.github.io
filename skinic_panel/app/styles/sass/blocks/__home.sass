@@ -21,7 +21,7 @@
 					position: relative
 					z-index: 2
 					width: 100%
-					background-color: #C2C2C2
+					background-color: #E6E5E6
 					height: 1px
 					margin-left: 35px
 					span
@@ -36,13 +36,16 @@
 			.block-hours
 				z-index: 1
 				position: relative
+				background-color: rgba(220, 230, 234, 0.6 )
 				> span
-					background-color: #E2E6EA
-					padding-left: 30px
-					display: block
-					padding: 5px 0
+					display: inline-block
+					padding: 5px 0 5px 30px
 					margin-left: 35px
 					color: rgba(21,21,21,0.58)
+					&:nth-of-type(2)
+						margin-left: 0
+						padding-left: 15px
+						font-family: helveticaMedium
 			.info-wrapper
 				display: flex
 				justify-content: space-between
@@ -74,11 +77,13 @@
 						> span
 							font-size: 12px
 							color: #343434
+							&:nth-of-type(1)
+								opacity: 0.8
 						p
 							color: #343434
 							font-size: $desktopsize
-							line-height: 26px
-							transform: translateY(-5px)
+							line-height: 22px
+							// transform: translateY(-5px)
 						&:first-child
 							display: flex
 							width: 35%
