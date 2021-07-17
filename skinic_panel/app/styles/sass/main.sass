@@ -68,6 +68,7 @@ label, .label, .global-content__search
 		display: flex
 		justify-content: space-between
 		margin-bottom: 9px
+		font-size: 14px
 		h4
 			display: inline-block
 			font-family: helveticaMedium
@@ -80,10 +81,9 @@ label, .label, .global-content__search
 		> span
 			display: inline-block
 			opacity: .5
-
 	p
 		margin-bottom: 5px
-	span
+	> span
 		font-family: helveticaBold
 		line-height: 13px
 		font-size: 11px
@@ -133,7 +133,27 @@ label, .label, .global-content__search
 		color: #8E8E8E
 		&::before, &:hover
 			background-color: #8E8E8E
-			color: #fff
+			color: #fff				
+.widget-wrapper
+	border-radius: 8px		
+	position: relative		
+	.delete-block
+		display: none
+		position: absolute
+		width: 56px
+		height: 100%
+		right: -50px
+		top: 0
+		justify-content: center
+		align-items: center
+		cursor: pointer
+		&__icon
+			width: 30px
+			height: 30px
+			display: block
+	&:hover
+		.delete-block
+			display: flex
 			
 
 .ui-timepicker-container
@@ -532,7 +552,7 @@ label, .label, .global-content__search
 .select-ver-1
 	.select2
 		width: auto !important
-		margin: 36px 0 27px 0
+		margin: 15px 0
 		&-selection--single
 			color: #fff
 		&-selection__arrow
@@ -547,7 +567,9 @@ label, .label, .global-content__search
 			color: #fff
 		&-selection__rendered
 			color: #fff !important
-			padding-right: 43px !important
+			padding: 5px 43px 4px 16px !important
+			line-height: initial !important
+			font-size: 14px !important
 
 		&:focus
 			outline: none

@@ -84,6 +84,7 @@
 	.modal-details
 		width: 60vw
 		overflow-y: scroll		
+		overflow-x: hidden
 		&__relative
 			position: relative
 			height: 100%
@@ -234,6 +235,7 @@
 				&__time
 					position: relative
 					margin-bottom: 14px
+					opacity: 0.8
 					display: block
 					&::before
 						content: ''
@@ -268,11 +270,14 @@
 				&__client-comments
 					margin-top: 24px
 					overflow-y: scroll
-					height: auto
 					height: 295px
+					width: 110%
+					
 					li
-						padding: 9px 14px
-						margin-bottom: 8px
+						width: calc(100% - 9%)
+						.widget
+							padding: 9px 14px
+							margin-bottom: 8px
 
 					&::-webkit-scrollbar
 						display: none
@@ -548,7 +553,7 @@
 										display: block
 										cursor: pointer
 										position: absolute
-										right: -10px
+										right: -18px
 										top: -20px
 										z-index: 99	
 										padding: 10px

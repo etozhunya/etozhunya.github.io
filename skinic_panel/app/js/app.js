@@ -443,25 +443,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	var twelveHour = $('.timepicker-12-hr').wickedpicker();
-            $('.time').text('//JS Console: ' + twelveHour.wickedpicker('time'));
             $('.timepicker-24-hr').wickedpicker({twentyFour: true});
             $('.timepicker-12-hr-clearable').wickedpicker({clearable: true});
-	// $('.search-field').timepicker({
-	// 		timeFormat: 'h:mm p',
-	// 		interval: 60,
-	// 		minTime: '10',
-	// 		maxTime: '6:00pm',
-	// 		defaultTime: '11',
-	// 		startTime: '10:00',
-	// 		dynamic: false,
-	// 		dropdown: true,
-	// 		scrollbar: true
-	// 	});
-
-
-
-
-
+	
 	// modals
 	$('.add-note').click(function() {
 		$('.add-note-general').addClass('active')
