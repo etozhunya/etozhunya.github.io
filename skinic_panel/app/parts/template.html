@@ -20,10 +20,19 @@
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
-
+	<script src="js/html2canvas.js"></script>
 </head>
 
 <body>
+	<script>
+	function doCapture() {
+		window.scrollTo(0, 0); // <-- this fixes the issue
+		html2canvas(document.getElementById('capture')).then(function (canvas) {
+			console.log(canvas.toDataURL("image/jpeg, 0.9"));
+			windowWidth: 450;
+		});
+	}
+	</script>
 	<section class="page">
 		<div class="page__white-space-mob-only"></div>	
 		<div class="page__left-side ">
@@ -38,7 +47,7 @@
 				</div>
 				<div class="side-bar__container">
 					<ul class="side-bar__list">
-						<li class="click-item" id="homePage">
+						<li class="click-item" id="homePage" data-order='0'>
 							<a href="index-home.html#homePage" data-name="Home">
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22">
 							  <g id="Group_163762" data-name="Group 163762" transform="translate(1 -1)">
@@ -53,7 +62,7 @@
 							<span>Home</span>
 							</a>
 						</li>
-						<li class="click-item" id="Requests">
+						<li class="click-item" id="Requests" data-order='1'>
 							<a href="index-requests.html#Requests" data-name="Requests">
 								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22">
 								  <g id="Group_163763" data-name="Group 163763" transform="translate(1 -1)">
@@ -66,7 +75,7 @@
 								<span>Requests</span>
 							</a>
 						</li>
-						<li class="click-item" id="Clients">
+						<li class="click-item" id="Clients" data-order='2'>
 							<a href="index-clients.html#Clients" data-name="Clients">
 								<svg xmlns="http://www.w3.org/2000/svg" width="19.446" height="22.569" viewBox="0 0 19.446 22.569">
 								  <g id="Group_163764" data-name="Group 163764" transform="translate(0 0)">
@@ -76,7 +85,7 @@
 								<span>Clients</span>
 							</a>
 						</li>
-						<li class="click-item" id="Doctors">
+						<li class="click-item" id="Doctors" data-order='3'>
 							<a href="index-doctors.html#Doctors" data-name="Doctors">
 								<svg xmlns="http://www.w3.org/2000/svg" width="20.446" height="23.571" viewBox="0 0 20.446 23.571">
 								  <g id="Group_163767" data-name="Group 163767" transform="translate(0.5 0.503)">
@@ -86,7 +95,7 @@
 								<span>Doctors</span>
 							</a>
 						</li>
-						<li class="click-item" id="PersonalInfo">
+						<li class="click-item" id="PersonalInfo" data-order='4'>
 							<a href="index-personal-info.html#PersonalInfo" data-name="Personal Info">
 								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
 								  <g id="Group_163765" data-name="Group 163765" transform="translate(1 -1)">
@@ -100,7 +109,7 @@
 								<span>Personal Info</span>
 							</a>
 						</li>
-						<li class="click-item" id="Reports">
+						<li class="click-item" id="Reports" data-order='5'>
 							<a href="index-reports.html#Reports" data-name="Reports">
 								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22">
 								  <g id="Group_163766" data-name="Group 163766" transform="translate(1 -1)">
@@ -242,7 +251,7 @@
 
 
 					<div class="global-content__title">
-						<h1 id="headText" class="global-content__home-only"></h1>
+						<h1 id="headText" class="global-content__home-only" onclick="doCapture()"</h1>
 						<p>12 appointment </p>
 					</div>
 				</div>
@@ -260,7 +269,6 @@
 					</div>
 				</a>
 			</div>
-
 		<div class="content-wrapper">
 			<div class="content-wrapper__header">
 				<div class="content-wrapper__app-hours">
@@ -268,7 +276,7 @@
 					<span class="hover click-item" id="BH-btn">Block hours</span>
 				</div>
 				<div class="content-wrapper__TWM TWM global-content__home-only">
-					<div class="TWM__days">
+					<div class="TWM__days" id="capture">
 						<span class="active hover click-item day-button calendar-nav">Today</span>
 						<span class="hover click-item week-button calendar-nav">Week</span>
 						<span class="hover click-item month-button calendar-nav">Month</span>

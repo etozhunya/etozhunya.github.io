@@ -11,12 +11,14 @@
 	&__left-side
 		width: 17%
 		position: relative
-		transition: all 1s cubic-bezier(.215, .61, .355, 1) 0s
+		transition: .4s
+		transform: translate3d(0, 0, 0)
 	&__right-side
-		transition: all 1s cubic-bezier(.215, .61, .355, 1) 0s
+		transition: .4s
 		width: 83%
 		background-color: #fff
 		border-radius: 8px 0 0 8px
+		transform: translate3d(0, 0, 0)
 	.global-content
 		padding: 36px
 		overflow: hidden
@@ -28,6 +30,7 @@
 			border: 1px solid #E2E6EA
 			cursor: pointer
 			border-radius: 8px
+			overflow: hidden
 			margin-right: 31px
 			width: 96px
 			height: 38px
@@ -124,7 +127,7 @@
 		padding: 36px 15px 17px 30px
 		overflow: hidden
 		position: absolute
-		transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
+		transition: .2s
 		height: 100%
 		
 		&__header
@@ -209,6 +212,7 @@
 						background-color: #000
 
 		&__footer
+			transform: translateX(-10px)
 			p, a, span
 				opacity: 0.38
 				font-family: helveticaRegular
@@ -224,17 +228,17 @@
 					color: $highlighted
 	.full
 		right: 0
-		transition-delay: 0.5s
+		transition-delay: 0.2s
 		min-width: 17vw
 		.side-bar__hamburger
 			span
 				&::before, &::after
-					transition-delay: 0.8s
+					transition-delay: 0.4s
 	.minimized
 		width: 100%
 		overflow: hidden
 		right: 100%
-		transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
+		transition: .2s
 		padding: 36px 0 17px 0
 		.side-bar__header
 			position: relative
@@ -280,12 +284,12 @@
 	&.wide
 		.page__left-side
 			width: 10%
-			transition: all 1s cubic-bezier(.215, .61, .355, 1) 0s
+			transition: .2s
 			.side-bar
 				position: absolute
 				overflow-y: scroll
 				top: 0
-				transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
+				transition: .2s
 			.full
 				right: 100%
 				.side-bar__hamburger
@@ -295,21 +299,21 @@
 							transition: 0.2s
 			.minimized
 				right: 0
-				transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
-				transition-delay: 0.5s
+				transition: .25s
+				transition-delay: 0.2s
 				.side-bar__hamburger
 					span
 						&::before
 							transform: rotate(45deg)
 							transition: 0.2s
-							transition-delay: 0.8s 
+							transition-delay: 0.4s 
 						&::after
 							transform: rotate(-45deg)
 							transition: 0.2s
-							transition-delay: 0.8s 
+							transition-delay: 0.4s 
 		.page__right-side
 			width: 90%
-			transition: all 1s cubic-bezier(.215, .61, .355, 1) 0s
+			transition: .2s
 	// SIDEBAR CSS END
 
 

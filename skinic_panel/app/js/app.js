@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	$(window.location.hash).addClass('active').siblings().removeClass('active')
 
+	
+		const order = $('.side-bar__list .click-item.active').attr('data-order')
+		console.log(order)
+		$('.minimized .side-bar__list .click-item').eq(order).addClass('active')
+		
+
+
 	mainText = $('.global-content__core').attr('data-name')
 
 	if( mainText == 'Clients') {
@@ -581,7 +588,7 @@ document.getElementById('cal-button').onclick = function(){
 	    var calendarEl = document.getElementById('calendar');
 	    var calendar = new FullCalendar.Calendar(calendarEl, {
 	      initialView: 'timeGridWeek',
-	       initialDate: "2021-02-15",
+	       initialDate: "2021-07-16",
 	      selectable: true,
 	      editable: true,
 	      eventContent: function( arg ) {
@@ -591,26 +598,26 @@ document.getElementById('cal-button').onclick = function(){
 	            {
 	              id: 1,
 	              title: '<div class="widget widget--violet"><span>Dr. med. Dan Iselin</span><h2>Sharlini Goncalves</h2><span>Nachkontrolle Hyaluron</span><span class="duration">90min</span></div',
-	              start: '2021-02-15 07:00:00',
-	              end: '2021-02-15 09:00:00'
+	              start: '2021-07-16 07:00:00',
+	              end: '2021-07-16 09:00:00'
 	            },
 	            {
 	              id: 2,
 	              title: '<div class="widget widget--red"><span>Dr. med. Dan Iselin</span><h2>Sharlini Goncalves</h2><span>Nachkontrolle Hyaluron</span><span class="duration">90min</span></div',
-	              start: '2021-02-15 10:00:00',
-	              end: '2021-02-15 12:00:00'
+	              start: '2021-07-15 10:00:00',
+	              end: '2021-07-15 09:00:00'
 	            },
 	                  {
 	              id: 3,
 	              title: '<div class="widget widget--green"><span>Dr. med. Dan Iselin</span><h2>Sharlini Goncalves</h2><span>Nachkontrolle Hyaluron</span><span class="duration">90min</span></div',
-	              start: '2021-02-16 07:00:00',
-	              end: '2021-02-16 12:00:00'
+	              start: '2021-07-16 07:00:00',
+	              end: '2021-07-16 09:00:00'
 	            },
 	                  {
 	              id: 4,
 	              title: '<div class="widget widget--blocked-hours"><h2>Blocked Hours</h2><span class="duration">90min</span></div',
-	              start: '2021-02-16 14:00:00',
-	              end: '2021-02-16 15:00:00'
+	              start: '2021-07-16 14:00:00',
+	              end: '2021-07-16 15:00:00'
 	            }
 	          ],
 	      headerToolbar: {
@@ -695,6 +702,12 @@ dragArea.addEventListener("drop", (event)=> {
 		fileReader.readAsDataurl(file);
 	}
 })
+
+
+// SCREENSHOT
+
+
+
 
 
 // DATA TABLE
