@@ -377,20 +377,22 @@
 					<li class="add-note add-note-general"><span class="hover">Add note</span></li>
 				</ul>
 				<div class="add-note-container">
-					<span class="add-note">Not appeared</span>
-					<span class="add-note">Cancel</span>
+					<span class="add-note cancel-mode">Cancel</span>
+					<span class="add-note not-appeared-mode">Not appeared</span>
 				</div>
 			</div>
 			<div class="modal-details__create-note create-note select-ver-1">
-				<h3>Example Textarea</h3>
-				<div class="create-note__clients-mode">
+				<h3 class="clients-mode">Example Textarea</h3>
+				<h3 class="cancel-mode">Cancel note</h3>
+				<h3 class="not-appeared-mode">Not appeared note</h3>
+				<div class="create-note__wrapper">
 					<div class="create-note__select2-container">
-						<select name="" id="sel6" class="select">
-							<option value="">March 12 2021</option>
-							<option value="">March 13 2021</option>
-							<option value="">March 14 2021</option>
-							<option value="">March 15 2021</option>
-						</select>
+						<div class="input-wrapper">
+							<input type="text" id="checkin3" value="Tue Jul 06 2021" readonly>
+							<span class="arrow-span" role="presentation">
+								<b role="presentation"></b>
+							</span>
+						</div>
 						<select name="" id="sel5" class="select">
 							<option value="">Label</option>
 							<option value="">Label</option>

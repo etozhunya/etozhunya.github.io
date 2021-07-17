@@ -405,7 +405,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	var checkin = document.querySelectorAll('#checkin');
 	var checkin2 = document.querySelectorAll('#checkin2');
+	var checkin3 = document.querySelectorAll('#checkin3');
 	var checkoff = document.querySelectorAll('#checkoff');
+	
 
 	const picker = datepicker('#checkin', {
 		  // Event callbacks.
@@ -419,6 +421,19 @@ document.addEventListener('DOMContentLoaded', () => {
 	checkin2.forEach(function(el) {
 		    datepicker(el)
 	})
+
+	const picker2 = datepicker('#checkin3', {
+		  onShow: instance => {
+		    $('.arrow-span').addClass('active')
+		  },
+		  onHide: instance => {
+			  console.log('asdasd')
+		    $('.arrow-span').removeClass('active')
+		  }
+	})
+	$('#checkin3').next().removeClass('qs-hidden')
+
+
 
 
 	
@@ -452,6 +467,21 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.modal-details__create-note').addClass('visible')
 		if($('.modal-details__create-note').hasClass('visible')) {
 			$(this).addClass('active')
+		}
+
+		// clients-mode
+		if( mainText == 'Clients') {
+			$('.modal-details__create-note').addClass('clients-mode')
+		}
+
+		// cancel mode
+		if ($(this).hasClass('cancel-mode')) {
+			$('.modal-details__create-note').addClass('cancel-mode').removeClass('not-appeared-mode')
+		}
+
+		// not appeared mode
+		if ($(this).hasClass('not-appeared-mode')) {
+			$('.modal-details__create-note').addClass('not-appeared-mode').removeClass('cancel-mode')
 		}
 
 	})

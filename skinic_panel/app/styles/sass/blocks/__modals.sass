@@ -23,6 +23,8 @@
 		cursor: pointer
 		font-size: 13px
 		color: #8E8E8E
+		&:hover
+			color: #D2B162
 		&::before
 			content: ''
 			display: inline-block
@@ -112,37 +114,37 @@
 						margin-left: 0
 					&:last-child
 						margin-right: 0
-			> div	
+			.add-note-container	
 				display: flex
-				> span
+				span
 					font-size: 16px
 					cursor: pointer
-					&:last-child
-						cursor: pointer
+				.cancel-mode
+					color: #DC3545
+					margin-right: 16px
+					&:hover
+						color: #333333
+				.not-appeared-mode
+					color: #333333
+					&:hover
 						color: #DC3545
-						margin-left: 16px
-		&__create-note
+					
+						
+
+		.create-note
 			display: none
 			h3
-				&:nth-child(2)
-					display: none
-			.create-note__clients-mode
 				display: none
-			&.visible
-				display: block
-		.create-note
-			h3
-				&:first-child
-					display: none
-				&:nth-child(2)
+				&:nth-of-type(1)
 					display: block
-			&__clients-mode
+
+			&__wrapper
 				border-radius: 8px
 				border: 1px solid #E0E0E0
-				overflow: hidden
 				display: block
-				#select2-sel6-container
-					padding-left: 30px
+				.input-wrapper
+					display: inline-block
+					margin-right: 5px
 					&::before
 						content: ''
 						display: block
@@ -153,7 +155,48 @@
 						background: url('../images/dist/calendar-white-icon.svg') center center/contain no-repeat
 						width: 11px
 						height: 11px
+						z-index: 31
+					#checkin3
+						cursor: pointer
+						font-size: 14px
+						z-index: 5
+						width: 182px
+						background-color: #343434
+						color: #fff
+						font-family: helveticaRegular
+						height: 28px
+						transform: translateY(1px)
+						appearance: none
+						padding: 5px 15px 5px 30px!important
+						border: none
+						border-radius: 4px
+					.arrow-span
+						pointer-events: none
+						height: 28px
+						position: absolute
+						top: 0px
+						right: 0px
+						width: 20px
+						b
+							width: 0
+							left: 8%
+							position: absolute
+							top: 50%
+							height: 0
+							border-style: solid
+							border-width: 6px 5px 0 5px !important
+							border-color: #fff transparent transparent transparent
+							transform: rotate(0deg)
+							transition-duration: .1s
+							
+						&.active
+							b
+								transform: rotate(-180deg)
+								transition-duration: .1s
+				
 			&__select2-container
+				display: none
+				border-radius: 4px 4px 0px 0px
 				padding: 8px
 				background-color: #E0E0E0
 			textarea
@@ -163,6 +206,26 @@
 				margin: 0	
 			> textarea
 				display: none
+			&.visible
+				display: block
+			&.clients-mode
+				h3
+					display: none
+				.create-note__select2-container
+					display: block
+			&.cancel-mode
+				h3
+					&:nth-of-type(1)
+						display: none
+					&:nth-of-type(2)
+						display: block
+			&.not-appeared-mode
+				h3
+					&:nth-of-type(1)
+						display: none
+					&:nth-of-type(3)
+						display: block
+				
 		&__buttons
 			text-align: right
 			margin: 25px 0 31px 0
@@ -196,8 +259,8 @@
 							height: 32px
 							position: absolute
 							bottom: -5px
-							right: -5px
-							transform: scale(1.5)
+							right: -15px
+							transform: scale(1.2)
 							&.edit
 								display: block
 
