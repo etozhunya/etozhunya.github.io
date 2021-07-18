@@ -463,7 +463,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	// modals
 	$('.add-note').click(function() {
-		$('.add-note-general').addClass('active')
 		$('.modal-details__create-note').addClass('visible')
 		if($('.modal-details__create-note').hasClass('visible')) {
 			$(this).addClass('active')
@@ -503,6 +502,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		if($(window).width() < 768) {
 			$('.modal-details__head .click-item').removeClass('active')
 			$(this).addClass('active')
+		}
+		if($(this).attr('data-index') == 4) {
+			$('.info__name').addClass('hidden')
+		} else {
+			$('.info__name').removeClass('hidden')	
 		}
 
 		// }

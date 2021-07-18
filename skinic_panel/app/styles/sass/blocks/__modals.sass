@@ -276,6 +276,8 @@
 							width: 100%
 							display: block
 							color: #343434
+				&.hidden
+						display: none
 			.unban-button
 				display: none
 			&__status
@@ -286,7 +288,7 @@
 				display: none
 				&.in-view
 					display: block						
-			.history__block
+			.appointment__block
 				.block-nav
 					border-bottom: none
 					margin-top: 52px
@@ -446,6 +448,18 @@
 						.time
 							&::after
 								background-color: #B964E6
+					&.green
+						.time
+							&::after
+								background-color: #3EBEB4
+					&.blue
+						.time
+							&::after
+								background-color: #607BF1		
+					&.ocean
+						.time
+							&::after
+								background-color: #207FB1
 					&:last-child
 						border: none
 			.reschedule-block
@@ -522,6 +536,30 @@
 						border-radius: 4px
 						padding: 14px 60px
 						font-size: $desktopsize
+			.history-block
+				position: relative
+				h1
+					font-size: 21px
+					font-family: helveticaBold
+					color: #343434
+				.comment-quantity
+					position: absolute
+					right: 0
+					top: 0
+				.timing
+					height: 372px
+					overflow-y: scroll
+					padding: 0
+					margin: 25px 0
+					li
+						padding: 0
+						margin-bottom: 16px
+						border-bottom: none
+						div
+							padding: 10px 0
+							span
+								margin-bottom: 0
+								color: #313131
 		.show-comments-button
 			font-size: $desktopsize
 			margin-top: 8px
