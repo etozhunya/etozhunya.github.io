@@ -466,6 +466,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			$(this).addClass('active')
 		}
 
+		// general
+		if($(this).hasClass('add-note-general')) {
+			$('.modal-details__create-note').removeClass('cancel-mode').removeClass('not-appeared-mode').addClass('clients-mode')
+		}
+
 		// clients-mode
 		if( mainText == 'Clients') {
 			$('.modal-details__create-note').addClass('clients-mode')
@@ -473,12 +478,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// cancel mode
 		if ($(this).hasClass('cancel-mode')) {
-			$('.modal-details__create-note').addClass('cancel-mode').removeClass('not-appeared-mode')
+			$('.add-note-general').removeClass('active')
+			$('.modal-details__create-note').addClass('cancel-mode').removeClass('not-appeared-mode').removeClass('clients-mode')
 		}
 
 		// not appeared mode
 		if ($(this).hasClass('not-appeared-mode')) {
-			$('.modal-details__create-note').addClass('not-appeared-mode').removeClass('cancel-mode')
+			$('.add-note-general').removeClass('active')
+			$('.modal-details__create-note').addClass('not-appeared-mode').removeClass('cancel-mode').removeClass('clients-mode')
 		}
 
 	})
