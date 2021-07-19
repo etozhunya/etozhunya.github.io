@@ -11,9 +11,13 @@
 	&__left-side
 		width: 17%
 		position: relative
-		transition: .4s
+		-webkit-transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
+		-o-transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
+		transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
 	&__right-side
-		transition: .4s
+		-webkit-transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
+		-o-transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
+		transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
 		width: 83%
 		background-color: #fff
 		border-radius: 8px 0 0 8px
@@ -125,7 +129,9 @@
 		padding: 36px 15px 17px 30px
 		overflow: hidden
 		position: absolute
-		transition: .2s
+		-webkit-transition: all .4s cubic-bezier(.215, .61, .355, 1) 0s
+		-o-transition: all .4s cubic-bezier(.215, .61, .355, 1) 0s
+		transition: all .4s cubic-bezier(.215, .61, .355, 1) 0s
 		height: 100%
 		
 		&__header
@@ -210,7 +216,6 @@
 						background-color: #000
 
 		&__footer
-			transform: translateX(-10px)
 			p, a, span
 				opacity: 0.38
 				font-family: helveticaRegular
@@ -226,12 +231,14 @@
 					color: $highlighted
 	.full
 		right: 0
-		transition-delay: 0.2s
+		transition-delay: .3s
 		min-width: 17vw
 		.side-bar__hamburger
 			span
 				&::before, &::after
-					transition-delay: 0.4s
+					transition-delay: 0.8s
+		.side-bar__footer
+			transform: translateX(-10px)
 	.minimized
 		width: 100%
 		overflow: hidden
@@ -282,7 +289,9 @@
 	&.wide
 		.page__left-side
 			width: 10%
-			transition: .2s
+			-webkit-transition: all .3s cubic-bezier(.215, .61, .355, 1) 0s
+			-o-transition: all .3s cubic-bezier(.215, .61, .355, 1) 0s
+			transition: all .3s cubic-bezier(.215, .61, .355, 1) 0s
 			.side-bar
 				position: absolute
 				overflow-y: scroll
@@ -297,18 +306,20 @@
 							transition: 0.2s
 			.minimized
 				right: 0
-				transition: .25s
-				transition-delay: 0.2s
+				-webkit-transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
+				-o-transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
+				transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
+				transition-delay: .35s
 				.side-bar__hamburger
 					span
 						&::before
 							transform: rotate(45deg)
 							transition: 0.2s
-							transition-delay: 0.4s 
+							transition-delay: 0.8s 
 						&::after
 							transform: rotate(-45deg)
 							transition: 0.2s
-							transition-delay: 0.4s 
+							transition-delay: 0.8s 
 		.page__right-side
 			width: 90%
 			transition: .2s

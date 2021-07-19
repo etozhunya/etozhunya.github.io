@@ -30,6 +30,10 @@ $gutter: $grid-gutter-width
 		font-style: $fstyle
 		font-weight: $fweight
 		src: url($furl) format('woff2')
+@mixin check()
+	-webkit-transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
+	-o-transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
+	transition: all .5s cubic-bezier(.215, .61, .355, 1) 0s
 @mixin transition($duration)
 	transition-duration: $duration
 	transition-timing-function: cubic-bezier(.215, .61, .355, 1)

@@ -437,8 +437,10 @@
 					</li>
 					<li class="table-slot block-hours">
 						<div class="table-slot__time"><span>10:00</span></div>
-						<span>Block hours</span>
-						<span>Work Meeting</span>
+						<div class="block-hours__container">
+							<span>Block hours</span>
+							<span>Work Meeting</span>
+						</div>
 					</li>
 					<li class="table-slot">
 						<div class="table-slot__time"><span>10:30</span></div>
@@ -890,13 +892,12 @@
 				</div>
 			</div>
 			<div class="modal-details__create-note create-note select-ver-1">
-				<h3 class="clients-mode">Example Textarea</h3>
+				<h3 class="clients-mode">Add note</h3>
 				<h3 class="cancel-mode">Cancel note</h3>
 				<h3 class="not-appeared-mode">Not appeared note</h3>
 				<div class="create-note__wrapper">
 					<div class="create-note__select2-container">
 						<div class="input-wrapper">
-							<input type="text" id="checkin3" value="Tue Jul 06 2021" readonly>
 							<span class="arrow-span" role="presentation">
 								<b role="presentation"></b>
 							</span>
@@ -2228,8 +2229,22 @@
 						</section>
 					</div>
 					<div class="info__wrapper__block history-block">
-						<h1>History</h1>
-						<span class="comment-quantity">21 Comment</span>
+						<h3>History note</h3>
+						<div class="create-note__wrapper">
+							<div class="create-note__select2-container">
+								<div class="input-wrapper">
+									<input type="text" id="checkin3" value="Tue Jul 06 2021" readonly>
+									<span class="arrow-span" role="presentation">
+										<b role="presentation"></b>
+									</span>
+								</div>
+							</div>
+							<textarea name="" id="" cols="30" rows="10" placeholder="Private notes about client"></textarea>
+						</div>
+						<div class="modal-details__buttons">
+							<span>Send</span>
+						</div>
+						<h1>History <span class="comment-quantity">21 Comment</span></h1>
 						<ul class="timing">
 							<li class="green">
 								<span class="time-duration">2:18 min after</span>
@@ -3351,7 +3366,7 @@
 				<span>Email</span>
 				<input type="EMAIL" value="giuseppe@gmail.com">
 			</label>
-			<h3>Example Textarea</h3>
+			<h3>Add note</h3>
 			<textarea name="" id="" cols="30" rows="10"></textarea>
 		</form>
 		<span class="close-button next-step-black hover">Сonfirm</span>

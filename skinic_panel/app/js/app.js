@@ -132,12 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 		$('.mobile-slider').slick({
 			arrows: false,
-			centerMode: false,
-			infinite: false,
-			centerPadding: '10px',
-			slidesToShow: 2,
-			slidesToScroll: 2
-
+			centerMode: true,
+			infinite: true,
+			TouchMove: true,
+			slidesToShow: 1,
 		})
 		$('.mobile-slider2').slick({
 			centerPadding: '10px',
@@ -557,14 +555,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // SIMULATIN CLICKS FULL CALLENDAR
 $('.calendar-nav').click(function(){
-	if ( $('.fc-today-button').attr('disabled')) {
-		$('.day-button').addClass('disabled')
-	} else {
-		$('.day-button').removeClass('disabled')
-	}
 	if(!$('.global-list-button').hasClass('active')) {
 		if ($(this).hasClass('day-button')) {
-			$('.fc-today-button').click ()
+			$('.fc-dayGridDay-button').click ()
 		}
 		if ($(this).hasClass('week-button')) {
 			$( '.fc-timeGridWeek-button' ).click ()
@@ -622,7 +615,7 @@ document.getElementById('cal-button').onclick = function(){
 	    var calendarEl = document.getElementById('calendar');
 	    var calendar = new FullCalendar.Calendar(calendarEl, {
 	      initialView: 'timeGridWeek',
-	       initialDate: "2021-07-16",
+		  initialDate: "2021-07-16",
 	      selectable: true,
 	      editable: true,
 	      eventContent: function( arg ) {
@@ -655,8 +648,22 @@ document.getElementById('cal-button').onclick = function(){
 	            }
 	          ],
 	      headerToolbar: {
-	            center: 'today,timeGridWeek,dayGridMonth,prev,next',
-	        }
+	            center: 'dayGridDay,timeGridWeek,dayGridMonth,prev,next',
+	        },
+			 views: {
+				basic: {
+				// options apply to basicWeek and basicDay views
+				},
+				agenda: {
+				// options apply to agendaWeek and agendaDay views
+				},
+				week: {
+				// options apply to basicWeek and agendaWeek views
+				},
+				day: {
+				// options apply to basicDay and agendaDay views
+				}
+			}
 	    });
 	}
 	calendar.render();
